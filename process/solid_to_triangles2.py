@@ -697,9 +697,9 @@ def doKnotInsertionCurve(spline_crv:Geom_BSplineCurve,num_max_knots=100):
                 spline_crv.InsertKnot((spline_crv.Knot(index)+spline_crv.Knot(index+1))/2, 1, 1e-6)
             n_knots=spline_crv.NbKnots()
 
-def process_main(input_path,output_path,method=10,dataset='mechcad',target='brt',process_num=30):
+def process_main(input_path,output_path,method=10,dataset='tmcad',target='brt',process_num=30):
 
-    if dataset=='mechcad':
+    if dataset=='tmcad':
         main([f'{input_path}/screw',f'{output_path}/{target}/screw','--num_processes', f'{process_num}','--no_random_name','--method',str(method),'--no_label'])
         main([f'{input_path}/shaft',f'{output_path}/{target}/shaft','--num_processes', f'{process_num}','--no_random_name','--method',str(method),'--no_label'])
         main([f'{input_path}/pulley',f'{output_path}/{target}/pulley','--num_processes', f'{process_num}','--no_random_name','--method',str(method),'--no_label'])
@@ -716,4 +716,4 @@ if __name__ == "__main__":
     logging.basicConfig(filename='logs/solid_to_triangles', filemode='w',
                         format=' %(asctime)s :: %(levelname)-8s :: %(message)s',level=logging.INFO)
 
-    process_main(method=8,dataset='mechcad',target='triangles',process_num=30)
+    process_main(method=8,dataset='tmcad',target='triangles',process_num=30)

@@ -12,4 +12,4 @@ paser=argparse.ArgumentParser('Convert each face of solid models into triangular
 paser.add_argument('data_path',type=str)
 paser.add_argument('output_path',type=str)
 args=paser.parse_args()
-process_main(args.data_path,args.output_path,method=8,dataset='mechcad',target='triangles',process_num=30)
+process_main(args.data_path,args.output_path,method=8,dataset='tmcad',target='triangles',process_num=30)
