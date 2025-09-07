@@ -1,4 +1,4 @@
-# SplineGen: data-driven, generative AI-based B-spline modeling
+# BRT: Boundary Representation Learning via Transformer
 
 - By Lizhen Zhu and Qiang Zou
 - Email: qzou.code@gmail.com
@@ -9,7 +9,7 @@
 <br />
 
 ## !important
-The source code was developed as a byproduct of the projects and methods presented in [1,2]. It promotes a new CAD modeling paradigm---data-driven, generative B-spline modeling---focusing on parameterization and knot placement for approximating unorganized points. The core principle is to replace manual heuristics with data-driven insights, enhancing modeling accuracy, efficiency, and robustness.
+The source code was developed as a byproduct of the projects and methods presented in [1,2]. It promotes a new learning method for boundary representation (B-rep) models. This may be the first work using the Transformer architecture (not just attention-enhanced GNN) to learn and understand B-rep models. Additionally, it differs from existing methods in that it operates entirely in the continuous domain, without discretizing the models. Previous methods are consistently based on the discretization of B-rep surface patches into points, meshes, or voxels, which inevitably introduce errors. It achieves SOTA performance in part classification and feature recognition tasks.
 
 It can be run with Pytorch 2.0.1 + CUDA 11.8 on the operating system Ubuntu 22.04 LTS. Windows, Mac.
 
@@ -17,14 +17,14 @@ It can be run with Pytorch 2.0.1 + CUDA 11.8 on the operating system Ubuntu 22.0
 1.Copyright
 -----------
 
-- SplineGen is GNU licensed. It is developed and maintained by Lizhe Zhu and Qiang Zou for research use. All rights about the program are reserved by Qiang Zou. This Python source code is available only to a primary user for academic purposes. No secondary use, such as copy, distribution, diversion, business purpose, etc., is allowed. In no event shall the author be liable to any party for direct, indirect, special, incidental, or consequential damage arising out of the use of this program. BRT is self-contained.
+- BRT is GNU licensed. It is developed and maintained by Lizhe Zhu and Qiang Zou for research use. All rights of the program are reserved by Qiang Zou. This Python source code is available only for primary use for academic purposes. No secondary use, such as copy, distribution, diversion, business purpose, etc., is allowed. In no event shall the author be liable to any party for direct, indirect, special, incidental, or consequential damage arising out of the use of this program. BRT is self-contained.
 
 
 2.Download
 ----------
 
 - The source code can be downloaded from: [https://github.com/Qiang-Zou/BRT](https://github.com/Qiang-Zou/BRT)
-- The MechCAD dataset can be downloaded from: [https://pan.zju.edu.cn/share/933cffb707d4c8b069dbf4c85f](https://pan.zju.edu.cn/share/933cffb707d4c8b069dbf4c85f)
+- The TMCAD dataset can be downloaded from: [https://pan.zju.edu.cn/share/933cffb707d4c8b069dbf4c85f](https://pan.zju.edu.cn/share/933cffb707d4c8b069dbf4c85f)
 
 3.Installing (Windows/Linux/Mac + Pytorch 2.2.1 + CUDA 12,1)
 -------------------------------------------
@@ -39,19 +39,19 @@ It can be run with Pytorch 2.0.1 + CUDA 11.8 on the operating system Ubuntu 22.0
 4.Usage
 -------
 
-- To preprocess the dataset like MechCAD, run
+- To preprocess the dataset like TMCAD (Truly Mechanical CAD Dataset), run
 
     ```shell
     cd process
     # extract topology
-    python gen_mechcad_topo.py /path/to/input_dir /path/to/output_dir/of/topology
+    python gen_tmcad_topo.py /path/to/input_dir /path/to/output_dir/of/topology
     # extract face geometry
-    python gen_mechcad_triangles.py /path/to/input_dir /path/to/output_dir/of/triangles
+    python gen_tmcad_triangles.py /path/to/input_dir /path/to/output_dir/of/triangles
     # split the dataset and save the result in /path/to/dataset/dir/datasplit.json
     python split_dataset.py /path/to/output_dir/of/triangles /path/to/output_dir/of/topology  /path/to/dataset/dir/datasplit.json
     ```
 
-- You can then train the model by the command following
+- You can then train the model by the following command 
 
     ```shell
     # classification
@@ -60,7 +60,7 @@ It can be run with Pytorch 2.0.1 + CUDA 11.8 on the operating system Ubuntu 22.0
     python segmentation.py train --num_classes num_of_classes --dataset_dir /path/to/dataset/dir --batch_size 16 --num_workers 4
     ```
 
-- You can test the model by the command following
+- You can test the model by the following command 
 
     ```shell
     # classification
