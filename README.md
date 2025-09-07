@@ -11,7 +11,7 @@
 ## !important
 The source code was developed as a byproduct of the projects and methods presented in [1,2]. It promotes a new learning method for boundary representation (B-rep) models. This may be the first work using the Transformer architecture (not just attention-enhanced GNN) to learn and understand B-rep models. Additionally, it differs from existing methods in that it operates entirely in the continuous domain, without discretizing the models. Previous methods are consistently based on the discretization of B-rep surface patches into points, meshes, or voxels, which inevitably introduce errors. It achieves SOTA performance in part classification and feature recognition tasks.
 
-It can be run with Pytorch 2.0.1 + CUDA 11.8 on the operating system Ubuntu 22.04 LTS. Windows, Mac.
+It can be run with Pytorch Pytorch 2.2.1 + CUDA 12.1 on the operating system Ubuntu, Windows, and Mac.
 
 
 1.Copyright
