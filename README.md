@@ -3,7 +3,7 @@
 - By Lizhen Zhu and Qiang Zou
 - Email: qzou.code@gmail.com
 - Webpage: https://qiang-zou.github.io/
-- Latest Release: 2025.09.07
+- Latest Release: 2025.09
 
 <img align="left" src="brt.jpg"> 
 <br />
@@ -24,7 +24,7 @@ It can be run with Pytorch Pytorch 2.2.1 + CUDA 12.1 on the operating system Ubu
 ----------
 
 - The source code can be downloaded from: [code](https://github.com/Qiang-Zou/BRT)
-- The TMCAD dataset can be downloaded from: [dataset](https://pan.zju.edu.cn/share/933cffb707d4c8b069dbf4c85f)
+- The TMCAD dataset can be downloaded from: [https://pan.zju.edu.cn/share/933cffb707d4c8b069dbf4c85f](https://pan.zju.edu.cn/share/933cffb707d4c8b069dbf4c85f)
 
 3.Installing (Windows/Linux/Mac + Pytorch 2.2.1 + CUDA 12.1)
 -------------------------------------------
