@@ -128,7 +128,8 @@ class BRT(nn.Module):
         # self.face_layer= FaceEncoder(input_dim=2*28*4+1,srf_emb_dim=dmodel,dropout=dropout,hidden_dim=hidden_dim,n_layers=2,n_heads=4)
         # self.face_layer= FaceEncoder_cnn(input_dim=2*4+1,srf_emb_dim=dmodel,dropout=dropout,hidden_dim=hidden_dim,n_layers=2,n_heads=4)
         self.topo_layer= TopoEncoder(vertex_dim=3,edge_dim=dmodel,h_dim=2*dmodel,dropout=dropout)
-        # self.vertex_layer=VertexEncoder()
+        self.vertex_layer=VertexEncoder(input_dim=3,output_dim=dmodel)
+        self.fc=nn.Linear(3*dmodel,dmodel)
         self.transformer=encoders.TransformerEncoderBLock(
             input_dim=dmodel,c_hidden=hidden_dim,n_layers=n_layers,n_heads=n_heads,dropout=dropout)
         self.max_length=max_face_length
@@ -138,8 +139,21 @@ class BRT(nn.Module):
                 edge_index,wire_index,adj_face_index,edge_padding_mask,edge_index_length,wire_index_length,adj_face_index_length,
                 num_faces_per_solid,**kwargs):
         
-        # with torch.no_grad():
+        # print(edge.shape)
+        # print(edge_padding_mask.shape)
+        v1=self.vertex_layer(edge[:,0,0,:3])
+        edge_len=torch.sum(edge_padding_mask,dim=1).long()
+        batch_indices=torch.arange(edge.shape[0],device=edge.device)
+        v2=self.vertex_layer(edge[batch_indices,edge_len-1,-1,:3])
+        # v2: get the last index of the edge:
+        # torch.scatter(edge)
+
         edge_emb=self.edge_layer(edge,edge_padding_mask)
+        # print(v1.shape)
+        # print(edge_emb.shape)
+        # print(self.fc)
+        edge_emb=torch.cat((edge_emb,v1,v2),dim=1)
+        edge_emb=self.fc(edge_emb)
         # edge_emb=None
         # with torch.no_grad():
         face_emb=self.face_layer(face,tri_normal,face_vis_mask,face_padding_mask)
@@ -445,6 +459,8 @@ class FaceEncoder_cnn2(nn.Module):
 class VertexEncoder(nn.Module):
     def __init__(
         self,
+        input_dim=3,
+        output_dim=64
     ):
         """
         Initialize the UV-Net solid classification model
@@ -458,7 +474,22 @@ class VertexEncoder(nn.Module):
         """
         super().__init__()
 
-        self.mlp = encoders._MLP(num_layers=2, input_dim=3, hidden_dim=64, output_dim=64)
+        self.mlp = encoders._MLP(num_layers=2, input_dim=input_dim, hidden_dim=64, output_dim=output_dim)
+    def forward(self, vertex):
+        """
+        Forward pass
+
+        Args:
+            batched_graph (dgl.Graph): A batched DGL graph containing the face 2D UV-grids in node features
+                                       (ndata['x']) and 1D edge UV-grids in the edge features (edata['x']).
+
+        Returns:
+            torch.tensor: Logits (batch_size x num_classes)
+        """
+
+        vertex_emb = self.mlp(vertex)
+
+        return vertex_emb
 
 class EdgeEncoder(nn.Module):
     def __init__(
