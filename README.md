@@ -24,7 +24,7 @@ It can be run with Pytorch Pytorch 2.2.1 + CUDA 12.1 on the operating system Ubu
 ----------
 
 - The source code can be downloaded from: https://github.com/Qiang-Zou/BRT
-- The TMCAD dataset v2 (2025.11.02) can be downloaded from: https://pan.zju.edu.cn/share/218d10a88e8c18f5b96e94a7e0
+- The TMCAD dataset v2 (a refined version released on 2025.11.02) can be downloaded from: https://pan.zju.edu.cn/share/218d10a88e8c18f5b96e94a7e0
 - The TMCAD dataset v1 (2025.02.10) can be downloaded from: https://pan.zju.edu.cn/share/305e1697a37277e6a9ec60dded
 
 3.Installing (Windows/Linux/Mac + Pytorch 2.2.1 + CUDA 12.1)
