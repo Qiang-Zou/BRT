@@ -280,12 +280,6 @@ class Intersector:
             params.append(projection.LowerDistanceParameter())
         return points,params
 
-def constructLine(p1,p2):
-    p1=gp_Pnt2d(*p1)
-    p2=gp_Pnt2d(*p2)
-    vec=gp_Vec2d(p1,p2)
-    dir=gp_Dir2d(vec)
-    return Geom2d_Line(p1,dir)
 def constructLineXDir(value):
     p1=gp_Pnt2d(0,value)
     p2=gp_Pnt2d(1,value)
@@ -328,8 +322,7 @@ def chordErrorCheckInRect(intersection:Intersection,rect:Rectangle,tol=0.995,edg
             if not chordErrorCheck(points[0],points[i],points[-1],dist_fn,tol):
                 return False
     return True
-def dist_on_params(crv:Geom2d_Curve,t1,t2):
-    return np.linalg.norm(geom_utils.gp_to_numpy(crv.Value(t1))-geom_utils.gp_to_numpy(crv.Value(t2)))
+
 
 def hasSamePoint(crv1:Geom2d_Curve,interval1,crv2:Geom2d_Curve,interval2,tol=9e-3):
     '''
@@ -754,83 +747,3 @@ def splitRectangle(face:Face,rectangle,curves,max_split=7,tol=0.7,distance_tol=1
                 continue
             rect.leaf_info=intersections
     return rectangle
-
-def splitRectangleSimple(face:Face,rectangle,curves,max_split=7,tol=0.7,distance_tol=1e-4,split_all=False):
-    intersector=Intersector()
-    stack=[rectangle]
-    # logging.debug("splitting rectangle")
-    # logging.debug("rectangle region:{}".format(rectangle.points))
-    while len(stack)>0:
-        # logging.debug("stack length:{}".format(len(stack)))
-        rect:Rectangle=stack.pop()
-        
-        if rect.discarded:
-            continue
-
-        intersections=[]
-        split_point=None
-        for curve,interval in curves:
-            intersection=intersector.intersect(rect,curve,interval,tol=distance_tol)
-
-            if intersection.NbPoints>0:
-                intersections.append(intersection)
-
-            # logging.debug("intersection points:{}".format(intersection.NbPoints))
-            # logging.debug("intersection status:{}".format(intersection.TwoPointOnSameLine))
-            # logging.debug("curve in rect:{}".format(curveInRect(curve,interval,rect,intersection,tol=distance_tol)))
-            # if intersection.NbPoints==2:
-            #     logging.debug("chord error check:{}".format(chordErrorCheckInRect(intersection,rect,tol=tol)))
-
-            if curveInRect(curve,interval,rect,intersection,tol=distance_tol) or\
-                      intersection.NbPoints>2 or\
-                      intersection.TwoPointOnSameLine or\
-                      not chordErrorCheckInRect(intersection,rect,tol=tol):
-                break
-
-        # logging.debug("intersection number:{}".format(len(intersections)))
-
-        # if len(intersections)>1:
-        #     if len(intersections)==2:
-        #         point=hasSamePoint(*intersections[0].Curve,*intersections[1].Curve,tol=distance_tol) 
-        #         if point is not None and rect.contains(point,tol=distance_tol) and not rect.isCorner(point,tol=distance_tol):
-        #             split_point=point
-
-        if len(intersections)==0 and ((not rect.anyCornersInFace(face)) and face.visibility_status(rect.center())==1):
-            rect.discarded=True
-
-        if rect.level<max_split:
-            rect.split(split_point,auto_ajust=True,tol=distance_tol)
-            rect.is_leaf=False
-            stack.extend(rect.sub_rects)
-
-    return rectangle
-
-#triangles3
-def quadtree_to_matrix(root:Rectangle,depth,degree=6):
-    # 计算四叉树的深度
-    size = 2 ** depth
-    tensor_size=(degree+1)*(degree+2)//2
-    
-    # 初始化结果矩阵
-    # matrix = [[None for _ in range(size)] for _ in range(size)]
-    matrix = np.zeros((size, size,2,tensor_size,4), dtype=np.float32)
-    discard_matrix = np.zeros((size, size), dtype=np.bool_)
-    
-    # 递归填充矩阵的函数
-    def fill(node:Rectangle, x, y, curr_size):
-        if node.is_leaf:
-            # 叶子节点，填充值
-            matrix[x][y][0] = node.leaf_info[0].control_points
-            matrix[x][y][1] = node.leaf_info[0].control_points
-            discard_matrix[x][y] = node.discarded
-        else:
-            # 非叶子节点，递归处理子节点
-            half = curr_size // 2
-            fill(node.sub_rects[0], x, y, half)            # 左上
-            fill(node.sub_rects[1], x, y + half, half)      # 右上
-            fill(node.sub_rects[2], x + half, y, half)      # 左下
-            fill(node.sub_rects[3], x + half, y + half, half) # 右下
-    
-    fill(root, 0, 0, size)
-    
-    return matrix.reshape(-1,2,tensor_size,4),~discard_matrix.reshape(-1)
