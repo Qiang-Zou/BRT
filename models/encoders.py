@@ -1,19 +1,10 @@
 """
 encoders whose input is group of control points of bazier pieces
 """
-
 import torch
 import math
 from torch import nn
-import numpy as np
 import torch.nn.functional as F
-from torch.autograd import Variable
-from torch import Tensor
-
-from typing import Callable, Union, Optional
-from dgl.nn.pytorch.glob import MaxPooling
-from dgl.nn.pytorch.conv import GINConv
-from dgl.nn.pytorch.conv import NNConv
 
 
 class BezierEncoderMLP_(nn.Module):
