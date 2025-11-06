@@ -7,7 +7,6 @@ from itertools import repeat
 import signal
 import dgl.data
 from scipy.optimize import minimize
-from utils import triangular_bezier
 import dgl
 import torch
 import numpy as np
