@@ -17,7 +17,7 @@ from occwl.entity_mapper import EntityMapper
 
 def build_data(solid,shape_att,edge_fn,*args,**kwargs):
     mapper = EntityMapper(solid)
-    # faces_data=[]
+
     labels=[]
 
     adj_faces_indices=[]
@@ -27,25 +27,9 @@ def build_data(solid,shape_att,edge_fn,*args,**kwargs):
 
     edge_dict={}
 
-    # sorted_face=solid.faces()
     face_mapper=lambda f:mapper.face_index(f)
 
     for face in solid.faces():
-
-        # points = uvgrid(
-        #     face, method="point", num_u=surf_num_u_samples, num_v=surf_num_v_samples
-        # )
-        # normals = uvgrid(
-        #     face, method="normal", num_u=surf_num_u_samples, num_v=surf_num_v_samples
-        # )
-        # visibility_status = uvgrid(
-        #     face, method="visibility_status", num_u=surf_num_u_samples, num_v=surf_num_v_samples
-        # )
-        # mask = np.logical_or(visibility_status == 0, visibility_status == 2)  # 0: Inside, 1: Outside, 2: On boundary
-        # # Concatenate channel-wise to form face feature tensor
-        # face_feat = np.concatenate((points, normals, mask), axis=-1)
-        # face_feature.append(face_feat)
-
         labels.append(int(shape_att[face]['name']))
 
         for wire in face.wires():
@@ -55,15 +39,12 @@ def build_data(solid,shape_att,edge_fn,*args,**kwargs):
                     continue
                 index=mapper.oriented_edge_index(edge)
 
-                # if not edge.has_curve():
-                #     raise RuntimeError("No curve found for edge")
                 connected_faces = list(solid.faces_from_edge(edge))
                 if len(connected_faces) < 2:
                     pass
                 elif len(connected_faces) == 2:
                     left_face, right_face = find_left_and_right_faces(edge,connected_faces)
                     if left_face is None or right_face is None:
-                        # continue
                         raise RuntimeError("Expected a manifold, an edge must be incident on one/two faces")
                 else:
                     raise RuntimeError("Expected a manifold, an edge must be incident on one/two faces")
@@ -75,7 +56,6 @@ def build_data(solid,shape_att,edge_fn,*args,**kwargs):
 
     edges_feature=[]
     for face in solid.faces():
-        # face_index=mapper.face_index(face)
         face_index=face_mapper(face)
 
         wires=[]
@@ -95,20 +75,6 @@ def build_data(solid,shape_att,edge_fn,*args,**kwargs):
                     continue
                 index=mapper.oriented_edge_index(edge)
 
-                # Compute U-grids
-                # points = ugrid(edge, method="point", num_u=curv_num_u_samples)
-                # tangents = ugrid(edge, method="tangent", num_u=curv_num_u_samples)
-                # Concatenate channel-wise to form edge feature tensor
-
-                # try:
-                #     assert len(points.shape)==2
-                #     assert len(tangents.shape)==2
-                # except AssertionError:
-                #     print(points.shape)
-                #     print(tangents.shape)
-                #     raise
-
-                # edge_feat = np.concatenate((points, tangents), axis=-1)
                 edge_feat=edge_fn(edge)
                 wire_data.append(cnt)
                 cnt+=1
@@ -132,15 +98,11 @@ def build_data(solid,shape_att,edge_fn,*args,**kwargs):
                 except KeyError:
                     pass
 
-    # face_feat=np.array(face_feature,dtype=np.float32)
-    # edge_feat=torch.from_numpy(np.stack(edges_feature,dtype=np.float32))
-    # face_feat,edge_feat=center_and_scale(face_feat,edge_feat)
     if len(edges_feature)==0:
         raise RuntimeError("No edges found in solid")
 
     return {
             'edge':edges_feature,
-            # 'face':face_feat,
             'edge_index':wire_edges,
             'wire_index':faces_wire,
             'adj_face_index':adj_faces_indices,
@@ -157,7 +119,6 @@ def build_data_no_label(solid,edge_fn,*args,**kwargs):
 
     edge_dict={}
 
-    # sorted_face=solid.faces()
     face_mapper=lambda f:mapper.face_index(f)
 
     for face in solid.faces():
@@ -169,15 +130,12 @@ def build_data_no_label(solid,edge_fn,*args,**kwargs):
                     continue
                 index=mapper.oriented_edge_index(edge)
 
-                # if not edge.has_curve():
-                #     raise RuntimeError("No curve found for edge")
                 connected_faces = list(solid.faces_from_edge(edge))
                 if len(connected_faces) < 2:
                     pass
                 elif len(connected_faces) == 2:
                     left_face, right_face = find_left_and_right_faces(edge,connected_faces)
                     if left_face is None or right_face is None:
-                        # continue
                         raise RuntimeError("Expected a manifold, an edge must be incident on one/two faces")
                 else:
                     raise RuntimeError("Expected a manifold, an edge must be incident on one/two faces")
@@ -189,7 +147,6 @@ def build_data_no_label(solid,edge_fn,*args,**kwargs):
 
     edges_feature=[]
     for face in solid.faces():
-        # face_index=mapper.face_index(face)
         face_index=face_mapper(face)
 
         wires=[]
@@ -237,7 +194,6 @@ def build_data_no_label(solid,edge_fn,*args,**kwargs):
 
     return {
             'edge':edges_feature,
-            # 'face':face_feat,
             'edge_index':wire_edges,
             'wire_index':faces_wire,
             'adj_face_index':adj_faces_indices,
@@ -296,10 +252,6 @@ def process_one_file(arguments):
     output_path_ = pathlib.Path(args.output)
 
     output_path=str(output_path_.joinpath(fn_stem + ".bin"))
-    # if os.path.exists(output_path):
-    #     print(output_path," file exists")
-    #     return
-
     compound, shape_att = Compound.load_step_with_attributes(fn)
     try:
         if args.no_label:
@@ -316,11 +268,9 @@ def process_one_file(arguments):
             return
         else:
             solid=next(compound.solids())
-            # solid = load_step(fn)[0]  # Assume there's one solid per file
             face_data = build_data(
                 solid,shape_att, args.curv_u_samples, args.surf_u_samples, args.surf_v_samples
             )
-        # dgl.data.utils.save_graphs(str(output_path.joinpath(fn_stem + ".bin")), [graph])
     except StopIteration:
         print("No solid found in file:", fn)
         return
@@ -350,8 +300,6 @@ def process(args):
     if not output_path.exists():
         output_path.mkdir(parents=True, exist_ok=True)
     step_files = list(input_path.glob("*.st*p"))
-    # for fn in tqdm(step_files):
-    #     process_one_file((fn, args))
     pool = Pool(processes=args.num_processes, initializer=initializer)
     try:
         results = list(tqdm(pool.imap(process_one_file, zip(step_files, repeat(args))), total=len(step_files)))
