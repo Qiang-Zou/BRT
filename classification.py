@@ -1,7 +1,6 @@
 import argparse
 import pathlib
 import time
-
 from pytorch_lightning import Trainer
 from pytorch_lightning.callbacks import ModelCheckpoint
 from pytorch_lightning.loggers import TensorBoardLogger
@@ -11,9 +10,6 @@ from models.brt_classfication import ClassificationPL as BRTClassification
 import datasets
 
 import torch
-
-# import os
-# os.environ['CUDA_LAUNCH_BLOCKING'] = "1"
 
 parser = argparse.ArgumentParser(
     "Parameterized Surface Reconstruction from Bezier Patches")
@@ -56,7 +52,6 @@ parser.add_argument(
     help="Experiment name (used to create folder inside ./results/ to save logs and checkpoints)",
 )
 
-# parser = Trainer.add_argparse_args(parser)
 args = parser.parse_args()
 
 experiment_name = args.experiment_name
