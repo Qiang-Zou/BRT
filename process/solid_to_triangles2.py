@@ -5,9 +5,6 @@ import pathlib
 from multiprocessing.pool import Pool
 from itertools import repeat
 import signal
-import dgl.data
-from scipy.optimize import minimize
-import dgl
 import torch
 import numpy as np
 from occwl.graph import face_adjacency
@@ -19,7 +16,7 @@ from tqdm import tqdm
 from OCC.Core.GeomConvert\
     import GeomConvert_BSplineSurfaceToBezierSurface as Converter, geomconvert
 from OCC.Core.GeomConvert import GeomConvert_BSplineCurveToBezierCurve
-from OCC.Core.Geom import Geom_BSplineSurface,Geom_BSplineCurve
+from OCC.Core.Geom import Geom_BSplineSurface
 from OCC.Core.TColStd import TColStd_Array1OfReal as ArrReal
 from OCC.Core.TopLoc import TopLoc_Location
 from OCC.Core.BRepTools import breptools
