@@ -222,43 +222,6 @@ def convertFaceToTriangles(face:Face,num_sample_points=256,normalize=True,trim=T
 #####################################################################################
 
 
-
-def convertEdgeToBeziers(edge:Edge,degree=3,max_knots=100):
-    crvdata=BRep_Tool.Curve(edge.topods_shape())
-    if len(crvdata)==2:
-        return None,None,None,None,None
-    else:
-        crv,first,last=crvdata
-
-    vertex_0,vertex_1=geom_utils.gp_to_numpy(crv.Value(first)),geom_utils.gp_to_numpy(crv.Value(last))
-    crv=Geom_TrimmedCurve(crv,first,last)
-    crv=geomconvert.CurveToBSplineCurve(crv)
-
-    n_uknots=crv.NbKnots()
-    if n_uknots<=1 or n_uknots>max_knots:
-        raise RuntimeError('bad nurbs')
-
-    deg=crv.Degree()
-    torch._assert(deg<=degree,f'degree {deg} too high')
-    if deg<degree:
-        crv.IncreaseDegree(degree)
-    doKnotInsertionCurve(crv,num_max_knots=max_knots)
-    converter=GeomConvert_BSplineCurveToBezierCurve(crv)
-    NbArcs=converter.NbArcs()
-    control_points=np.zeros((NbArcs,degree+1,4),dtype=np.float32)
-    sampled_points=np.zeros((NbArcs,10,3),dtype=np.float32)
-    sampled_normals=np.zeros((NbArcs,10,3),dtype=np.float32)
-    for i in range(NbArcs):
-        arc=converter.Arc(i+1)
-        for j in range(degree+1):
-            p=arc.Pole(j+1)
-            W=arc.Weight(j+1)
-            control_points[i,j]=p.X(),p.Y(),p.Z(),W
-        sampled_points[i]=ugrid(crv,(crv.Knot(i+1),crv.Knot(i+2)),method='point')
-        sampled_normals[i]=ugrid(crv,(crv.Knot(i+1),crv.Knot(i+2)),method='tangent')
-
-    return control_points,vertex_0,vertex_1,sampled_points,sampled_normals
-
 def convertEdgeToBeziers2(edge:Edge,degree=10,max_knots=100,sampling=True):
     crvdata=BRep_Tool.Curve(edge.topods_shape())
     if len(crvdata)==2:
@@ -605,28 +568,6 @@ def doKnotInsertion(spline_surf:Geom_BSplineSurface,num_max_knots=3):
         for knot in insert_list:
             spline_surf.InsertVKnot(knot, 1, 1e-6)
 
-def doKnotInsertionCurve(spline_crv:Geom_BSplineCurve,num_max_knots=100):
-    n_uknots=spline_crv.NbKnots()
-
-    if n_uknots<=1 or n_uknots>num_max_knots:
-        raise RuntimeError('bad nurbs')
-
-    if n_uknots<num_max_knots:
-        insert_num = num_max_knots-n_uknots
-
-        insert_list = np.linspace(spline_crv.Knot(
-            1), spline_crv.Knot(n_uknots), insert_num+2)
-        insert_list = insert_list[1:-1]
-        for knot in insert_list:
-            spline_crv.InsertKnot(knot, 1, 1e-6)
-
-        n_knots=spline_crv.NbKnots()
-        while n_knots<num_max_knots:
-            indices = np.random.choice(range(1, n_knots), size=min(n_knots-1,num_max_knots-n_knots), replace=False)
-            for index in indices:
-                index=int(index)
-                spline_crv.InsertKnot((spline_crv.Knot(index)+spline_crv.Knot(index+1))/2, 1, 1e-6)
-            n_knots=spline_crv.NbKnots()
 
 def process_main(input_path,output_path,method=10,dataset='tmcad',target='brt',process_num=30):
 
