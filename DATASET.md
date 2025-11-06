@@ -1,4 +1,4 @@
-# 📦 Dataset Overview
+# Dataset Overview
 
 This document introduces the TMCAD dataset used in this project. TMCAD stands for **truly mechanical CAD dataset**.
 
@@ -7,7 +7,7 @@ This document introduces the TMCAD dataset used in this project. TMCAD stands fo
 
 ---
 
-## 📘 Dataset Description
+## Dataset Description
 
 TMCAD v2 contains **9,799 CAD models** spanning **10 standardized mechanical part categories**.  
 All models are provided in **STEP (.stp)** format with standardized naming conventions.
@@ -83,11 +83,10 @@ Each folder corresponds to a **part category** and contains 3D CAD files in `.st
 
 TMCAD v2 can be directly used for a wide range of 3D geometric learning tasks:
 
-- 🧭 **3D Classification** — Train networks like PointNet, DGCNN, Point Transformer  
-- 🔍 **Shape Retrieval** — Evaluate similarity-based methods on mechanical components  
-- 🧩 **Few-shot / Meta-learning** — Build n-way k-shot episodic datasets  
-- 🧠 **Representation Learning** — Pre-train or fine-tune on CAD-level geometry  
-- ⚙️ **Cross-modal Tasks** — Combine with textual or image data for multi-modal learning  
+- **3D Classification** — Train networks like PointNet, DGCNN, Point Transformer  
+- **Shape Retrieval** — Evaluate similarity-based methods on mechanical components  
+- **Cross-modal Tasks** — Combine with textual or image data for multi-modal learning  
+- ...
 
 
 ## License
