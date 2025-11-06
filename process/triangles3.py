@@ -129,7 +129,6 @@ class Rectangle:
         return min_x,max_x,min_y,max_y
     def contains(self,point:List[float],boundary=True,tol=1e-4)->bool:
         min_x,max_x,min_y,max_y=self.getBoundary()
-        # return min_x<=point[0]<=max_x and min_y<=point[1]<=max_y
         if boundary:
             return point[0]-min_x>=-tol and max_x-point[0]>=-tol and point[1]-min_y>=-tol and max_y-point[1]>=-tol
         return point[0]-min_x>tol and max_x-point[0]>tol and point[1]-min_y>tol and max_y-point[1]>tol
@@ -170,7 +169,6 @@ class Intersector:
                 points.extend(intersection[0])
                 params.extend(intersection[1])
 
-        # logging.debug("intersection points:"+str(len(points)))
         if len(points)>0:
             # sort params and points by params
             sorted_params_points=sorted(zip(params,points),key=lambda x:x[0])
@@ -213,17 +211,9 @@ class Intersector:
                     p0=geom_utils.gp_to_numpy(curve.Value(interval[0]))
                     p1=geom_utils.gp_to_numpy(curve.Value(interval[1]))
 
-                    # no intersection
-                    # if np.linalg.norm(p0-points[0])<1e-6 or np.linalg.norm(p1-points[0])<1e-6:
-                    #     return Intersection(0,[],[],curve,interval)
-
-                    # logging.debug(str(p0))
-                    # logging.debug(str(p1))
-
                     points.extend(tangent_points)
                     params.extend(tangent_points_param)
 
-                    # tol=9e-3
                     if rect.onBoundary(p0,tol):
                         repeat=False
                         for p in points:
@@ -247,8 +237,6 @@ class Intersector:
                         l0=rect.contains(p0,boundary=False)
                         l1=rect.contains(p1,boundary=False)
                         if (not l0 and not l1) or (l0 and l1):
-                        # if (not l0 and not l1):
-                            # logging.debug(f"with 1 intersection point, but goes through the rectangle,{l0},{l1}")
                             return Intersection(0,[],[],curve,interval)
                     else:
                         logging.debug("collect close intersection point ignored before")
@@ -266,7 +254,6 @@ class Intersector:
         params=[]
         for i in range(intersector.NbPoints()):
             point=intersector.Point(i+1)
-            # logging.debug("point:"+str(geom_utils.gp_to_numpy(point)))
             projection=Geom2dAPI_ProjectPointOnCurve(point,curve,interval[0],interval[1])
             if projection.NbPoints()==0 or projection.LowerDistance()>tol:
                 continue
@@ -275,7 +262,6 @@ class Intersector:
             if not rect.contains(point,tol=tol):
                 continue
 
-            # logging.debug("point accepted")
             points.append(point)
             params.append(projection.LowerDistanceParameter())
         return points,params
@@ -384,13 +370,7 @@ def make_rect(face:Face,rect:Rectangle,nurbs_surface,loc):
         logging.error("failed to convert surface to bezier surface: no patches")
         rect.discarded=True
         return
-    # assert uNumPatches==1 and vNumPatches==1
 
-    # uKnots = ArrReal(1, uNumPatches+1)
-    # vKnots = ArrReal(1, vNumPatches+1)
-
-    # converter.UKnots(uKnots)
-    # converter.VKnots(vKnots)
     tris=[]
 
     for (i,j) in np.ndindex((uNumPatches,vNumPatches)):
@@ -434,7 +414,7 @@ def CollectTris(rectangle:Rectangle,edgeManager:TraingleEdgeManager,pointsManage
 
 def CollectTrisInLine(rectangle:Rectangle,tris_lst:List[Triangle],face,surface,loc):
     if rectangle.discarded:
-        # tris_lst.append(None)
+
         if rectangle.area()>1e-5:
             tris=make_rect(face,rectangle,surface,loc)
             for tri in tris:
@@ -447,17 +427,12 @@ def CollectTrisInLine(rectangle:Rectangle,tris_lst:List[Triangle],face,surface,l
                     tris=make_rect(face,rectangle,surface,loc)
                     for tri in tris:
                         tris_lst.append((None,tri))
-                # rectangle.discarded=True
-                # tris_lst.append(None)
+
                 return
-                # raise ValueError("triangle is not Triangle")
+
 
             tris_lst.append(tri)
     else:
-        # order=[0,1,3,2]
-        # for idx in order:
-        #     sub_rect=rectangle.sub_rects[idx]
-        #     CollectTrisInLine(sub_rect,tris_lst)
         for sub_rect in rectangle.sub_rects:
             CollectTrisInLine(sub_rect,tris_lst,face,surface,loc)
 
@@ -471,10 +446,7 @@ def HandleLeaves(face:Face,rectangle:Rectangle,surface,loc):
             HandleLeaves(face,sub_rect,surface,loc)
 
 def HandleLeavesSimple(face:Face,rectangle:Rectangle,surface,loc):
-    # if rectangle.discarded:
-    #     return
     if rectangle.is_leaf:
-        # splitBoundaryRectangle(face,rectangle,surface,loc)
         rectangle.leaf_info=make_rect(face,rectangle,surface,loc)
     else:
         for sub_rect in rectangle.sub_rects:
@@ -485,8 +457,7 @@ def splitBoundaryRectangle(face:Face,rectangle:Rectangle,surface,loc,tol=9e-3):
     if intersections is None or len(intersections)==0:
         rectangle.leaf_info=make_rect(face,rectangle,surface,loc)
         return
-    # logging.debug("splitting boundary rectangle")
-    # logging.debug("rectangle points:{}".format(rectangle.points))
+
     intersection=intersections[0]
     if type(intersection)==Triangle:
         # spliting has done
@@ -496,15 +467,13 @@ def splitBoundaryRectangle(face:Face,rectangle:Rectangle,surface,loc,tol=9e-3):
             raise ValueError("too many intersections!")
         else:
             logging.warning("too many intersections!")
-            # rectangle.leaf_info=make_rect(face,rectangle,surface,loc)
             return
     if intersection.NbPoints!=2:
         if report_error():
             raise ValueError("intersection points are not 2, but {}".format(intersection.NbPoints))
         else:
             logging.warning("intersection points are not 2, but {}".format(intersection.NbPoints))
-            # rectangle.leaf_info=make_rect(face,rectangle,surface,loc)
-            # return
+
             if intersection.NbPoints==1:
                 rectangle.leaf_info=make_rect(face,rectangle,surface,loc)
                 return
@@ -526,9 +495,7 @@ def splitBoundaryRectangle(face:Face,rectangle:Rectangle,surface,loc,tol=9e-3):
             point_on_line_21+=(1<<idx)
 
     status=[point_on_line_01,point_on_line_13,point_on_line_32,point_on_line_21]
-    # logging.debug("two points:{},{}".format(intersection.Points[0],intersection.Points[1]))
-    # logging.debug("status:{}".format(status))
-    # print(status)
+
 
     hit_flag=0
     for item in status:
@@ -536,17 +503,12 @@ def splitBoundaryRectangle(face:Face,rectangle:Rectangle,surface,loc,tol=9e-3):
         if item==0x3:
             logging.warning("intersection points are on the same line")
             rectangle.leaf_info=make_rect(face,rectangle,surface,loc)
-            # rectangle.leaf_info=make_rect(face,rectangle,surface,loc)
-            # raise NotImplementedError("intersection points are on the same line")
             return
     if hit_flag!=0x03:
         logging.warning("not enough intersection points are on the boundary")
-        # rectangle.leaf_info=make_rect(face,rectangle,surface,loc)
-        # raise NotImplementedError("intersection points are on the same line")
         return
     clockwise_index=[0,1,3,2]
-    # next_index=lambda x:(x+1)%4
-    turned=False
+
     try:
         for idx in range(4):
             item=status[idx]
@@ -556,8 +518,7 @@ def splitBoundaryRectangle(face:Face,rectangle:Rectangle,surface,loc,tol=9e-3):
                 reverse=(item==0x02)
                 if status[(idx+1)%4]>0:
                     if item!=status[(idx+1)%4]:
-                        # intersection on ajacent edges
-
+                        # intersection on adjacent edges
                         end_index=clockwise_index[(idx+1)%4]
                         end_point=rectangle.points[end_index]
                         vis=face.visibility_status(end_point)
@@ -590,7 +551,6 @@ def splitBoundaryRectangle(face:Face,rectangle:Rectangle,surface,loc,tol=9e-3):
                                             interval=intersection.Parameters[::-1] if reverse else intersection.Parameters,
                                             end_points=(intersection.Points[reverse],rectangle.points[end_index],intersection.Points[not reverse]))
 
-                        # logging.debug("intersection on ajacent edges")
                         break
                     else:
                         corner_point=True
@@ -601,11 +561,8 @@ def splitBoundaryRectangle(face:Face,rectangle:Rectangle,surface,loc,tol=9e-3):
                     end_index=clockwise_index[(idx+1)%4]
                     end_point=rectangle.points[end_index]
                     vis=face.visibility_status(end_point)
-                    # if not turned and (vis==1 or vis==3):
-                    #     turned=True
-                    #     continue
+
                     if vis==1 or vis==3:
-                        turned=True
                         continue
                     else:
                         other_index=clockwise_index[(idx+2)%4]
@@ -653,10 +610,7 @@ def splitBoundaryRectangle(face:Face,rectangle:Rectangle,surface,loc,tol=9e-3):
     else:
         if type(rectangle.leaf_info[0])!=Triangle:
             logging.warning("no triangles are generated, status:{}".format(status))
-            # rectangle.leaf_info=make_rect(face,rectangle,surface,loc)
-            # rectangle.discarded=True
 
-        
 
 def pointOnLine(p1,p2,point,tol=9e-3):
     return (np.linalg.norm(p2-point)<tol or np.linalg.norm(p1-point)<tol) or np.dot(p2-p1,point-p1)>=0 and distance_point_to_line(p1,p2,point)<tol
@@ -694,10 +648,8 @@ def report_error():
 def splitRectangle(face:Face,rectangle,curves,max_split=7,tol=0.7,distance_tol=1e-4,split_all=False):
     intersector=Intersector()
     stack=[rectangle]
-    # logging.debug("splitting rectangle")
-    # logging.debug("rectangle region:{}".format(rectangle.points))
+
     while len(stack)>0:
-        # logging.debug("stack length:{}".format(len(stack)))
         rect:Rectangle=stack.pop()
         
         if rect.discarded:
@@ -712,20 +664,12 @@ def splitRectangle(face:Face,rectangle,curves,max_split=7,tol=0.7,distance_tol=1
             if intersection.NbPoints>0:
                 intersections.append(intersection)
 
-            # logging.debug("intersection points:{}".format(intersection.NbPoints))
-            # logging.debug("intersection status:{}".format(intersection.TwoPointOnSameLine))
-            # logging.debug("curve in rect:{}".format(curveInRect(curve,interval,rect,intersection,tol=distance_tol)))
-            # if intersection.NbPoints==2:
-            #     logging.debug("chord error check:{}".format(chordErrorCheckInRect(intersection,rect,tol=tol)))
-
             if curveInRect(curve,interval,rect,intersection,tol=distance_tol) or\
                       intersection.NbPoints>2 or\
                       intersection.TwoPointOnSameLine or\
                       not chordErrorCheckInRect(intersection,rect,tol=tol):
                 split_flag=True
                 break
-
-        # logging.debug("intersection number:{}".format(len(intersections)))
 
         if len(intersections)>1:
             split_flag=True
