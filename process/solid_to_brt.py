@@ -304,31 +304,6 @@ def process(args):
         pool.join()
     print(f"Processed {len(results)} files.")
 
-def center_and_scale_uvgrid(inp , return_center_scale=False):
-    bbox = bounding_box_uvgrid(inp)
-    diag = bbox[1] - bbox[0]
-    scale = 2.0 / max(diag[0], diag[1], diag[2])
-    center = 0.5 * (bbox[0] + bbox[1])
-    inp[..., :3] -= center
-    inp[..., :3] *= scale
-    if return_center_scale:
-        return inp, center, scale
-    return inp
-
-def bounding_box_uvgrid(inp):
-    pts = inp[..., :3].reshape((-1, 3))
-    mask = inp[..., 6].reshape(-1)
-    point_indices_inside_faces = mask == 1
-    pts = pts[point_indices_inside_faces, :]
-    return bounding_box_pointcloud(pts)
-
-def bounding_box_pointcloud(pts: torch.Tensor):
-    x = pts[:, 0]
-    y = pts[:, 1]
-    z = pts[:, 2]
-    box = [[x.min(), y.min(), z.min()], [x.max(), y.max(), z.max()]]
-    return np.array(box)
-
 
 def main(input_args=None):
     parser = argparse.ArgumentParser(
