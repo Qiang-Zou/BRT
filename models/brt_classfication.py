@@ -18,9 +18,6 @@ class BRTClassification(nn.Module):
         self.max_face_length = max_face_length
 
     def forward(self, x):
-        # edges,edges_padding_mask,faces,faces_vis_mask,faces_padding_mask,
-        #                 edge_index,wire_index,face_index,edge_index_length,wire_index_length,adj_face_index_length,
-        #                 num_faces_per_solid
         if self.masking_rate is not None:
             reserved_num = int(self.max_face_length * self.masking_rate)
             face_emb, mask = self.model(**x, reserved_num=reserved_num)
@@ -78,8 +75,6 @@ class ClassificationPL(pl.LightningModule):
 
         labels = batch["label"]
 
-        # print('type:',inputs['edge_index_length'].device)
-        # self.model.masking_rate=self.masking_rate
         logits = self.model(inputs)
         loss = F.cross_entropy(logits, labels, reduction="mean")
         self.log("train_loss", loss, on_step=False, on_epoch=True, sync_dist=True, batch_size=self.getBatchSize(batch))
@@ -107,7 +102,6 @@ class ClassificationPL(pl.LightningModule):
 
         labels = batch["label"]
 
-        # self.model.masking_rate=None
         logits = self.model(inputs)
         loss = F.cross_entropy(logits, labels, reduction="mean")
         self.log("val_loss", loss, on_step=False, on_epoch=True, sync_dist=True, batch_size=self.getBatchSize(batch))
@@ -135,7 +129,6 @@ class ClassificationPL(pl.LightningModule):
 
         labels = batch["label"]
 
-        # self.model.masking_rate=None
         logits = self.model(inputs)
         loss = F.cross_entropy(logits, labels, reduction="mean")
         self.log("test_loss", loss, on_step=False, on_epoch=True, sync_dist=True, batch_size=self.getBatchSize(batch))
