@@ -74,15 +74,10 @@ class Rectangular2TriangularBezier:
             control_pts=np.array(control_pts)
             control_pts[...,:-1]*=control_pts[...,[-1]]
 
-            # print(control_pts.shape)
-
             deg,nodes1=self.convert_(control_pts)
             deg,nodes2=self.convert_(control_pts,invert=True)
             nodes1[...,:-1]/=nodes1[...,[-1]]
             nodes2[...,:-1]/=nodes2[...,[-1]]
-
-            # print(nodes1.shape)
-            # exit(0)
 
         return deg,nodes1,nodes2
 
