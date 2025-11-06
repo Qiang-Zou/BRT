@@ -2,7 +2,6 @@ import argparse
 import pathlib
 import pickle
 import traceback
-import numpy as np
 import torch
 from occwl.compound import Compound
 from tqdm import tqdm
