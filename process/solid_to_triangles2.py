@@ -11,35 +11,26 @@ import dgl
 import torch
 import numpy as np
 from occwl.graph import face_adjacency
-# from matplotlib.patches import FancyArrowPatch
 from OCC.Core.BRep import BRep_Tool
 from occwl.face import Face
 from occwl.edge import Edge
 from occwl.geometry import geom_utils
 from tqdm import tqdm
-
-# from OCC.Core.BRep import BRep_Tool_Surface
 from OCC.Core.GeomConvert\
     import GeomConvert_BSplineSurfaceToBezierSurface as Converter, geomconvert
 from OCC.Core.GeomConvert import GeomConvert_BSplineCurveToBezierCurve
-
 from OCC.Core.Geom import Geom_BSplineSurface,Geom_BSplineCurve
-
 from OCC.Core.TColStd import TColStd_Array1OfReal as ArrReal
 from OCC.Core.TopLoc import TopLoc_Location
-# from OCC.Core.BRepTools import breptools_UVBounds
 from OCC.Core.BRepTools import breptools
 from OCC.Core.Geom import Geom_RectangularTrimmedSurface,Geom_TrimmedCurve
 from occwl.compound import Compound
-# import PythonCDT as cdt
 from utils.triangle import Triangle
 from utils.sampling import randn_uvgrid,ugrid
 from triangles3 import Rectangle,splitRectangle,HandleLeaves,CollectTrisInLine,make_rect
 import triangles3
 from solid_to_brt import build_data as build_BRT, build_data_no_label as build_BRT_no_label
 import uuid
-
-import numpy as np
 from numpy.linalg import norm
 
 def rotation_matrix_to_z_axis(v):
@@ -105,14 +96,6 @@ def convertFaceToTriangles(face:Face,num_sample_points=256,normalize=True,trim=T
     if uNumPatches==0 or vNumPatches==0:
         raise RuntimeError('no patches')
 
-    # if uNumPatches<2 and vNumPatches<2:
-    #     raise RuntimeError('too less patch')
-
-    # if may_be_plain_face(face):
-    #     # raise RuntimeError('plain face not needed')
-    #     raise PlainFaceError('plain face not needed')
-
-
     uKnots = ArrReal(1, uNumPatches+1)
     vKnots = ArrReal(1, vNumPatches+1)
 
@@ -125,16 +108,6 @@ def convertFaceToTriangles(face:Face,num_sample_points=256,normalize=True,trim=T
             rect=Rectangle()
             rect.points=[(uKnots[u],vKnots[v]),(uKnots[u+1],vKnots[v]),(uKnots[u],vKnots[v+1]),(uKnots[u+1],vKnots[v+1])]
             rects.append(rect)
-        # if u%2==0:
-        #     for v in range(vNumPatches):
-        #         rect=Rectangle()
-        #         rect.points=[(uKnots[u],vKnots[v]),(uKnots[u+1],vKnots[v]),(uKnots[u],vKnots[v+1]),(uKnots[u+1],vKnots[v+1])]
-        #         rects.append(rect)
-        # else:
-        #     for v in range(vNumPatches-1,-1,-1):
-        #         rect=Rectangle()
-        #         rect.points=[(uKnots[u],vKnots[v]),(uKnots[u+1],vKnots[v]),(uKnots[u],vKnots[v+1]),(uKnots[u+1],vKnots[v+1])]
-        #         rects.append(rect)
 
     if trim:
         crvs=[]
@@ -160,8 +133,6 @@ def convertFaceToTriangles(face:Face,num_sample_points=256,normalize=True,trim=T
         x=(tri.v1[0]+tri.v2[0]+tri.v3[0])/3
         y=(tri.v1[1]+tri.v2[1]+tri.v3[1])/3
         return face.normal([x,y])
-    # if len(tris)>1000:
-    #     raise RuntimeError('too many triangles')
 
     nodes=[tri.control_points if type(tri) is not tuple else tri[1].control_points for tri  in tris]
     nodes=np.stack(nodes)
@@ -198,14 +169,7 @@ def convertFaceToTriangles(face:Face,num_sample_points=256,normalize=True,trim=T
             new_feature[6]=scale
         tri_normals=new_feature
 
-    # nodes=[tri.control_points   for tri  in tris if type(tri) is not tuple]
-    # nodes=np.stack(nodes)
-
-    # mask=[True for tri in tris if type(tri) is not tuple]
-    # in_mask=np.array(mask)
-
     # sample some points as label
-
     points, uv_values = randn_uvgrid(
         face, method="point",num=num_sample_points,
         bounds=[uKnots[0], uKnots[uNumPatches], vKnots[0], vKnots[vNumPatches]]
@@ -260,7 +224,6 @@ def convertFaceToTriangles(face:Face,num_sample_points=256,normalize=True,trim=T
 
 
 def convertEdgeToBeziers(edge:Edge,degree=3,max_knots=100):
-    # crv=edge.curve()
     crvdata=BRep_Tool.Curve(edge.topods_shape())
     if len(crvdata)==2:
         return None,None,None,None,None
@@ -297,11 +260,9 @@ def convertEdgeToBeziers(edge:Edge,degree=3,max_knots=100):
     return control_points,vertex_0,vertex_1,sampled_points,sampled_normals
 
 def convertEdgeToBeziers2(edge:Edge,degree=10,max_knots=100,sampling=True):
-    # crv,first,last=BRep_Tool.Curve(edge.topods_shape())
     crvdata=BRep_Tool.Curve(edge.topods_shape())
     if len(crvdata)==2:
         return None
-        # return None,None,None,None,None
     else:
         crv,first,last=crvdata
     vertex_0,vertex_1=geom_utils.gp_to_numpy(crv.Value(first)),geom_utils.gp_to_numpy(crv.Value(last))
@@ -309,8 +270,6 @@ def convertEdgeToBeziers2(edge:Edge,degree=10,max_knots=100,sampling=True):
     crv=geomconvert.CurveToBSplineCurve(crv)
 
     n_uknots=crv.NbKnots()
-    # if n_uknots<=1 or n_uknots>max_knots:
-        # raise RuntimeError('bad nurbs')
     if n_uknots<=1:
         raise RuntimeError('bad nurbs')
 
@@ -318,12 +277,10 @@ def convertEdgeToBeziers2(edge:Edge,degree=10,max_knots=100,sampling=True):
     torch._assert(deg<=degree,f'degree {deg} too high')
     if deg<degree:
         crv.IncreaseDegree(degree)
-    # doKnotInsertionCurve(crv,num_max_knots=max_knots)
     converter=GeomConvert_BSplineCurveToBezierCurve(crv)
     NbArcs=converter.NbArcs()
     control_points=np.zeros((NbArcs,degree+1,4),dtype=np.float32)
-    # sampled_points=np.zeros((100,3),dtype=np.float32)
-    # sampled_normals=np.zeros((100,3),dtype=np.float32)
+
     for i in range(NbArcs):
         arc=converter.Arc(i+1)
         for j in range(degree+1):
@@ -341,7 +298,6 @@ def convertEdgeToBeziers2(edge:Edge,degree=10,max_knots=100,sampling=True):
     vertex_1=sampled_points[-1]
     if np.linalg.norm(vertex_0-control_points[0,0,:3])>1e-3 or np.linalg.norm(vertex_1-control_points[-1,-1,:3])>1e-3:
         logging.info('bad vertex: '+str(vertex_0)+' '+str(vertex_1)+' '+str(control_points))
-        # raise RuntimeError('bad vertex: '+str(vertex_0)+' '+str(vertex_1)+' '+str(control_points))
 
     return control_points,vertex_0,vertex_1,sampled_points,sampled_normals,us
 
@@ -353,8 +309,6 @@ def getNURBS(face: Face):
     surface_brep = BRep_Tool().Surface(face.topods_shape(), loc)
     bound_box = breptools().UVBounds(face.topods_shape())
 
-    # # try:
-
     # determine the face bound
     face_bound = surface_brep.Bounds()
     true_bound = [max(bound_box[0], face_bound[0]),
@@ -364,19 +318,15 @@ def getNURBS(face: Face):
 
     bound_flag = True
     if bound_box[1] <= face_bound[0]:
-        # true_bound[0] = bound_box[0]
         bound_flag = False
 
     if bound_box[0] >= face_bound[1]:
-        # true_bound[1] = bound_box[1]
         bound_flag = False
 
     if bound_box[3] <= face_bound[2]:
-        # true_bound[2] = bound_box[2]
         bound_flag = False
 
     if bound_box[2] >= face_bound[3]:
-        # true_bound[3] = bound_box[3]
         bound_flag = False
 
     if bound_flag:
@@ -384,9 +334,6 @@ def getNURBS(face: Face):
             surface_brep, *true_bound)
     else:
         surface_box = surface_brep
-    # surface_box = Geom_RectangularTrimmedSurface(
-    #     surface_brep, *bound_box,USense=True,VSense=True)
-    # surface_box = surface_brep
 
     surface = geomconvert.SurfaceToBSplineSurface(surface_box)
     return surface, loc
@@ -558,7 +505,6 @@ def build_triangles(solid,
     normals_lst=torch.stack(normals_lst)
     scale_lst = torch.stack(scale_lst)
     vis_mask_lst = torch.stack(vis_mask_lst)
-    # tri_normals_list=torch.stack(tri_normals_list)
 
     torch.save(
         {'nodes':nodes_lst,'in_mask':in_mask_lst,'tri_normals':tri_normals_list,'points': points_lst, 'uvs': uv_values_lst, 'vis':vis_mask_lst,'scale': scale_lst,'normal':normals_lst},str(save_path/target),)
@@ -602,12 +548,7 @@ def process_one_file(arguments):
 
     target_file = output_path/f'{fn_stem}.bin'
 
-    # if not args.all:
-    #     if target_file.exists():
-    #         # print(f'file {target_file} already exists')
-    #         return False
     if target_file.exists():
-        # print(f'file {target_file} already exists')
         return False
 
     try:
@@ -616,14 +557,8 @@ def process_one_file(arguments):
         else:
             compound,shape_att= Compound.load_step_with_attributes(fn)
             args.shape_att = shape_att
-        # solid = next(compound.solids())
 
-    # except StopIteration:
-    #     logging.exception(f"No solid found in file {fn.stem}")
-    #     return False
-    # except (AssertionError,RuntimeError):
     except Exception:
-        # logException(f'Read Step Error in {fn.stem}', e)
         logging.exception(f'Read Step Error in {fn}')
         return False
 
@@ -635,10 +570,7 @@ def process_one_file(arguments):
                 solid, output_path, fn_stem,**vars(args)
             )
             break
-            # if idx>0:
-            #     logging.info(f'file {fn} has multiple solids')
-            #     break
-        # return True
+
     except ValueError:
         logging.exception(f'Found Value Error in {fn.stem}')
     except Exception:
