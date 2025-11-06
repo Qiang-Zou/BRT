@@ -2,11 +2,9 @@
 import argparse
 import pathlib
 import time
-
 from pytorch_lightning import Trainer
 from pytorch_lightning.callbacks import ModelCheckpoint
 from pytorch_lightning.loggers import TensorBoardLogger
-# from pytorch_lightning.utilities.seed import seed_everything
 from lightning.pytorch import seed_everything
 import datasets.brt_dataset
 from models.brt_segmentation import SegmentationPL as BRTSegmentation
