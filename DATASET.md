@@ -72,7 +72,7 @@ TMCAD_v2/
      ├── spring_0.stp
      ├── spring_1.stp
      └── ...
-
+```
 
 Each folder corresponds to a **part category** and contains 3D CAD files in `.stp` format.
 
@@ -94,6 +94,7 @@ The dataset is released under GPL-3.0 license.
 
 ## Citation
 If you use this dataset, please cite:
+```bash
 @article{zou2025bringing,
   title={Bringing attention to CAD: Boundary representation learning via transformer},
   author={Zou, Qiang and Zhu, Lizhen},
