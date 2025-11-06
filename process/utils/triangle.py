@@ -4,8 +4,7 @@ import numpy as np
 from typing import Optional,List
 import math
 
-def isClose(pt1,pt2,tol=1e-6):
-    return np.linalg.norm(pt1-pt2)<=tol
+
 class Triangle:
     def __init__(self,v1,v2,v3) -> None:
         self.v1=v1
@@ -21,65 +20,6 @@ class BoundaryEdge:
         self.crv=crv
         self.edge3d=edge3d
 
-class Rectangular2TriangularBezier:
-
-    def __init__(self) -> None:
-        pass
-
-    def convert_(self,control_pts,invert=False):
-        '''
-            control_pts: m x n array
-        '''
-        m,n,_=control_pts.shape
-        m-=1
-        n-=1
-        nodes=[]
-
-        degree=m+n
-        const1=1./binom(degree,n)
-
-        for s in range(degree,-1,-1):
-            for b in range(s+1):
-                a=s-b
-                v=[]
-                for j in range(a+1):
-                    const_aj=binom(a,j)
-
-                    item_sum=[]
-
-                    for k in range(max(0,b-m+j),min(b,n-a+j)+1):
-                        if invert:
-                            item=control_pts[m-j,n-k]*binom(b,k)*binom(m+n-a-b,m+k-j-b)
-                        else:
-                            item=control_pts[j,k]*binom(b,k)*binom(m+n-a-b,m+k-j-b)
-                        item_sum.append(item)
-
-                    item_sum=sum(item_sum)
-                    item_sum*=const_aj
-
-                    v.append(item_sum)
-                v=sum(v)
-                nodes.append(v)
-
-        nodes=np.stack(nodes)
-        nodes*=const1
-
-        return degree,nodes
-
-    def convert(self,control_pts,rational=False):
-        if not rational:
-            deg,nodes1=self.convert_(control_pts)
-            deg,nodes2=self.convert_(control_pts,invert=True)
-        else:
-            control_pts=np.array(control_pts)
-            control_pts[...,:-1]*=control_pts[...,[-1]]
-
-            deg,nodes1=self.convert_(control_pts)
-            deg,nodes2=self.convert_(control_pts,invert=True)
-            nodes1[...,:-1]/=nodes1[...,[-1]]
-            nodes2[...,:-1]/=nodes2[...,[-1]]
-
-        return deg,nodes1,nodes2
 
 class PointInfo:
     def __init__(self) -> None:
@@ -89,13 +29,6 @@ class PointInfo:
         self.param_on_curve=None
         self.belong_edges=[]
         self.belong_rectangle_indices=[] # [(i,j),...]
-
-class RectInfo:
-    def __init__(self) -> None:
-        self.end_points=None
-        self.isBroken=False
-        self.upper_triangle=None
-        self.lower_triangle=None
 
 
 class PointsManager:
