@@ -2,7 +2,7 @@ import os
 import json
 import argparse
 import random
-import glob
+
 
 def find_step_files(directory):
     """
