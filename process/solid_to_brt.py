@@ -332,14 +332,7 @@ def bounding_box_pointcloud(pts: torch.Tensor):
     z = pts[:, 2]
     box = [[x.min(), y.min(), z.min()], [x.max(), y.max(), z.max()]]
     return np.array(box)
-def center_and_scale(face,edge):
-    face, center, scale = center_and_scale_uvgrid(
-        face, return_center_scale=True
-    )
-    edge[...,:3] -= center
-    edge[...,:3] *= scale
 
-    return face,edge
 
 def main(input_args=None):
     parser = argparse.ArgumentParser(
