@@ -10,7 +10,6 @@ from torch.autograd import Variable
 from torch import Tensor
 
 from typing import Callable, Union, Optional
-# from models import pointnet as pn
 from dgl.nn.pytorch.glob import MaxPooling
 from dgl.nn.pytorch.conv import GINConv
 from dgl.nn.pytorch.conv import NNConv
@@ -122,10 +121,7 @@ class UVNetSurfaceEncoder_new(nn.Module):
         super().__init__()
         self.dmodel = hidden_dim
         self.bezier = BezierEncoderMLP(out_dim=self.dmodel, dim=in_channels)
-        # self.bezier = UVNetSurfaceEncoder(in_channels=in_channels,output_dims=self.dmodel)
         self.pos_encoder = PositionEmbeddingLearned(self.dmodel)
-        # self.tranformer = nn.Transformer(
-        #     d_model=output_dims, num_decoder_layers=0)
         self.transformer = MyTransformerEncoder(
             d_model=self.dmodel, dim_feedforward=128,
             num_encoder_layers=6,  # original 6
@@ -144,10 +140,7 @@ class UVNetSurfaceEncoder_new(nn.Module):
         # batch*len,dmodel
 
         x = self.pos_encoder(x, pos)
-
         x = x.view(batch, len, self.dmodel)
-
-        # x = self.transformer(src=x)
         x = self.transformer(src=x, src_key_padding_mask=mask)
         # batch,output_dims
 
@@ -170,8 +163,7 @@ class UVNetSurfaceEncoder2D(nn.Module):
         self.bezier = BezierEncoderMLP(out_dim=self.dmodel, dim=in_channels)
         self.pos = nn.Parameter(torch.empty(
             1, src_len+1, hidden_dim).normal_(std=0.02))
-        # self.tranformer = nn.Transformer(
-        #     d_model=output_dims, num_decoder_layers=0)
+
         self.transformer = MyTransformerEncoderSimple(
             d_model=self.dmodel, dim_feedforward=128,
             num_encoder_layers=6,  # original 6
@@ -239,10 +231,6 @@ class BezierEncoderSample(nn.Module):
 class BezierEncoderSimple(nn.Module):
     def __init__(self, out_dim=64, dim=5, patch_size=4):
         super().__init__()
-        # self.dim=3
-        # self.out_dim=out_dim
-        # self.encoder = UVNetSurfaceEncoder(
-        #     in_channels=dim, output_dims=out_dim)
         self.fc = _fc(dim*patch_size*patch_size, out_dim)
 
     def forward(self, x: torch.Tensor):
@@ -257,11 +245,6 @@ class BezierEncoderSimple(nn.Module):
 class BezierEncoderMLP(nn.Module):
     def __init__(self, out_dim=64, dim=5, patch_size=4, hidden_dim=256):
         super().__init__()
-        # self.dim=3
-        # self.out_dim=out_dim
-        # self.encoder = UVNetSurfaceEncoder(
-        #     in_channels=dim, output_dims=out_dim)
-        # self.fc = _fc(dim*patch_size*patch_size, out_dim)
         self.mlp = _MLP(num_layers=3, input_dim=patch_size *
                         patch_size*dim, hidden_dim=hidden_dim, output_dim=out_dim)
 
@@ -276,11 +259,6 @@ class BezierEncoderMLP(nn.Module):
 class BezierEncoderMLP2(nn.Module):
     def __init__(self, out_dim=64, dim=5, patch_size=4, hidden_dim=256):
         super().__init__()
-        # self.dim=3
-        # self.out_dim=out_dim
-        # self.encoder = UVNetSurfaceEncoder(
-        #     in_channels=dim, output_dims=out_dim)
-        # self.fc = _fc(dim*patch_size*patch_size, out_dim)
         self.mlp = _MLP(num_layers=3, input_dim=patch_size *
                         patch_size*dim, hidden_dim=hidden_dim, output_dim=out_dim)
         self.mlp2 = _MLP(num_layers=3, input_dim=out_dim, hidden_dim=hidden_dim, output_dim=out_dim)
@@ -297,27 +275,14 @@ class BezierEncoderMLP2(nn.Module):
 class BezierEncoderMLP_(nn.Module):
     def __init__(self, out_dim=64, input_dim=28*4,  hidden_dim=256):
         super().__init__()
-        # self.dim=3
-        # self.out_dim=out_dim
-        # self.encoder = UVNetSurfaceEncoder(
-        #     in_channels=dim, output_dims=out_dim)
-        # self.fc = _fc(dim*patch_size*patch_size, out_dim)
         self.mlp = _MLP(num_layers=3, input_dim=input_dim, hidden_dim=hidden_dim, output_dim=out_dim)
         self.mlp2 = _MLP(num_layers=3, input_dim=out_dim, hidden_dim=hidden_dim, output_dim=out_dim)
-        # self.mlp3 = _MLP(num_layers=3, input_dim=out_dim, hidden_dim=hidden_dim, output_dim=out_dim)
-        # self.mlp4 = _MLP(num_layers=3, input_dim=out_dim, hidden_dim=hidden_dim, output_dim=out_dim)
-        # for m in self.modules():
-        #     self.weights_init(m)
 
     def forward(self, x: torch.Tensor):
         # x: control pts in shape [batch,dim,h,w]
         # x: output: [batch, out_dim]
-
-        # x = torch.flatten(x, start_dim=1)
         x = self.mlp(x)
         x = x+self.mlp2(x)
-        # x = x+self.mlp3(x)
-        # x = x+self.mlp4(x)
         return x
 
     def weights_init(self, m):
@@ -676,10 +641,6 @@ class CoordinatesClassfier(nn.Module):
             hidden_dim, feature_dim, kernel_size=1)
 
         self.classifiers=nn.ModuleList([_NonLinearClassifier(input_dim=feature_dim,num_classes=num_classes,dropout=dropout) for _ in range(out_channels)])
-        # self.classifier1=_NonLinearClassifier(input_dim=feature_dim,num_classes=num_classes,dropout=dropout) 
-        # self.classifier2=_NonLinearClassifier(input_dim=feature_dim,num_classes=num_classes,dropout=dropout) 
-        # self.classifier3=_NonLinearClassifier(input_dim=feature_dim,num_classes=num_classes,dropout=dropout) 
-
         self.out_channels=out_channels
 
     def forward(self, uv: torch.Tensor, net_feature: torch.Tensor):
@@ -705,7 +666,6 @@ class CoordinatesClassfier(nn.Module):
         x = x.reshape(n*length,-1)
 
         vectors = [self.classifiers[i](x) for i in range(self.out_channels)]
-        # vectors = [getattr(self,f'classifier{i+1}')(x) for i in range(self.out_channels)]
 
         if len(vectors)==1:
             vectors= vectors[0]
