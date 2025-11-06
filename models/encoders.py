@@ -1,6 +1,7 @@
 """
-    encoders whose input is group of control points of bazier pieces
+encoders whose input is group of control points of bazier pieces
 """
+
 import torch
 import math
 from torch import nn
@@ -13,6 +14,7 @@ from typing import Callable, Union, Optional
 from dgl.nn.pytorch.glob import MaxPooling
 from dgl.nn.pytorch.conv import GINConv
 from dgl.nn.pytorch.conv import NNConv
+
 
 class UVNetCurveEncoder(nn.Module):
     def __init__(self, in_channels=6, output_dims=64):
@@ -54,6 +56,7 @@ class UVNetCurveEncoder(nn.Module):
         x = x.view(batch_size, -1)
         x = self.fc(x)
         return x
+
 
 class UVNetSurfaceEncoder(nn.Module):
     def __init__(
@@ -99,6 +102,8 @@ class UVNetSurfaceEncoder(nn.Module):
         x = x.view(batch_size, -1)
         x = self.fc(x)
         return x
+
+
 class UVNetSurfaceEncoder_new(nn.Module):
     def __init__(
         self,
@@ -123,9 +128,13 @@ class UVNetSurfaceEncoder_new(nn.Module):
         self.bezier = BezierEncoderMLP(out_dim=self.dmodel, dim=in_channels)
         self.pos_encoder = PositionEmbeddingLearned(self.dmodel)
         self.transformer = MyTransformerEncoder(
-            d_model=self.dmodel, dim_feedforward=128,
+            d_model=self.dmodel,
+            dim_feedforward=128,
             num_encoder_layers=6,  # original 6
-            output_dim=output_dim, dropout=0.3, nhead=4)
+            output_dim=output_dim,
+            dropout=0.3,
+            nhead=4,
+        )
 
     def forward(self, face, pos, mask, scale):
         # face in shape [batch,len,dim,h,w]
@@ -151,7 +160,7 @@ class UVNetSurfaceEncoder2D(nn.Module):
     def __init__(
         self,
         in_channels=5,
-        src_len=2*2,
+        src_len=2 * 2,
         hidden_dim=64,
         output_dim=64,
     ):
@@ -161,31 +170,34 @@ class UVNetSurfaceEncoder2D(nn.Module):
         super().__init__()
         self.dmodel = hidden_dim
         self.bezier = BezierEncoderMLP(out_dim=self.dmodel, dim=in_channels)
-        self.pos = nn.Parameter(torch.empty(
-            1, src_len+1, hidden_dim).normal_(std=0.02))
+        self.pos = nn.Parameter(torch.empty(1, src_len + 1, hidden_dim).normal_(std=0.02))
 
         self.transformer = MyTransformerEncoderSimple(
-            d_model=self.dmodel, dim_feedforward=128,
+            d_model=self.dmodel,
+            dim_feedforward=128,
             num_encoder_layers=6,  # original 6
-            output_dim=output_dim, dropout=0.3, nhead=4)
+            output_dim=output_dim,
+            dropout=0.3,
+            nhead=4,
+        )
 
-        self.class_token = nn.Parameter(torch.zeros(1, 1,hidden_dim))
-        self.src_len=src_len
+        self.class_token = nn.Parameter(torch.zeros(1, 1, hidden_dim))
+        self.src_len = src_len
 
     def forward(self, face, mask, scale):
         # face in shape [batch,len,dim,h,w]
         # mask in shape [batch,len]
         # scale in shape [batch]
 
-        if len(face.shape)==6:
-            batch, len1,len2, dim, h, w = face.shape
-            face=face.view(batch,-1,dim,h,w)
-        if len(mask.shape)==3:
-            batch,mlen1,mlen2=mask.shape
-            mask=mask.view(batch,-1)
-        
-        batch,length, dim, h, w = face.shape
-        torch._assert(self.src_len==length,'src_len not match')
+        if len(face.shape) == 6:
+            batch, len1, len2, dim, h, w = face.shape
+            face = face.view(batch, -1, dim, h, w)
+        if len(mask.shape) == 3:
+            batch, mlen1, mlen2 = mask.shape
+            mask = mask.view(batch, -1)
+
+        batch, length, dim, h, w = face.shape
+        torch._assert(self.src_len == length, "src_len not match")
 
         x = face.view(-1, dim, h, w)
 
@@ -194,18 +206,18 @@ class UVNetSurfaceEncoder2D(nn.Module):
 
         src = x.view(batch, -1, self.dmodel)
 
-        src_key_padding_mask=mask
+        src_key_padding_mask = mask
 
         n = batch
         batch_class_token = self.class_token.expand(n, -1, -1)
         src = torch.cat([batch_class_token, src], dim=1)
 
-        src = src+self.pos
+        src = src + self.pos
 
         if src_key_padding_mask is not None:
-            src_key_padding_mask =\
-                torch.cat([torch.zeros((n, 1), dtype=torch.bool, device=src.device),
-                           src_key_padding_mask], dim=1)
+            src_key_padding_mask = torch.cat(
+                [torch.zeros((n, 1), dtype=torch.bool, device=src.device), src_key_padding_mask], dim=1
+            )
 
         x = self.transformer(src=src, src_key_padding_mask=src_key_padding_mask)
 
@@ -231,7 +243,7 @@ class BezierEncoderSample(nn.Module):
 class BezierEncoderSimple(nn.Module):
     def __init__(self, out_dim=64, dim=5, patch_size=4):
         super().__init__()
-        self.fc = _fc(dim*patch_size*patch_size, out_dim)
+        self.fc = _fc(dim * patch_size * patch_size, out_dim)
 
     def forward(self, x: torch.Tensor):
         # x: control pts in shape [batch,dim,h,w]
@@ -245,8 +257,9 @@ class BezierEncoderSimple(nn.Module):
 class BezierEncoderMLP(nn.Module):
     def __init__(self, out_dim=64, dim=5, patch_size=4, hidden_dim=256):
         super().__init__()
-        self.mlp = _MLP(num_layers=3, input_dim=patch_size *
-                        patch_size*dim, hidden_dim=hidden_dim, output_dim=out_dim)
+        self.mlp = _MLP(
+            num_layers=3, input_dim=patch_size * patch_size * dim, hidden_dim=hidden_dim, output_dim=out_dim
+        )
 
     def forward(self, x: torch.Tensor):
         # x: control pts in shape [batch,dim,h,w]
@@ -256,11 +269,13 @@ class BezierEncoderMLP(nn.Module):
 
         return self.mlp(x)
 
+
 class BezierEncoderMLP2(nn.Module):
     def __init__(self, out_dim=64, dim=5, patch_size=4, hidden_dim=256):
         super().__init__()
-        self.mlp = _MLP(num_layers=3, input_dim=patch_size *
-                        patch_size*dim, hidden_dim=hidden_dim, output_dim=out_dim)
+        self.mlp = _MLP(
+            num_layers=3, input_dim=patch_size * patch_size * dim, hidden_dim=hidden_dim, output_dim=out_dim
+        )
         self.mlp2 = _MLP(num_layers=3, input_dim=out_dim, hidden_dim=hidden_dim, output_dim=out_dim)
 
     def forward(self, x: torch.Tensor):
@@ -269,11 +284,12 @@ class BezierEncoderMLP2(nn.Module):
 
         x = torch.flatten(x, start_dim=1)
         x = self.mlp(x)
-        x = x+self.mlp2(x)
+        x = x + self.mlp2(x)
         return x
 
+
 class BezierEncoderMLP_(nn.Module):
-    def __init__(self, out_dim=64, input_dim=28*4,  hidden_dim=256):
+    def __init__(self, out_dim=64, input_dim=28 * 4, hidden_dim=256):
         super().__init__()
         self.mlp = _MLP(num_layers=3, input_dim=input_dim, hidden_dim=hidden_dim, output_dim=out_dim)
         self.mlp2 = _MLP(num_layers=3, input_dim=out_dim, hidden_dim=hidden_dim, output_dim=out_dim)
@@ -282,7 +298,7 @@ class BezierEncoderMLP_(nn.Module):
         # x: control pts in shape [batch,dim,h,w]
         # x: output: [batch, out_dim]
         x = self.mlp(x)
-        x = x+self.mlp2(x)
+        x = x + self.mlp2(x)
         return x
 
     def weights_init(self, m):
@@ -290,7 +306,6 @@ class BezierEncoderMLP_(nn.Module):
             torch.nn.init.kaiming_uniform_(m.weight.data)
             if m.bias is not None:
                 m.bias.data.fill_(0.0)
-
 
 
 class PositionalEncoding(nn.Module):
@@ -302,6 +317,7 @@ class PositionalEncoding(nn.Module):
         max_len: The maximum length of input sequences.
         dropout: The dropout probability.
     """
+
     def __init__(self, d_model: int, dropout: float = 0.1, max_len: int = 8000):
         super(PositionalEncoding, self).__init__()
         self.dropout = nn.Dropout(p=dropout)
@@ -309,17 +325,16 @@ class PositionalEncoding(nn.Module):
         # Create a matrix of shape (max_len, d_model) with positional encodings
         pe = torch.zeros(max_len, d_model)
         position = torch.arange(0, max_len, dtype=torch.float).unsqueeze(1)
-        
+
         # Compute the div_term as specified in the paper
-        div_term = torch.exp(torch.arange(0, d_model, 2).float() * 
-                             (-math.log(10000.0) / d_model))
-        
+        div_term = torch.exp(torch.arange(0, d_model, 2).float() * (-math.log(10000.0) / d_model))
+
         # Apply sinusoidal functions to even and odd indices
-        pe[:, 0::2] = torch.sin(position * div_term)    # Apply sin to even indices
-        pe[:, 1::2] = torch.cos(position * div_term)    # Apply cos to odd indices
+        pe[:, 0::2] = torch.sin(position * div_term)  # Apply sin to even indices
+        pe[:, 1::2] = torch.cos(position * div_term)  # Apply cos to odd indices
 
         pe = pe.unsqueeze(0)  # Shape becomes (1, max_len, d_model)
-        self.register_buffer('pe', pe)  # Register as buffer to avoid updating during training
+        self.register_buffer("pe", pe)  # Register as buffer to avoid updating during training
 
     def forward(self, x: torch.Tensor) -> torch.Tensor:
         """
@@ -335,26 +350,28 @@ class PositionalEncoding(nn.Module):
         # Determine the shape of input x
         if x.dim() == 3:
             # Assumes shape is (batch_size, seq_len, d_model)
-            x = x + self.pe[:, :x.size(1), :]
+            x = x + self.pe[:, : x.size(1), :]
         elif x.dim() == 2:
             # Assumes shape is (seq_len, d_model)
-            x = x + self.pe[:, :x.size(0), :]
+            x = x + self.pe[:, : x.size(0), :]
         else:
             raise ValueError("Input tensor must have 2 or 3 dimensions")
 
         return self.dropout(x)
 
+
 class PositionEmbeddingLearned(nn.Module):
     """
     Absolute pos embedding, learned.
     """
+
     # x: batch,d_model
     # pos: batch,2
 
     def __init__(self, num_pos_feats=256):
         super().__init__()
-        self.row_embed = nn.Embedding(50, num_pos_feats//2)
-        self.col_embed = nn.Embedding(50, num_pos_feats//2)
+        self.row_embed = nn.Embedding(50, num_pos_feats // 2)
+        self.col_embed = nn.Embedding(50, num_pos_feats // 2)
         self.reset_parameters()
 
     def reset_parameters(self):
@@ -364,29 +381,42 @@ class PositionEmbeddingLearned(nn.Module):
     def forward(self, x, pos):
         x_emb = self.col_embed(pos[:, 0])
         y_emb = self.row_embed(pos[:, 1])
-        pos = torch.cat([
-            x_emb,
-            y_emb
-        ], dim=-1)
-        return x+pos
+        pos = torch.cat([x_emb, y_emb], dim=-1)
+        return x + pos
 
 
 class MyTransformerEncoder(nn.Module):
-    def __init__(self, d_model: int = 512, nhead: int = 8, num_layers: int = 6,
-                 dim_feedforward: int = 2048, dropout: float = 0.1,
-                 activation: Union[str, Callable[[Tensor], Tensor]] = F.relu,
-                 layer_norm_eps: float = 1e-5, batch_first: bool = True, norm_first: bool = False,
-                 device=None, dtype=None, output_dim=512):
+    def __init__(
+        self,
+        d_model: int = 512,
+        nhead: int = 8,
+        num_layers: int = 6,
+        dim_feedforward: int = 2048,
+        dropout: float = 0.1,
+        activation: Union[str, Callable[[Tensor], Tensor]] = F.relu,
+        layer_norm_eps: float = 1e-5,
+        batch_first: bool = True,
+        norm_first: bool = False,
+        device=None,
+        dtype=None,
+        output_dim=512,
+    ):
         super().__init__()
-        factory_kwargs = {'device': device, 'dtype': dtype}
+        factory_kwargs = {"device": device, "dtype": dtype}
 
-        encoder_layer = nn.TransformerEncoderLayer(d_model, nhead, dim_feedforward, dropout,
-                                                   activation, layer_norm_eps,
-                                                   batch_first, norm_first, **factory_kwargs)
-        encoder_norm = nn.LayerNorm(
-            d_model, eps=layer_norm_eps, **factory_kwargs)
-        self.encoder = nn.TransformerEncoder(
-            encoder_layer, num_layers, encoder_norm)
+        encoder_layer = nn.TransformerEncoderLayer(
+            d_model,
+            nhead,
+            dim_feedforward,
+            dropout,
+            activation,
+            layer_norm_eps,
+            batch_first,
+            norm_first,
+            **factory_kwargs
+        )
+        encoder_norm = nn.LayerNorm(d_model, eps=layer_norm_eps, **factory_kwargs)
+        self.encoder = nn.TransformerEncoder(encoder_layer, num_layers, encoder_norm)
         self.d_model = d_model
 
         self.class_token = nn.Parameter(torch.empty(1, 1, d_model))
@@ -395,34 +425,30 @@ class MyTransformerEncoder(nn.Module):
         self.pos = nn.Parameter(torch.empty(1, 29, d_model))
 
         self.reset_parameters()
+
     def reset_parameters(self):
         nn.init.xavier_uniform_(self.class_token)
         nn.init.xavier_uniform_(self.pos)
 
     def forward(
-            self,
-            src: Tensor,
-            mask: Optional[Tensor] = None,
-            src_key_padding_mask: Optional[Tensor] = None
+        self, src: Tensor, mask: Optional[Tensor] = None, src_key_padding_mask: Optional[Tensor] = None
     ) -> Tensor:
 
         if src.size(-1) != self.d_model:
-            raise RuntimeError(
-                "the feature number of src must be equal to d_model")
+            raise RuntimeError("the feature number of src must be equal to d_model")
 
         n = src.shape[0]
         batch_class_token = self.class_token.expand(n, -1, -1)
         src = torch.cat([batch_class_token, src], dim=1)
 
-        src = src+self.pos
+        src = src + self.pos
 
         if src_key_padding_mask is not None:
-            src_key_padding_mask =\
-                torch.cat([torch.zeros((n, 1), dtype=torch.bool, device=src.device),
-                           src_key_padding_mask], dim=1)
+            src_key_padding_mask = torch.cat(
+                [torch.zeros((n, 1), dtype=torch.bool, device=src.device), src_key_padding_mask], dim=1
+            )
 
-        memory = self.encoder(src, mask=mask,
-                              src_key_padding_mask=src_key_padding_mask)
+        memory = self.encoder(src, mask=mask, src_key_padding_mask=src_key_padding_mask)
 
         x = memory[:, 0]
 
@@ -430,45 +456,58 @@ class MyTransformerEncoder(nn.Module):
 
         return x
 
-class MyTransformerEncoderSimple(nn.Module):
-    def __init__(self, d_model: int = 512, nhead: int = 8, num_encoder_layers: int = 6,
-                 dim_feedforward: int = 2048, dropout: float = 0.1,
-                 activation: Union[str, Callable[[Tensor], Tensor]] = F.relu,
-                 layer_norm_eps: float = 1e-5, batch_first: bool = True, norm_first: bool = False,
-                 device=None, dtype=None, output_dim=512):
-        super().__init__()
-        factory_kwargs = {'device': device, 'dtype': dtype}
 
-        encoder_layer = nn.TransformerEncoderLayer(d_model, nhead, dim_feedforward, dropout,
-                                                   activation, layer_norm_eps,
-                                                   batch_first, norm_first, **factory_kwargs)
-        encoder_norm = nn.LayerNorm(
-            d_model, eps=layer_norm_eps, **factory_kwargs)
-        self.encoder = nn.TransformerEncoder(
-            encoder_layer, num_encoder_layers, encoder_norm)
+class MyTransformerEncoderSimple(nn.Module):
+    def __init__(
+        self,
+        d_model: int = 512,
+        nhead: int = 8,
+        num_encoder_layers: int = 6,
+        dim_feedforward: int = 2048,
+        dropout: float = 0.1,
+        activation: Union[str, Callable[[Tensor], Tensor]] = F.relu,
+        layer_norm_eps: float = 1e-5,
+        batch_first: bool = True,
+        norm_first: bool = False,
+        device=None,
+        dtype=None,
+        output_dim=512,
+    ):
+        super().__init__()
+        factory_kwargs = {"device": device, "dtype": dtype}
+
+        encoder_layer = nn.TransformerEncoderLayer(
+            d_model,
+            nhead,
+            dim_feedforward,
+            dropout,
+            activation,
+            layer_norm_eps,
+            batch_first,
+            norm_first,
+            **factory_kwargs
+        )
+        encoder_norm = nn.LayerNorm(d_model, eps=layer_norm_eps, **factory_kwargs)
+        self.encoder = nn.TransformerEncoder(encoder_layer, num_encoder_layers, encoder_norm)
         self.d_model = d_model
 
         self.heads = _fc(d_model, output_dim)
 
     def forward(
-            self,
-            src: Tensor,
-            mask: Optional[Tensor] = None,
-            src_key_padding_mask: Optional[Tensor] = None
+        self, src: Tensor, mask: Optional[Tensor] = None, src_key_padding_mask: Optional[Tensor] = None
     ) -> Tensor:
 
         if src.size(-1) != self.d_model:
-            raise RuntimeError(
-                "the feature number of src must be equal to d_model")
+            raise RuntimeError("the feature number of src must be equal to d_model")
 
-        memory = self.encoder(src, mask=mask,
-                              src_key_padding_mask=src_key_padding_mask)
+        memory = self.encoder(src, mask=mask, src_key_padding_mask=src_key_padding_mask)
 
         x = memory[:, 0]
 
         x = self.heads(x)
 
         return x
+
 
 class UVNetGraphEncoder_No_Edge(nn.Module):
     def __init__(
@@ -517,11 +556,9 @@ class UVNetGraphEncoder_No_Edge(nn.Module):
 
         for layer in range(num_layers):
             if layer == 0:
-                self.linears_prediction.append(
-                    nn.Linear(input_dim, output_dim))
+                self.linears_prediction.append(nn.Linear(input_dim, output_dim))
             else:
-                self.linears_prediction.append(
-                    nn.Linear(hidden_dim, output_dim))
+                self.linears_prediction.append(nn.Linear(hidden_dim, output_dim))
 
         self.drop1 = nn.Dropout(0.3)
         self.drop = nn.Dropout(0.5)
@@ -576,33 +613,28 @@ class _NodeConv_No_Edge(nn.Module):
             h = F.leaky_relu(self.batchnorm(h))
             return h
 
-        self.gconv = GINConv(
-            apply_func=apply_func,
-            aggregator_type="sum",
-            learn_eps=True
-        )
+        self.gconv = GINConv(apply_func=apply_func, aggregator_type="sum", learn_eps=True)
         self.batchnorm = nn.BatchNorm1d(out_feats)
 
     def forward(self, graph, nfeat):
-        return self.gconv(
-            graph, nfeat)
+        return self.gconv(graph, nfeat)
 
 
 class CoordinatesDecoder(nn.Module):
     def __init__(self, feature_dim, hidden_dim=64, in_channels=2, out_channels=3):
         super().__init__()
-        self.uv_encoder: nn.Module = nn.Sequential(*[
-            _conv1d(in_channels, hidden_dim, kernel_size=1),
-            _conv1d(hidden_dim, hidden_dim, kernel_size=1),
-            _conv1d(hidden_dim, feature_dim, kernel_size=1),
-            ])
-        self.conv1: nn.Module = _conv1d(
-            feature_dim, hidden_dim, kernel_size=1)
-        self.conv2: nn.Module = nn.Conv1d(
-            hidden_dim, out_channels, kernel_size=1)
+        self.uv_encoder: nn.Module = nn.Sequential(
+            *[
+                _conv1d(in_channels, hidden_dim, kernel_size=1),
+                _conv1d(hidden_dim, hidden_dim, kernel_size=1),
+                _conv1d(hidden_dim, feature_dim, kernel_size=1),
+            ]
+        )
+        self.conv1: nn.Module = _conv1d(feature_dim, hidden_dim, kernel_size=1)
+        self.conv2: nn.Module = nn.Conv1d(hidden_dim, out_channels, kernel_size=1)
 
-        self.norm=nn.BatchNorm1d(hidden_dim)
-        self.relu=nn.ReLU()
+        self.norm = nn.BatchNorm1d(hidden_dim)
+        self.relu = nn.ReLU()
 
     def forward(self, uv: torch.Tensor, net_feature: torch.Tensor):
         # uv (n,2,len)
@@ -630,18 +662,21 @@ class CoordinatesDecoder(nn.Module):
 
         return x.transpose(2, 1)
 
-class CoordinatesClassfier(nn.Module):
-    def __init__(self, feature_dim, hidden_dim=128, in_channels=2, out_channels=3,num_classes=1024,dropout=0.3):
-        super().__init__()
-        self.uv_encoder: nn.Module = _conv1d(
-            in_channels, feature_dim, kernel_size=1)
-        self.conv1: nn.Module = _conv1d(
-            feature_dim, hidden_dim, kernel_size=1)
-        self.conv2: nn.Module = nn.Conv1d(
-            hidden_dim, feature_dim, kernel_size=1)
 
-        self.classifiers=nn.ModuleList([_NonLinearClassifier(input_dim=feature_dim,num_classes=num_classes,dropout=dropout) for _ in range(out_channels)])
-        self.out_channels=out_channels
+class CoordinatesClassfier(nn.Module):
+    def __init__(self, feature_dim, hidden_dim=128, in_channels=2, out_channels=3, num_classes=1024, dropout=0.3):
+        super().__init__()
+        self.uv_encoder: nn.Module = _conv1d(in_channels, feature_dim, kernel_size=1)
+        self.conv1: nn.Module = _conv1d(feature_dim, hidden_dim, kernel_size=1)
+        self.conv2: nn.Module = nn.Conv1d(hidden_dim, feature_dim, kernel_size=1)
+
+        self.classifiers = nn.ModuleList(
+            [
+                _NonLinearClassifier(input_dim=feature_dim, num_classes=num_classes, dropout=dropout)
+                for _ in range(out_channels)
+            ]
+        )
+        self.out_channels = out_channels
 
     def forward(self, uv: torch.Tensor, net_feature: torch.Tensor):
         # uv (n,2,len)
@@ -653,35 +688,36 @@ class CoordinatesClassfier(nn.Module):
         x = self.uv_encoder(uv)
 
         # n,dim,len
-        net_feature=net_feature.unsqueeze(-1).expand(-1, -1, length)
+        net_feature = net_feature.unsqueeze(-1).expand(-1, -1, length)
         x = net_feature + x
 
         x = self.conv1(x)
 
         x = self.conv2(x)
 
-        x = x+net_feature
+        x = x + net_feature
 
-        x = torch.transpose(x,2,1)
-        x = x.reshape(n*length,-1)
+        x = torch.transpose(x, 2, 1)
+        x = x.reshape(n * length, -1)
 
         vectors = [self.classifiers[i](x) for i in range(self.out_channels)]
 
-        if len(vectors)==1:
-            vectors= vectors[0]
+        if len(vectors) == 1:
+            vectors = vectors[0]
         else:
-            vectors = torch.stack(vectors,dim=1)
-        vectors = vectors.view(n,length,self.out_channels,-1)
+            vectors = torch.stack(vectors, dim=1)
+        vectors = vectors.view(n, length, self.out_channels, -1)
 
         return vectors
-    
+
+
 class _NonLinearClassifier(nn.Module):
     def __init__(self, input_dim, num_classes, dropout=0.3):
         """
         A 3-layer MLP with linear outputs
 
         Args:
-            input_dim (int): Dimension of the input tensor 
+            input_dim (int): Dimension of the input tensor
             num_classes (int): Dimension of the output logits
             dropout (float, optional): Dropout used after each linear layer. Defaults to 0.3.
         """
@@ -720,6 +756,7 @@ class _NonLinearClassifier(nn.Module):
         x = self.dp2(x)
         x = self.linear3(x)
         return x
+
 
 class _MLP(nn.Module):
     """"""
@@ -772,6 +809,7 @@ class _MLP(nn.Module):
                 h = F.relu(self.batch_norms[i](self.linears[i](h)))
             return self.linears[-1](h)
 
+
 def _conv1d(in_channels, out_channels, kernel_size=3, padding=0, bias=False):
     """
     Helper function to create a 1D convolutional layer with batchnorm and LeakyReLU activation
@@ -787,9 +825,7 @@ def _conv1d(in_channels, out_channels, kernel_size=3, padding=0, bias=False):
         nn.Sequential: Sequential contained the Conv1d, BatchNorm1d and LeakyReLU layers
     """
     return nn.Sequential(
-        nn.Conv1d(
-            in_channels, out_channels, kernel_size=kernel_size, padding=padding, bias=bias
-        ),
+        nn.Conv1d(in_channels, out_channels, kernel_size=kernel_size, padding=padding, bias=bias),
         nn.BatchNorm1d(out_channels),
         nn.LeakyReLU(),
     )
@@ -829,6 +865,7 @@ def _fc(in_features, out_features, bias=False):
         nn.LeakyReLU(),
     )
 
+
 def _fc_nlp(in_features, out_features, bias=False):
     return nn.Sequential(
         nn.Linear(in_features, out_features, bias=bias),
@@ -836,13 +873,15 @@ def _fc_nlp(in_features, out_features, bias=False):
         nn.LeakyReLU(),
     )
 
+
 class TransformerEncoderBLock(nn.Module):
-    def __init__(self, input_dim, c_hidden,n_layers, n_heads, dropout=0.01,batch_first=True):
+    def __init__(self, input_dim, c_hidden, n_layers, n_heads, dropout=0.01, batch_first=True):
         """
         A transformer layer with a single attention layer
-        """    
+        """
         super().__init__()
-        encoder_layers = nn.TransformerEncoderLayer(input_dim, n_heads, c_hidden, dropout,batch_first=batch_first)
+        encoder_layers = nn.TransformerEncoderLayer(input_dim, n_heads, c_hidden, dropout, batch_first=batch_first)
         self.encoder = nn.TransformerEncoder(encoder_layers, n_layers)
-    def forward(self, x,src_key_padding_mask=None,src_mask=None):
-        return self.encoder(x,src_key_padding_mask=src_key_padding_mask,mask=src_mask)
+
+    def forward(self, x, src_key_padding_mask=None, src_mask=None):
+        return self.encoder(x, src_key_padding_mask=src_key_padding_mask, mask=src_mask)
