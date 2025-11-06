@@ -1,6 +1,5 @@
 from OCC.Core.gp import gp_Pnt, gp_Dir, gp_Vec, gp_Pnt2d, gp_Ax2, gp_Circ
 import numpy as np
-# from matplotlib.patches import FancyArrowPatch
 from OCC.Core.Geom import Geom_BSplineCurve
 from occwl.geometry import geom_utils
 from occwl.geometry.box import Box
@@ -91,7 +90,6 @@ def uvgrid(face, given_bound=None,num_u=10, num_v=10, uvs=False, method="point",
         umin, umax, vmin, vmax = given_bound
         uv_box = Box(np.array([umin, vmin]))
         uv_box.encompass_point(np.array([umax, vmax]))
-    # uv_box = uv_bounds(face)
 
     if method=='point':
         fn=lambda uv:pointOnFace(face,uv)
@@ -102,12 +100,6 @@ def uvgrid(face, given_bound=None,num_u=10, num_v=10, uvs=False, method="point",
 
     uvgrid = []
     uv_values = np.zeros((num_u, num_v, 2), dtype=np.float32)
-
-    # if type(face.surface()) is float:
-    #     # Can't get an curve for this face.
-    #     if uvs:
-    #         return None, uv_values
-    #     return None
 
     for i in range(num_u):
         u = uv_box.intervals[0].interpolate(float(i) / (num_u - 1))
@@ -142,21 +134,15 @@ def ugrid(curve:Geom_BSplineCurve,u_range, num_u: int = 10,us=False, method="poi
     """
     assert num_u >= 2
     ugrid = []
-    # u_values = np.zeros((num_u), dtype=np.float32)
 
-    # bound = edge.u_bounds()
     u_values = np.linspace(u_range[0],u_range[1],num_u)
-    # fn = getattr(edge, method)
+
     if method=='point':
         fn = lambda u:geom_utils.gp_to_numpy(curve.Value(u))
     elif method=='tangent':
         fn = lambda u:tangent(curve,u)
 
-    # for i in range(num_u):
     for u in u_values:
-        # u = bound.interpolate(float(i) / (num_u - 1))
-        # u = u_values[i]
-        # u_values[i] = u
         val = fn(u)
         ugrid.append(val)
 
