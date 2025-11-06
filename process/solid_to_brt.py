@@ -10,189 +10,188 @@ from itertools import repeat
 import signal
 from occwl.entity_mapper import EntityMapper
 
-def build_data(solid,shape_att,edge_fn,*args,**kwargs):
+
+def build_data(solid, shape_att, edge_fn, *args, **kwargs):
     mapper = EntityMapper(solid)
 
-    labels=[]
+    labels = []
 
-    adj_faces_indices=[]
-    faces_wire=[]
+    adj_faces_indices = []
+    faces_wire = []
 
-    wire_edges=[]
+    wire_edges = []
 
-    edge_dict={}
+    edge_dict = {}
 
-    face_mapper=lambda f:mapper.face_index(f)
+    face_mapper = lambda f: mapper.face_index(f)
 
     for face in solid.faces():
-        labels.append(int(shape_att[face]['name']))
+        labels.append(int(shape_att[face]["name"]))
 
         for wire in face.wires():
-            edges=[]
+            edges = []
             for edge in wire.ordered_edges():
                 if not edge.has_curve():
                     continue
-                index=mapper.oriented_edge_index(edge)
+                index = mapper.oriented_edge_index(edge)
 
                 connected_faces = list(solid.faces_from_edge(edge))
                 if len(connected_faces) < 2:
                     pass
                 elif len(connected_faces) == 2:
-                    left_face, right_face = find_left_and_right_faces(edge,connected_faces)
+                    left_face, right_face = find_left_and_right_faces(edge, connected_faces)
                     if left_face is None or right_face is None:
                         raise RuntimeError("Expected a manifold, an edge must be incident on one/two faces")
                 else:
                     raise RuntimeError("Expected a manifold, an edge must be incident on one/two faces")
 
-                edge_dict[index]={'last':None if len(edges)==0 else edges[-1],
-                                  'face':face_mapper(face)}
+                edge_dict[index] = {"last": None if len(edges) == 0 else edges[-1], "face": face_mapper(face)}
                 edges.append(edge)
-            edge_dict[mapper.oriented_edge_index(edges[0])]['last']=edges[-1]
+            edge_dict[mapper.oriented_edge_index(edges[0])]["last"] = edges[-1]
 
-    edges_feature=[]
+    edges_feature = []
     for face in solid.faces():
-        face_index=face_mapper(face)
+        face_index = face_mapper(face)
 
-        wires=[]
+        wires = []
         faces_wire.append(wires)
 
-        adj_faces=[]
+        adj_faces = []
         adj_faces_indices.append(adj_faces)
 
         for wire in face.wires():
             wires.append(len(wire_edges))
-            wire_data=[]
+            wire_data = []
             wire_edges.append(wire_data)
-            cnt=0
+            cnt = 0
 
             for edge in wire.ordered_edges():
                 if not edge.has_curve():
                     continue
-                index=mapper.oriented_edge_index(edge)
+                index = mapper.oriented_edge_index(edge)
 
-                edge_feat=edge_fn(edge)
+                edge_feat = edge_fn(edge)
                 wire_data.append(cnt)
-                cnt+=1
+                cnt += 1
                 edges_feature.append(edge_feat)
 
-
-                e=edge
+                e = edge
 
                 try:
                     while True:
-                        reversed_edge=e.reversed_edge()
-                        index=mapper.oriented_edge_index(reversed_edge)
-                        face_belongs=edge_dict[index]['face']
+                        reversed_edge = e.reversed_edge()
+                        index = mapper.oriented_edge_index(reversed_edge)
+                        face_belongs = edge_dict[index]["face"]
 
-                        if face_belongs==face_index:
+                        if face_belongs == face_index:
                             break
                         if face_belongs not in adj_faces:
                             adj_faces.append(face_belongs)
 
-                        e=edge_dict[index]['last']
+                        e = edge_dict[index]["last"]
                 except KeyError:
                     pass
 
-    if len(edges_feature)==0:
+    if len(edges_feature) == 0:
         raise RuntimeError("No edges found in solid")
 
     return {
-            'edge':edges_feature,
-            'edge_index':wire_edges,
-            'wire_index':faces_wire,
-            'adj_face_index':adj_faces_indices,
-            'label':torch.tensor(labels,dtype=torch.long),
-            }
+        "edge": edges_feature,
+        "edge_index": wire_edges,
+        "wire_index": faces_wire,
+        "adj_face_index": adj_faces_indices,
+        "label": torch.tensor(labels, dtype=torch.long),
+    }
 
-def build_data_no_label(solid,edge_fn,*args,**kwargs):
+
+def build_data_no_label(solid, edge_fn, *args, **kwargs):
     mapper = EntityMapper(solid)
 
-    adj_faces_indices=[]
-    faces_wire=[]
+    adj_faces_indices = []
+    faces_wire = []
 
-    wire_edges=[]
+    wire_edges = []
 
-    edge_dict={}
+    edge_dict = {}
 
-    face_mapper=lambda f:mapper.face_index(f)
+    face_mapper = lambda f: mapper.face_index(f)
 
     for face in solid.faces():
 
         for wire in face.wires():
-            edges=[]
+            edges = []
             for edge in wire.ordered_edges():
                 if not edge.has_curve():
                     continue
-                index=mapper.oriented_edge_index(edge)
+                index = mapper.oriented_edge_index(edge)
 
                 connected_faces = list(solid.faces_from_edge(edge))
                 if len(connected_faces) < 2:
                     pass
                 elif len(connected_faces) == 2:
-                    left_face, right_face = find_left_and_right_faces(edge,connected_faces)
+                    left_face, right_face = find_left_and_right_faces(edge, connected_faces)
                     if left_face is None or right_face is None:
                         raise RuntimeError("Expected a manifold, an edge must be incident on one/two faces")
                 else:
                     raise RuntimeError("Expected a manifold, an edge must be incident on one/two faces")
 
-                edge_dict[index]={'last':None if len(edges)==0 else edges[-1],
-                                  'face':face_mapper(face)}
+                edge_dict[index] = {"last": None if len(edges) == 0 else edges[-1], "face": face_mapper(face)}
                 edges.append(edge)
-            edge_dict[mapper.oriented_edge_index(edges[0])]['last']=edges[-1]
+            edge_dict[mapper.oriented_edge_index(edges[0])]["last"] = edges[-1]
 
-    edges_feature=[]
+    edges_feature = []
     for face in solid.faces():
-        face_index=face_mapper(face)
+        face_index = face_mapper(face)
 
-        wires=[]
+        wires = []
         faces_wire.append(wires)
 
-        adj_faces=[]
+        adj_faces = []
         adj_faces_indices.append(adj_faces)
 
         for wire in face.wires():
             wires.append(len(wire_edges))
-            wire_data=[]
+            wire_data = []
             wire_edges.append(wire_data)
-            cnt=0
+            cnt = 0
 
             for edge in wire.ordered_edges():
                 if not edge.has_curve():
                     continue
-                index=mapper.oriented_edge_index(edge)
+                index = mapper.oriented_edge_index(edge)
 
-                edge_feat=edge_fn(edge)
+                edge_feat = edge_fn(edge)
                 wire_data.append(cnt)
-                cnt+=1
+                cnt += 1
                 edges_feature.append(edge_feat)
 
-
-                e=edge
+                e = edge
 
                 try:
                     while True:
-                        reversed_edge=e.reversed_edge()
-                        index=mapper.oriented_edge_index(reversed_edge)
-                        face_belongs=edge_dict[index]['face']
+                        reversed_edge = e.reversed_edge()
+                        index = mapper.oriented_edge_index(reversed_edge)
+                        face_belongs = edge_dict[index]["face"]
 
-                        if face_belongs==face_index:
+                        if face_belongs == face_index:
                             break
                         if face_belongs not in adj_faces:
                             adj_faces.append(face_belongs)
 
-                        e=edge_dict[index]['last']
+                        e = edge_dict[index]["last"]
                 except KeyError:
                     pass
 
-    if len(edges_feature)==0:
+    if len(edges_feature) == 0:
         raise RuntimeError("No edges found in solid")
 
     return {
-            'edge':edges_feature,
-            'edge_index':wire_edges,
-            'wire_index':faces_wire,
-            'adj_face_index':adj_faces_indices,
-            }
+        "edge": edges_feature,
+        "edge_index": wire_edges,
+        "wire_index": faces_wire,
+        "adj_face_index": adj_faces_indices,
+    }
+
 
 def find_left_and_right_faces(self, faces):
     """
@@ -241,31 +240,28 @@ def find_left_and_right_faces(self, faces):
 
     return left_face, right_face
 
+
 def process_one_file(arguments):
     fn, args = arguments
     fn_stem = fn.stem
     output_path_ = pathlib.Path(args.output)
 
-    output_path=str(output_path_.joinpath(fn_stem + ".bin"))
+    output_path = str(output_path_.joinpath(fn_stem + ".bin"))
     compound, shape_att = Compound.load_step_with_attributes(fn)
     try:
         if args.no_label:
-            face_data = build_data_no_label(
-                next(compound.solids()),args.edge_fn
-            )
+            face_data = build_data_no_label(next(compound.solids()), args.edge_fn)
         elif args.genlabel:
-            solid=next(compound.solids())
-            labels=[shape_att[face]['name'] for face in solid.faces()]
-            output_path=str(output_path_.joinpath(fn_stem + ".seg"))
-            with open(output_path,'w') as f:
+            solid = next(compound.solids())
+            labels = [shape_att[face]["name"] for face in solid.faces()]
+            output_path = str(output_path_.joinpath(fn_stem + ".seg"))
+            with open(output_path, "w") as f:
                 for label in labels:
-                    f.write(str(label)+'\n')
+                    f.write(str(label) + "\n")
             return
         else:
-            solid=next(compound.solids())
-            face_data = build_data(
-                solid,shape_att, args.curv_u_samples, args.surf_u_samples, args.surf_v_samples
-            )
+            solid = next(compound.solids())
+            face_data = build_data(solid, shape_att, args.curv_u_samples, args.surf_u_samples, args.surf_v_samples)
     except StopIteration:
         print("No solid found in file:", fn)
         return
@@ -273,15 +269,13 @@ def process_one_file(arguments):
         print("Error loading file:", fn)
         return
     except Exception as e:
-        print('Unhandled Exception:')
+        print("Unhandled Exception:")
         print(traceback.format_exc())
         raise
 
-
-    with open(output_path,'wb') as f:
-        pickle.dump(face_data,f,protocol=pickle.HIGHEST_PROTOCOL)
+    with open(output_path, "wb") as f:
+        pickle.dump(face_data, f, protocol=pickle.HIGHEST_PROTOCOL)
     return face_data
-
 
 
 def initializer():
@@ -305,14 +299,10 @@ def process(args):
 
 
 def main(input_args=None):
-    parser = argparse.ArgumentParser(
-        "Convert solid models to face-adjacency graphs with UV-grid features"
-    )
+    parser = argparse.ArgumentParser("Convert solid models to face-adjacency graphs with UV-grid features")
     parser.add_argument("input", type=str, help="Input folder of STEP files")
     parser.add_argument("output", type=str, help="Output folder of DGL graph BIN files")
-    parser.add_argument(
-        "--curv_u_samples", type=int, default=10, help="Number of samples on each curve"
-    )
+    parser.add_argument("--curv_u_samples", type=int, default=10, help="Number of samples on each curve")
     parser.add_argument(
         "--surf_u_samples",
         type=int,
@@ -334,13 +324,13 @@ def main(input_args=None):
     parser.add_argument(
         "--genlabel",
         default=False,
-        action='store_true',
+        action="store_true",
         help="Only generate face label file",
     )
     parser.add_argument(
         "--no_label",
         default=False,
-        action='store_true',
+        action="store_true",
         help="Don't generate labels",
     )
     args = parser.parse_args(input_args)
