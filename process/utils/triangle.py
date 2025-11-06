@@ -1,8 +1,4 @@
-from scipy.special import binom
-import numpy as np
-
-from typing import Optional,List
-import math
+from typing import List
 
 
 class Triangle:
