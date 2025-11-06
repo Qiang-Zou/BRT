@@ -1,6 +1,5 @@
 import numpy as np
 import logging
-from OCC.Core.ShapeAnalysis import ShapeAnalysis_Surface
 from utils.triangle import Triangle,BoundaryEdge,isClose,Rectangular2TriangularBezier
 from occwl.face import Face
 from occwl.geometry import geom_utils
@@ -88,18 +87,15 @@ def fit_bezier_surface2(points,uvs, initial_control_points=None,bn_cache=[]):
 def generate_uvw(num_points):
     points = []
     for _ in range(num_points):
-        # 生成均匀分布的随机数
         x = np.random.rand()
         y = np.random.rand()
-        # 计算 (u, v) 值
         if x + y > 1:
             u = x - (x + y - 1)
             v = y - (x + y - 1)
         else:
             u = x
             v = y
-        
-        # 计算 w
+
         w = 1 - u - v
         
         points.append((u, v, w))
@@ -112,21 +108,8 @@ def getControlPointsFromApproximation(triangle:Triangle,face:Face,edge=None,edge
     v2=triangle.v2
     v3=triangle.v3
 
-    # uvs=np.array([[0,0],[0,1],[1,0],[0,1/3],[0,2/3],[1/3,2/3],[2/3,1/3],[2/3,0],[1/3,0],
-    #                 [1/9,1/9],[1/9,7/9],[7/9,1/9],
-    #                 [(1/3)*(7/9)+(2/3)*(1/9),1/9],[1-(1/3)*(7/9)-(2/3)*(1/9)-1/9,1/9],
-    #                 [1/9,(1/3)*(7/9)+(2/3)*(1/9)],[1/9,1-(1/3)*(7/9)-(2/3)*(1/9)-1/9],
-    #                 [(1/3)*(7/9)+(2/3)*(1/9),1-(1/3)*(7/9)-(2/3)*(1/9)-1/9],[1-(1/3)*(7/9)-(2/3)*(1/9)-1/9,(1/3)*(7/9)+(2/3)*(1/9)],
-
-    #                 [2/9,2/9],[2/9,5/9],[5/9,2/9],
-    #                 [(1/3)*(5/9)+(2/3)*(2/9),2/9],[1-(1/3)*(5/9)-(2/3)*(2/9)-2/9,2/9],
-    #                 [2/9,(1/3)*(5/9)+(2/3)*(2/9)],[2/9,1-(1/3)*(5/9)-(2/3)*(2/9)-2/9],
-    #                 [(1/3)*(5/9)+(2/3)*(2/9),1-(1/3)*(5/9)-(2/3)*(2/9)-2/9],[1-(1/3)*(5/9)-(2/3)*(2/9)-2/9,(1/3)*(5/9)+(2/3)*(2/9)],
-
-    #                 [1/3,1/3]
-    #                 ])
     uvs_base=np.array([[0,0],[0,1],[1,0],[0,1/3],[0,2/3],[1/3,2/3],[2/3,1/3],[2/3,0],[1/3,0]])
-    # uvs_random=generate_uvw(100)[:,:2]
+
     uvs=np.concatenate([uvs_base,uvs_random],axis=0)
 
     params=[[v3[i]*u+v2[i]*v+v1[i]*(1-u-v) for i in range(2)] for (u,v) in uvs]
@@ -134,7 +117,7 @@ def getControlPointsFromApproximation(triangle:Triangle,face:Face,edge=None,edge
     if edge:
         edge:BoundaryEdge
         old_points=[params[edge_idx],params[(edge_idx+1)%3]]
-        # edge3d:Edge=edge.edge3d
+
         if isClose(edge.start_point,old_points[0]):
             params_=[edge.params[0]*2/3+edge.params[1]*1/3,edge.params[0]*1/3+edge.params[1]*2/3]
 
@@ -146,7 +129,6 @@ def getControlPointsFromApproximation(triangle:Triangle,face:Face,edge=None,edge
 
         points[3+edge_idx*2:3+edge_idx*2+2]=replace_points
 
-    # ctrl_pts=np.empty(shape=(len(points),3),dtype=np.float32)
     points=np.array(points)
 
     center,scale=getCenterAndScale(points)
@@ -161,10 +143,6 @@ def getControlPointsFromApproximation(triangle:Triangle,face:Face,edge=None,edge
     ctrl_pts[...,:3]/=scale
     ctrl_pts[...,:3]+=center
 
-    # if np.any(np.isnan(ctrl_pts)):
-    #     logging.error(f"nan in control points")
-    #     raise ValueError("nan in control points")
-        
     return ctrl_pts
 
 def getControlPointsFromRect(patch,surface,loc):
@@ -174,28 +152,19 @@ def getControlPointsFromRect(patch,surface,loc):
     
     max_degree=3
     patch.Increase(max_degree, max_degree)
-    # assert nU_ctrl_pts == patch.NbUPoles() and nV_ctrl_pts == patch.NbVPoles()
     poles = np.zeros([nU_ctrl_pts, nV_ctrl_pts, channel_size])
-    # print(patch.NbUPoles(),patch.NbVPoles())
-    for u, v in np.ndindex((nU_ctrl_pts, nV_ctrl_pts)):
 
-        # print('trace',u,v)
+    for u, v in np.ndindex((nU_ctrl_pts, nV_ctrl_pts)):
         p = patch.Pole(u+1, v+1)
         w = patch.Weight(u+1, v+1)
 
         p=p.Transformed(loc.Transformation())
         poles[u, v] = [p.X(), p.Y(), p.Z(), w]
-        # poles[u, v] = [p.X(), p.Y(), p.Z()]
 
     if poles[...,-1].sum()<1e-6:
         poles[...,-1]=1
 
     deg,node1,node2=tri_converter.convert(poles,rational=True)
-
-
-    # if np.any(np.isnan(node1))or np.any(np.isnan(node2)):
-    #     logging.error(f"nan in control points")
-    #     raise ValueError("nan in control points")
 
     return node1,node2
 
