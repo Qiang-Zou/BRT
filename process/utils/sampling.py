@@ -1,4 +1,4 @@
-from OCC.Core.gp import gp_Pnt, gp_Dir, gp_Vec, gp_Pnt2d, gp_Ax2, gp_Circ
+from OCC.Core.gp import gp_Pnt, gp_Vec
 import numpy as np
 from OCC.Core.Geom import Geom_BSplineCurve
 from occwl.geometry import geom_utils
