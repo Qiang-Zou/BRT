@@ -2,10 +2,6 @@ import argparse
 import pathlib
 import pickle
 import traceback
-
-from occwl.compound import Compound
-from occwl.entity_mapper import EntityMapper
-
 import numpy as np
 import torch
 from occwl.compound import Compound
