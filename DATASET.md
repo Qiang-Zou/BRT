@@ -53,6 +53,7 @@ The TMCAD dataset v1 (2025.02.10) can be downloaded from: https://pan.zju.edu.cn
 
 ### Contents
 
+```bash
 TMCAD_v2/
  │
  ├── bearing/
@@ -68,9 +69,10 @@ TMCAD_v2/
  ├── ...
  │
  └── spring/
- ├── spring_0.stp
- ├── spring_1.stp
- └── ...
+     ├── spring_0.stp
+     ├── spring_1.stp
+     └── ...
+
 
 Each folder corresponds to a **part category** and contains 3D CAD files in `.stp` format.
 
