@@ -7,13 +7,9 @@ from .encoders import PositionalEncoding
 class TopoEncoder(nn.Module):
     def __init__(self,vertex_dim=3,edge_dim=128,h_dim=128,dropout=0.01):
         super(TopoEncoder, self).__init__()
-        # self.edge_layer = UVNetCurveEncoder(output_dims=h_dim)
+
         self.ev_2_e=nn.Linear(64*3,64)
         self.wire_layer = WireNet(edge_dim)
-        # self.face_layer=nn.Linear(face_dim,h_dim)
-        # face_out_dim=1024
-        # self.face_layer=UVNetSurfaceEncoder(output_dims=h_dim)
-        # self.adj_face_layer=nn.Linear(h_dim,h_dim)
         self.adj_face_layer=nn.Sequential(
             nn.Linear(2*edge_dim,512,bias=False),
             nn.LayerNorm(512),
@@ -50,8 +46,6 @@ class TopoEncoder(nn.Module):
             wire_mask=getMaskFromLength(wire_index_length,wire_index.shape[1])
             adj_face_mask=getMaskFromLength(adj_face_index_length,face_index.shape[1])
 
-            ## edges=self.edge_layer(edges.permute(0,2,1))
-
             edges_per_wire=torch.gather(edges.unsqueeze(0).expand(N_w,-1,-1),1,
                                         edge_index.unsqueeze(-1).expand(-1,-1,edges.shape[-1])) # N_w, M, D_e
 
@@ -63,10 +57,6 @@ class TopoEncoder(nn.Module):
             wires_per_face=torch.masked_fill(wires_per_face,~wire_mask.unsqueeze(-1),0)
 
             feat_face=faces
-            # feat_face=torch.zeros_like(faces)
-
-            # feat_face=self.face_layer2(feat_face)
-            # torch._assert(feat_face.shape[-1]==wires_per_face.shape[-1] and feat_face.shape[0]==wires_per_face.shape[0],f'face shape error,{feat_face.shape},{wires_per_face.shape}')
             feat_face=torch.concat((feat_face,torch.sum(wires_per_face,dim=1)),dim=-1) # N_f, D_f
 
             adjs_faces_per_face=torch.gather(feat_face.unsqueeze(0).expand(N_f,-1,-1),1,
@@ -125,8 +115,7 @@ class BRT(nn.Module):
         super(BRT, self).__init__()
         self.edge_layer= EdgeEncoder(input_dim=4*11,srf_emb_dim=dmodel,dropout=dropout,hidden_dim=hidden_dim,n_layers=2,n_heads=4)
         self.face_layer= FaceEncoder(input_dim=28*4+1+7,srf_emb_dim=dmodel,dropout=dropout,hidden_dim=hidden_dim,n_layers=2,n_heads=4)
-        # self.face_layer= FaceEncoder(input_dim=2*28*4+1,srf_emb_dim=dmodel,dropout=dropout,hidden_dim=hidden_dim,n_layers=2,n_heads=4)
-        # self.face_layer= FaceEncoder_cnn(input_dim=2*4+1,srf_emb_dim=dmodel,dropout=dropout,hidden_dim=hidden_dim,n_layers=2,n_heads=4)
+
         self.topo_layer= TopoEncoder(vertex_dim=3,edge_dim=dmodel,h_dim=2*dmodel,dropout=dropout)
         self.vertex_layer=VertexEncoder(input_dim=3,output_dim=dmodel)
         self.fc=nn.Linear(3*dmodel,dmodel)
@@ -138,30 +127,17 @@ class BRT(nn.Module):
     def forward(self,edge,face,tri_normal,face_vis_mask,face_padding_mask,
                 edge_index,wire_index,adj_face_index,edge_padding_mask,edge_index_length,wire_index_length,adj_face_index_length,
                 num_faces_per_solid,**kwargs):
-        
-        # print(edge.shape)
-        # print(edge_padding_mask.shape)
+
         v1=self.vertex_layer(edge[:,0,0,:3])
         edge_len=torch.sum(edge_padding_mask,dim=1).long()
         batch_indices=torch.arange(edge.shape[0],device=edge.device)
         v2=self.vertex_layer(edge[batch_indices,edge_len-1,-1,:3])
-        # v2: get the last index of the edge:
-        # torch.scatter(edge)
-
         edge_emb=self.edge_layer(edge,edge_padding_mask)
-        # print(v1.shape)
-        # print(edge_emb.shape)
-        # print(self.fc)
         edge_emb=torch.cat((edge_emb,v1,v2),dim=1)
         edge_emb=self.fc(edge_emb)
-        # edge_emb=None
-        # with torch.no_grad():
         face_emb=self.face_layer(face,tri_normal,face_vis_mask,face_padding_mask)
-        # face_emb=self.face_layer(face,face_vis_mask,face_padding_mask)
-        # face_emb=torch.zeros_like(face_emb)
         topo_emb=self.topo_layer(edge_emb,face_emb,edge_index,wire_index,adj_face_index,edge_index_length,wire_index_length,adj_face_index_length)
         topo_emb,mask=self.splitIntoBatches(topo_emb,num_faces_per_solid)
-        # print(topo_emb.shape)
         perm_index=kwargs.get('perm_index',None)
         if perm_index is not None:
             perm_index=perm_index.view(-1,self.max_length)
@@ -189,8 +165,6 @@ class BRT(nn.Module):
 
     def splitIntoBatches(self,face_features,num_faces_per_graph):
         max_width=self.max_length
-        # max_width=torch.max(num_faces_per_graph)
-
         cell_index_per_batch=torch.cumsum(num_faces_per_graph,dim=0)
         base_index_per_batch=cell_index_per_batch-num_faces_per_graph
         index=torch.arange(max_width,dtype=face_features.dtype,device=face_features.device).unsqueeze(0).expand(len(num_faces_per_graph),-1)
@@ -248,18 +222,15 @@ class FaceEncoder(nn.Module):
         """
         super().__init__()
 
-        # self.vis_linear=nn.Linear(input_dim+1,input_dim)
         self.surf_encoder = encoders.BezierEncoderMLP_(
             input_dim=input_dim,
             hidden_dim=hidden_dim,
             out_dim=srf_emb_dim)
-        # self.surf_encoder = encoders.BezierTriangleEncoder(sampled_points=64,out_dim=srf_emb_dim,vis_dim=True)
 
         self.transformer_encoder=encoders.TransformerEncoderBLock(
             input_dim=srf_emb_dim,c_hidden=hidden_dim,n_layers=n_layers,n_heads=n_heads,dropout=dropout)
         self.max_length=max_face_length
 
-        # self.class_token=nn.Parameter(torch.randn(1,1,srf_emb_dim))
         self.pos=PositionalEncoding(srf_emb_dim,dropout)
         self.dislation=dislation
 
@@ -280,29 +251,14 @@ class FaceEncoder(nn.Module):
         B,L=control_pts.shape[0],control_pts.shape[1]
         x = torch.cat([torch.flatten(control_pts,start_dim=2),tri_normal,in_mask.unsqueeze(-1)],dim=-1)
         face_emb = self.surf_encoder(x.view(-1,x.shape[-1]))
-
-        # x=control_pts.view(-1,N,D)
-        # in_mask=in_mask.reshape(-1)
-        # face_emb=self.surf_encoder(x,vis_mask=in_mask)
-
         face_emb=face_emb.view(B,L,-1)
-
         face_emb=self.pos(face_emb)
-
-        # B,L,C=face_emb.shape
-        # face_emb=face_emb.view(B,L//self.dislation,self.dislation,C).transpose(1,2).reshape(-1,L//self.dislation,C)
-        # src_mask=mask.view(B,L//self.dislation,self.dislation).transpose(1,2).reshape(-1,L//self.dislation)
 
         src_mask = torch.logical_not(mask)
         face_emb=self.transformer_encoder(face_emb,src_mask)
 
-        # face_emb=face_emb.view(B,self.dislation,L//self.dislation,-1).transpose(1,2).reshape(B,L,-1)
-
         face_emb=face_emb.masked_fill(torch.logical_not(mask.unsqueeze(-1)),0)
         count=mask.sum(dim=1)
-        # if torch.isnan(face_emb).any():
-        #     print(face_emb[0])
-        #     exit(0)
         feature=face_emb.sum(dim=1)/count.unsqueeze(-1)
 
         return feature
@@ -332,12 +288,11 @@ class FaceEncoder_cnn(nn.Module):
         """
         super().__init__()
 
-        # self.vis_linear=nn.Linear(input_dim+1,input_dim)
         self.surf_encoder = encoders.BezierEncoderMLP_(
             input_dim=input_dim,
             hidden_dim=hidden_dim,
             out_dim=srf_emb_dim)
-        # self.surf_encoder = encoders.BezierTriangleEncoder(sampled_points=64,out_dim=srf_emb_dim,vis_dim=True)
+
         self.cnn=encoders.UVNetSurfaceEncoder(in_channels=srf_emb_dim,output_dims=srf_emb_dim)
 
     def forward(self, control_pts, in_mask, padding_mask):
@@ -355,106 +310,16 @@ class FaceEncoder_cnn(nn.Module):
         mask=padding_mask
 
         B,L=control_pts.shape[0],control_pts.shape[1]
-        # print(B,L)
-        # test
+
         control_pts=control_pts[:,:,:,[0]]
         x = torch.cat([torch.flatten(control_pts,start_dim=2),in_mask.unsqueeze(-1)],dim=-1)
+
         face_emb = self.surf_encoder(x.view(-1,x.shape[-1]))
-
-        # x=control_pts.view(-1,N,D)
-        # in_mask=in_mask.reshape(-1)
-        # face_emb=self.surf_encoder(x,vis_mask=in_mask)
-
         face_emb=face_emb.view(B,16,16,-1).permute(0,3,1,2)
-        # print(face_emb.shape)
-
         face_emb=self.cnn(face_emb)
 
         return face_emb
 
-class FaceEncoder_cnn2(nn.Module):
-    def __init__(
-        self,
-        input_dim=28*4,
-        srf_emb_dim=64,
-        dropout=0.1,
-        hidden_dim=1024,
-        n_layers=4,
-        dislation=4,
-        n_heads=16,
-        num_classes=1024,
-        max_face_length=600,
-    ):
-        """
-        Initialize the UV-Net solid classification model
-
-        Args:
-            num_classes (int): Number of classes to output
-            crv_emb_dim (int, optional): Embedding dimension for the 1D edge UV-grids. Defaults to 64.
-            srf_emb_dim (int, optional): Embedding dimension for the 2D face UV-grids. Defaults to 64.
-            graph_emb_dim (int, optional): Embedding dimension for the graph. Defaults to 128.
-            dropout (float, optional): Dropout for the final non-linear classifier. Defaults to 0.3.
-        """
-        super().__init__()
-
-        # self.vis_linear=nn.Linear(input_dim+1,input_dim)
-        self.surf_encoder = encoders.BezierEncoderMLP_(
-            input_dim=input_dim,
-            hidden_dim=hidden_dim,
-            out_dim=srf_emb_dim)
-        # self.surf_encoder = encoders.BezierTriangleEncoder(sampled_points=64,out_dim=srf_emb_dim,vis_dim=True)
-
-        self.cnn=encoders.UVNetCurveEncoder(
-            input_dim=srf_emb_dim,output_dims=srf_emb_dim)
-        self.max_length=max_face_length
-
-        # self.class_token=nn.Parameter(torch.randn(1,1,srf_emb_dim))
-        self.pos=PositionalEncoding(srf_emb_dim,dropout)
-        self.dislation=dislation
-
-    def forward(self, control_pts,tri_normal, in_mask, padding_mask):
-        """
-        Forward pass
-
-        Args:
-            batched_graph (dgl.Graph): A batched DGL graph containing the face 2D UV-grids in node features
-                                       (ndata['x']) and 1D edge UV-grids in the edge features (edata['x']).
-
-        Returns:
-            torch.tensor: Logits (batch_size x num_classes)
-        """
-
-        mask=padding_mask
-
-        B,L=control_pts.shape[0],control_pts.shape[1]
-        x = torch.cat([torch.flatten(control_pts,start_dim=2),tri_normal,in_mask.unsqueeze(-1)],dim=-1)
-        face_emb = self.surf_encoder(x.view(-1,x.shape[-1]))
-
-        # x=control_pts.view(-1,N,D)
-        # in_mask=in_mask.reshape(-1)
-        # face_emb=self.surf_encoder(x,vis_mask=in_mask)
-
-        face_emb=face_emb.view(B,L,-1)
-
-        face_emb=self.pos(face_emb)
-
-        # B,L,C=face_emb.shape
-        # face_emb=face_emb.view(B,L//self.dislation,self.dislation,C).transpose(1,2).reshape(-1,L//self.dislation,C)
-        # src_mask=mask.view(B,L//self.dislation,self.dislation).transpose(1,2).reshape(-1,L//self.dislation)
-
-        src_mask = torch.logical_not(mask)
-        face_emb=self.transformer_encoder(face_emb,src_mask)
-
-        # face_emb=face_emb.view(B,self.dislation,L//self.dislation,-1).transpose(1,2).reshape(B,L,-1)
-
-        face_emb=face_emb.masked_fill(torch.logical_not(mask.unsqueeze(-1)),0)
-        count=mask.sum(dim=1)
-        # if torch.isnan(face_emb).any():
-        #     print(face_emb[0])
-        #     exit(0)
-        feature=face_emb.sum(dim=1)/count.unsqueeze(-1)
-
-        return feature
 
 class VertexEncoder(nn.Module):
     def __init__(
@@ -520,16 +385,8 @@ class EdgeEncoder(nn.Module):
             hidden_dim=hidden_dim,
             out_dim=srf_emb_dim)
 
-        # self.graph_encoder = encoders.UVNetGraphEncoder_No_Edge(
-        #     input_dim=srf_emb_dim, output_dim=graph_emb_dim
-        # )
-
         self.transformer_encoder=encoders.TransformerEncoderBLock(
             input_dim=srf_emb_dim,c_hidden=hidden_dim,n_layers=n_layers,n_heads=n_heads,dropout=dropout)
-        # self.points_decoder = encoders.CoordinatesClassfier(
-        #     feature_dim=srf_emb_dim,hidden_dim=hidden_dim,num_classes=num_classes,dropout=dropout,in_channels=1)
-        # self.normal_decoder = encoders.CoordinatesClassfier(
-        #     feature_dim=srf_emb_dim,num_classes=num_classes,dropout=dropout,in_channels=1)
 
         self.class_token=nn.Parameter(torch.randn(1,1,srf_emb_dim))
         self.pos=PositionalEncoding(srf_emb_dim,dropout)
@@ -545,9 +402,6 @@ class EdgeEncoder(nn.Module):
         Returns:
             torch.tensor: Logits (batch_size x num_classes)
         """
-        # print(control_pts.shape)
-        # exit(0)
-
         x = torch.flatten(control_pts,start_dim=2)
 
         face_emb = self.surf_encoder(x.view(-1,x.shape[-1]))
