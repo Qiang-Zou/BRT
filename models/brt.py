@@ -239,21 +239,6 @@ class BRT(nn.Module):
         return torch.cat(lines, dim=0)
 
 
-class FaceDistillationFromUV(nn.Module):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.face_encoder = FaceEncoder(
-            input_dim=28 * 4 + 1, srf_emb_dim=256, dropout=0.01, hidden_dim=1024, n_layers=2, n_heads=4
-        )
-        self.uv_encoder = encoders.UVNetSurfaceEncoder(in_channels=7, output_dims=256)
-
-    def forward(self, face, uvgrids, face_vis_mask, face_padding_mask, **kwargs):
-        face_emb = self.face_encoder(face, face_vis_mask, face_padding_mask)
-        with torch.no_grad():
-            uv_emb = self.uv_encoder(uvgrids)
-        return torch.sum((face_emb - uv_emb) ** 2)
-
-
 class FaceEncoder(nn.Module):
     def __init__(
         self,
@@ -317,61 +302,6 @@ class FaceEncoder(nn.Module):
         feature = face_emb.sum(dim=1) / count.unsqueeze(-1)
 
         return feature
-
-
-class FaceEncoder_cnn(nn.Module):
-    def __init__(
-        self,
-        input_dim=28 * 4,
-        srf_emb_dim=64,
-        dropout=0.1,
-        hidden_dim=1024,
-        n_layers=4,
-        dislation=4,
-        n_heads=16,
-        num_classes=1024,
-        max_face_length=600,
-    ):
-        """
-        Initialize the UV-Net solid classification model
-
-        Args:
-            num_classes (int): Number of classes to output
-            crv_emb_dim (int, optional): Embedding dimension for the 1D edge UV-grids. Defaults to 64.
-            srf_emb_dim (int, optional): Embedding dimension for the 2D face UV-grids. Defaults to 64.
-            graph_emb_dim (int, optional): Embedding dimension for the graph. Defaults to 128.
-            dropout (float, optional): Dropout for the final non-linear classifier. Defaults to 0.3.
-        """
-        super().__init__()
-
-        self.surf_encoder = encoders.BezierEncoderMLP_(input_dim=input_dim, hidden_dim=hidden_dim, out_dim=srf_emb_dim)
-
-        self.cnn = encoders.UVNetSurfaceEncoder(in_channels=srf_emb_dim, output_dims=srf_emb_dim)
-
-    def forward(self, control_pts, in_mask, padding_mask):
-        """
-        Forward pass
-
-        Args:
-            batched_graph (dgl.Graph): A batched DGL graph containing the face 2D UV-grids in node features
-                                       (ndata['x']) and 1D edge UV-grids in the edge features (edata['x']).
-
-        Returns:
-            torch.tensor: Logits (batch_size x num_classes)
-        """
-
-        mask = padding_mask
-
-        B, L = control_pts.shape[0], control_pts.shape[1]
-
-        control_pts = control_pts[:, :, :, [0]]
-        x = torch.cat([torch.flatten(control_pts, start_dim=2), in_mask.unsqueeze(-1)], dim=-1)
-
-        face_emb = self.surf_encoder(x.view(-1, x.shape[-1]))
-        face_emb = face_emb.view(B, 16, 16, -1).permute(0, 3, 1, 2)
-        face_emb = self.cnn(face_emb)
-
-        return face_emb
 
 
 class VertexEncoder(nn.Module):
