@@ -9,10 +9,10 @@ import torchmetrics
 
 
 class BRTSegmentation(nn.Module):
-    def __init__(self, num_classes, d_model=64, max_face_length=100, masking_rate=None):
+    def __init__(self, num_classes, d_model=64, max_face_length=100, masking_rate=None,num_control_pts=28):
         super().__init__()
         self.model = BRT(
-            dmodel=d_model, hidden_dim=8 * d_model, n_layers=2, n_heads=8, dropout=0.25, max_face_length=max_face_length
+            dmodel=d_model, hidden_dim=8 * d_model, n_layers=2, n_heads=8, dropout=0.25, max_face_length=max_face_length,num_control_pts=num_control_pts
         )
         self.head = _NonLinearClassifier(d_model, num_classes)
         self.masking_rate = masking_rate
@@ -36,14 +36,14 @@ class SegmentationPL(pl.LightningModule):
     PyTorch Lightning module to train/test the classifier.
     """
 
-    def __init__(self, num_classes=25, method="brt", masking_rate=None):
+    def __init__(self, num_classes=25, method="brt", masking_rate=None,num_control_pts=28):
         """
         Args:
             num_classes (int): Number of per-solid classes in the dataset
         """
         super().__init__()
         self.save_hyperparameters()
-        self.model = BRTSegmentation(num_classes=num_classes, masking_rate=masking_rate)
+        self.model = BRTSegmentation(num_classes=num_classes, masking_rate=masking_rate,num_control_pts=num_control_pts)
         self.masking_rate = masking_rate
         self.train_acc = torchmetrics.Accuracy(
             task="multiclass",

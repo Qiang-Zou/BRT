@@ -8,10 +8,10 @@ import torchmetrics
 
 
 class BRTClassification(nn.Module):
-    def __init__(self, num_classes, d_model=64, masking_rate=None, max_face_length=100):
+    def __init__(self, num_classes, d_model=64, masking_rate=None, max_face_length=100,num_control_pts=28):
         super().__init__()
         self.model = BRT(
-            dmodel=d_model, hidden_dim=512, n_layers=2, n_heads=4, max_face_length=max_face_length, dropout=0.25
+            dmodel=d_model, hidden_dim=512, n_layers=2, n_heads=4, max_face_length=max_face_length, dropout=0.25,num_control_pts=num_control_pts
         )
         self.head = _NonLinearClassifier(d_model, num_classes)
         self.masking_rate = masking_rate
@@ -36,14 +36,14 @@ class ClassificationPL(pl.LightningModule):
     PyTorch Lightning module to train/test the classifier.
     """
 
-    def __init__(self, num_classes=15, method="brt", masking_rate=None):
+    def __init__(self, num_classes=15, method="brt", masking_rate=None,num_control_pts=28):
         """
         Args:
             num_classes (int): Number of per-solid classes in the dataset
         """
         super().__init__()
         self.save_hyperparameters()
-        self.model = BRTClassification(num_classes=num_classes, masking_rate=masking_rate)
+        self.model = BRTClassification(num_classes=num_classes, masking_rate=masking_rate,num_control_pts=num_control_pts)
         self.masking_rate = masking_rate
         self.train_acc = torchmetrics.Accuracy(
             task="multiclass",

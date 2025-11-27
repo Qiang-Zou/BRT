@@ -475,6 +475,59 @@ def make_rect(face: Face, rect: Rectangle, nurbs_surface, loc):
 
     return tris
 
+def getRectBezierControlPointsFromRect(patch,surface,loc):
+    nU_ctrl_pts, nV_ctrl_pts = 4, 4
+    channel_size=4
+    
+    max_degree=3
+    patch.Increase(max_degree, max_degree)
+    # assert nU_ctrl_pts == patch.NbUPoles() and nV_ctrl_pts == patch.NbVPoles()
+    poles = np.zeros([nU_ctrl_pts, nV_ctrl_pts, channel_size])
+    # print(patch.NbUPoles(),patch.NbVPoles())
+    for u, v in np.ndindex((nU_ctrl_pts, nV_ctrl_pts)):
+
+        # print('trace',u,v)
+        p = patch.Pole(u+1, v+1)
+        w = patch.Weight(u+1, v+1)
+
+        p=p.Transformed(loc.Transformation())
+        poles[u, v] = [p.X(), p.Y(), p.Z(), w]
+        # poles[u, v] = [p.X(), p.Y(), p.Z()]
+
+    if poles[...,-1].sum()<1e-6:
+        poles[...,-1]=1
+
+    return poles
+
+def make_rectangular_bezier(face:Face,rect:Rectangle,nurbs_surface,loc):
+    '''
+        make rects from face and curves and 4 end points
+    '''
+    end_points=rect.points
+    x_min,x_max,y_min,y_max=rect.getBoundary()
+    try:
+        converter=Converter(nurbs_surface,x_min,x_max,y_min,y_max,1e-4)
+    except RuntimeError as e:
+        logging.error(f"failed to convert surface to bezier surface: {e}\n with following boundary: {end_points}")
+        rect.discarded=True
+        return
+
+    uNumPatches = converter.NbUPatches()
+    vNumPatches = converter.NbVPatches()
+
+    if uNumPatches==0 or vNumPatches==0:
+        logging.error("failed to convert surface to bezier surface: no patches")
+        rect.discarded=True
+        return
+    res=[]
+
+    for (i,j) in np.ndindex((uNumPatches,vNumPatches)):
+        patch=converter.Patch(i+1,j+1)
+
+        poles=getRectBezierControlPointsFromRect(patch,nurbs_surface,loc)
+        res.append(poles)
+
+    return res
 
 def CollectTris(
     rectangle: Rectangle, edgeManager: TraingleEdgeManager, pointsManager: PointsManager, tris_lst: List[Triangle]
@@ -525,6 +578,18 @@ def CollectTrisInLine(rectangle: Rectangle, tris_lst: List[Triangle], face, surf
         for sub_rect in rectangle.sub_rects:
             CollectTrisInLine(sub_rect, tris_lst, face, surface, loc)
 
+def CollectRectangles(rectangle:Rectangle,output_lst:List[Triangle],face:Face,surface,loc):
+    if rectangle.discarded:
+        return
+    if rectangle.is_leaf:
+        if rectangle.area()>1e-5:
+            for poles in rectangle.leaf_info:
+                min_x,max_x,min_y,max_y=rectangle.getBoundary()
+                center_normal=face.normal(((min_x+max_x)/2,(min_y+max_y)/2))
+                output_lst.append((center_normal,poles))
+    else:
+        for sub_rect in rectangle.sub_rects:
+            CollectRectangles(sub_rect,output_lst,face,surface,loc)
 
 def HandleLeaves(face: Face, rectangle: Rectangle, surface, loc):
     if rectangle.discarded:
@@ -543,6 +608,19 @@ def HandleLeavesSimple(face: Face, rectangle: Rectangle, surface, loc):
         for sub_rect in rectangle.sub_rects:
             HandleLeavesSimple(face, sub_rect, surface, loc)
 
+def HandleLeavesRectangle(face:Face,rectangle:Rectangle,surface,loc):
+    if rectangle.discarded:
+        return
+    if rectangle.is_leaf:
+        # splitBoundaryRectangle(face,rectangle,surface,loc)
+        intersections=rectangle.leaf_info
+        if (intersections is None or len(intersections)==0) and rectangle.area()>1e-5:
+            rectangle.leaf_info=make_rectangular_bezier(face,rectangle,surface,loc)
+            return
+        rectangle.discarded=True
+    else:
+        for sub_rect in rectangle.sub_rects:
+            HandleLeavesRectangle(face,sub_rect,surface,loc)
 
 def splitBoundaryRectangle(face: Face, rectangle: Rectangle, surface, loc, tol=9e-3):
     intersections = rectangle.leaf_info

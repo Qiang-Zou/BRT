@@ -31,6 +31,10 @@ parser.add_argument(
     "--gpu", type=int,default=0, help="choose gpu"
 )
 
+parser.add_argument(
+    "--num_control_pts", type=int, default=28, help="Number of control points for bezier patches"
+)
+
 parser.add_argument("--dataset_dir", type=str, help="Directory to datasets")
 parser.add_argument("--batch_size", type=int, default=64, help="Batch size")
 parser.add_argument(
@@ -109,7 +113,7 @@ results/{experiment_name}/{month_day}/{hour_min_second}/best.ckpt
     if args.checkpoint is not None:
         model=ClassificationModel.load_from_checkpoint(args.checkpoint)
     else:
-        model_hparams = {'method': args.method,'num_classes':args.num_classes,"masking_rate":None}
+        model_hparams = {'method': args.method,'num_classes':args.num_classes,"masking_rate":None,"num_control_pts":args.num_control_pts}
         if model_hparams is not None:
             model = ClassificationModel(**model_hparams)
         else:

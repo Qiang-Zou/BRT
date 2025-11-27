@@ -127,13 +127,13 @@ class WireNet(nn.Module):
 
 
 class BRT(nn.Module):
-    def __init__(self, dmodel=256, hidden_dim=2048, n_layers=4, n_heads=16, dropout=0.01, max_face_length=90):
+    def __init__(self, dmodel=256, hidden_dim=2048, n_layers=4, n_heads=16, dropout=0.01, max_face_length=90,num_control_pts=28):
         super(BRT, self).__init__()
         self.edge_layer = EdgeEncoder(
             input_dim=4 * 11, srf_emb_dim=dmodel, dropout=dropout, hidden_dim=hidden_dim, n_layers=2, n_heads=4
         )
         self.face_layer = FaceEncoder(
-            input_dim=28 * 4 + 1 + 7, srf_emb_dim=dmodel, dropout=dropout, hidden_dim=hidden_dim, n_layers=2, n_heads=4
+            input_dim=num_control_pts * 4 + 1 + 7, srf_emb_dim=dmodel, dropout=dropout, hidden_dim=hidden_dim, n_layers=2, n_heads=4
         )
 
         self.topo_layer = TopoEncoder(vertex_dim=3, edge_dim=dmodel, h_dim=2 * dmodel, dropout=dropout)
