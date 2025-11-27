@@ -23,7 +23,7 @@ from OCC.Core.Geom import Geom_RectangularTrimmedSurface, Geom_TrimmedCurve
 from occwl.compound import Compound
 from utils.triangle import Triangle
 from utils.sampling import randn_uvgrid, ugrid
-from triangles3 import Rectangle, splitRectangle, HandleLeaves, CollectTrisInLine, make_rect
+from triangles3 import Rectangle,splitRectangle,HandleLeaves,CollectTrisInLine,make_rect,HandleLeavesRectangle,CollectRectangles
 import triangles3
 from solid_to_brt import build_data as build_BRT, build_data_no_label as build_BRT_no_label
 import uuid
@@ -168,7 +168,7 @@ def convertFaceToTriangles(
             else:
                 scale = 1
             new_feature[:, 3:6] = center
-            new_feature[6] = scale
+            new_feature[:,6] = scale
         tri_normals = new_feature
 
     # sample some points as label
@@ -233,7 +233,135 @@ def convertFaceToTriangles(
 
 
 #####################################################################################
+def convertFaceToRectangleBeziers(face:Face,num_sample_points=256,normalize=True,trim=True,rotated_and_normalized=True,**kwargs):
+    surface, loc = getNURBS(face)
 
+    # knot insertion
+    doKnotInsertion(surface,num_max_knots=5)
+
+    converter = Converter(surface)
+
+    uNumPatches = converter.NbUPatches()
+    vNumPatches = converter.NbVPatches()
+
+    if uNumPatches==0 or vNumPatches==0:
+        raise RuntimeError('no patches')
+
+
+    uKnots = ArrReal(1, uNumPatches+1)
+    vKnots = ArrReal(1, vNumPatches+1)
+
+    converter.UKnots(uKnots)
+    converter.VKnots(vKnots)
+
+    rects=[]
+    for u in range(uNumPatches):
+        for v in range(vNumPatches):
+            rect=Rectangle()
+            rect.points=[(uKnots[u],vKnots[v]),(uKnots[u+1],vKnots[v]),(uKnots[u],vKnots[v+1]),(uKnots[u+1],vKnots[v+1])]
+            rects.append(rect)
+
+    if trim:
+        crvs=[]
+        for wire in face.wires():
+            for edge in wire.ordered_edges():
+                edge:Edge 
+                crv,interval=pcurve(face,edge)
+                crvs.append((crv,interval))
+        output_lst=[]
+        with triangles3.suppress_subdivsion_err():
+            for rect in rects:
+                splitRectangle(face,rect,crvs,max_split=5)
+                HandleLeavesRectangle(face,rect,surface,loc) 
+                CollectRectangles(rect,output_lst,face,surface,loc)
+    else:
+        raise NotImplementedError
+
+
+    nodes=[r[1] for r  in output_lst]
+    nodes=np.stack(nodes)
+    nodes=nodes.reshape(nodes.shape[0],-1,nodes.shape[-1])
+
+    mask=[True for r in output_lst]
+    in_mask=np.array(mask)
+
+    rec_normals=[r[0] for r in output_lst]
+    rec_normals=np.stack(rec_normals)
+
+    if rotated_and_normalized:
+        new_feature=np.zeros((len(rec_normals),7),dtype=rec_normals.dtype)
+        new_feature[:,:3]=rec_normals
+        for i in range(len(nodes)):
+            R=rotation_matrix_to_z_axis(rec_normals[i])
+            nodes[i][...,:3]= (R@nodes[i][...,:3].T).T
+
+            x = nodes[..., 0]
+            y = nodes[..., 1]
+            z = nodes[..., 2]
+            bbox = [[x.min(), y.min(), z.min()], [x.max(), y.max(), z.max()]]
+            bbox = np.array(bbox)
+
+            diag = bbox[1] - bbox[0]
+            scale = 2.0 / max(diag[0], diag[1], diag[2])
+            center = 0.5 * (bbox[0] + bbox[1])
+
+            nodes[...,:3] -= center
+            if not np.isnan(scale).any():
+                nodes[...,:3] *= scale
+            else:
+                scale=1
+            new_feature[:,3:6]=center
+            new_feature[:,6]=scale
+        rec_normals=new_feature
+
+    points, uv_values = randn_uvgrid(
+        face, method="point",num=num_sample_points,
+        bounds=[uKnots[0], uKnots[uNumPatches], vKnots[0], vKnots[vNumPatches]]
+    )
+
+    normals = randn_uvgrid(
+        face, method="normal",num=num_sample_points,
+        bounds=[uKnots[0], uKnots[uNumPatches], vKnots[0], vKnots[vNumPatches]],given_uvs=uv_values,uvs=False
+    )
+
+    visibility_status = randn_uvgrid(
+        face, method="visibility_status",num=num_sample_points,
+        bounds=[uKnots[0], uKnots[uNumPatches], vKnots[0], vKnots[vNumPatches]],given_uvs=uv_values,uvs=False
+    )
+    mask = np.logical_or(visibility_status == 0, visibility_status == 2)  # 0: Inside, 1: Outside, 2: On boundary
+
+    # normalize
+    if normalize:
+        x = points[:, 0]
+        y = points[:, 1]
+        z = points[:, 2]
+        bbox = [[x.min(), y.min(), z.min()], [x.max(), y.max(), z.max()]]
+        bbox = np.array(bbox)
+
+        diag = bbox[1] - bbox[0]
+        scale = 2.0 / max(diag[0], diag[1], diag[2])
+        center = 0.5 * (bbox[0] + bbox[1])
+
+        points -= center
+        points *= scale
+
+        nodes[...,:3] -= center
+        nodes[...,:3] *= scale
+    else:
+        scale=1.0
+        center=np.zeros(3)
+
+    points = torch.from_numpy(points)
+    uv_values = torch.from_numpy(uv_values)
+    vis_mask=torch.from_numpy(mask)
+    scale = torch.tensor(scale)
+    normals=torch.tensor(normals)
+    
+    nodes=torch.from_numpy(nodes)
+    in_mask=torch.from_numpy(in_mask)
+    rec_normals=torch.from_numpy(rec_normals)
+
+    return nodes,in_mask,rec_normals,points,normals,vis_mask,uv_values, scale
 
 def convertEdgeToBeziers2(edge: Edge, degree=10, max_knots=100, sampling=True):
     crvdata = BRep_Tool.Curve(edge.topods_shape())
@@ -410,16 +538,20 @@ def main(cmd=None):
 
     arguments = arg_parser.parse_args(cmd)
 
-    if arguments.method == 8:
-        arguments.build_fn = build_triangles
-    elif arguments.method == 10:
+    if arguments.method==8:
+        arguments.build_fn= build_triangles
+    elif arguments.method==10:
         if arguments.no_label:
-            arguments.build_fn = build_brt_data_no_label
+            arguments.build_fn= build_brt_data_no_label
         else:
-            arguments.build_fn = build_brt_data
-
-    elif arguments.method == 8:
-        arguments.sub_fn = convertFaceToTriangles
+            arguments.build_fn= build_brt_data
+    elif arguments.method==18:
+        arguments.build_fn=build_triangles
+    
+    if arguments.method==8:
+        arguments.sub_fn=convertFaceToTriangles
+    elif arguments.method==18:
+        arguments.sub_fn=convertFaceToRectangleBeziers
 
     print(f"process number: {arguments.num_processes}")
 
