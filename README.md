@@ -45,10 +45,12 @@ It can be run with Pytorch Pytorch 2.2.1 + CUDA 12.1 on the operating system Ubu
     cd process
     # extract topology
     python gen_tmcad_topo.py /path/to/input_dir /path/to/output_dir/of/topology
-    # extract face geometry
+    # extract face geometry into triangular bezier patches
     python gen_tmcad_triangles.py /path/to/input_dir /path/to/output_dir/of/triangles
+    # or you can extract the face geometry into rectangular bezier patches
+    python gen_tmcad_rectangles.py /path/to/input_dir /path/to/output_dir/of/rectangles
     # split the dataset and save the result in /path/to/dataset/dir/datasplit.json
-    python split_dataset.py /path/to/output_dir/of/triangles /path/to/output_dir/of/topology  /path/to/dataset/dir/datasplit.json
+    python split_dataset.py /path/to/output_dir/of/triangles(rectangles) /path/to/output_dir/of/topology  /path/to/datasplit.json
     ```
 
 - You can then train the model by the following command 
