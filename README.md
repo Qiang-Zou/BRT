@@ -69,7 +69,36 @@ It can be run with Pytorch Pytorch 2.2.1 + CUDA 12.1 on the operating system Ubu
     python segmentation.py test  --num_classes num_of_classes --dataset_dir /path/to/dataset/dir --batch_size 16 --num_workers 4 --checkpoint path/to/checkpoint
     ```
 
-5.References
+5.Using Rectangular Bézier Patches for Surface Representation
+-------
+
+The method described in the paper converts B‑spline surfaces into triangular Bézier patches, which are then fed into the neural networks. As an alternative, B‑spline surfaces can also be decomposed into **rectangular Bézier patches**, as illustrated below.
+
+<img width="722" height="413" alt="Rectangular Bézier patch example" src="https://github.com/user-attachments/assets/7b03cff5-b7f7-4df5-9c04-e7dd560d6166" /> 
+
+To use rectangular Bézier patches instead of triangular ones, follow the steps below:
+
+### Preprocessing
+To convert surfaces in TMCAD into rectangular Bézier patches, run:
+```shell
+python gen_tmcad_rectangles.py /path/to/input_dir /path/to/output_dir/of/rectangles
+```
+
+### Training & Evaluation
+The number of control points in a rectangular Bézier patch typically differs from that of a triangular patch. For instance, a rectangular Bézier patch of degree (3×3) contains 
+(3+1)×(3+1) = **16 control points**, whereas two triangular Bézier patches of total degree (3+3) contain (2×3+2)(2×3+1)/2 = **28 control points**.
+
+Therefore, when training and evaluating, you must adjust the `num_control_pts` parameter accordingly:
+
+```shell
+# Classification
+python classification.py train --num_classes num_of_classes --dataset_dir /path/to/dataset/dir --batch_size 16 --num_workers 4 --num_control_pts 16
+
+# Segmentation
+python segmentation.py train --num_classes num_of_classes --dataset_dir /path/to/dataset/dir --batch_size 16 --num_workers 4 --num_control_pts 16
+```
+
+6.References
 -------------
 - [1] Qiang Zou, Lizhen Zhu, "Bringing Attention to CAD: Boundary Representation Learning via Transformer." Computer-Aided Design, vol.189, 103940, 2025. https://doi.org/10.1016/j.cad.2025.103940
 - [2] Qiang Zou , Yincai Wu , Zhenyu Liu , Weiwei Xu , Shuming Gao. "Intelligent CAD 2.0." Visual Informatics (2024). https://doi.org/10.1016/j.visinf.2024.10.001
