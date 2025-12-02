@@ -74,7 +74,7 @@ It can be run with Pytorch Pytorch 2.2.1 + CUDA 12.1 on the operating system Ubu
 
 The method described in the paper converts B‑spline surfaces into triangular Bézier patches, which are then fed into the neural networks. As an alternative, B‑spline surfaces can also be decomposed into **rectangular Bézier patches**, as illustrated below.
 
-<img width="722" height="413" alt="Rectangular Bézier patch example" src="https://github.com/user-attachments/assets/d6a1d8ff-3638-40bf-a6ee-9e7518dd2698" />
+<img width="722" height="413" alt="Rectangular Bézier patch example" src="https://github.com/user-attachments/assets/7b03cff5-b7f7-4df5-9c04-e7dd560d6166" /> 
 
 To use rectangular Bézier patches instead of triangular ones, follow the steps below:
 
