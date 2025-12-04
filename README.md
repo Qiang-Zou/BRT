@@ -5,7 +5,7 @@
 - Webpage: https://qiang-zou.github.io/
 - Latest Release: 2025.09
 
-<img align="left" src="brt.jpg"> 
+<img align="left" src="brt.jpg">
 <br />
 
 ## !important
@@ -39,20 +39,30 @@ It can be run with Pytorch Pytorch 2.2.1 + CUDA 12.1 on the operating system Ubu
 4.Usage
 -------
 
-- To preprocess the dataset like TMCAD (Truly Mechanical CAD Dataset), run
+Training the BRT model requires preprocessing B‑rep models into a network-compatible format. The approach described in the paper converts B‑spline surfaces into triangular Bézier patches, which are then used as network input. As an alternative, surfaces can also be decomposed into rectangular Bézier patches.
 
+The figure below illustrates the difference between these representations: triangular patches tile the entire surface (conforming precisely to its boundary), whereas rectangular patches offer a simpler representation but may not achieve complete surface coverage.
+
+<img width="722" height="413" alt="Rectangular Bézier patch example" src="https://github.com/user-attachments/assets/7b03cff5-b7f7-4df5-9c04-e7dd560d6166" />
+
+We therefore provide two geometry preprocessing options:
+
+### 4.1 Using Triangular Bézier Patches
+
+- **Preprocess the dataset (e.g., TMCAD – Truly Mechanical CAD Dataset)**
+    
     ```shell
     cd process
     # extract topology
     python gen_tmcad_topo.py /path/to/input_dir /path/to/output_dir/of/topology
     # extract face geometry
     python gen_tmcad_triangles.py /path/to/input_dir /path/to/output_dir/of/triangles
-    # split the dataset and save the result in /path/to/dataset/dir/datasplit.json
-    python split_dataset.py /path/to/output_dir/of/triangles /path/to/output_dir/of/topology  /path/to/dataset/dir/datasplit.json
+    # split dataset and save results in datasplit.json
+    python split_dataset.py /path/to/output_dir/of/triangles /path/to/output_dir/of/topology /path/to/dataset/dir/datasplit.json
     ```
 
-- You can then train the model by the following command 
-
+- **Train the model**
+    
     ```shell
     # classification
     python classification.py train --num_classes num_of_classes --dataset_dir /path/to/dataset/dir --batch_size 16 --num_workers 4
@@ -60,43 +70,51 @@ It can be run with Pytorch Pytorch 2.2.1 + CUDA 12.1 on the operating system Ubu
     python segmentation.py train --num_classes num_of_classes --dataset_dir /path/to/dataset/dir --batch_size 16 --num_workers 4
     ```
 
-- You can test the model by the following command 
-
+- **Test the model**
+    
     ```shell
     # classification
     python classification.py test --num_classes num_of_classes --dataset_dir /path/to/dataset/dir --batch_size 16 --num_workers 4 --checkpoint path/to/checkpoint
     # segmentation
-    python segmentation.py test  --num_classes num_of_classes --dataset_dir /path/to/dataset/dir --batch_size 16 --num_workers 4 --checkpoint path/to/checkpoint
+    python segmentation.py test --num_classes num_of_classes --dataset_dir /path/to/dataset/dir --batch_size 16 --num_workers 4 --checkpoint path/to/checkpoint
     ```
 
-5.Using Rectangular Bézier Patches for Surface Representation
--------
+### 4.2 Using Rectangular Bézier Patches
 
-The method described in the paper converts B‑spline surfaces into triangular Bézier patches, which are then fed into the neural networks. As an alternative, B‑spline surfaces can also be decomposed into **rectangular Bézier patches**, as illustrated below.
+- **Preprocess the dataset (e.g., TMCAD)**
+    
+    ```shell
+    cd process
+    # extract topology
+    python gen_tmcad_topo.py /path/to/input_dir /path/to/output_dir/of/topology
+    # extract face geometry
+    python gen_tmcad_rectangles.py /path/to/input_dir /path/to/output_dir/of/rectangles
+    # split dataset and save results in datasplit.json
+    python split_dataset.py /path/to/output_dir/of/rectangles /path/to/output_dir/of/topology /path/to/dataset/dir/datasplit.json
+    ```
 
-<img width="722" height="413" alt="Rectangular Bézier patch example" src="https://github.com/user-attachments/assets/7b03cff5-b7f7-4df5-9c04-e7dd560d6166" /> 
+- **Train the model**
 
-To use rectangular Bézier patches instead of triangular ones, follow the steps below:
+    Rectangular Bézier patches generally have a different number of control points than triangular patches. For example, a rectangular patch of degree $3 \times 3$ contains $(3+1) \times (3+1) = \mathbf{16}$ control points, while two triangular patches of total degree $3+3$ contain $(2 \times 3 + 2)(2 \times 3 + 1) / 2 = \mathbf{28}$ control points.  
+    Adjust the `num_ctrl_pts` parameter accordingly:
+    
+    ```shell
+    # classification
+    python classification.py train --num_classes num_of_classes --dataset_dir /path/to/dataset/dir --batch_size 16 --num_workers 4 --num_ctrl_pts 16
+    # segmentation
+    python segmentation.py train --num_classes num_of_classes --dataset_dir /path/to/dataset/dir --batch_size 16 --num_workers 4 --num_ctrl_pts 16
+    ```
 
-### Preprocessing
-To convert surfaces in TMCAD into rectangular Bézier patches, run:
-```shell
-python gen_tmcad_rectangles.py /path/to/input_dir /path/to/output_dir/of/rectangles
-```
+- **Test the model**
+    
+    ```shell
+    # classification
+    python classification.py test --num_classes num_of_classes --dataset_dir /path/to/dataset/dir --batch_size 16 --num_workers 4 --checkpoint path/to/checkpoint --num_ctrl_pts 16
+    # segmentation
+    python segmentation.py test --num_classes num_of_classes --dataset_dir /path/to/dataset/dir --batch_size 16 --num_workers 4 --checkpoint path/to/checkpoint --num_ctrl_pts 16
+    ```
 
-### Training & Evaluation
-The number of control points in a rectangular Bézier patch typically differs from that of a triangular patch. For instance, a rectangular Bézier patch of degree (3×3) contains 
-(3+1)×(3+1) = **16 control points**, whereas two triangular Bézier patches of total degree (3+3) contain (2×3+2)(2×3+1)/2 = **28 control points**.
 
-Therefore, when training and evaluating, you must adjust the `num_control_pts` parameter accordingly:
-
-```shell
-# Classification
-python classification.py train --num_classes num_of_classes --dataset_dir /path/to/dataset/dir --batch_size 16 --num_workers 4 --num_control_pts 16
-
-# Segmentation
-python segmentation.py train --num_classes num_of_classes --dataset_dir /path/to/dataset/dir --batch_size 16 --num_workers 4 --num_control_pts 16
-```
 
 6.References
 -------------
