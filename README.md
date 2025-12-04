@@ -39,7 +39,9 @@ It can be run with Pytorch Pytorch 2.2.1 + CUDA 12.1 on the operating system Ubu
 4.Usage
 -------
 
-Training the BRT model requires preprocessing B‑rep models into a format suitable for the network input. The method described in the paper converts B‑spline surfaces into triangular Bézier patches before feeding them to the neural network. Alternatively, B‑spline surfaces can also be decomposed into **rectangular Bézier patches**, as illustrated below.
+Training the BRT model requires preprocessing B‑rep models into a network-compatible format. The approach described in the paper converts B‑spline surfaces into triangular Bézier patches, which are then used as network input. As an alternative, surfaces can also be decomposed into rectangular Bézier patches.
+
+The figure below illustrates the difference between these representations: triangular patches tile the entire surface (conforming precisely to its boundary), whereas rectangular patches offer a simpler representation but may not achieve complete surface coverage.
 
 <img width="722" height="413" alt="Rectangular Bézier patch example" src="https://github.com/user-attachments/assets/7b03cff5-b7f7-4df5-9c04-e7dd560d6166" />
 
@@ -93,7 +95,7 @@ We therefore provide two geometry preprocessing options:
 
 - **Train the model**
 
-    Rectangular Bézier patches generally have a different number of control points than triangular patches. For example, a rectangular patch of degree $3 \times 3$ contains $(3+1) \times (3+1) = \mathbf{16}$ control points, while two triangular patches of total degree $3+3$ contain $ (2 \times 3 + 2)(2 \times 3 + 1) / 2 = \mathbf{28} $ control points.  
+    Rectangular Bézier patches generally have a different number of control points than triangular patches. For example, a rectangular patch of degree $3 \times 3$ contains $(3+1) \times (3+1) = \mathbf{16}$ control points, while two triangular patches of total degree $3+3$ contain $(2 \times 3 + 2)(2 \times 3 + 1) / 2 = \mathbf{28}$ control points.  
     Adjust the `num_ctrl_pts` parameter accordingly:
     
     ```shell
