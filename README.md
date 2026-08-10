@@ -5,7 +5,7 @@
 - Webpage: https://qiang-zou.github.io/
 - Latest Release: 2025.09
 
-<img align="left" src="brt.jpg"> 
+<img align="left" src="brt.jpg">
 <br />
 
 ## !important
@@ -39,20 +39,30 @@ It can be run with Pytorch Pytorch 2.2.1 + CUDA 12.1 on the operating system Ubu
 4.Usage
 -------
 
-- To preprocess the dataset like TMCAD (Truly Mechanical CAD Dataset), run
+Training the BRT model requires preprocessing B‑rep models into a network-compatible format. The approach described in the paper converts B‑spline surfaces into triangular Bézier patches, which are then used as network input. As an alternative, surfaces can also be decomposed into rectangular Bézier patches.
 
+The figure below illustrates the difference between these representations: triangular patches tile the entire surface (conforming precisely to its boundary), whereas rectangular patches offer a simpler representation but may not achieve complete surface coverage.
+
+<img width="722" height="413" alt="Rectangular Bézier patch example" src="https://github.com/user-attachments/assets/7b03cff5-b7f7-4df5-9c04-e7dd560d6166" />
+
+We therefore provide two geometry preprocessing options:
+
+### 4.1 Using Triangular Bézier Patches
+
+- **Preprocess the dataset (e.g., TMCAD – Truly Mechanical CAD Dataset)**
+    
     ```shell
     cd process
     # extract topology
     python gen_tmcad_topo.py /path/to/input_dir /path/to/output_dir/of/topology
     # extract face geometry
     python gen_tmcad_triangles.py /path/to/input_dir /path/to/output_dir/of/triangles
-    # split the dataset and save the result in /path/to/dataset/dir/datasplit.json
-    python split_dataset.py /path/to/output_dir/of/triangles /path/to/output_dir/of/topology  /path/to/dataset/dir/datasplit.json
+    # split dataset and save results in datasplit.json
+    python split_dataset.py /path/to/output_dir/of/triangles /path/to/output_dir/of/topology /path/to/dataset/dir/datasplit.json
     ```
 
-- You can then train the model by the following command 
-
+- **Train the model**
+    
     ```shell
     # classification
     python classification.py train --num_classes num_of_classes --dataset_dir /path/to/dataset/dir --batch_size 16 --num_workers 4
@@ -60,16 +70,53 @@ It can be run with Pytorch Pytorch 2.2.1 + CUDA 12.1 on the operating system Ubu
     python segmentation.py train --num_classes num_of_classes --dataset_dir /path/to/dataset/dir --batch_size 16 --num_workers 4
     ```
 
-- You can test the model by the following command 
-
+- **Test the model**
+    
     ```shell
     # classification
     python classification.py test --num_classes num_of_classes --dataset_dir /path/to/dataset/dir --batch_size 16 --num_workers 4 --checkpoint path/to/checkpoint
     # segmentation
-    python segmentation.py test  --num_classes num_of_classes --dataset_dir /path/to/dataset/dir --batch_size 16 --num_workers 4 --checkpoint path/to/checkpoint
+    python segmentation.py test --num_classes num_of_classes --dataset_dir /path/to/dataset/dir --batch_size 16 --num_workers 4 --checkpoint path/to/checkpoint
     ```
 
-5.References
+### 4.2 Using Rectangular Bézier Patches
+
+- **Preprocess the dataset (e.g., TMCAD)**
+    
+    ```shell
+    cd process
+    # extract topology
+    python gen_tmcad_topo.py /path/to/input_dir /path/to/output_dir/of/topology
+    # extract face geometry
+    python gen_tmcad_rectangles.py /path/to/input_dir /path/to/output_dir/of/rectangles
+    # split dataset and save results in datasplit.json
+    python split_dataset.py /path/to/output_dir/of/rectangles /path/to/output_dir/of/topology /path/to/dataset/dir/datasplit.json
+    ```
+
+- **Train the model**
+
+    Rectangular Bézier patches generally have a different number of control points than triangular patches. For example, a rectangular patch of degree $3 \times 3$ contains $(3+1) \times (3+1) = \mathbf{16}$ control points, while two triangular patches of total degree $3+3$ contain $(2 \times 3 + 2)(2 \times 3 + 1) / 2 = \mathbf{28}$ control points.  
+    Adjust the `num_ctrl_pts` parameter accordingly:
+    
+    ```shell
+    # classification
+    python classification.py train --num_classes num_of_classes --dataset_dir /path/to/dataset/dir --batch_size 16 --num_workers 4 --num_ctrl_pts 16
+    # segmentation
+    python segmentation.py train --num_classes num_of_classes --dataset_dir /path/to/dataset/dir --batch_size 16 --num_workers 4 --num_ctrl_pts 16
+    ```
+
+- **Test the model**
+    
+    ```shell
+    # classification
+    python classification.py test --num_classes num_of_classes --dataset_dir /path/to/dataset/dir --batch_size 16 --num_workers 4 --checkpoint path/to/checkpoint --num_ctrl_pts 16
+    # segmentation
+    python segmentation.py test --num_classes num_of_classes --dataset_dir /path/to/dataset/dir --batch_size 16 --num_workers 4 --checkpoint path/to/checkpoint --num_ctrl_pts 16
+    ```
+
+
+
+6.References
 -------------
 - [1] Qiang Zou, Lizhen Zhu, "Bringing Attention to CAD: Boundary Representation Learning via Transformer." Computer-Aided Design, vol.189, 103940, 2025. https://doi.org/10.1016/j.cad.2025.103940
 - [2] Qiang Zou , Yincai Wu , Zhenyu Liu , Weiwei Xu , Shuming Gao. "Intelligent CAD 2.0." Visual Informatics (2024). https://doi.org/10.1016/j.visinf.2024.10.001

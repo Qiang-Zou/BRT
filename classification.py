@@ -1,7 +1,6 @@
 import argparse
 import pathlib
 import time
-
 from pytorch_lightning import Trainer
 from pytorch_lightning.callbacks import ModelCheckpoint
 from pytorch_lightning.loggers import TensorBoardLogger
@@ -11,9 +10,6 @@ from models.brt_classfication import ClassificationPL as BRTClassification
 import datasets
 
 import torch
-
-# import os
-# os.environ['CUDA_LAUNCH_BLOCKING'] = "1"
 
 parser = argparse.ArgumentParser(
     "Parameterized Surface Reconstruction from Bezier Patches")
@@ -33,6 +29,10 @@ parser.add_argument(
 )
 parser.add_argument(
     "--gpu", type=int,default=0, help="choose gpu"
+)
+
+parser.add_argument(
+    "--num_control_pts", type=int, default=28, help="Number of control points for bezier patches"
 )
 
 parser.add_argument("--dataset_dir", type=str, help="Directory to datasets")
@@ -56,7 +56,6 @@ parser.add_argument(
     help="Experiment name (used to create folder inside ./results/ to save logs and checkpoints)",
 )
 
-# parser = Trainer.add_argparse_args(parser)
 args = parser.parse_args()
 
 experiment_name = args.experiment_name
@@ -114,7 +113,7 @@ results/{experiment_name}/{month_day}/{hour_min_second}/best.ckpt
     if args.checkpoint is not None:
         model=ClassificationModel.load_from_checkpoint(args.checkpoint)
     else:
-        model_hparams = {'method': args.method,'num_classes':args.num_classes,"masking_rate":None}
+        model_hparams = {'method': args.method,'num_classes':args.num_classes,"masking_rate":None,"num_control_pts":args.num_control_pts}
         if model_hparams is not None:
             model = ClassificationModel(**model_hparams)
         else:

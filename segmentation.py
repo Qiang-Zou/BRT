@@ -2,11 +2,9 @@
 import argparse
 import pathlib
 import time
-
 from pytorch_lightning import Trainer
 from pytorch_lightning.callbacks import ModelCheckpoint
 from pytorch_lightning.loggers import TensorBoardLogger
-# from pytorch_lightning.utilities.seed import seed_everything
 from lightning.pytorch import seed_everything
 import datasets.brt_dataset
 from models.brt_segmentation import SegmentationPL as BRTSegmentation
@@ -22,6 +20,9 @@ parser.add_argument(
 
 parser.add_argument(
     "--num_classes", type=int,help="number of classes of the dataset"
+)
+parser.add_argument(
+    "--num_control_pts", type=int, default=28, help="Number of control points for bezier patches"
 )
 parser.add_argument(
     "--method", choices=("brt"), default='brt',help='Specific method'
@@ -81,7 +82,7 @@ trainer = Trainer(callbacks=[checkpoint_callback], logger=TensorBoardLogger(
 ),devices=[args.gpu],accelerator='gpu')
 
 if args.method == "brt":
-    ClassificationModel = BRTSegmentation
+    SegmentationModel = BRTSegmentation
 else:
     raise NotImplementedError
 
@@ -91,7 +92,7 @@ else:
     raise NotImplementedError
 
 # model_hparams = {'method': args.method}
-model_hparams = None
+model_hparams = {'method': args.method,'num_classes':args.num_classes,"masking_rate":None,"num_control_pts":args.num_control_pts}
 if args.traintest == "train":
     seed_everything(workers=True)
     print(
@@ -110,12 +111,9 @@ results/{experiment_name}/{month_day}/{hour_min_second}/best.ckpt
     """
     )
     if args.checkpoint is not None:
-        model=ClassificationModel.load_from_checkpoint(args.checkpoint)
+        model=SegmentationModel.load_from_checkpoint(args.checkpoint)
     else:
-        if model_hparams is not None:
-            model = ClassificationModel(**model_hparams)
-        else:
-            model = ClassificationModel(num_classes=args.num_classes)
+        model = SegmentationModel(**model_hparams)
     train_data = Dataset(root_dir=args.dataset_dir, split="train",masking_rate=None,load_label_from_file=True)
     val_data = Dataset(root_dir=args.dataset_dir, split="val",masking_rate=None,load_label_from_file=True)
     train_loader = train_data.get_dataloader(
@@ -134,7 +132,7 @@ else:
     test_loader = test_data.get_dataloader(
         batch_size=args.batch_size, shuffle=False, num_workers=args.num_workers
     )
-    model = ClassificationModel.load_from_checkpoint(args.checkpoint)
+    model = SegmentationModel.load_from_checkpoint(args.checkpoint)
     results = trainer.test(model=model, dataloaders=[
                            test_loader], verbose=True)
     print(
