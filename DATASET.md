@@ -37,7 +37,7 @@ It was collected as part of the BRT to support research in learning from CAD mod
 The dataset is publicly available at the following location:
 
 ### TMCAD v2
-The TMCAD dataset v2 (a refined version released on 2025.11.02) can be downloaded from: https://pan.zju.edu.cn/share/218d10a88e8c18f5b96e94a7e0
+The TMCAD dataset v2 (a refined version released on 2025.11.02) can be downloaded from: https://pan.zju.edu.cn/share/327c39e9b5c68b6ba2d26fa00b
 
 
 **TMCAD v2**  is a **cleaned and verified collection of 3D CAD mechanical parts**, designed for research in 3D **shape classification**, **representation learning**, and **retrieval**, etc. The specific improvements in v2 are:
