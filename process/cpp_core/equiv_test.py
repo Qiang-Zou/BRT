@@ -10,8 +10,8 @@ so the RNG streams align) and ALL eight outputs are compared: nodes,
 in_mask, tri_normals (the 7-column feature), points, normals, vis_mask,
 uv_values, scale. normalize=False as in production (build_triangles).
 
-Both paths run in the SAME process so they share the module-import-time
-random uv fit grid (import-time random uv grid). Faces where both implementations raise are
+Both paths use the same deterministic UV grid for boundary fitting.
+Faces where both implementations raise are
 counted as matching failures.
 
 Usage (inside the pythonocc conda env, after building brt_core):

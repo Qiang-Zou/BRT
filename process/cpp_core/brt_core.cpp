@@ -67,7 +67,7 @@ struct Curve {
 struct Isect {
     int nbpoints = 0;
     std::vector<V2> pts;
-    std::vector<double> params;  // chordErrorCheckInRect mutates these in place
+    std::vector<double> params;
     const Curve* curve = nullptr;
     bool two_same_line = false;
 };
@@ -388,25 +388,29 @@ static void py_linspace(double start, double stop, int num, double* out) {
     out[num - 1] = stop;
 }
 
-// chordErrorCheckInRect(intersection, rect, tol=0.7, edge_sample_num=20)
-// NOTE: the periodic branch mutates the stored intersection parameters in
-// place (swap + period shift), exactly like the Python list aliasing.
-static bool chord_error_check_in_rect(Isect& is, const Rect& r, double tol) {
+// Keep each parameter paired with its endpoint, including across a periodic seam.
+static std::array<double, 2> boundary_interval(const Isect& is, const Rect& r) {
+    double first = is.params[0], last = is.params[1];
+    const auto& crv = is.curve->crv;
+    if (crv->IsPeriodic()) {
+        gp_Pnt2d mid = crv->Value((first + last) / 2.0);
+        if (!rect_contains(r, V2{mid.X(), mid.Y()}, true, 1e-4)) {
+            if (first < last) first += crv->Period();
+            else last += crv->Period();
+        }
+    }
+    return {first, last};
+}
+
+static bool chord_error_check_in_rect(const Isect& is, const Rect& r, double tol) {
     constexpr int kSamples = 20;
     if (is.nbpoints > 1) {
         if (is.nbpoints != 2)
             throw std::runtime_error("intersection points are not 2");
-        const Handle(Geom2d_Curve)& crv = is.curve->crv;
-        if (crv->IsPeriodic()) {
-            double u = (is.params[0] + is.params[1]) / 2.0;
-            gp_Pnt2d mid = crv->Value(u);
-            if (!rect_contains(r, V2{mid.X(), mid.Y()}, true, 1e-4)) {
-                std::swap(is.params[0], is.params[1]);
-                is.params[1] += crv->Period();
-            }
-        }
+        const auto& crv = is.curve->crv;
+        auto interval = boundary_interval(is, r);
         double t[kSamples];
-        py_linspace(is.params[0], is.params[1], kSamples, t);
+        py_linspace(interval[0], interval[1], kSamples, t);
         V2 pts[kSamples];
         for (int i = 0; i < kSamples; i++) {
             gp_Pnt2d g = crv->Value(t[i]);
@@ -435,15 +439,16 @@ static bool has_same_point(const Isect& a, const Isect& b, double tol, V2& out) 
     return false;
 }
 
-// pointOnLine, reproducing `(near p1 or p2) or (dot >= 0 and dist < tol)`
+// Match the finite segment and endpoint tolerance used by pointOnLine.
 static bool point_on_line(const V2& p1, const V2& p2, const V2& pt, double tol) {
     if (dist2(p2, pt) < tol || dist2(p1, pt) < tol) return true;
     double abx = p2.x - p1.x, aby = p2.y - p1.y;
     double apx = pt.x - p1.x, apy = pt.y - p1.y;
     double dot = abx * apx + aby * apy;
-    if (!(dot >= 0.0)) return false;
+    double length_sq = abx * abx + aby * aby;
+    if (length_sq == 0.0 || !(dot >= 0.0 && dot <= length_sq)) return false;
     double cross = std::fabs(abx * apy - aby * apx);
-    double ab_len = std::sqrt(abx * abx + aby * aby);
+    double ab_len = std::sqrt(length_sq);
     return (cross / ab_len) < tol;
 }
 
@@ -742,14 +747,8 @@ static void split_boundary_rectangle(Ctx& c, Rect& r) {
             if (item <= 0) continue;
             bool corner_point = false;
             bool reverse = (item == 0x02);
-            double pr[2];
-            if (reverse) {
-                pr[0] = isect.params[1];
-                pr[1] = isect.params[0];
-            } else {
-                pr[0] = isect.params[0];
-                pr[1] = isect.params[1];
-            }
+            auto pr = boundary_interval(isect, r);
+            if (reverse) std::swap(pr[0], pr[1]);
             const V2& A = isect.pts[reverse ? 1 : 0];   // Points[reverse]
             const V2& B = isect.pts[reverse ? 0 : 1];   // Points[not reverse]
 
@@ -765,7 +764,7 @@ static void split_boundary_rectangle(Ctx& c, Rect& r) {
                         rect_split(r, &oppo, tol);
                         r.is_leaf = false;
                         r.subs[end_index].tris =
-                            make_triangles(c, isect.curve->crv, pr, A, oppo, B);
+                            make_triangles(c, isect.curve->crv, pr.data(), A, oppo, B);
                         r.subs[end_index].leaf_state = 2;
                     } else {
                         rect_split(r, &oppo, tol);
@@ -773,7 +772,7 @@ static void split_boundary_rectangle(Ctx& c, Rect& r) {
                         for (int k = 0; k < 4; k++) r.subs[k].discarded = true;
                         r.subs[end_index].discarded = false;
                         r.subs[end_index].tris = make_triangles(
-                            c, isect.curve->crv, pr, A, r.p[end_index], B);
+                            c, isect.curve->crv, pr.data(), A, r.p[end_index], B);
                         r.subs[end_index].leaf_state = 2;
                     }
                     break;
@@ -800,7 +799,7 @@ static void split_boundary_rectangle(Ctx& c, Rect& r) {
                     rect_split(r, &oppo, tol);
                     r.is_leaf = false;
                     int tgt = CW[(idx + 3) % 4];
-                    r.subs[tgt].tris = make_triangles(c, isect.curve->crv, pr,
+                    r.subs[tgt].tris = make_triangles(c, isect.curve->crv, pr.data(),
                                                       point1, oppo, point2);
                     r.subs[tgt].leaf_state = 2;
                 } else if (d < -tol) {
@@ -809,7 +808,7 @@ static void split_boundary_rectangle(Ctx& c, Rect& r) {
                     rect_split(r, &oppo, tol);
                     r.is_leaf = false;
                     int tgt = CW[idx];
-                    r.subs[tgt].tris = make_triangles(c, isect.curve->crv, pr,
+                    r.subs[tgt].tris = make_triangles(c, isect.curve->crv, pr.data(),
                                                       point1, oppo, point2);
                     r.subs[tgt].leaf_state = 2;
                 } else {
@@ -817,7 +816,7 @@ static void split_boundary_rectangle(Ctx& c, Rect& r) {
                     rect_split(r, &oppo, tol);
                     r.is_leaf = false;
                     r.subs[end_index].tris =
-                        make_boundary_rect(c, isect.curve->crv, pr, point1,
+                        make_boundary_rect(c, isect.curve->crv, pr.data(), point1,
                                            end_point, other_point, point2);
                     r.subs[end_index].leaf_state = 2;
                     for (int k = 0; k < 4; k++)
