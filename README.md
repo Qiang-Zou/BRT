@@ -4,6 +4,7 @@
 - Email: qzou.code@gmail.com
 - Webpage: https://qiang-zou.github.io/
 - Latest Release: 2025.09
+- Updated on 2026.11 with open weights and C++ core for face tokenization (plus a standalone convert_ speedup)
 
 <img align="left" src="brt.jpg">
 <br />
