@@ -1,0 +1,47 @@
+{
+  "study_type": "supervised_warm_start_finetuning",
+  "strict_paper_reproduction": false,
+  "initial_checkpoint_sha256": "608dfa4eb761dc3b8b25139cd7696b2f6031a47a7b34de2ff19a6a86c192b676",
+  "manifest_sha256": "bf3c5d467023f5a3aade2a3810d92d82eed8405892f18ac0b42da6b1ce39ddb9",
+  "max_epochs": 30,
+  "early_stopping_patience": 8,
+  "max_training_wall_seconds": 10800,
+  "learning_rate": 1e-05,
+  "adam_betas": [
+    0.001,
+    0.999
+  ],
+  "batch_size": 16,
+  "seed": 0,
+  "precision": "float32_highest",
+  "train_drop_last": true,
+  "evaluation_drop_last": false,
+  "expected_test_count": 794,
+  "selection": "minimum_validation_loss_including_initial_checkpoint",
+  "task": "classification",
+  "num_classes": 10,
+  "freeze_backbone": false,
+  "new_optimizer_state": true,
+  "additional_masking": null,
+  "loader_workers": 8,
+  "test_protocol": "CPU, 8 threads, seed 0, 8 data workers, batch 16, no dropped tail; same numerical runtime as initial reported test",
+  "source_sha256": {
+    "train_finetune.py": "dfef5cbcfef08a26a9dfeb3b4cd06464603808d52ca651f76581228e02f5dd04",
+    "scripts/memory_recovery.py": "8366b8c17ff6175b1ef258a76b07868286167c4ad28b1aba9fdd1e2dcfe01ac8",
+    "runtime/datasets/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runtime/datasets/brt_dataset.py": "cdecedbaf79b73ca058dbac7596c96d4f323be47c2dc46f83ac522ba40cb802d",
+    "runtime/models/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runtime/models/brt.py": "a44608815515e9d0f497f179c3606dbcf59294eae487a98d01a770251c701ee1",
+    "runtime/models/brt_classfication.py": "b2803b6566c544140b85fecb80b316c43ede10319177a1b44abddd2b579fa485",
+    "runtime/models/encoders.py": "05b87bcaf6d1373d6b84dd2d8b52fa82754faa28fe04d000150b08a3013fae4e"
+  },
+  "remaining_mismatches": [
+    "Author processed dataset and split not verified",
+    "Original face/edge caches and original model architecture retained",
+    "Public-repository geometry/masking/topology differences retained",
+    "Warm-start fine-tuning is not the paper 350-epoch training protocol"
+  ],
+  "created_at": "2026-11-13 12:47:03 +0800",
+  "completed_epochs": 9,
+  "selected_epoch": 1
+}

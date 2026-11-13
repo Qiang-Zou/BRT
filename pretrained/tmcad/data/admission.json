@@ -1,0 +1,7744 @@
+{
+  "raw_counts": {
+    "train": 4780,
+    "val": 1024,
+    "test": 1026
+  },
+  "admitted_counts": {
+    "train": 3708,
+    "val": 789,
+    "test": 794
+  },
+  "exclusions": {
+    "train": [
+      {
+        "face": "bracket/bracket_0780.bin",
+        "topo": "bracket/bracket_0780.bin",
+        "label": 2
+      },
+      {
+        "face": "screw/screw_0280.bin",
+        "topo": "screw/screw_0280.bin",
+        "label": 8
+      },
+      {
+        "face": "gear/gear_0118.bin",
+        "topo": "gear/gear_0118.bin",
+        "label": 5
+      },
+      {
+        "face": "bracket/bracket_0257.bin",
+        "topo": "bracket/bracket_0257.bin",
+        "label": 2
+      },
+      {
+        "face": "bearing/bearing_0825.bin",
+        "topo": "bearing/bearing_0825.bin",
+        "label": 0
+      },
+      {
+        "face": "gear/gear_0484.bin",
+        "topo": "gear/gear_0484.bin",
+        "label": 5
+      },
+      {
+        "face": "screw/screw_0845.bin",
+        "topo": "screw/screw_0845.bin",
+        "label": 8
+      },
+      {
+        "face": "gear/gear_0748.bin",
+        "topo": "gear/gear_0748.bin",
+        "label": 5
+      },
+      {
+        "face": "screw/screw_0954.bin",
+        "topo": "screw/screw_0954.bin",
+        "label": 8
+      },
+      {
+        "face": "screw/screw_0830.bin",
+        "topo": "screw/screw_0830.bin",
+        "label": 8
+      },
+      {
+        "face": "pulley/pulley_0262.bin",
+        "topo": "pulley/pulley_0262.bin",
+        "label": 7
+      },
+      {
+        "face": "gear/gear_0781.bin",
+        "topo": "gear/gear_0781.bin",
+        "label": 5
+      },
+      {
+        "face": "bearing/bearing_0397.bin",
+        "topo": "bearing/bearing_0397.bin",
+        "label": 0
+      },
+      {
+        "face": "gear/gear_0382.bin",
+        "topo": "gear/gear_0382.bin",
+        "label": 5
+      },
+      {
+        "face": "shaft/shaft_0330.bin",
+        "topo": "shaft/shaft_0330.bin",
+        "label": 9
+      },
+      {
+        "face": "screw/screw_0756.bin",
+        "topo": "screw/screw_0756.bin",
+        "label": 8
+      },
+      {
+        "face": "bearing/bearing_0195.bin",
+        "topo": "bearing/bearing_0195.bin",
+        "label": 0
+      },
+      {
+        "face": "gear/gear_0668.bin",
+        "topo": "gear/gear_0668.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0892.bin",
+        "topo": "gear/gear_0892.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0041.bin",
+        "topo": "gear/gear_0041.bin",
+        "label": 5
+      },
+      {
+        "face": "bracket/bracket_0159.bin",
+        "topo": "bracket/bracket_0159.bin",
+        "label": 2
+      },
+      {
+        "face": "bracket/bracket_0115.bin",
+        "topo": "bracket/bracket_0115.bin",
+        "label": 2
+      },
+      {
+        "face": "pulley/pulley_0264.bin",
+        "topo": "pulley/pulley_0264.bin",
+        "label": 7
+      },
+      {
+        "face": "gear/gear_0436.bin",
+        "topo": "gear/gear_0436.bin",
+        "label": 5
+      },
+      {
+        "face": "bearing/bearing_0071.bin",
+        "topo": "bearing/bearing_0071.bin",
+        "label": 0
+      },
+      {
+        "face": "gear/gear_0545.bin",
+        "topo": "gear/gear_0545.bin",
+        "label": 5
+      },
+      {
+        "face": "screw/screw_0276.bin",
+        "topo": "screw/screw_0276.bin",
+        "label": 8
+      },
+      {
+        "face": "shaft/shaft_0236.bin",
+        "topo": "shaft/shaft_0236.bin",
+        "label": 9
+      },
+      {
+        "face": "gear/gear_0724.bin",
+        "topo": "gear/gear_0724.bin",
+        "label": 5
+      },
+      {
+        "face": "screw/screw_0399.bin",
+        "topo": "screw/screw_0399.bin",
+        "label": 8
+      },
+      {
+        "face": "bracket/bracket_0537.bin",
+        "topo": "bracket/bracket_0537.bin",
+        "label": 2
+      },
+      {
+        "face": "bracket/bracket_0015.bin",
+        "topo": "bracket/bracket_0015.bin",
+        "label": 2
+      },
+      {
+        "face": "bearing/bearing_0068.bin",
+        "topo": "bearing/bearing_0068.bin",
+        "label": 0
+      },
+      {
+        "face": "bracket/bracket_0889.bin",
+        "topo": "bracket/bracket_0889.bin",
+        "label": 2
+      },
+      {
+        "face": "gear/gear_0432.bin",
+        "topo": "gear/gear_0432.bin",
+        "label": 5
+      },
+      {
+        "face": "bracket/bracket_0675.bin",
+        "topo": "bracket/bracket_0675.bin",
+        "label": 2
+      },
+      {
+        "face": "shaft/shaft_0110.bin",
+        "topo": "shaft/shaft_0110.bin",
+        "label": 9
+      },
+      {
+        "face": "coupling/coupling_0174.bin",
+        "topo": "coupling/coupling_0174.bin",
+        "label": 3
+      },
+      {
+        "face": "gear/gear_0464.bin",
+        "topo": "gear/gear_0464.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0603.bin",
+        "topo": "gear/gear_0603.bin",
+        "label": 5
+      },
+      {
+        "face": "shaft/shaft_0783.bin",
+        "topo": "shaft/shaft_0783.bin",
+        "label": 9
+      },
+      {
+        "face": "coupling/coupling_0359.bin",
+        "topo": "coupling/coupling_0359.bin",
+        "label": 3
+      },
+      {
+        "face": "gear/gear_0746.bin",
+        "topo": "gear/gear_0746.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0018.bin",
+        "topo": "gear/gear_0018.bin",
+        "label": 5
+      },
+      {
+        "face": "bearing/bearing_0559.bin",
+        "topo": "bearing/bearing_0559.bin",
+        "label": 0
+      },
+      {
+        "face": "bearing/bearing_0844.bin",
+        "topo": "bearing/bearing_0844.bin",
+        "label": 0
+      },
+      {
+        "face": "screw/screw_0665.bin",
+        "topo": "screw/screw_0665.bin",
+        "label": 8
+      },
+      {
+        "face": "gear/gear_0534.bin",
+        "topo": "gear/gear_0534.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0153.bin",
+        "topo": "gear/gear_0153.bin",
+        "label": 5
+      },
+      {
+        "face": "bracket/bracket_0099.bin",
+        "topo": "bracket/bracket_0099.bin",
+        "label": 2
+      },
+      {
+        "face": "shaft/shaft_0509.bin",
+        "topo": "shaft/shaft_0509.bin",
+        "label": 9
+      },
+      {
+        "face": "gear/gear_0765.bin",
+        "topo": "gear/gear_0765.bin",
+        "label": 5
+      },
+      {
+        "face": "bracket/bracket_0029.bin",
+        "topo": "bracket/bracket_0029.bin",
+        "label": 2
+      },
+      {
+        "face": "pulley/pulley_0058.bin",
+        "topo": "pulley/pulley_0058.bin",
+        "label": 7
+      },
+      {
+        "face": "screw/screw_0288.bin",
+        "topo": "screw/screw_0288.bin",
+        "label": 8
+      },
+      {
+        "face": "bearing/bearing_0093.bin",
+        "topo": "bearing/bearing_0093.bin",
+        "label": 0
+      },
+      {
+        "face": "gear/gear_0580.bin",
+        "topo": "gear/gear_0580.bin",
+        "label": 5
+      },
+      {
+        "face": "bracket/bracket_0309.bin",
+        "topo": "bracket/bracket_0309.bin",
+        "label": 2
+      },
+      {
+        "face": "bracket/bracket_0219.bin",
+        "topo": "bracket/bracket_0219.bin",
+        "label": 2
+      },
+      {
+        "face": "gear/gear_0166.bin",
+        "topo": "gear/gear_0166.bin",
+        "label": 5
+      },
+      {
+        "face": "bracket/bracket_0247.bin",
+        "topo": "bracket/bracket_0247.bin",
+        "label": 2
+      },
+      {
+        "face": "bearing/bearing_0104.bin",
+        "topo": "bearing/bearing_0104.bin",
+        "label": 0
+      },
+      {
+        "face": "gear/gear_0487.bin",
+        "topo": "gear/gear_0487.bin",
+        "label": 5
+      },
+      {
+        "face": "screw/screw_0587.bin",
+        "topo": "screw/screw_0587.bin",
+        "label": 8
+      },
+      {
+        "face": "pulley/pulley_0415.bin",
+        "topo": "pulley/pulley_0415.bin",
+        "label": 7
+      },
+      {
+        "face": "coupling/coupling_0200.bin",
+        "topo": "coupling/coupling_0200.bin",
+        "label": 3
+      },
+      {
+        "face": "pulley/pulley_0379.bin",
+        "topo": "pulley/pulley_0379.bin",
+        "label": 7
+      },
+      {
+        "face": "gear/gear_0400.bin",
+        "topo": "gear/gear_0400.bin",
+        "label": 5
+      },
+      {
+        "face": "flange/flange_0137.bin",
+        "topo": "flange/flange_0137.bin",
+        "label": 4
+      },
+      {
+        "face": "coupling/coupling_0008.bin",
+        "topo": "coupling/coupling_0008.bin",
+        "label": 3
+      },
+      {
+        "face": "shaft/shaft_0422.bin",
+        "topo": "shaft/shaft_0422.bin",
+        "label": 9
+      },
+      {
+        "face": "shaft/shaft_0126.bin",
+        "topo": "shaft/shaft_0126.bin",
+        "label": 9
+      },
+      {
+        "face": "screw/screw_0382.bin",
+        "topo": "screw/screw_0382.bin",
+        "label": 8
+      },
+      {
+        "face": "screw/screw_0278.bin",
+        "topo": "screw/screw_0278.bin",
+        "label": 8
+      },
+      {
+        "face": "bracket/bracket_0136.bin",
+        "topo": "bracket/bracket_0136.bin",
+        "label": 2
+      },
+      {
+        "face": "bracket/bracket_0838.bin",
+        "topo": "bracket/bracket_0838.bin",
+        "label": 2
+      },
+      {
+        "face": "shaft/shaft_0248.bin",
+        "topo": "shaft/shaft_0248.bin",
+        "label": 9
+      },
+      {
+        "face": "bolt/bolt_0345.bin",
+        "topo": "bolt/bolt_0345.bin",
+        "label": 1
+      },
+      {
+        "face": "gear/gear_0731.bin",
+        "topo": "gear/gear_0731.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0062.bin",
+        "topo": "gear/gear_0062.bin",
+        "label": 5
+      },
+      {
+        "face": "coupling/coupling_0167.bin",
+        "topo": "coupling/coupling_0167.bin",
+        "label": 3
+      },
+      {
+        "face": "bracket/bracket_0784.bin",
+        "topo": "bracket/bracket_0784.bin",
+        "label": 2
+      },
+      {
+        "face": "shaft/shaft_0072.bin",
+        "topo": "shaft/shaft_0072.bin",
+        "label": 9
+      },
+      {
+        "face": "shaft/shaft_0518.bin",
+        "topo": "shaft/shaft_0518.bin",
+        "label": 9
+      },
+      {
+        "face": "gear/gear_0838.bin",
+        "topo": "gear/gear_0838.bin",
+        "label": 5
+      },
+      {
+        "face": "bearing/bearing_0094.bin",
+        "topo": "bearing/bearing_0094.bin",
+        "label": 0
+      },
+      {
+        "face": "bolt/bolt_0818.bin",
+        "topo": "bolt/bolt_0818.bin",
+        "label": 1
+      },
+      {
+        "face": "screw/screw_0542.bin",
+        "topo": "screw/screw_0542.bin",
+        "label": 8
+      },
+      {
+        "face": "flange/flange_0497.bin",
+        "topo": "flange/flange_0497.bin",
+        "label": 4
+      },
+      {
+        "face": "screw/screw_0600.bin",
+        "topo": "screw/screw_0600.bin",
+        "label": 8
+      },
+      {
+        "face": "bearing/bearing_0172.bin",
+        "topo": "bearing/bearing_0172.bin",
+        "label": 0
+      },
+      {
+        "face": "pulley/pulley_0018.bin",
+        "topo": "pulley/pulley_0018.bin",
+        "label": 7
+      },
+      {
+        "face": "gear/gear_0749.bin",
+        "topo": "gear/gear_0749.bin",
+        "label": 5
+      },
+      {
+        "face": "bracket/bracket_0556.bin",
+        "topo": "bracket/bracket_0556.bin",
+        "label": 2
+      },
+      {
+        "face": "bracket/bracket_0223.bin",
+        "topo": "bracket/bracket_0223.bin",
+        "label": 2
+      },
+      {
+        "face": "gear/gear_0879.bin",
+        "topo": "gear/gear_0879.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0291.bin",
+        "topo": "gear/gear_0291.bin",
+        "label": 5
+      },
+      {
+        "face": "bearing/bearing_0332.bin",
+        "topo": "bearing/bearing_0332.bin",
+        "label": 0
+      },
+      {
+        "face": "gear/gear_0429.bin",
+        "topo": "gear/gear_0429.bin",
+        "label": 5
+      },
+      {
+        "face": "bracket/bracket_0661.bin",
+        "topo": "bracket/bracket_0661.bin",
+        "label": 2
+      },
+      {
+        "face": "bearing/bearing_0215.bin",
+        "topo": "bearing/bearing_0215.bin",
+        "label": 0
+      },
+      {
+        "face": "bearing/bearing_0151.bin",
+        "topo": "bearing/bearing_0151.bin",
+        "label": 0
+      },
+      {
+        "face": "pulley/pulley_0215.bin",
+        "topo": "pulley/pulley_0215.bin",
+        "label": 7
+      },
+      {
+        "face": "gear/gear_0554.bin",
+        "topo": "gear/gear_0554.bin",
+        "label": 5
+      },
+      {
+        "face": "coupling/coupling_0095.bin",
+        "topo": "coupling/coupling_0095.bin",
+        "label": 3
+      },
+      {
+        "face": "gear/gear_0442.bin",
+        "topo": "gear/gear_0442.bin",
+        "label": 5
+      },
+      {
+        "face": "screw/screw_0264.bin",
+        "topo": "screw/screw_0264.bin",
+        "label": 8
+      },
+      {
+        "face": "gear/gear_0797.bin",
+        "topo": "gear/gear_0797.bin",
+        "label": 5
+      },
+      {
+        "face": "bearing/bearing_0160.bin",
+        "topo": "bearing/bearing_0160.bin",
+        "label": 0
+      },
+      {
+        "face": "screw/screw_0471.bin",
+        "topo": "screw/screw_0471.bin",
+        "label": 8
+      },
+      {
+        "face": "bracket/bracket_0128.bin",
+        "topo": "bracket/bracket_0128.bin",
+        "label": 2
+      },
+      {
+        "face": "bolt/bolt_0745.bin",
+        "topo": "bolt/bolt_0745.bin",
+        "label": 1
+      },
+      {
+        "face": "gear/gear_0351.bin",
+        "topo": "gear/gear_0351.bin",
+        "label": 5
+      },
+      {
+        "face": "bracket/bracket_0286.bin",
+        "topo": "bracket/bracket_0286.bin",
+        "label": 2
+      },
+      {
+        "face": "bracket/bracket_0378.bin",
+        "topo": "bracket/bracket_0378.bin",
+        "label": 2
+      },
+      {
+        "face": "bracket/bracket_0234.bin",
+        "topo": "bracket/bracket_0234.bin",
+        "label": 2
+      },
+      {
+        "face": "bearing/bearing_0499.bin",
+        "topo": "bearing/bearing_0499.bin",
+        "label": 0
+      },
+      {
+        "face": "gear/gear_0112.bin",
+        "topo": "gear/gear_0112.bin",
+        "label": 5
+      },
+      {
+        "face": "screw/screw_0497.bin",
+        "topo": "screw/screw_0497.bin",
+        "label": 8
+      },
+      {
+        "face": "shaft/shaft_0288.bin",
+        "topo": "shaft/shaft_0288.bin",
+        "label": 9
+      },
+      {
+        "face": "gear/gear_0568.bin",
+        "topo": "gear/gear_0568.bin",
+        "label": 5
+      },
+      {
+        "face": "pulley/pulley_0287.bin",
+        "topo": "pulley/pulley_0287.bin",
+        "label": 7
+      },
+      {
+        "face": "bearing/bearing_0557.bin",
+        "topo": "bearing/bearing_0557.bin",
+        "label": 0
+      },
+      {
+        "face": "gear/gear_0422.bin",
+        "topo": "gear/gear_0422.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0330.bin",
+        "topo": "gear/gear_0330.bin",
+        "label": 5
+      },
+      {
+        "face": "shaft/shaft_0569.bin",
+        "topo": "shaft/shaft_0569.bin",
+        "label": 9
+      },
+      {
+        "face": "nut/nut_0812.bin",
+        "topo": "nut/nut_0812.bin",
+        "label": 6
+      },
+      {
+        "face": "gear/gear_0835.bin",
+        "topo": "gear/gear_0835.bin",
+        "label": 5
+      },
+      {
+        "face": "pulley/pulley_0334.bin",
+        "topo": "pulley/pulley_0334.bin",
+        "label": 7
+      },
+      {
+        "face": "bracket/bracket_0629.bin",
+        "topo": "bracket/bracket_0629.bin",
+        "label": 2
+      },
+      {
+        "face": "bracket/bracket_0035.bin",
+        "topo": "bracket/bracket_0035.bin",
+        "label": 2
+      },
+      {
+        "face": "bolt/bolt_0064.bin",
+        "topo": "bolt/bolt_0064.bin",
+        "label": 1
+      },
+      {
+        "face": "pulley/pulley_0391.bin",
+        "topo": "pulley/pulley_0391.bin",
+        "label": 7
+      },
+      {
+        "face": "gear/gear_0270.bin",
+        "topo": "gear/gear_0270.bin",
+        "label": 5
+      },
+      {
+        "face": "coupling/coupling_0151.bin",
+        "topo": "coupling/coupling_0151.bin",
+        "label": 3
+      },
+      {
+        "face": "flange/flange_0916.bin",
+        "topo": "flange/flange_0916.bin",
+        "label": 4
+      },
+      {
+        "face": "bearing/bearing_0253.bin",
+        "topo": "bearing/bearing_0253.bin",
+        "label": 0
+      },
+      {
+        "face": "coupling/coupling_0215.bin",
+        "topo": "coupling/coupling_0215.bin",
+        "label": 3
+      },
+      {
+        "face": "screw/screw_0286.bin",
+        "topo": "screw/screw_0286.bin",
+        "label": 8
+      },
+      {
+        "face": "bearing/bearing_0818.bin",
+        "topo": "bearing/bearing_0818.bin",
+        "label": 0
+      },
+      {
+        "face": "screw/screw_0526.bin",
+        "topo": "screw/screw_0526.bin",
+        "label": 8
+      },
+      {
+        "face": "coupling/coupling_0401.bin",
+        "topo": "coupling/coupling_0401.bin",
+        "label": 3
+      },
+      {
+        "face": "bearing/bearing_0711.bin",
+        "topo": "bearing/bearing_0711.bin",
+        "label": 0
+      },
+      {
+        "face": "gear/gear_0635.bin",
+        "topo": "gear/gear_0635.bin",
+        "label": 5
+      },
+      {
+        "face": "bolt/bolt_0705.bin",
+        "topo": "bolt/bolt_0705.bin",
+        "label": 1
+      },
+      {
+        "face": "bearing/bearing_0815.bin",
+        "topo": "bearing/bearing_0815.bin",
+        "label": 0
+      },
+      {
+        "face": "screw/screw_0344.bin",
+        "topo": "screw/screw_0344.bin",
+        "label": 8
+      },
+      {
+        "face": "bracket/bracket_0051.bin",
+        "topo": "bracket/bracket_0051.bin",
+        "label": 2
+      },
+      {
+        "face": "gear/gear_0789.bin",
+        "topo": "gear/gear_0789.bin",
+        "label": 5
+      },
+      {
+        "face": "bracket/bracket_0592.bin",
+        "topo": "bracket/bracket_0592.bin",
+        "label": 2
+      },
+      {
+        "face": "gear/gear_0357.bin",
+        "topo": "gear/gear_0357.bin",
+        "label": 5
+      },
+      {
+        "face": "screw/screw_0424.bin",
+        "topo": "screw/screw_0424.bin",
+        "label": 8
+      },
+      {
+        "face": "bolt/bolt_0820.bin",
+        "topo": "bolt/bolt_0820.bin",
+        "label": 1
+      },
+      {
+        "face": "gear/gear_0050.bin",
+        "topo": "gear/gear_0050.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0672.bin",
+        "topo": "gear/gear_0672.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0244.bin",
+        "topo": "gear/gear_0244.bin",
+        "label": 5
+      },
+      {
+        "face": "bracket/bracket_0006.bin",
+        "topo": "bracket/bracket_0006.bin",
+        "label": 2
+      },
+      {
+        "face": "coupling/coupling_0372.bin",
+        "topo": "coupling/coupling_0372.bin",
+        "label": 3
+      },
+      {
+        "face": "bracket/bracket_0305.bin",
+        "topo": "bracket/bracket_0305.bin",
+        "label": 2
+      },
+      {
+        "face": "bearing/bearing_0084.bin",
+        "topo": "bearing/bearing_0084.bin",
+        "label": 0
+      },
+      {
+        "face": "pulley/pulley_0419.bin",
+        "topo": "pulley/pulley_0419.bin",
+        "label": 7
+      },
+      {
+        "face": "screw/screw_0012.bin",
+        "topo": "screw/screw_0012.bin",
+        "label": 8
+      },
+      {
+        "face": "screw/screw_0315.bin",
+        "topo": "screw/screw_0315.bin",
+        "label": 8
+      },
+      {
+        "face": "bearing/bearing_0196.bin",
+        "topo": "bearing/bearing_0196.bin",
+        "label": 0
+      },
+      {
+        "face": "flange/flange_0491.bin",
+        "topo": "flange/flange_0491.bin",
+        "label": 4
+      },
+      {
+        "face": "bearing/bearing_0834.bin",
+        "topo": "bearing/bearing_0834.bin",
+        "label": 0
+      },
+      {
+        "face": "bearing/bearing_0549.bin",
+        "topo": "bearing/bearing_0549.bin",
+        "label": 0
+      },
+      {
+        "face": "bolt/bolt_0845.bin",
+        "topo": "bolt/bolt_0845.bin",
+        "label": 1
+      },
+      {
+        "face": "bolt/bolt_0816.bin",
+        "topo": "bolt/bolt_0816.bin",
+        "label": 1
+      },
+      {
+        "face": "gear/gear_0536.bin",
+        "topo": "gear/gear_0536.bin",
+        "label": 5
+      },
+      {
+        "face": "bearing/bearing_0095.bin",
+        "topo": "bearing/bearing_0095.bin",
+        "label": 0
+      },
+      {
+        "face": "bolt/bolt_0437.bin",
+        "topo": "bolt/bolt_0437.bin",
+        "label": 1
+      },
+      {
+        "face": "gear/gear_0510.bin",
+        "topo": "gear/gear_0510.bin",
+        "label": 5
+      },
+      {
+        "face": "bearing/bearing_0302.bin",
+        "topo": "bearing/bearing_0302.bin",
+        "label": 0
+      },
+      {
+        "face": "screw/screw_0991.bin",
+        "topo": "screw/screw_0991.bin",
+        "label": 8
+      },
+      {
+        "face": "screw/screw_0529.bin",
+        "topo": "screw/screw_0529.bin",
+        "label": 8
+      },
+      {
+        "face": "bolt/bolt_0658.bin",
+        "topo": "bolt/bolt_0658.bin",
+        "label": 1
+      },
+      {
+        "face": "bolt/bolt_0707.bin",
+        "topo": "bolt/bolt_0707.bin",
+        "label": 1
+      },
+      {
+        "face": "gear/gear_0317.bin",
+        "topo": "gear/gear_0317.bin",
+        "label": 5
+      },
+      {
+        "face": "bracket/bracket_0631.bin",
+        "topo": "bracket/bracket_0631.bin",
+        "label": 2
+      },
+      {
+        "face": "gear/gear_0644.bin",
+        "topo": "gear/gear_0644.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0208.bin",
+        "topo": "gear/gear_0208.bin",
+        "label": 5
+      },
+      {
+        "face": "bolt/bolt_0829.bin",
+        "topo": "bolt/bolt_0829.bin",
+        "label": 1
+      },
+      {
+        "face": "gear/gear_0361.bin",
+        "topo": "gear/gear_0361.bin",
+        "label": 5
+      },
+      {
+        "face": "flange/flange_0908.bin",
+        "topo": "flange/flange_0908.bin",
+        "label": 4
+      },
+      {
+        "face": "shaft/shaft_0380.bin",
+        "topo": "shaft/shaft_0380.bin",
+        "label": 9
+      },
+      {
+        "face": "screw/screw_0501.bin",
+        "topo": "screw/screw_0501.bin",
+        "label": 8
+      },
+      {
+        "face": "gear/gear_0768.bin",
+        "topo": "gear/gear_0768.bin",
+        "label": 5
+      },
+      {
+        "face": "coupling/coupling_0239.bin",
+        "topo": "coupling/coupling_0239.bin",
+        "label": 3
+      },
+      {
+        "face": "gear/gear_0830.bin",
+        "topo": "gear/gear_0830.bin",
+        "label": 5
+      },
+      {
+        "face": "bearing/bearing_0472.bin",
+        "topo": "bearing/bearing_0472.bin",
+        "label": 0
+      },
+      {
+        "face": "gear/gear_0363.bin",
+        "topo": "gear/gear_0363.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0252.bin",
+        "topo": "gear/gear_0252.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0189.bin",
+        "topo": "gear/gear_0189.bin",
+        "label": 5
+      },
+      {
+        "face": "screw/screw_0285.bin",
+        "topo": "screw/screw_0285.bin",
+        "label": 8
+      },
+      {
+        "face": "bearing/bearing_0443.bin",
+        "topo": "bearing/bearing_0443.bin",
+        "label": 0
+      },
+      {
+        "face": "gear/gear_0829.bin",
+        "topo": "gear/gear_0829.bin",
+        "label": 5
+      },
+      {
+        "face": "screw/screw_0698.bin",
+        "topo": "screw/screw_0698.bin",
+        "label": 8
+      },
+      {
+        "face": "shaft/shaft_0199.bin",
+        "topo": "shaft/shaft_0199.bin",
+        "label": 9
+      },
+      {
+        "face": "shaft/shaft_0474.bin",
+        "topo": "shaft/shaft_0474.bin",
+        "label": 9
+      },
+      {
+        "face": "bolt/bolt_0836.bin",
+        "topo": "bolt/bolt_0836.bin",
+        "label": 1
+      },
+      {
+        "face": "screw/screw_0515.bin",
+        "topo": "screw/screw_0515.bin",
+        "label": 8
+      },
+      {
+        "face": "screw/screw_0378.bin",
+        "topo": "screw/screw_0378.bin",
+        "label": 8
+      },
+      {
+        "face": "bearing/bearing_0256.bin",
+        "topo": "bearing/bearing_0256.bin",
+        "label": 0
+      },
+      {
+        "face": "gear/gear_0130.bin",
+        "topo": "gear/gear_0130.bin",
+        "label": 5
+      },
+      {
+        "face": "nut/nut_0717.bin",
+        "topo": "nut/nut_0717.bin",
+        "label": 6
+      },
+      {
+        "face": "gear/gear_0815.bin",
+        "topo": "gear/gear_0815.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0075.bin",
+        "topo": "gear/gear_0075.bin",
+        "label": 5
+      },
+      {
+        "face": "nut/nut_0565.bin",
+        "topo": "nut/nut_0565.bin",
+        "label": 6
+      },
+      {
+        "face": "flange/flange_0810.bin",
+        "topo": "flange/flange_0810.bin",
+        "label": 4
+      },
+      {
+        "face": "gear/gear_0451.bin",
+        "topo": "gear/gear_0451.bin",
+        "label": 5
+      },
+      {
+        "face": "coupling/coupling_0342.bin",
+        "topo": "coupling/coupling_0342.bin",
+        "label": 3
+      },
+      {
+        "face": "gear/gear_0734.bin",
+        "topo": "gear/gear_0734.bin",
+        "label": 5
+      },
+      {
+        "face": "pulley/pulley_0105.bin",
+        "topo": "pulley/pulley_0105.bin",
+        "label": 7
+      },
+      {
+        "face": "gear/gear_0575.bin",
+        "topo": "gear/gear_0575.bin",
+        "label": 5
+      },
+      {
+        "face": "pulley/pulley_0273.bin",
+        "topo": "pulley/pulley_0273.bin",
+        "label": 7
+      },
+      {
+        "face": "screw/screw_0305.bin",
+        "topo": "screw/screw_0305.bin",
+        "label": 8
+      },
+      {
+        "face": "gear/gear_0119.bin",
+        "topo": "gear/gear_0119.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0205.bin",
+        "topo": "gear/gear_0205.bin",
+        "label": 5
+      },
+      {
+        "face": "shaft/shaft_0111.bin",
+        "topo": "shaft/shaft_0111.bin",
+        "label": 9
+      },
+      {
+        "face": "gear/gear_0515.bin",
+        "topo": "gear/gear_0515.bin",
+        "label": 5
+      },
+      {
+        "face": "shaft/shaft_0232.bin",
+        "topo": "shaft/shaft_0232.bin",
+        "label": 9
+      },
+      {
+        "face": "shaft/shaft_0788.bin",
+        "topo": "shaft/shaft_0788.bin",
+        "label": 9
+      },
+      {
+        "face": "shaft/shaft_0426.bin",
+        "topo": "shaft/shaft_0426.bin",
+        "label": 9
+      },
+      {
+        "face": "gear/gear_0191.bin",
+        "topo": "gear/gear_0191.bin",
+        "label": 5
+      },
+      {
+        "face": "bearing/bearing_0147.bin",
+        "topo": "bearing/bearing_0147.bin",
+        "label": 0
+      },
+      {
+        "face": "shaft/shaft_0083.bin",
+        "topo": "shaft/shaft_0083.bin",
+        "label": 9
+      },
+      {
+        "face": "bracket/bracket_0502.bin",
+        "topo": "bracket/bracket_0502.bin",
+        "label": 2
+      },
+      {
+        "face": "gear/gear_0769.bin",
+        "topo": "gear/gear_0769.bin",
+        "label": 5
+      },
+      {
+        "face": "shaft/shaft_0713.bin",
+        "topo": "shaft/shaft_0713.bin",
+        "label": 9
+      },
+      {
+        "face": "gear/gear_0168.bin",
+        "topo": "gear/gear_0168.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0687.bin",
+        "topo": "gear/gear_0687.bin",
+        "label": 5
+      },
+      {
+        "face": "bearing/bearing_0040.bin",
+        "topo": "bearing/bearing_0040.bin",
+        "label": 0
+      },
+      {
+        "face": "pulley/pulley_0468.bin",
+        "topo": "pulley/pulley_0468.bin",
+        "label": 7
+      },
+      {
+        "face": "coupling/coupling_0289.bin",
+        "topo": "coupling/coupling_0289.bin",
+        "label": 3
+      },
+      {
+        "face": "gear/gear_0491.bin",
+        "topo": "gear/gear_0491.bin",
+        "label": 5
+      },
+      {
+        "face": "bracket/bracket_0324.bin",
+        "topo": "bracket/bracket_0324.bin",
+        "label": 2
+      },
+      {
+        "face": "shaft/shaft_0373.bin",
+        "topo": "shaft/shaft_0373.bin",
+        "label": 9
+      },
+      {
+        "face": "shaft/shaft_0085.bin",
+        "topo": "shaft/shaft_0085.bin",
+        "label": 9
+      },
+      {
+        "face": "pulley/pulley_0099.bin",
+        "topo": "pulley/pulley_0099.bin",
+        "label": 7
+      },
+      {
+        "face": "bolt/bolt_0392.bin",
+        "topo": "bolt/bolt_0392.bin",
+        "label": 1
+      },
+      {
+        "face": "bolt/bolt_0373.bin",
+        "topo": "bolt/bolt_0373.bin",
+        "label": 1
+      },
+      {
+        "face": "gear/gear_0663.bin",
+        "topo": "gear/gear_0663.bin",
+        "label": 5
+      },
+      {
+        "face": "bearing/bearing_0251.bin",
+        "topo": "bearing/bearing_0251.bin",
+        "label": 0
+      },
+      {
+        "face": "screw/screw_0644.bin",
+        "topo": "screw/screw_0644.bin",
+        "label": 8
+      },
+      {
+        "face": "screw/screw_0425.bin",
+        "topo": "screw/screw_0425.bin",
+        "label": 8
+      },
+      {
+        "face": "gear/gear_0730.bin",
+        "topo": "gear/gear_0730.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0509.bin",
+        "topo": "gear/gear_0509.bin",
+        "label": 5
+      },
+      {
+        "face": "bearing/bearing_0291.bin",
+        "topo": "bearing/bearing_0291.bin",
+        "label": 0
+      },
+      {
+        "face": "gear/gear_0237.bin",
+        "topo": "gear/gear_0237.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0761.bin",
+        "topo": "gear/gear_0761.bin",
+        "label": 5
+      },
+      {
+        "face": "bolt/bolt_0843.bin",
+        "topo": "bolt/bolt_0843.bin",
+        "label": 1
+      },
+      {
+        "face": "pulley/pulley_0202.bin",
+        "topo": "pulley/pulley_0202.bin",
+        "label": 7
+      },
+      {
+        "face": "bolt/bolt_0243.bin",
+        "topo": "bolt/bolt_0243.bin",
+        "label": 1
+      },
+      {
+        "face": "gear/gear_0520.bin",
+        "topo": "gear/gear_0520.bin",
+        "label": 5
+      },
+      {
+        "face": "shaft/shaft_0416.bin",
+        "topo": "shaft/shaft_0416.bin",
+        "label": 9
+      },
+      {
+        "face": "gear/gear_0367.bin",
+        "topo": "gear/gear_0367.bin",
+        "label": 5
+      },
+      {
+        "face": "bearing/bearing_0158.bin",
+        "topo": "bearing/bearing_0158.bin",
+        "label": 0
+      },
+      {
+        "face": "shaft/shaft_0057.bin",
+        "topo": "shaft/shaft_0057.bin",
+        "label": 9
+      },
+      {
+        "face": "bearing/bearing_0039.bin",
+        "topo": "bearing/bearing_0039.bin",
+        "label": 0
+      },
+      {
+        "face": "gear/gear_0856.bin",
+        "topo": "gear/gear_0856.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0377.bin",
+        "topo": "gear/gear_0377.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0412.bin",
+        "topo": "gear/gear_0412.bin",
+        "label": 5
+      },
+      {
+        "face": "shaft/shaft_0202.bin",
+        "topo": "shaft/shaft_0202.bin",
+        "label": 9
+      },
+      {
+        "face": "gear/gear_0809.bin",
+        "topo": "gear/gear_0809.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0569.bin",
+        "topo": "gear/gear_0569.bin",
+        "label": 5
+      },
+      {
+        "face": "screw/screw_0121.bin",
+        "topo": "screw/screw_0121.bin",
+        "label": 8
+      },
+      {
+        "face": "gear/gear_0591.bin",
+        "topo": "gear/gear_0591.bin",
+        "label": 5
+      },
+      {
+        "face": "screw/screw_0836.bin",
+        "topo": "screw/screw_0836.bin",
+        "label": 8
+      },
+      {
+        "face": "bearing/bearing_0113.bin",
+        "topo": "bearing/bearing_0113.bin",
+        "label": 0
+      },
+      {
+        "face": "gear/gear_0159.bin",
+        "topo": "gear/gear_0159.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0641.bin",
+        "topo": "gear/gear_0641.bin",
+        "label": 5
+      },
+      {
+        "face": "bracket/bracket_0358.bin",
+        "topo": "bracket/bracket_0358.bin",
+        "label": 2
+      },
+      {
+        "face": "coupling/coupling_0419.bin",
+        "topo": "coupling/coupling_0419.bin",
+        "label": 3
+      },
+      {
+        "face": "gear/gear_0565.bin",
+        "topo": "gear/gear_0565.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0146.bin",
+        "topo": "gear/gear_0146.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0555.bin",
+        "topo": "gear/gear_0555.bin",
+        "label": 5
+      },
+      {
+        "face": "nut/nut_0851.bin",
+        "topo": "nut/nut_0851.bin",
+        "label": 6
+      },
+      {
+        "face": "gear/gear_0092.bin",
+        "topo": "gear/gear_0092.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0316.bin",
+        "topo": "gear/gear_0316.bin",
+        "label": 5
+      },
+      {
+        "face": "pulley/pulley_0333.bin",
+        "topo": "pulley/pulley_0333.bin",
+        "label": 7
+      },
+      {
+        "face": "screw/screw_0538.bin",
+        "topo": "screw/screw_0538.bin",
+        "label": 8
+      },
+      {
+        "face": "bracket/bracket_0521.bin",
+        "topo": "bracket/bracket_0521.bin",
+        "label": 2
+      },
+      {
+        "face": "gear/gear_0124.bin",
+        "topo": "gear/gear_0124.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0579.bin",
+        "topo": "gear/gear_0579.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0890.bin",
+        "topo": "gear/gear_0890.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0336.bin",
+        "topo": "gear/gear_0336.bin",
+        "label": 5
+      },
+      {
+        "face": "pulley/pulley_0458.bin",
+        "topo": "pulley/pulley_0458.bin",
+        "label": 7
+      },
+      {
+        "face": "shaft/shaft_0055.bin",
+        "topo": "shaft/shaft_0055.bin",
+        "label": 9
+      },
+      {
+        "face": "bracket/bracket_0302.bin",
+        "topo": "bracket/bracket_0302.bin",
+        "label": 2
+      },
+      {
+        "face": "screw/screw_0350.bin",
+        "topo": "screw/screw_0350.bin",
+        "label": 8
+      },
+      {
+        "face": "shaft/shaft_0054.bin",
+        "topo": "shaft/shaft_0054.bin",
+        "label": 9
+      },
+      {
+        "face": "pulley/pulley_0203.bin",
+        "topo": "pulley/pulley_0203.bin",
+        "label": 7
+      },
+      {
+        "face": "nut/nut_0655.bin",
+        "topo": "nut/nut_0655.bin",
+        "label": 6
+      },
+      {
+        "face": "flange/flange_0909.bin",
+        "topo": "flange/flange_0909.bin",
+        "label": 4
+      },
+      {
+        "face": "gear/gear_0350.bin",
+        "topo": "gear/gear_0350.bin",
+        "label": 5
+      },
+      {
+        "face": "bearing/bearing_0163.bin",
+        "topo": "bearing/bearing_0163.bin",
+        "label": 0
+      },
+      {
+        "face": "shaft/shaft_0250.bin",
+        "topo": "shaft/shaft_0250.bin",
+        "label": 9
+      },
+      {
+        "face": "screw/screw_0279.bin",
+        "topo": "screw/screw_0279.bin",
+        "label": 8
+      },
+      {
+        "face": "bracket/bracket_0097.bin",
+        "topo": "bracket/bracket_0097.bin",
+        "label": 2
+      },
+      {
+        "face": "gear/gear_0618.bin",
+        "topo": "gear/gear_0618.bin",
+        "label": 5
+      },
+      {
+        "face": "bracket/bracket_0843.bin",
+        "topo": "bracket/bracket_0843.bin",
+        "label": 2
+      },
+      {
+        "face": "coupling/coupling_0157.bin",
+        "topo": "coupling/coupling_0157.bin",
+        "label": 3
+      },
+      {
+        "face": "bracket/bracket_0216.bin",
+        "topo": "bracket/bracket_0216.bin",
+        "label": 2
+      },
+      {
+        "face": "gear/gear_0297.bin",
+        "topo": "gear/gear_0297.bin",
+        "label": 5
+      },
+      {
+        "face": "coupling/coupling_0344.bin",
+        "topo": "coupling/coupling_0344.bin",
+        "label": 3
+      },
+      {
+        "face": "shaft/shaft_0761.bin",
+        "topo": "shaft/shaft_0761.bin",
+        "label": 9
+      },
+      {
+        "face": "bracket/bracket_0875.bin",
+        "topo": "bracket/bracket_0875.bin",
+        "label": 2
+      },
+      {
+        "face": "gear/gear_0796.bin",
+        "topo": "gear/gear_0796.bin",
+        "label": 5
+      },
+      {
+        "face": "pulley/pulley_0305.bin",
+        "topo": "pulley/pulley_0305.bin",
+        "label": 7
+      },
+      {
+        "face": "gear/gear_0585.bin",
+        "topo": "gear/gear_0585.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0334.bin",
+        "topo": "gear/gear_0334.bin",
+        "label": 5
+      },
+      {
+        "face": "shaft/shaft_0105.bin",
+        "topo": "shaft/shaft_0105.bin",
+        "label": 9
+      },
+      {
+        "face": "gear/gear_0366.bin",
+        "topo": "gear/gear_0366.bin",
+        "label": 5
+      },
+      {
+        "face": "bearing/bearing_0355.bin",
+        "topo": "bearing/bearing_0355.bin",
+        "label": 0
+      },
+      {
+        "face": "bracket/bracket_0066.bin",
+        "topo": "bracket/bracket_0066.bin",
+        "label": 2
+      },
+      {
+        "face": "gear/gear_0823.bin",
+        "topo": "gear/gear_0823.bin",
+        "label": 5
+      },
+      {
+        "face": "pulley/pulley_0370.bin",
+        "topo": "pulley/pulley_0370.bin",
+        "label": 7
+      },
+      {
+        "face": "gear/gear_0601.bin",
+        "topo": "gear/gear_0601.bin",
+        "label": 5
+      },
+      {
+        "face": "shaft/shaft_0740.bin",
+        "topo": "shaft/shaft_0740.bin",
+        "label": 9
+      },
+      {
+        "face": "shaft/shaft_0255.bin",
+        "topo": "shaft/shaft_0255.bin",
+        "label": 9
+      },
+      {
+        "face": "bearing/bearing_0801.bin",
+        "topo": "bearing/bearing_0801.bin",
+        "label": 0
+      },
+      {
+        "face": "gear/gear_0040.bin",
+        "topo": "gear/gear_0040.bin",
+        "label": 5
+      },
+      {
+        "face": "bracket/bracket_0869.bin",
+        "topo": "bracket/bracket_0869.bin",
+        "label": 2
+      },
+      {
+        "face": "gear/gear_0056.bin",
+        "topo": "gear/gear_0056.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0210.bin",
+        "topo": "gear/gear_0210.bin",
+        "label": 5
+      },
+      {
+        "face": "bracket/bracket_0321.bin",
+        "topo": "bracket/bracket_0321.bin",
+        "label": 2
+      },
+      {
+        "face": "gear/gear_0129.bin",
+        "topo": "gear/gear_0129.bin",
+        "label": 5
+      },
+      {
+        "face": "bracket/bracket_0193.bin",
+        "topo": "bracket/bracket_0193.bin",
+        "label": 2
+      },
+      {
+        "face": "screw/screw_0839.bin",
+        "topo": "screw/screw_0839.bin",
+        "label": 8
+      },
+      {
+        "face": "shaft/shaft_0543.bin",
+        "topo": "shaft/shaft_0543.bin",
+        "label": 9
+      },
+      {
+        "face": "bearing/bearing_0123.bin",
+        "topo": "bearing/bearing_0123.bin",
+        "label": 0
+      },
+      {
+        "face": "gear/gear_0532.bin",
+        "topo": "gear/gear_0532.bin",
+        "label": 5
+      },
+      {
+        "face": "bracket/bracket_0712.bin",
+        "topo": "bracket/bracket_0712.bin",
+        "label": 2
+      },
+      {
+        "face": "gear/gear_0087.bin",
+        "topo": "gear/gear_0087.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0650.bin",
+        "topo": "gear/gear_0650.bin",
+        "label": 5
+      },
+      {
+        "face": "bracket/bracket_0723.bin",
+        "topo": "bracket/bracket_0723.bin",
+        "label": 2
+      },
+      {
+        "face": "gear/gear_0338.bin",
+        "topo": "gear/gear_0338.bin",
+        "label": 5
+      },
+      {
+        "face": "shaft/shaft_0021.bin",
+        "topo": "shaft/shaft_0021.bin",
+        "label": 9
+      },
+      {
+        "face": "shaft/shaft_0241.bin",
+        "topo": "shaft/shaft_0241.bin",
+        "label": 9
+      },
+      {
+        "face": "gear/gear_0209.bin",
+        "topo": "gear/gear_0209.bin",
+        "label": 5
+      },
+      {
+        "face": "screw/screw_0436.bin",
+        "topo": "screw/screw_0436.bin",
+        "label": 8
+      },
+      {
+        "face": "screw/screw_0272.bin",
+        "topo": "screw/screw_0272.bin",
+        "label": 8
+      },
+      {
+        "face": "coupling/coupling_0318.bin",
+        "topo": "coupling/coupling_0318.bin",
+        "label": 3
+      },
+      {
+        "face": "gear/gear_0807.bin",
+        "topo": "gear/gear_0807.bin",
+        "label": 5
+      },
+      {
+        "face": "bracket/bracket_0630.bin",
+        "topo": "bracket/bracket_0630.bin",
+        "label": 2
+      },
+      {
+        "face": "bearing/bearing_0565.bin",
+        "topo": "bearing/bearing_0565.bin",
+        "label": 0
+      },
+      {
+        "face": "screw/screw_0764.bin",
+        "topo": "screw/screw_0764.bin",
+        "label": 8
+      },
+      {
+        "face": "bearing/bearing_0561.bin",
+        "topo": "bearing/bearing_0561.bin",
+        "label": 0
+      },
+      {
+        "face": "pulley/pulley_0204.bin",
+        "topo": "pulley/pulley_0204.bin",
+        "label": 7
+      },
+      {
+        "face": "shaft/shaft_0727.bin",
+        "topo": "shaft/shaft_0727.bin",
+        "label": 9
+      },
+      {
+        "face": "screw/screw_0701.bin",
+        "topo": "screw/screw_0701.bin",
+        "label": 8
+      },
+      {
+        "face": "bolt/bolt_0750.bin",
+        "topo": "bolt/bolt_0750.bin",
+        "label": 1
+      },
+      {
+        "face": "screw/screw_0347.bin",
+        "topo": "screw/screw_0347.bin",
+        "label": 8
+      },
+      {
+        "face": "screw/screw_0325.bin",
+        "topo": "screw/screw_0325.bin",
+        "label": 8
+      },
+      {
+        "face": "gear/gear_0211.bin",
+        "topo": "gear/gear_0211.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0648.bin",
+        "topo": "gear/gear_0648.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0743.bin",
+        "topo": "gear/gear_0743.bin",
+        "label": 5
+      },
+      {
+        "face": "shaft/shaft_0233.bin",
+        "topo": "shaft/shaft_0233.bin",
+        "label": 9
+      },
+      {
+        "face": "gear/gear_0418.bin",
+        "topo": "gear/gear_0418.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0090.bin",
+        "topo": "gear/gear_0090.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0571.bin",
+        "topo": "gear/gear_0571.bin",
+        "label": 5
+      },
+      {
+        "face": "bracket/bracket_0751.bin",
+        "topo": "bracket/bracket_0751.bin",
+        "label": 2
+      },
+      {
+        "face": "screw/screw_0188.bin",
+        "topo": "screw/screw_0188.bin",
+        "label": 8
+      },
+      {
+        "face": "gear/gear_0859.bin",
+        "topo": "gear/gear_0859.bin",
+        "label": 5
+      },
+      {
+        "face": "screw/screw_0298.bin",
+        "topo": "screw/screw_0298.bin",
+        "label": 8
+      },
+      {
+        "face": "bracket/bracket_0595.bin",
+        "topo": "bracket/bracket_0595.bin",
+        "label": 2
+      },
+      {
+        "face": "bearing/bearing_0488.bin",
+        "topo": "bearing/bearing_0488.bin",
+        "label": 0
+      },
+      {
+        "face": "bracket/bracket_0466.bin",
+        "topo": "bracket/bracket_0466.bin",
+        "label": 2
+      },
+      {
+        "face": "bolt/bolt_0225.bin",
+        "topo": "bolt/bolt_0225.bin",
+        "label": 1
+      },
+      {
+        "face": "bearing/bearing_0321.bin",
+        "topo": "bearing/bearing_0321.bin",
+        "label": 0
+      },
+      {
+        "face": "bracket/bracket_0024.bin",
+        "topo": "bracket/bracket_0024.bin",
+        "label": 2
+      },
+      {
+        "face": "nut/nut_0319.bin",
+        "topo": "nut/nut_0319.bin",
+        "label": 6
+      },
+      {
+        "face": "gear/gear_0348.bin",
+        "topo": "gear/gear_0348.bin",
+        "label": 5
+      },
+      {
+        "face": "pulley/pulley_0062.bin",
+        "topo": "pulley/pulley_0062.bin",
+        "label": 7
+      },
+      {
+        "face": "gear/gear_0886.bin",
+        "topo": "gear/gear_0886.bin",
+        "label": 5
+      },
+      {
+        "face": "shaft/shaft_0481.bin",
+        "topo": "shaft/shaft_0481.bin",
+        "label": 9
+      },
+      {
+        "face": "bearing/bearing_0491.bin",
+        "topo": "bearing/bearing_0491.bin",
+        "label": 0
+      },
+      {
+        "face": "gear/gear_0197.bin",
+        "topo": "gear/gear_0197.bin",
+        "label": 5
+      },
+      {
+        "face": "coupling/coupling_0004.bin",
+        "topo": "coupling/coupling_0004.bin",
+        "label": 3
+      },
+      {
+        "face": "gear/gear_0079.bin",
+        "topo": "gear/gear_0079.bin",
+        "label": 5
+      },
+      {
+        "face": "bolt/bolt_0069.bin",
+        "topo": "bolt/bolt_0069.bin",
+        "label": 1
+      },
+      {
+        "face": "pulley/pulley_0278.bin",
+        "topo": "pulley/pulley_0278.bin",
+        "label": 7
+      },
+      {
+        "face": "screw/screw_0534.bin",
+        "topo": "screw/screw_0534.bin",
+        "label": 8
+      },
+      {
+        "face": "bearing/bearing_0157.bin",
+        "topo": "bearing/bearing_0157.bin",
+        "label": 0
+      },
+      {
+        "face": "bearing/bearing_0375.bin",
+        "topo": "bearing/bearing_0375.bin",
+        "label": 0
+      },
+      {
+        "face": "gear/gear_0219.bin",
+        "topo": "gear/gear_0219.bin",
+        "label": 5
+      },
+      {
+        "face": "pulley/pulley_0457.bin",
+        "topo": "pulley/pulley_0457.bin",
+        "label": 7
+      },
+      {
+        "face": "bearing/bearing_0076.bin",
+        "topo": "bearing/bearing_0076.bin",
+        "label": 0
+      },
+      {
+        "face": "screw/screw_0716.bin",
+        "topo": "screw/screw_0716.bin",
+        "label": 8
+      },
+      {
+        "face": "gear/gear_0764.bin",
+        "topo": "gear/gear_0764.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0486.bin",
+        "topo": "gear/gear_0486.bin",
+        "label": 5
+      },
+      {
+        "face": "screw/screw_1099.bin",
+        "topo": "screw/screw_1099.bin",
+        "label": 8
+      },
+      {
+        "face": "coupling/coupling_0160.bin",
+        "topo": "coupling/coupling_0160.bin",
+        "label": 3
+      },
+      {
+        "face": "bearing/bearing_0405.bin",
+        "topo": "bearing/bearing_0405.bin",
+        "label": 0
+      },
+      {
+        "face": "gear/gear_0282.bin",
+        "topo": "gear/gear_0282.bin",
+        "label": 5
+      },
+      {
+        "face": "shaft/shaft_0486.bin",
+        "topo": "shaft/shaft_0486.bin",
+        "label": 9
+      },
+      {
+        "face": "bearing/bearing_0845.bin",
+        "topo": "bearing/bearing_0845.bin",
+        "label": 0
+      },
+      {
+        "face": "bearing/bearing_0576.bin",
+        "topo": "bearing/bearing_0576.bin",
+        "label": 0
+      },
+      {
+        "face": "bracket/bracket_0588.bin",
+        "topo": "bracket/bracket_0588.bin",
+        "label": 2
+      },
+      {
+        "face": "bearing/bearing_0109.bin",
+        "topo": "bearing/bearing_0109.bin",
+        "label": 0
+      },
+      {
+        "face": "gear/gear_0431.bin",
+        "topo": "gear/gear_0431.bin",
+        "label": 5
+      },
+      {
+        "face": "pulley/pulley_0465.bin",
+        "topo": "pulley/pulley_0465.bin",
+        "label": 7
+      },
+      {
+        "face": "gear/gear_0421.bin",
+        "topo": "gear/gear_0421.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0854.bin",
+        "topo": "gear/gear_0854.bin",
+        "label": 5
+      },
+      {
+        "face": "bearing/bearing_0500.bin",
+        "topo": "bearing/bearing_0500.bin",
+        "label": 0
+      },
+      {
+        "face": "gear/gear_0896.bin",
+        "topo": "gear/gear_0896.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0086.bin",
+        "topo": "gear/gear_0086.bin",
+        "label": 5
+      },
+      {
+        "face": "screw/screw_0844.bin",
+        "topo": "screw/screw_0844.bin",
+        "label": 8
+      },
+      {
+        "face": "bracket/bracket_0323.bin",
+        "topo": "bracket/bracket_0323.bin",
+        "label": 2
+      },
+      {
+        "face": "pulley/pulley_0405.bin",
+        "topo": "pulley/pulley_0405.bin",
+        "label": 7
+      },
+      {
+        "face": "bearing/bearing_0646.bin",
+        "topo": "bearing/bearing_0646.bin",
+        "label": 0
+      },
+      {
+        "face": "pulley/pulley_0431.bin",
+        "topo": "pulley/pulley_0431.bin",
+        "label": 7
+      },
+      {
+        "face": "pulley/pulley_0021.bin",
+        "topo": "pulley/pulley_0021.bin",
+        "label": 7
+      },
+      {
+        "face": "gear/gear_0700.bin",
+        "topo": "gear/gear_0700.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0263.bin",
+        "topo": "gear/gear_0263.bin",
+        "label": 5
+      },
+      {
+        "face": "coupling/coupling_0037.bin",
+        "topo": "coupling/coupling_0037.bin",
+        "label": 3
+      },
+      {
+        "face": "bracket/bracket_0596.bin",
+        "topo": "bracket/bracket_0596.bin",
+        "label": 2
+      },
+      {
+        "face": "gear/gear_0647.bin",
+        "topo": "gear/gear_0647.bin",
+        "label": 5
+      },
+      {
+        "face": "coupling/coupling_0175.bin",
+        "topo": "coupling/coupling_0175.bin",
+        "label": 3
+      },
+      {
+        "face": "gear/gear_0778.bin",
+        "topo": "gear/gear_0778.bin",
+        "label": 5
+      },
+      {
+        "face": "bracket/bracket_0853.bin",
+        "topo": "bracket/bracket_0853.bin",
+        "label": 2
+      },
+      {
+        "face": "gear/gear_0738.bin",
+        "topo": "gear/gear_0738.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0478.bin",
+        "topo": "gear/gear_0478.bin",
+        "label": 5
+      },
+      {
+        "face": "screw/screw_0951.bin",
+        "topo": "screw/screw_0951.bin",
+        "label": 8
+      },
+      {
+        "face": "gear/gear_0691.bin",
+        "topo": "gear/gear_0691.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0383.bin",
+        "topo": "gear/gear_0383.bin",
+        "label": 5
+      },
+      {
+        "face": "bearing/bearing_0492.bin",
+        "topo": "bearing/bearing_0492.bin",
+        "label": 0
+      },
+      {
+        "face": "bearing/bearing_0490.bin",
+        "topo": "bearing/bearing_0490.bin",
+        "label": 0
+      },
+      {
+        "face": "gear/gear_0236.bin",
+        "topo": "gear/gear_0236.bin",
+        "label": 5
+      },
+      {
+        "face": "bracket/bracket_0625.bin",
+        "topo": "bracket/bracket_0625.bin",
+        "label": 2
+      },
+      {
+        "face": "gear/gear_0683.bin",
+        "topo": "gear/gear_0683.bin",
+        "label": 5
+      },
+      {
+        "face": "pulley/pulley_0445.bin",
+        "topo": "pulley/pulley_0445.bin",
+        "label": 7
+      },
+      {
+        "face": "screw/screw_0514.bin",
+        "topo": "screw/screw_0514.bin",
+        "label": 8
+      },
+      {
+        "face": "pulley/pulley_0010.bin",
+        "topo": "pulley/pulley_0010.bin",
+        "label": 7
+      },
+      {
+        "face": "nut/nut_0095.bin",
+        "topo": "nut/nut_0095.bin",
+        "label": 6
+      },
+      {
+        "face": "flange/flange_0275.bin",
+        "topo": "flange/flange_0275.bin",
+        "label": 4
+      },
+      {
+        "face": "bracket/bracket_0150.bin",
+        "topo": "bracket/bracket_0150.bin",
+        "label": 2
+      },
+      {
+        "face": "gear/gear_0243.bin",
+        "topo": "gear/gear_0243.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0469.bin",
+        "topo": "gear/gear_0469.bin",
+        "label": 5
+      },
+      {
+        "face": "bearing/bearing_0368.bin",
+        "topo": "bearing/bearing_0368.bin",
+        "label": 0
+      },
+      {
+        "face": "shaft/shaft_0200.bin",
+        "topo": "shaft/shaft_0200.bin",
+        "label": 9
+      },
+      {
+        "face": "shaft/shaft_0705.bin",
+        "topo": "shaft/shaft_0705.bin",
+        "label": 9
+      },
+      {
+        "face": "gear/gear_0549.bin",
+        "topo": "gear/gear_0549.bin",
+        "label": 5
+      },
+      {
+        "face": "shaft/shaft_0079.bin",
+        "topo": "shaft/shaft_0079.bin",
+        "label": 9
+      },
+      {
+        "face": "bearing/bearing_0260.bin",
+        "topo": "bearing/bearing_0260.bin",
+        "label": 0
+      },
+      {
+        "face": "shaft/shaft_0473.bin",
+        "topo": "shaft/shaft_0473.bin",
+        "label": 9
+      },
+      {
+        "face": "screw/screw_0840.bin",
+        "topo": "screw/screw_0840.bin",
+        "label": 8
+      },
+      {
+        "face": "screw/screw_0666.bin",
+        "topo": "screw/screw_0666.bin",
+        "label": 8
+      },
+      {
+        "face": "gear/gear_0756.bin",
+        "topo": "gear/gear_0756.bin",
+        "label": 5
+      },
+      {
+        "face": "screw/screw_0477.bin",
+        "topo": "screw/screw_0477.bin",
+        "label": 8
+      },
+      {
+        "face": "screw/screw_0092.bin",
+        "topo": "screw/screw_0092.bin",
+        "label": 8
+      },
+      {
+        "face": "shaft/shaft_0253.bin",
+        "topo": "shaft/shaft_0253.bin",
+        "label": 9
+      },
+      {
+        "face": "gear/gear_0658.bin",
+        "topo": "gear/gear_0658.bin",
+        "label": 5
+      },
+      {
+        "face": "shaft/shaft_0390.bin",
+        "topo": "shaft/shaft_0390.bin",
+        "label": 9
+      },
+      {
+        "face": "shaft/shaft_0397.bin",
+        "topo": "shaft/shaft_0397.bin",
+        "label": 9
+      },
+      {
+        "face": "gear/gear_0526.bin",
+        "topo": "gear/gear_0526.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0793.bin",
+        "topo": "gear/gear_0793.bin",
+        "label": 5
+      },
+      {
+        "face": "nut/nut_0793.bin",
+        "topo": "nut/nut_0793.bin",
+        "label": 6
+      },
+      {
+        "face": "gear/gear_0239.bin",
+        "topo": "gear/gear_0239.bin",
+        "label": 5
+      },
+      {
+        "face": "bearing/bearing_0282.bin",
+        "topo": "bearing/bearing_0282.bin",
+        "label": 0
+      },
+      {
+        "face": "bearing/bearing_0061.bin",
+        "topo": "bearing/bearing_0061.bin",
+        "label": 0
+      },
+      {
+        "face": "gear/gear_0446.bin",
+        "topo": "gear/gear_0446.bin",
+        "label": 5
+      },
+      {
+        "face": "bracket/bracket_0203.bin",
+        "topo": "bracket/bracket_0203.bin",
+        "label": 2
+      },
+      {
+        "face": "bracket/bracket_0340.bin",
+        "topo": "bracket/bracket_0340.bin",
+        "label": 2
+      },
+      {
+        "face": "gear/gear_0011.bin",
+        "topo": "gear/gear_0011.bin",
+        "label": 5
+      },
+      {
+        "face": "bearing/bearing_0351.bin",
+        "topo": "bearing/bearing_0351.bin",
+        "label": 0
+      },
+      {
+        "face": "gear/gear_0465.bin",
+        "topo": "gear/gear_0465.bin",
+        "label": 5
+      },
+      {
+        "face": "bearing/bearing_0558.bin",
+        "topo": "bearing/bearing_0558.bin",
+        "label": 0
+      },
+      {
+        "face": "screw/screw_0109.bin",
+        "topo": "screw/screw_0109.bin",
+        "label": 8
+      },
+      {
+        "face": "gear/gear_0288.bin",
+        "topo": "gear/gear_0288.bin",
+        "label": 5
+      },
+      {
+        "face": "screw/screw_0663.bin",
+        "topo": "screw/screw_0663.bin",
+        "label": 8
+      },
+      {
+        "face": "pulley/pulley_0173.bin",
+        "topo": "pulley/pulley_0173.bin",
+        "label": 7
+      },
+      {
+        "face": "gear/gear_0388.bin",
+        "topo": "gear/gear_0388.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0827.bin",
+        "topo": "gear/gear_0827.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0231.bin",
+        "topo": "gear/gear_0231.bin",
+        "label": 5
+      },
+      {
+        "face": "pulley/pulley_0244.bin",
+        "topo": "pulley/pulley_0244.bin",
+        "label": 7
+      },
+      {
+        "face": "pulley/pulley_0441.bin",
+        "topo": "pulley/pulley_0441.bin",
+        "label": 7
+      },
+      {
+        "face": "shaft/shaft_0140.bin",
+        "topo": "shaft/shaft_0140.bin",
+        "label": 9
+      },
+      {
+        "face": "screw/screw_0386.bin",
+        "topo": "screw/screw_0386.bin",
+        "label": 8
+      },
+      {
+        "face": "coupling/coupling_0364.bin",
+        "topo": "coupling/coupling_0364.bin",
+        "label": 3
+      },
+      {
+        "face": "pulley/pulley_0252.bin",
+        "topo": "pulley/pulley_0252.bin",
+        "label": 7
+      },
+      {
+        "face": "bearing/bearing_0122.bin",
+        "topo": "bearing/bearing_0122.bin",
+        "label": 0
+      },
+      {
+        "face": "bracket/bracket_0311.bin",
+        "topo": "bracket/bracket_0311.bin",
+        "label": 2
+      },
+      {
+        "face": "gear/gear_0574.bin",
+        "topo": "gear/gear_0574.bin",
+        "label": 5
+      },
+      {
+        "face": "bearing/bearing_0145.bin",
+        "topo": "bearing/bearing_0145.bin",
+        "label": 0
+      },
+      {
+        "face": "bearing/bearing_0329.bin",
+        "topo": "bearing/bearing_0329.bin",
+        "label": 0
+      },
+      {
+        "face": "gear/gear_0324.bin",
+        "topo": "gear/gear_0324.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0310.bin",
+        "topo": "gear/gear_0310.bin",
+        "label": 5
+      },
+      {
+        "face": "bearing/bearing_0105.bin",
+        "topo": "bearing/bearing_0105.bin",
+        "label": 0
+      },
+      {
+        "face": "gear/gear_0500.bin",
+        "topo": "gear/gear_0500.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0717.bin",
+        "topo": "gear/gear_0717.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0674.bin",
+        "topo": "gear/gear_0674.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0757.bin",
+        "topo": "gear/gear_0757.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0542.bin",
+        "topo": "gear/gear_0542.bin",
+        "label": 5
+      },
+      {
+        "face": "screw/screw_0071.bin",
+        "topo": "screw/screw_0071.bin",
+        "label": 8
+      },
+      {
+        "face": "bracket/bracket_0427.bin",
+        "topo": "bracket/bracket_0427.bin",
+        "label": 2
+      },
+      {
+        "face": "bracket/bracket_0391.bin",
+        "topo": "bracket/bracket_0391.bin",
+        "label": 2
+      },
+      {
+        "face": "bracket/bracket_0893.bin",
+        "topo": "bracket/bracket_0893.bin",
+        "label": 2
+      },
+      {
+        "face": "gear/gear_0684.bin",
+        "topo": "gear/gear_0684.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0788.bin",
+        "topo": "gear/gear_0788.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0521.bin",
+        "topo": "gear/gear_0521.bin",
+        "label": 5
+      },
+      {
+        "face": "bracket/bracket_0041.bin",
+        "topo": "bracket/bracket_0041.bin",
+        "label": 2
+      },
+      {
+        "face": "screw/screw_0544.bin",
+        "topo": "screw/screw_0544.bin",
+        "label": 8
+      },
+      {
+        "face": "coupling/coupling_0422.bin",
+        "topo": "coupling/coupling_0422.bin",
+        "label": 3
+      },
+      {
+        "face": "bracket/bracket_0188.bin",
+        "topo": "bracket/bracket_0188.bin",
+        "label": 2
+      },
+      {
+        "face": "bearing/bearing_0656.bin",
+        "topo": "bearing/bearing_0656.bin",
+        "label": 0
+      },
+      {
+        "face": "gear/gear_0082.bin",
+        "topo": "gear/gear_0082.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0833.bin",
+        "topo": "gear/gear_0833.bin",
+        "label": 5
+      },
+      {
+        "face": "bracket/bracket_0081.bin",
+        "topo": "bracket/bracket_0081.bin",
+        "label": 2
+      },
+      {
+        "face": "screw/screw_0394.bin",
+        "topo": "screw/screw_0394.bin",
+        "label": 8
+      },
+      {
+        "face": "bearing/bearing_0734.bin",
+        "topo": "bearing/bearing_0734.bin",
+        "label": 0
+      },
+      {
+        "face": "screw/screw_0261.bin",
+        "topo": "screw/screw_0261.bin",
+        "label": 8
+      },
+      {
+        "face": "gear/gear_0443.bin",
+        "topo": "gear/gear_0443.bin",
+        "label": 5
+      },
+      {
+        "face": "screw/screw_0678.bin",
+        "topo": "screw/screw_0678.bin",
+        "label": 8
+      },
+      {
+        "face": "screw/screw_0994.bin",
+        "topo": "screw/screw_0994.bin",
+        "label": 8
+      },
+      {
+        "face": "gear/gear_0872.bin",
+        "topo": "gear/gear_0872.bin",
+        "label": 5
+      },
+      {
+        "face": "bolt/bolt_0472.bin",
+        "topo": "bolt/bolt_0472.bin",
+        "label": 1
+      },
+      {
+        "face": "bearing/bearing_0070.bin",
+        "topo": "bearing/bearing_0070.bin",
+        "label": 0
+      },
+      {
+        "face": "pulley/pulley_0056.bin",
+        "topo": "pulley/pulley_0056.bin",
+        "label": 7
+      },
+      {
+        "face": "bearing/bearing_0318.bin",
+        "topo": "bearing/bearing_0318.bin",
+        "label": 0
+      },
+      {
+        "face": "nut/nut_0577.bin",
+        "topo": "nut/nut_0577.bin",
+        "label": 6
+      },
+      {
+        "face": "bolt/bolt_0819.bin",
+        "topo": "bolt/bolt_0819.bin",
+        "label": 1
+      },
+      {
+        "face": "gear/gear_0023.bin",
+        "topo": "gear/gear_0023.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0232.bin",
+        "topo": "gear/gear_0232.bin",
+        "label": 5
+      },
+      {
+        "face": "coupling/coupling_0216.bin",
+        "topo": "coupling/coupling_0216.bin",
+        "label": 3
+      },
+      {
+        "face": "gear/gear_0404.bin",
+        "topo": "gear/gear_0404.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0139.bin",
+        "topo": "gear/gear_0139.bin",
+        "label": 5
+      },
+      {
+        "face": "bracket/bracket_0186.bin",
+        "topo": "bracket/bracket_0186.bin",
+        "label": 2
+      },
+      {
+        "face": "screw/screw_0314.bin",
+        "topo": "screw/screw_0314.bin",
+        "label": 8
+      },
+      {
+        "face": "screw/screw_0413.bin",
+        "topo": "screw/screw_0413.bin",
+        "label": 8
+      },
+      {
+        "face": "bracket/bracket_0480.bin",
+        "topo": "bracket/bracket_0480.bin",
+        "label": 2
+      },
+      {
+        "face": "bracket/bracket_0410.bin",
+        "topo": "bracket/bracket_0410.bin",
+        "label": 2
+      },
+      {
+        "face": "screw/screw_0578.bin",
+        "topo": "screw/screw_0578.bin",
+        "label": 8
+      },
+      {
+        "face": "bracket/bracket_0189.bin",
+        "topo": "bracket/bracket_0189.bin",
+        "label": 2
+      },
+      {
+        "face": "gear/gear_0533.bin",
+        "topo": "gear/gear_0533.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0409.bin",
+        "topo": "gear/gear_0409.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0127.bin",
+        "topo": "gear/gear_0127.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0012.bin",
+        "topo": "gear/gear_0012.bin",
+        "label": 5
+      },
+      {
+        "face": "bracket/bracket_0749.bin",
+        "topo": "bracket/bracket_0749.bin",
+        "label": 2
+      },
+      {
+        "face": "gear/gear_0493.bin",
+        "topo": "gear/gear_0493.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0804.bin",
+        "topo": "gear/gear_0804.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0397.bin",
+        "topo": "gear/gear_0397.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0490.bin",
+        "topo": "gear/gear_0490.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0000.bin",
+        "topo": "gear/gear_0000.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0068.bin",
+        "topo": "gear/gear_0068.bin",
+        "label": 5
+      },
+      {
+        "face": "bearing/bearing_0114.bin",
+        "topo": "bearing/bearing_0114.bin",
+        "label": 0
+      },
+      {
+        "face": "gear/gear_0045.bin",
+        "topo": "gear/gear_0045.bin",
+        "label": 5
+      },
+      {
+        "face": "screw/screw_0503.bin",
+        "topo": "screw/screw_0503.bin",
+        "label": 8
+      },
+      {
+        "face": "gear/gear_0869.bin",
+        "topo": "gear/gear_0869.bin",
+        "label": 5
+      },
+      {
+        "face": "screw/screw_0765.bin",
+        "topo": "screw/screw_0765.bin",
+        "label": 8
+      },
+      {
+        "face": "gear/gear_0736.bin",
+        "topo": "gear/gear_0736.bin",
+        "label": 5
+      },
+      {
+        "face": "coupling/coupling_0405.bin",
+        "topo": "coupling/coupling_0405.bin",
+        "label": 3
+      },
+      {
+        "face": "screw/screw_0265.bin",
+        "topo": "screw/screw_0265.bin",
+        "label": 8
+      },
+      {
+        "face": "gear/gear_0839.bin",
+        "topo": "gear/gear_0839.bin",
+        "label": 5
+      },
+      {
+        "face": "bearing/bearing_0537.bin",
+        "topo": "bearing/bearing_0537.bin",
+        "label": 0
+      },
+      {
+        "face": "screw/screw_0275.bin",
+        "topo": "screw/screw_0275.bin",
+        "label": 8
+      },
+      {
+        "face": "pulley/pulley_0424.bin",
+        "topo": "pulley/pulley_0424.bin",
+        "label": 7
+      },
+      {
+        "face": "gear/gear_0151.bin",
+        "topo": "gear/gear_0151.bin",
+        "label": 5
+      },
+      {
+        "face": "shaft/shaft_0423.bin",
+        "topo": "shaft/shaft_0423.bin",
+        "label": 9
+      },
+      {
+        "face": "screw/screw_0720.bin",
+        "topo": "screw/screw_0720.bin",
+        "label": 8
+      },
+      {
+        "face": "bracket/bracket_0106.bin",
+        "topo": "bracket/bracket_0106.bin",
+        "label": 2
+      },
+      {
+        "face": "gear/gear_0787.bin",
+        "topo": "gear/gear_0787.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0203.bin",
+        "topo": "gear/gear_0203.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0182.bin",
+        "topo": "gear/gear_0182.bin",
+        "label": 5
+      },
+      {
+        "face": "bearing/bearing_0150.bin",
+        "topo": "bearing/bearing_0150.bin",
+        "label": 0
+      },
+      {
+        "face": "gear/gear_0766.bin",
+        "topo": "gear/gear_0766.bin",
+        "label": 5
+      },
+      {
+        "face": "flange/flange_0086.bin",
+        "topo": "flange/flange_0086.bin",
+        "label": 4
+      },
+      {
+        "face": "flange/flange_0208.bin",
+        "topo": "flange/flange_0208.bin",
+        "label": 4
+      },
+      {
+        "face": "screw/screw_0589.bin",
+        "topo": "screw/screw_0589.bin",
+        "label": 8
+      },
+      {
+        "face": "gear/gear_0459.bin",
+        "topo": "gear/gear_0459.bin",
+        "label": 5
+      },
+      {
+        "face": "bracket/bracket_0507.bin",
+        "topo": "bracket/bracket_0507.bin",
+        "label": 2
+      },
+      {
+        "face": "coupling/coupling_0284.bin",
+        "topo": "coupling/coupling_0284.bin",
+        "label": 3
+      },
+      {
+        "face": "gear/gear_0311.bin",
+        "topo": "gear/gear_0311.bin",
+        "label": 5
+      },
+      {
+        "face": "shaft/shaft_0382.bin",
+        "topo": "shaft/shaft_0382.bin",
+        "label": 9
+      },
+      {
+        "face": "gear/gear_0171.bin",
+        "topo": "gear/gear_0171.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0589.bin",
+        "topo": "gear/gear_0589.bin",
+        "label": 5
+      },
+      {
+        "face": "shaft/shaft_0435.bin",
+        "topo": "shaft/shaft_0435.bin",
+        "label": 9
+      },
+      {
+        "face": "bearing/bearing_0214.bin",
+        "topo": "bearing/bearing_0214.bin",
+        "label": 0
+      },
+      {
+        "face": "shaft/shaft_0177.bin",
+        "topo": "shaft/shaft_0177.bin",
+        "label": 9
+      },
+      {
+        "face": "gear/gear_0657.bin",
+        "topo": "gear/gear_0657.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0249.bin",
+        "topo": "gear/gear_0249.bin",
+        "label": 5
+      },
+      {
+        "face": "pulley/pulley_0259.bin",
+        "topo": "pulley/pulley_0259.bin",
+        "label": 7
+      },
+      {
+        "face": "shaft/shaft_0709.bin",
+        "topo": "shaft/shaft_0709.bin",
+        "label": 9
+      },
+      {
+        "face": "bearing/bearing_0281.bin",
+        "topo": "bearing/bearing_0281.bin",
+        "label": 0
+      },
+      {
+        "face": "bearing/bearing_0244.bin",
+        "topo": "bearing/bearing_0244.bin",
+        "label": 0
+      },
+      {
+        "face": "gear/gear_0753.bin",
+        "topo": "gear/gear_0753.bin",
+        "label": 5
+      },
+      {
+        "face": "bearing/bearing_0034.bin",
+        "topo": "bearing/bearing_0034.bin",
+        "label": 0
+      },
+      {
+        "face": "bracket/bracket_0289.bin",
+        "topo": "bracket/bracket_0289.bin",
+        "label": 2
+      },
+      {
+        "face": "bearing/bearing_0310.bin",
+        "topo": "bearing/bearing_0310.bin",
+        "label": 0
+      },
+      {
+        "face": "coupling/coupling_0022.bin",
+        "topo": "coupling/coupling_0022.bin",
+        "label": 3
+      },
+      {
+        "face": "gear/gear_0893.bin",
+        "topo": "gear/gear_0893.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0206.bin",
+        "topo": "gear/gear_0206.bin",
+        "label": 5
+      },
+      {
+        "face": "bolt/bolt_0388.bin",
+        "topo": "bolt/bolt_0388.bin",
+        "label": 1
+      },
+      {
+        "face": "bracket/bracket_0384.bin",
+        "topo": "bracket/bracket_0384.bin",
+        "label": 2
+      },
+      {
+        "face": "gear/gear_0143.bin",
+        "topo": "gear/gear_0143.bin",
+        "label": 5
+      },
+      {
+        "face": "bearing/bearing_0744.bin",
+        "topo": "bearing/bearing_0744.bin",
+        "label": 0
+      },
+      {
+        "face": "shaft/shaft_0311.bin",
+        "topo": "shaft/shaft_0311.bin",
+        "label": 9
+      },
+      {
+        "face": "gear/gear_0055.bin",
+        "topo": "gear/gear_0055.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0188.bin",
+        "topo": "gear/gear_0188.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0227.bin",
+        "topo": "gear/gear_0227.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0474.bin",
+        "topo": "gear/gear_0474.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0163.bin",
+        "topo": "gear/gear_0163.bin",
+        "label": 5
+      },
+      {
+        "face": "bracket/bracket_0065.bin",
+        "topo": "bracket/bracket_0065.bin",
+        "label": 2
+      },
+      {
+        "face": "bearing/bearing_0010.bin",
+        "topo": "bearing/bearing_0010.bin",
+        "label": 0
+      },
+      {
+        "face": "gear/gear_0430.bin",
+        "topo": "gear/gear_0430.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0425.bin",
+        "topo": "gear/gear_0425.bin",
+        "label": 5
+      },
+      {
+        "face": "bracket/bracket_0329.bin",
+        "topo": "bracket/bracket_0329.bin",
+        "label": 2
+      },
+      {
+        "face": "coupling/coupling_0429.bin",
+        "topo": "coupling/coupling_0429.bin",
+        "label": 3
+      },
+      {
+        "face": "gear/gear_0025.bin",
+        "topo": "gear/gear_0025.bin",
+        "label": 5
+      },
+      {
+        "face": "pulley/pulley_0251.bin",
+        "topo": "pulley/pulley_0251.bin",
+        "label": 7
+      },
+      {
+        "face": "screw/screw_0778.bin",
+        "topo": "screw/screw_0778.bin",
+        "label": 8
+      },
+      {
+        "face": "bracket/bracket_0604.bin",
+        "topo": "bracket/bracket_0604.bin",
+        "label": 2
+      },
+      {
+        "face": "pulley/pulley_0260.bin",
+        "topo": "pulley/pulley_0260.bin",
+        "label": 7
+      },
+      {
+        "face": "pulley/pulley_0103.bin",
+        "topo": "pulley/pulley_0103.bin",
+        "label": 7
+      },
+      {
+        "face": "gear/gear_0747.bin",
+        "topo": "gear/gear_0747.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0547.bin",
+        "topo": "gear/gear_0547.bin",
+        "label": 5
+      },
+      {
+        "face": "bearing/bearing_0365.bin",
+        "topo": "bearing/bearing_0365.bin",
+        "label": 0
+      },
+      {
+        "face": "pulley/pulley_0271.bin",
+        "topo": "pulley/pulley_0271.bin",
+        "label": 7
+      },
+      {
+        "face": "screw/screw_0022.bin",
+        "topo": "screw/screw_0022.bin",
+        "label": 8
+      },
+      {
+        "face": "gear/gear_0727.bin",
+        "topo": "gear/gear_0727.bin",
+        "label": 5
+      },
+      {
+        "face": "bracket/bracket_0296.bin",
+        "topo": "bracket/bracket_0296.bin",
+        "label": 2
+      },
+      {
+        "face": "bearing/bearing_0043.bin",
+        "topo": "bearing/bearing_0043.bin",
+        "label": 0
+      },
+      {
+        "face": "pulley/pulley_0363.bin",
+        "topo": "pulley/pulley_0363.bin",
+        "label": 7
+      },
+      {
+        "face": "gear/gear_0505.bin",
+        "topo": "gear/gear_0505.bin",
+        "label": 5
+      },
+      {
+        "face": "screw/screw_0932.bin",
+        "topo": "screw/screw_0932.bin",
+        "label": 8
+      },
+      {
+        "face": "gear/gear_0433.bin",
+        "topo": "gear/gear_0433.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0516.bin",
+        "topo": "gear/gear_0516.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0059.bin",
+        "topo": "gear/gear_0059.bin",
+        "label": 5
+      },
+      {
+        "face": "bearing/bearing_0009.bin",
+        "topo": "bearing/bearing_0009.bin",
+        "label": 0
+      },
+      {
+        "face": "bolt/bolt_0627.bin",
+        "topo": "bolt/bolt_0627.bin",
+        "label": 1
+      },
+      {
+        "face": "gear/gear_0608.bin",
+        "topo": "gear/gear_0608.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0504.bin",
+        "topo": "gear/gear_0504.bin",
+        "label": 5
+      },
+      {
+        "face": "shaft/shaft_0204.bin",
+        "topo": "shaft/shaft_0204.bin",
+        "label": 9
+      },
+      {
+        "face": "gear/gear_0855.bin",
+        "topo": "gear/gear_0855.bin",
+        "label": 5
+      },
+      {
+        "face": "bearing/bearing_0116.bin",
+        "topo": "bearing/bearing_0116.bin",
+        "label": 0
+      },
+      {
+        "face": "screw/screw_0722.bin",
+        "topo": "screw/screw_0722.bin",
+        "label": 8
+      },
+      {
+        "face": "bearing/bearing_0665.bin",
+        "topo": "bearing/bearing_0665.bin",
+        "label": 0
+      },
+      {
+        "face": "coupling/coupling_0053.bin",
+        "topo": "coupling/coupling_0053.bin",
+        "label": 3
+      },
+      {
+        "face": "gear/gear_0782.bin",
+        "topo": "gear/gear_0782.bin",
+        "label": 5
+      },
+      {
+        "face": "bracket/bracket_0242.bin",
+        "topo": "bracket/bracket_0242.bin",
+        "label": 2
+      },
+      {
+        "face": "nut/nut_0049.bin",
+        "topo": "nut/nut_0049.bin",
+        "label": 6
+      },
+      {
+        "face": "shaft/shaft_0424.bin",
+        "topo": "shaft/shaft_0424.bin",
+        "label": 9
+      },
+      {
+        "face": "gear/gear_0593.bin",
+        "topo": "gear/gear_0593.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0899.bin",
+        "topo": "gear/gear_0899.bin",
+        "label": 5
+      },
+      {
+        "face": "pulley/pulley_0210.bin",
+        "topo": "pulley/pulley_0210.bin",
+        "label": 7
+      },
+      {
+        "face": "shaft/shaft_0315.bin",
+        "topo": "shaft/shaft_0315.bin",
+        "label": 9
+      },
+      {
+        "face": "bearing/bearing_0767.bin",
+        "topo": "bearing/bearing_0767.bin",
+        "label": 0
+      },
+      {
+        "face": "gear/gear_0403.bin",
+        "topo": "gear/gear_0403.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0651.bin",
+        "topo": "gear/gear_0651.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0030.bin",
+        "topo": "gear/gear_0030.bin",
+        "label": 5
+      },
+      {
+        "face": "shaft/shaft_0212.bin",
+        "topo": "shaft/shaft_0212.bin",
+        "label": 9
+      },
+      {
+        "face": "gear/gear_0744.bin",
+        "topo": "gear/gear_0744.bin",
+        "label": 5
+      },
+      {
+        "face": "pulley/pulley_0361.bin",
+        "topo": "pulley/pulley_0361.bin",
+        "label": 7
+      },
+      {
+        "face": "pulley/pulley_0323.bin",
+        "topo": "pulley/pulley_0323.bin",
+        "label": 7
+      },
+      {
+        "face": "gear/gear_0605.bin",
+        "topo": "gear/gear_0605.bin",
+        "label": 5
+      },
+      {
+        "face": "screw/screw_0480.bin",
+        "topo": "screw/screw_0480.bin",
+        "label": 8
+      },
+      {
+        "face": "gear/gear_0147.bin",
+        "topo": "gear/gear_0147.bin",
+        "label": 5
+      },
+      {
+        "face": "flange/flange_0912.bin",
+        "topo": "flange/flange_0912.bin",
+        "label": 4
+      },
+      {
+        "face": "pulley/pulley_0343.bin",
+        "topo": "pulley/pulley_0343.bin",
+        "label": 7
+      },
+      {
+        "face": "bearing/bearing_0283.bin",
+        "topo": "bearing/bearing_0283.bin",
+        "label": 0
+      },
+      {
+        "face": "gear/gear_0375.bin",
+        "topo": "gear/gear_0375.bin",
+        "label": 5
+      },
+      {
+        "face": "shaft/shaft_0337.bin",
+        "topo": "shaft/shaft_0337.bin",
+        "label": 9
+      },
+      {
+        "face": "gear/gear_0594.bin",
+        "topo": "gear/gear_0594.bin",
+        "label": 5
+      },
+      {
+        "face": "bracket/bracket_0215.bin",
+        "topo": "bracket/bracket_0215.bin",
+        "label": 2
+      },
+      {
+        "face": "gear/gear_0220.bin",
+        "topo": "gear/gear_0220.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0094.bin",
+        "topo": "gear/gear_0094.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0347.bin",
+        "topo": "gear/gear_0347.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0898.bin",
+        "topo": "gear/gear_0898.bin",
+        "label": 5
+      },
+      {
+        "face": "pulley/pulley_0104.bin",
+        "topo": "pulley/pulley_0104.bin",
+        "label": 7
+      },
+      {
+        "face": "gear/gear_0001.bin",
+        "topo": "gear/gear_0001.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0128.bin",
+        "topo": "gear/gear_0128.bin",
+        "label": 5
+      },
+      {
+        "face": "shaft/shaft_0425.bin",
+        "topo": "shaft/shaft_0425.bin",
+        "label": 9
+      },
+      {
+        "face": "bracket/bracket_0165.bin",
+        "topo": "bracket/bracket_0165.bin",
+        "label": 2
+      },
+      {
+        "face": "gear/gear_0694.bin",
+        "topo": "gear/gear_0694.bin",
+        "label": 5
+      },
+      {
+        "face": "shaft/shaft_0498.bin",
+        "topo": "shaft/shaft_0498.bin",
+        "label": 9
+      },
+      {
+        "face": "screw/screw_0940.bin",
+        "topo": "screw/screw_0940.bin",
+        "label": 8
+      },
+      {
+        "face": "bolt/bolt_0779.bin",
+        "topo": "bolt/bolt_0779.bin",
+        "label": 1
+      },
+      {
+        "face": "gear/gear_0201.bin",
+        "topo": "gear/gear_0201.bin",
+        "label": 5
+      },
+      {
+        "face": "screw/screw_0374.bin",
+        "topo": "screw/screw_0374.bin",
+        "label": 8
+      },
+      {
+        "face": "gear/gear_0200.bin",
+        "topo": "gear/gear_0200.bin",
+        "label": 5
+      },
+      {
+        "face": "nut/nut_0664.bin",
+        "topo": "nut/nut_0664.bin",
+        "label": 6
+      },
+      {
+        "face": "screw/screw_0406.bin",
+        "topo": "screw/screw_0406.bin",
+        "label": 8
+      },
+      {
+        "face": "gear/gear_0154.bin",
+        "topo": "gear/gear_0154.bin",
+        "label": 5
+      },
+      {
+        "face": "bracket/bracket_0239.bin",
+        "topo": "bracket/bracket_0239.bin",
+        "label": 2
+      },
+      {
+        "face": "gear/gear_0438.bin",
+        "topo": "gear/gear_0438.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0689.bin",
+        "topo": "gear/gear_0689.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0840.bin",
+        "topo": "gear/gear_0840.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0204.bin",
+        "topo": "gear/gear_0204.bin",
+        "label": 5
+      },
+      {
+        "face": "bracket/bracket_0170.bin",
+        "topo": "bracket/bracket_0170.bin",
+        "label": 2
+      },
+      {
+        "face": "pulley/pulley_0383.bin",
+        "topo": "pulley/pulley_0383.bin",
+        "label": 7
+      },
+      {
+        "face": "bracket/bracket_0847.bin",
+        "topo": "bracket/bracket_0847.bin",
+        "label": 2
+      },
+      {
+        "face": "bearing/bearing_0202.bin",
+        "topo": "bearing/bearing_0202.bin",
+        "label": 0
+      },
+      {
+        "face": "gear/gear_0071.bin",
+        "topo": "gear/gear_0071.bin",
+        "label": 5
+      },
+      {
+        "face": "screw/screw_0591.bin",
+        "topo": "screw/screw_0591.bin",
+        "label": 8
+      },
+      {
+        "face": "coupling/coupling_0169.bin",
+        "topo": "coupling/coupling_0169.bin",
+        "label": 3
+      },
+      {
+        "face": "bolt/bolt_0842.bin",
+        "topo": "bolt/bolt_0842.bin",
+        "label": 1
+      },
+      {
+        "face": "screw/screw_0306.bin",
+        "topo": "screw/screw_0306.bin",
+        "label": 8
+      },
+      {
+        "face": "bolt/bolt_0647.bin",
+        "topo": "bolt/bolt_0647.bin",
+        "label": 1
+      },
+      {
+        "face": "bearing/bearing_0328.bin",
+        "topo": "bearing/bearing_0328.bin",
+        "label": 0
+      },
+      {
+        "face": "gear/gear_0273.bin",
+        "topo": "gear/gear_0273.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0183.bin",
+        "topo": "gear/gear_0183.bin",
+        "label": 5
+      },
+      {
+        "face": "shaft/shaft_0463.bin",
+        "topo": "shaft/shaft_0463.bin",
+        "label": 9
+      },
+      {
+        "face": "gear/gear_0148.bin",
+        "topo": "gear/gear_0148.bin",
+        "label": 5
+      },
+      {
+        "face": "shaft/shaft_0129.bin",
+        "topo": "shaft/shaft_0129.bin",
+        "label": 9
+      },
+      {
+        "face": "gear/gear_0696.bin",
+        "topo": "gear/gear_0696.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0165.bin",
+        "topo": "gear/gear_0165.bin",
+        "label": 5
+      },
+      {
+        "face": "bearing/bearing_0308.bin",
+        "topo": "bearing/bearing_0308.bin",
+        "label": 0
+      },
+      {
+        "face": "gear/gear_0060.bin",
+        "topo": "gear/gear_0060.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0803.bin",
+        "topo": "gear/gear_0803.bin",
+        "label": 5
+      },
+      {
+        "face": "bracket/bracket_0278.bin",
+        "topo": "bracket/bracket_0278.bin",
+        "label": 2
+      },
+      {
+        "face": "gear/gear_0646.bin",
+        "topo": "gear/gear_0646.bin",
+        "label": 5
+      },
+      {
+        "face": "shaft/shaft_0097.bin",
+        "topo": "shaft/shaft_0097.bin",
+        "label": 9
+      },
+      {
+        "face": "gear/gear_0091.bin",
+        "topo": "gear/gear_0091.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0293.bin",
+        "topo": "gear/gear_0293.bin",
+        "label": 5
+      },
+      {
+        "face": "flange/flange_0214.bin",
+        "topo": "flange/flange_0214.bin",
+        "label": 4
+      },
+      {
+        "face": "screw/screw_0684.bin",
+        "topo": "screw/screw_0684.bin",
+        "label": 8
+      },
+      {
+        "face": "bearing/bearing_0325.bin",
+        "topo": "bearing/bearing_0325.bin",
+        "label": 0
+      },
+      {
+        "face": "coupling/coupling_0182.bin",
+        "topo": "coupling/coupling_0182.bin",
+        "label": 3
+      },
+      {
+        "face": "gear/gear_0682.bin",
+        "topo": "gear/gear_0682.bin",
+        "label": 5
+      },
+      {
+        "face": "bracket/bracket_0148.bin",
+        "topo": "bracket/bracket_0148.bin",
+        "label": 2
+      },
+      {
+        "face": "screw/screw_0132.bin",
+        "topo": "screw/screw_0132.bin",
+        "label": 8
+      },
+      {
+        "face": "bearing/bearing_0038.bin",
+        "topo": "bearing/bearing_0038.bin",
+        "label": 0
+      },
+      {
+        "face": "coupling/coupling_0253.bin",
+        "topo": "coupling/coupling_0253.bin",
+        "label": 3
+      },
+      {
+        "face": "bolt/bolt_0833.bin",
+        "topo": "bolt/bolt_0833.bin",
+        "label": 1
+      },
+      {
+        "face": "coupling/coupling_0382.bin",
+        "topo": "coupling/coupling_0382.bin",
+        "label": 3
+      },
+      {
+        "face": "flange/flange_0915.bin",
+        "topo": "flange/flange_0915.bin",
+        "label": 4
+      },
+      {
+        "face": "bracket/bracket_0747.bin",
+        "topo": "bracket/bracket_0747.bin",
+        "label": 2
+      },
+      {
+        "face": "bracket/bracket_0761.bin",
+        "topo": "bracket/bracket_0761.bin",
+        "label": 2
+      },
+      {
+        "face": "bearing/bearing_0263.bin",
+        "topo": "bearing/bearing_0263.bin",
+        "label": 0
+      },
+      {
+        "face": "bracket/bracket_0817.bin",
+        "topo": "bracket/bracket_0817.bin",
+        "label": 2
+      },
+      {
+        "face": "bracket/bracket_0386.bin",
+        "topo": "bracket/bracket_0386.bin",
+        "label": 2
+      },
+      {
+        "face": "bearing/bearing_0824.bin",
+        "topo": "bearing/bearing_0824.bin",
+        "label": 0
+      },
+      {
+        "face": "pulley/pulley_0382.bin",
+        "topo": "pulley/pulley_0382.bin",
+        "label": 7
+      },
+      {
+        "face": "pulley/pulley_0338.bin",
+        "topo": "pulley/pulley_0338.bin",
+        "label": 7
+      },
+      {
+        "face": "gear/gear_0881.bin",
+        "topo": "gear/gear_0881.bin",
+        "label": 5
+      },
+      {
+        "face": "bracket/bracket_0181.bin",
+        "topo": "bracket/bracket_0181.bin",
+        "label": 2
+      },
+      {
+        "face": "gear/gear_0664.bin",
+        "topo": "gear/gear_0664.bin",
+        "label": 5
+      },
+      {
+        "face": "shaft/shaft_0415.bin",
+        "topo": "shaft/shaft_0415.bin",
+        "label": 9
+      },
+      {
+        "face": "shaft/shaft_0144.bin",
+        "topo": "shaft/shaft_0144.bin",
+        "label": 9
+      },
+      {
+        "face": "gear/gear_0481.bin",
+        "topo": "gear/gear_0481.bin",
+        "label": 5
+      },
+      {
+        "face": "pulley/pulley_0051.bin",
+        "topo": "pulley/pulley_0051.bin",
+        "label": 7
+      },
+      {
+        "face": "gear/gear_0264.bin",
+        "topo": "gear/gear_0264.bin",
+        "label": 5
+      },
+      {
+        "face": "screw/screw_1098.bin",
+        "topo": "screw/screw_1098.bin",
+        "label": 8
+      },
+      {
+        "face": "screw/screw_0371.bin",
+        "topo": "screw/screw_0371.bin",
+        "label": 8
+      },
+      {
+        "face": "pulley/pulley_0282.bin",
+        "topo": "pulley/pulley_0282.bin",
+        "label": 7
+      },
+      {
+        "face": "gear/gear_0116.bin",
+        "topo": "gear/gear_0116.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0402.bin",
+        "topo": "gear/gear_0402.bin",
+        "label": 5
+      },
+      {
+        "face": "screw/screw_0536.bin",
+        "topo": "screw/screw_0536.bin",
+        "label": 8
+      },
+      {
+        "face": "coupling/coupling_0207.bin",
+        "topo": "coupling/coupling_0207.bin",
+        "label": 3
+      },
+      {
+        "face": "flange/flange_0862.bin",
+        "topo": "flange/flange_0862.bin",
+        "label": 4
+      },
+      {
+        "face": "bearing/bearing_0722.bin",
+        "topo": "bearing/bearing_0722.bin",
+        "label": 0
+      },
+      {
+        "face": "bracket/bracket_0533.bin",
+        "topo": "bracket/bracket_0533.bin",
+        "label": 2
+      },
+      {
+        "face": "bracket/bracket_0756.bin",
+        "topo": "bracket/bracket_0756.bin",
+        "label": 2
+      },
+      {
+        "face": "bearing/bearing_0642.bin",
+        "topo": "bearing/bearing_0642.bin",
+        "label": 0
+      },
+      {
+        "face": "flange/flange_0646.bin",
+        "topo": "flange/flange_0646.bin",
+        "label": 4
+      },
+      {
+        "face": "screw/screw_0409.bin",
+        "topo": "screw/screw_0409.bin",
+        "label": 8
+      },
+      {
+        "face": "nut/nut_0814.bin",
+        "topo": "nut/nut_0814.bin",
+        "label": 6
+      },
+      {
+        "face": "shaft/shaft_0417.bin",
+        "topo": "shaft/shaft_0417.bin",
+        "label": 9
+      },
+      {
+        "face": "shaft/shaft_0053.bin",
+        "topo": "shaft/shaft_0053.bin",
+        "label": 9
+      },
+      {
+        "face": "bolt/bolt_0051.bin",
+        "topo": "bolt/bolt_0051.bin",
+        "label": 1
+      },
+      {
+        "face": "screw/screw_0317.bin",
+        "topo": "screw/screw_0317.bin",
+        "label": 8
+      },
+      {
+        "face": "gear/gear_0389.bin",
+        "topo": "gear/gear_0389.bin",
+        "label": 5
+      },
+      {
+        "face": "screw/screw_0015.bin",
+        "topo": "screw/screw_0015.bin",
+        "label": 8
+      },
+      {
+        "face": "bearing/bearing_0522.bin",
+        "topo": "bearing/bearing_0522.bin",
+        "label": 0
+      },
+      {
+        "face": "bolt/bolt_0790.bin",
+        "topo": "bolt/bolt_0790.bin",
+        "label": 1
+      },
+      {
+        "face": "screw/screw_0266.bin",
+        "topo": "screw/screw_0266.bin",
+        "label": 8
+      },
+      {
+        "face": "gear/gear_0540.bin",
+        "topo": "gear/gear_0540.bin",
+        "label": 5
+      },
+      {
+        "face": "shaft/shaft_0608.bin",
+        "topo": "shaft/shaft_0608.bin",
+        "label": 9
+      },
+      {
+        "face": "flange/flange_0858.bin",
+        "topo": "flange/flange_0858.bin",
+        "label": 4
+      },
+      {
+        "face": "bearing/bearing_0493.bin",
+        "topo": "bearing/bearing_0493.bin",
+        "label": 0
+      },
+      {
+        "face": "bracket/bracket_0422.bin",
+        "topo": "bracket/bracket_0422.bin",
+        "label": 2
+      },
+      {
+        "face": "shaft/shaft_0781.bin",
+        "topo": "shaft/shaft_0781.bin",
+        "label": 9
+      },
+      {
+        "face": "pulley/pulley_0461.bin",
+        "topo": "pulley/pulley_0461.bin",
+        "label": 7
+      },
+      {
+        "face": "pulley/pulley_0022.bin",
+        "topo": "pulley/pulley_0022.bin",
+        "label": 7
+      },
+      {
+        "face": "coupling/coupling_0223.bin",
+        "topo": "coupling/coupling_0223.bin",
+        "label": 3
+      },
+      {
+        "face": "pulley/pulley_0412.bin",
+        "topo": "pulley/pulley_0412.bin",
+        "label": 7
+      },
+      {
+        "face": "screw/screw_0224.bin",
+        "topo": "screw/screw_0224.bin",
+        "label": 8
+      },
+      {
+        "face": "gear/gear_0883.bin",
+        "topo": "gear/gear_0883.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0235.bin",
+        "topo": "gear/gear_0235.bin",
+        "label": 5
+      },
+      {
+        "face": "coupling/coupling_0150.bin",
+        "topo": "coupling/coupling_0150.bin",
+        "label": 3
+      },
+      {
+        "face": "gear/gear_0695.bin",
+        "topo": "gear/gear_0695.bin",
+        "label": 5
+      },
+      {
+        "face": "bearing/bearing_0231.bin",
+        "topo": "bearing/bearing_0231.bin",
+        "label": 0
+      },
+      {
+        "face": "pulley/pulley_0055.bin",
+        "topo": "pulley/pulley_0055.bin",
+        "label": 7
+      },
+      {
+        "face": "bolt/bolt_0815.bin",
+        "topo": "bolt/bolt_0815.bin",
+        "label": 1
+      },
+      {
+        "face": "gear/gear_0306.bin",
+        "topo": "gear/gear_0306.bin",
+        "label": 5
+      },
+      {
+        "face": "coupling/coupling_0431.bin",
+        "topo": "coupling/coupling_0431.bin",
+        "label": 3
+      },
+      {
+        "face": "screw/screw_0423.bin",
+        "topo": "screw/screw_0423.bin",
+        "label": 8
+      },
+      {
+        "face": "bearing/bearing_0167.bin",
+        "topo": "bearing/bearing_0167.bin",
+        "label": 0
+      },
+      {
+        "face": "coupling/coupling_0246.bin",
+        "topo": "coupling/coupling_0246.bin",
+        "label": 3
+      },
+      {
+        "face": "gear/gear_0564.bin",
+        "topo": "gear/gear_0564.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0309.bin",
+        "topo": "gear/gear_0309.bin",
+        "label": 5
+      },
+      {
+        "face": "bearing/bearing_0274.bin",
+        "topo": "bearing/bearing_0274.bin",
+        "label": 0
+      },
+      {
+        "face": "gear/gear_0069.bin",
+        "topo": "gear/gear_0069.bin",
+        "label": 5
+      },
+      {
+        "face": "bracket/bracket_0593.bin",
+        "topo": "bracket/bracket_0593.bin",
+        "label": 2
+      },
+      {
+        "face": "screw/screw_0696.bin",
+        "topo": "screw/screw_0696.bin",
+        "label": 8
+      },
+      {
+        "face": "bracket/bracket_0206.bin",
+        "topo": "bracket/bracket_0206.bin",
+        "label": 2
+      },
+      {
+        "face": "gear/gear_0255.bin",
+        "topo": "gear/gear_0255.bin",
+        "label": 5
+      },
+      {
+        "face": "screw/screw_0439.bin",
+        "topo": "screw/screw_0439.bin",
+        "label": 8
+      },
+      {
+        "face": "screw/screw_0596.bin",
+        "topo": "screw/screw_0596.bin",
+        "label": 8
+      },
+      {
+        "face": "gear/gear_0801.bin",
+        "topo": "gear/gear_0801.bin",
+        "label": 5
+      },
+      {
+        "face": "coupling/coupling_0021.bin",
+        "topo": "coupling/coupling_0021.bin",
+        "label": 3
+      },
+      {
+        "face": "pulley/pulley_0257.bin",
+        "topo": "pulley/pulley_0257.bin",
+        "label": 7
+      },
+      {
+        "face": "screw/screw_0592.bin",
+        "topo": "screw/screw_0592.bin",
+        "label": 8
+      },
+      {
+        "face": "coupling/coupling_0187.bin",
+        "topo": "coupling/coupling_0187.bin",
+        "label": 3
+      },
+      {
+        "face": "bearing/bearing_0562.bin",
+        "topo": "bearing/bearing_0562.bin",
+        "label": 0
+      },
+      {
+        "face": "bearing/bearing_0374.bin",
+        "topo": "bearing/bearing_0374.bin",
+        "label": 0
+      },
+      {
+        "face": "shaft/shaft_0427.bin",
+        "topo": "shaft/shaft_0427.bin",
+        "label": 9
+      },
+      {
+        "face": "bearing/bearing_0650.bin",
+        "topo": "bearing/bearing_0650.bin",
+        "label": 0
+      },
+      {
+        "face": "bearing/bearing_0822.bin",
+        "topo": "bearing/bearing_0822.bin",
+        "label": 0
+      },
+      {
+        "face": "pulley/pulley_0211.bin",
+        "topo": "pulley/pulley_0211.bin",
+        "label": 7
+      },
+      {
+        "face": "bearing/bearing_0757.bin",
+        "topo": "bearing/bearing_0757.bin",
+        "label": 0
+      },
+      {
+        "face": "gear/gear_0449.bin",
+        "topo": "gear/gear_0449.bin",
+        "label": 5
+      },
+      {
+        "face": "screw/screw_0651.bin",
+        "topo": "screw/screw_0651.bin",
+        "label": 8
+      },
+      {
+        "face": "bearing/bearing_0545.bin",
+        "topo": "bearing/bearing_0545.bin",
+        "label": 0
+      },
+      {
+        "face": "flange/flange_0913.bin",
+        "topo": "flange/flange_0913.bin",
+        "label": 4
+      },
+      {
+        "face": "shaft/shaft_0218.bin",
+        "topo": "shaft/shaft_0218.bin",
+        "label": 9
+      },
+      {
+        "face": "coupling/coupling_0059.bin",
+        "topo": "coupling/coupling_0059.bin",
+        "label": 3
+      },
+      {
+        "face": "screw/screw_0561.bin",
+        "topo": "screw/screw_0561.bin",
+        "label": 8
+      },
+      {
+        "face": "bolt/bolt_0021.bin",
+        "topo": "bolt/bolt_0021.bin",
+        "label": 1
+      },
+      {
+        "face": "flange/flange_0919.bin",
+        "topo": "flange/flange_0919.bin",
+        "label": 4
+      },
+      {
+        "face": "gear/gear_0888.bin",
+        "topo": "gear/gear_0888.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0496.bin",
+        "topo": "gear/gear_0496.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0132.bin",
+        "topo": "gear/gear_0132.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0813.bin",
+        "topo": "gear/gear_0813.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0102.bin",
+        "topo": "gear/gear_0102.bin",
+        "label": 5
+      },
+      {
+        "face": "pulley/pulley_0216.bin",
+        "topo": "pulley/pulley_0216.bin",
+        "label": 7
+      },
+      {
+        "face": "gear/gear_0413.bin",
+        "topo": "gear/gear_0413.bin",
+        "label": 5
+      },
+      {
+        "face": "screw/screw_0502.bin",
+        "topo": "screw/screw_0502.bin",
+        "label": 8
+      },
+      {
+        "face": "gear/gear_0745.bin",
+        "topo": "gear/gear_0745.bin",
+        "label": 5
+      },
+      {
+        "face": "screw/screw_0489.bin",
+        "topo": "screw/screw_0489.bin",
+        "label": 8
+      },
+      {
+        "face": "bearing/bearing_0489.bin",
+        "topo": "bearing/bearing_0489.bin",
+        "label": 0
+      },
+      {
+        "face": "bearing/bearing_0486.bin",
+        "topo": "bearing/bearing_0486.bin",
+        "label": 0
+      },
+      {
+        "face": "screw/screw_0531.bin",
+        "topo": "screw/screw_0531.bin",
+        "label": 8
+      },
+      {
+        "face": "shaft/shaft_0549.bin",
+        "topo": "shaft/shaft_0549.bin",
+        "label": 9
+      },
+      {
+        "face": "gear/gear_0570.bin",
+        "topo": "gear/gear_0570.bin",
+        "label": 5
+      },
+      {
+        "face": "bearing/bearing_0487.bin",
+        "topo": "bearing/bearing_0487.bin",
+        "label": 0
+      },
+      {
+        "face": "bearing/bearing_0819.bin",
+        "topo": "bearing/bearing_0819.bin",
+        "label": 0
+      },
+      {
+        "face": "screw/screw_0476.bin",
+        "topo": "screw/screw_0476.bin",
+        "label": 8
+      },
+      {
+        "face": "bracket/bracket_0109.bin",
+        "topo": "bracket/bracket_0109.bin",
+        "label": 2
+      },
+      {
+        "face": "nut/nut_0777.bin",
+        "topo": "nut/nut_0777.bin",
+        "label": 6
+      },
+      {
+        "face": "bolt/bolt_0634.bin",
+        "topo": "bolt/bolt_0634.bin",
+        "label": 1
+      },
+      {
+        "face": "shaft/shaft_0449.bin",
+        "topo": "shaft/shaft_0449.bin",
+        "label": 9
+      },
+      {
+        "face": "screw/screw_0402.bin",
+        "topo": "screw/screw_0402.bin",
+        "label": 8
+      },
+      {
+        "face": "bolt/bolt_0239.bin",
+        "topo": "bolt/bolt_0239.bin",
+        "label": 1
+      },
+      {
+        "face": "bracket/bracket_0342.bin",
+        "topo": "bracket/bracket_0342.bin",
+        "label": 2
+      },
+      {
+        "face": "screw/screw_0660.bin",
+        "topo": "screw/screw_0660.bin",
+        "label": 8
+      },
+      {
+        "face": "shaft/shaft_0575.bin",
+        "topo": "shaft/shaft_0575.bin",
+        "label": 9
+      },
+      {
+        "face": "gear/gear_0558.bin",
+        "topo": "gear/gear_0558.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0525.bin",
+        "topo": "gear/gear_0525.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0228.bin",
+        "topo": "gear/gear_0228.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0120.bin",
+        "topo": "gear/gear_0120.bin",
+        "label": 5
+      },
+      {
+        "face": "shaft/shaft_0290.bin",
+        "topo": "shaft/shaft_0290.bin",
+        "label": 9
+      },
+      {
+        "face": "shaft/shaft_0188.bin",
+        "topo": "shaft/shaft_0188.bin",
+        "label": 9
+      },
+      {
+        "face": "bracket/bracket_0442.bin",
+        "topo": "bracket/bracket_0442.bin",
+        "label": 2
+      },
+      {
+        "face": "screw/screw_0444.bin",
+        "topo": "screw/screw_0444.bin",
+        "label": 8
+      },
+      {
+        "face": "shaft/shaft_0060.bin",
+        "topo": "shaft/shaft_0060.bin",
+        "label": 9
+      },
+      {
+        "face": "gear/gear_0247.bin",
+        "topo": "gear/gear_0247.bin",
+        "label": 5
+      },
+      {
+        "face": "screw/screw_0492.bin",
+        "topo": "screw/screw_0492.bin",
+        "label": 8
+      },
+      {
+        "face": "pulley/pulley_0350.bin",
+        "topo": "pulley/pulley_0350.bin",
+        "label": 7
+      },
+      {
+        "face": "bracket/bracket_0911.bin",
+        "topo": "bracket/bracket_0911.bin",
+        "label": 2
+      },
+      {
+        "face": "gear/gear_0852.bin",
+        "topo": "gear/gear_0852.bin",
+        "label": 5
+      },
+      {
+        "face": "bearing/bearing_0110.bin",
+        "topo": "bearing/bearing_0110.bin",
+        "label": 0
+      },
+      {
+        "face": "gear/gear_0492.bin",
+        "topo": "gear/gear_0492.bin",
+        "label": 5
+      },
+      {
+        "face": "screw/screw_0105.bin",
+        "topo": "screw/screw_0105.bin",
+        "label": 8
+      },
+      {
+        "face": "bracket/bracket_0918.bin",
+        "topo": "bracket/bracket_0918.bin",
+        "label": 2
+      },
+      {
+        "face": "coupling/coupling_0361.bin",
+        "topo": "coupling/coupling_0361.bin",
+        "label": 3
+      },
+      {
+        "face": "gear/gear_0374.bin",
+        "topo": "gear/gear_0374.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0596.bin",
+        "topo": "gear/gear_0596.bin",
+        "label": 5
+      },
+      {
+        "face": "bracket/bracket_0483.bin",
+        "topo": "bracket/bracket_0483.bin",
+        "label": 2
+      },
+      {
+        "face": "pulley/pulley_0409.bin",
+        "topo": "pulley/pulley_0409.bin",
+        "label": 7
+      },
+      {
+        "face": "pulley/pulley_0015.bin",
+        "topo": "pulley/pulley_0015.bin",
+        "label": 7
+      },
+      {
+        "face": "pulley/pulley_0455.bin",
+        "topo": "pulley/pulley_0455.bin",
+        "label": 7
+      },
+      {
+        "face": "coupling/coupling_0119.bin",
+        "topo": "coupling/coupling_0119.bin",
+        "label": 3
+      },
+      {
+        "face": "bearing/bearing_0243.bin",
+        "topo": "bearing/bearing_0243.bin",
+        "label": 0
+      },
+      {
+        "face": "gear/gear_0054.bin",
+        "topo": "gear/gear_0054.bin",
+        "label": 5
+      },
+      {
+        "face": "shaft/shaft_0809.bin",
+        "topo": "shaft/shaft_0809.bin",
+        "label": 9
+      },
+      {
+        "face": "gear/gear_0495.bin",
+        "topo": "gear/gear_0495.bin",
+        "label": 5
+      },
+      {
+        "face": "coupling/coupling_0092.bin",
+        "topo": "coupling/coupling_0092.bin",
+        "label": 3
+      },
+      {
+        "face": "bearing/bearing_0240.bin",
+        "topo": "bearing/bearing_0240.bin",
+        "label": 0
+      },
+      {
+        "face": "gear/gear_0843.bin",
+        "topo": "gear/gear_0843.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0328.bin",
+        "topo": "gear/gear_0328.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0710.bin",
+        "topo": "gear/gear_0710.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0329.bin",
+        "topo": "gear/gear_0329.bin",
+        "label": 5
+      },
+      {
+        "face": "screw/screw_0453.bin",
+        "topo": "screw/screw_0453.bin",
+        "label": 8
+      },
+      {
+        "face": "gear/gear_0673.bin",
+        "topo": "gear/gear_0673.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0662.bin",
+        "topo": "gear/gear_0662.bin",
+        "label": 5
+      },
+      {
+        "face": "bearing/bearing_0326.bin",
+        "topo": "bearing/bearing_0326.bin",
+        "label": 0
+      },
+      {
+        "face": "shaft/shaft_0245.bin",
+        "topo": "shaft/shaft_0245.bin",
+        "label": 9
+      },
+      {
+        "face": "nut/nut_0857.bin",
+        "topo": "nut/nut_0857.bin",
+        "label": 6
+      },
+      {
+        "face": "flange/flange_0914.bin",
+        "topo": "flange/flange_0914.bin",
+        "label": 4
+      },
+      {
+        "face": "gear/gear_0548.bin",
+        "topo": "gear/gear_0548.bin",
+        "label": 5
+      },
+      {
+        "face": "bearing/bearing_0064.bin",
+        "topo": "bearing/bearing_0064.bin",
+        "label": 0
+      },
+      {
+        "face": "gear/gear_0772.bin",
+        "topo": "gear/gear_0772.bin",
+        "label": 5
+      },
+      {
+        "face": "coupling/coupling_0113.bin",
+        "topo": "coupling/coupling_0113.bin",
+        "label": 3
+      },
+      {
+        "face": "bracket/bracket_0191.bin",
+        "topo": "bracket/bracket_0191.bin",
+        "label": 2
+      },
+      {
+        "face": "pulley/pulley_0230.bin",
+        "topo": "pulley/pulley_0230.bin",
+        "label": 7
+      },
+      {
+        "face": "coupling/coupling_0054.bin",
+        "topo": "coupling/coupling_0054.bin",
+        "label": 3
+      },
+      {
+        "face": "screw/screw_0277.bin",
+        "topo": "screw/screw_0277.bin",
+        "label": 8
+      },
+      {
+        "face": "gear/gear_0792.bin",
+        "topo": "gear/gear_0792.bin",
+        "label": 5
+      },
+      {
+        "face": "bracket/bracket_0032.bin",
+        "topo": "bracket/bracket_0032.bin",
+        "label": 2
+      },
+      {
+        "face": "bearing/bearing_0059.bin",
+        "topo": "bearing/bearing_0059.bin",
+        "label": 0
+      },
+      {
+        "face": "gear/gear_0135.bin",
+        "topo": "gear/gear_0135.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0173.bin",
+        "topo": "gear/gear_0173.bin",
+        "label": 5
+      },
+      {
+        "face": "shaft/shaft_0489.bin",
+        "topo": "shaft/shaft_0489.bin",
+        "label": 9
+      },
+      {
+        "face": "gear/gear_0117.bin",
+        "topo": "gear/gear_0117.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0611.bin",
+        "topo": "gear/gear_0611.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0777.bin",
+        "topo": "gear/gear_0777.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0029.bin",
+        "topo": "gear/gear_0029.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0513.bin",
+        "topo": "gear/gear_0513.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0033.bin",
+        "topo": "gear/gear_0033.bin",
+        "label": 5
+      },
+      {
+        "face": "pulley/pulley_0209.bin",
+        "topo": "pulley/pulley_0209.bin",
+        "label": 7
+      },
+      {
+        "face": "bearing/bearing_0083.bin",
+        "topo": "bearing/bearing_0083.bin",
+        "label": 0
+      },
+      {
+        "face": "shaft/shaft_0035.bin",
+        "topo": "shaft/shaft_0035.bin",
+        "label": 9
+      },
+      {
+        "face": "pulley/pulley_0443.bin",
+        "topo": "pulley/pulley_0443.bin",
+        "label": 7
+      },
+      {
+        "face": "pulley/pulley_0038.bin",
+        "topo": "pulley/pulley_0038.bin",
+        "label": 7
+      },
+      {
+        "face": "gear/gear_0750.bin",
+        "topo": "gear/gear_0750.bin",
+        "label": 5
+      },
+      {
+        "face": "bolt/bolt_0284.bin",
+        "topo": "bolt/bolt_0284.bin",
+        "label": 1
+      },
+      {
+        "face": "pulley/pulley_0322.bin",
+        "topo": "pulley/pulley_0322.bin",
+        "label": 7
+      },
+      {
+        "face": "shaft/shaft_0651.bin",
+        "topo": "shaft/shaft_0651.bin",
+        "label": 9
+      },
+      {
+        "face": "gear/gear_0512.bin",
+        "topo": "gear/gear_0512.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0643.bin",
+        "topo": "gear/gear_0643.bin",
+        "label": 5
+      },
+      {
+        "face": "bolt/bolt_0449.bin",
+        "topo": "bolt/bolt_0449.bin",
+        "label": 1
+      },
+      {
+        "face": "bracket/bracket_0434.bin",
+        "topo": "bracket/bracket_0434.bin",
+        "label": 2
+      },
+      {
+        "face": "bolt/bolt_0738.bin",
+        "topo": "bolt/bolt_0738.bin",
+        "label": 1
+      },
+      {
+        "face": "shaft/shaft_0025.bin",
+        "topo": "shaft/shaft_0025.bin",
+        "label": 9
+      },
+      {
+        "face": "bearing/bearing_0299.bin",
+        "topo": "bearing/bearing_0299.bin",
+        "label": 0
+      },
+      {
+        "face": "gear/gear_0365.bin",
+        "topo": "gear/gear_0365.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0341.bin",
+        "topo": "gear/gear_0341.bin",
+        "label": 5
+      },
+      {
+        "face": "screw/screw_0835.bin",
+        "topo": "screw/screw_0835.bin",
+        "label": 8
+      },
+      {
+        "face": "gear/gear_0690.bin",
+        "topo": "gear/gear_0690.bin",
+        "label": 5
+      },
+      {
+        "face": "nut/nut_0569.bin",
+        "topo": "nut/nut_0569.bin",
+        "label": 6
+      },
+      {
+        "face": "bearing/bearing_0280.bin",
+        "topo": "bearing/bearing_0280.bin",
+        "label": 0
+      },
+      {
+        "face": "pulley/pulley_0258.bin",
+        "topo": "pulley/pulley_0258.bin",
+        "label": 7
+      },
+      {
+        "face": "screw/screw_0467.bin",
+        "topo": "screw/screw_0467.bin",
+        "label": 8
+      },
+      {
+        "face": "gear/gear_0287.bin",
+        "topo": "gear/gear_0287.bin",
+        "label": 5
+      },
+      {
+        "face": "shaft/shaft_0487.bin",
+        "topo": "shaft/shaft_0487.bin",
+        "label": 9
+      },
+      {
+        "face": "shaft/shaft_0441.bin",
+        "topo": "shaft/shaft_0441.bin",
+        "label": 9
+      },
+      {
+        "face": "pulley/pulley_0356.bin",
+        "topo": "pulley/pulley_0356.bin",
+        "label": 7
+      },
+      {
+        "face": "shaft/shaft_0201.bin",
+        "topo": "shaft/shaft_0201.bin",
+        "label": 9
+      },
+      {
+        "face": "screw/screw_0697.bin",
+        "topo": "screw/screw_0697.bin",
+        "label": 8
+      },
+      {
+        "face": "gear/gear_0262.bin",
+        "topo": "gear/gear_0262.bin",
+        "label": 5
+      },
+      {
+        "face": "shaft/shaft_0621.bin",
+        "topo": "shaft/shaft_0621.bin",
+        "label": 9
+      },
+      {
+        "face": "bracket/bracket_0432.bin",
+        "topo": "bracket/bracket_0432.bin",
+        "label": 2
+      },
+      {
+        "face": "coupling/coupling_0165.bin",
+        "topo": "coupling/coupling_0165.bin",
+        "label": 3
+      },
+      {
+        "face": "gear/gear_0752.bin",
+        "topo": "gear/gear_0752.bin",
+        "label": 5
+      },
+      {
+        "face": "bearing/bearing_0221.bin",
+        "topo": "bearing/bearing_0221.bin",
+        "label": 0
+      },
+      {
+        "face": "bracket/bracket_0585.bin",
+        "topo": "bracket/bracket_0585.bin",
+        "label": 2
+      },
+      {
+        "face": "bearing/bearing_0108.bin",
+        "topo": "bearing/bearing_0108.bin",
+        "label": 0
+      },
+      {
+        "face": "bearing/bearing_0164.bin",
+        "topo": "bearing/bearing_0164.bin",
+        "label": 0
+      },
+      {
+        "face": "coupling/coupling_0400.bin",
+        "topo": "coupling/coupling_0400.bin",
+        "label": 3
+      },
+      {
+        "face": "shaft/shaft_0687.bin",
+        "topo": "shaft/shaft_0687.bin",
+        "label": 9
+      },
+      {
+        "face": "gear/gear_0857.bin",
+        "topo": "gear/gear_0857.bin",
+        "label": 5
+      },
+      {
+        "face": "screw/screw_0287.bin",
+        "topo": "screw/screw_0287.bin",
+        "label": 8
+      },
+      {
+        "face": "shaft/shaft_0660.bin",
+        "topo": "shaft/shaft_0660.bin",
+        "label": 9
+      },
+      {
+        "face": "shaft/shaft_0351.bin",
+        "topo": "shaft/shaft_0351.bin",
+        "label": 9
+      },
+      {
+        "face": "bracket/bracket_0195.bin",
+        "topo": "bracket/bracket_0195.bin",
+        "label": 2
+      },
+      {
+        "face": "nut/nut_0723.bin",
+        "topo": "nut/nut_0723.bin",
+        "label": 6
+      },
+      {
+        "face": "gear/gear_0304.bin",
+        "topo": "gear/gear_0304.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0380.bin",
+        "topo": "gear/gear_0380.bin",
+        "label": 5
+      },
+      {
+        "face": "screw/screw_0518.bin",
+        "topo": "screw/screw_0518.bin",
+        "label": 8
+      },
+      {
+        "face": "gear/gear_0355.bin",
+        "topo": "gear/gear_0355.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0805.bin",
+        "topo": "gear/gear_0805.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0637.bin",
+        "topo": "gear/gear_0637.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0384.bin",
+        "topo": "gear/gear_0384.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0810.bin",
+        "topo": "gear/gear_0810.bin",
+        "label": 5
+      },
+      {
+        "face": "shaft/shaft_0014.bin",
+        "topo": "shaft/shaft_0014.bin",
+        "label": 9
+      },
+      {
+        "face": "bearing/bearing_0075.bin",
+        "topo": "bearing/bearing_0075.bin",
+        "label": 0
+      },
+      {
+        "face": "pulley/pulley_0279.bin",
+        "topo": "pulley/pulley_0279.bin",
+        "label": 7
+      },
+      {
+        "face": "shaft/shaft_0430.bin",
+        "topo": "shaft/shaft_0430.bin",
+        "label": 9
+      },
+      {
+        "face": "bracket/bracket_0757.bin",
+        "topo": "bracket/bracket_0757.bin",
+        "label": 2
+      },
+      {
+        "face": "bolt/bolt_0787.bin",
+        "topo": "bolt/bolt_0787.bin",
+        "label": 1
+      },
+      {
+        "face": "screw/screw_0296.bin",
+        "topo": "screw/screw_0296.bin",
+        "label": 8
+      },
+      {
+        "face": "gear/gear_0537.bin",
+        "topo": "gear/gear_0537.bin",
+        "label": 5
+      },
+      {
+        "face": "bearing/bearing_0672.bin",
+        "topo": "bearing/bearing_0672.bin",
+        "label": 0
+      },
+      {
+        "face": "gear/gear_0440.bin",
+        "topo": "gear/gear_0440.bin",
+        "label": 5
+      },
+      {
+        "face": "screw/screw_0513.bin",
+        "topo": "screw/screw_0513.bin",
+        "label": 8
+      },
+      {
+        "face": "bearing/bearing_0515.bin",
+        "topo": "bearing/bearing_0515.bin",
+        "label": 0
+      },
+      {
+        "face": "bearing/bearing_0267.bin",
+        "topo": "bearing/bearing_0267.bin",
+        "label": 0
+      },
+      {
+        "face": "gear/gear_0806.bin",
+        "topo": "gear/gear_0806.bin",
+        "label": 5
+      },
+      {
+        "face": "bracket/bracket_0536.bin",
+        "topo": "bracket/bracket_0536.bin",
+        "label": 2
+      },
+      {
+        "face": "gear/gear_0420.bin",
+        "topo": "gear/gear_0420.bin",
+        "label": 5
+      },
+      {
+        "face": "screw/screw_0135.bin",
+        "topo": "screw/screw_0135.bin",
+        "label": 8
+      },
+      {
+        "face": "bearing/bearing_0619.bin",
+        "topo": "bearing/bearing_0619.bin",
+        "label": 0
+      },
+      {
+        "face": "nut/nut_0794.bin",
+        "topo": "nut/nut_0794.bin",
+        "label": 6
+      },
+      {
+        "face": "gear/gear_0044.bin",
+        "topo": "gear/gear_0044.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0837.bin",
+        "topo": "gear/gear_0837.bin",
+        "label": 5
+      },
+      {
+        "face": "flange/flange_0189.bin",
+        "topo": "flange/flange_0189.bin",
+        "label": 4
+      },
+      {
+        "face": "gear/gear_0131.bin",
+        "topo": "gear/gear_0131.bin",
+        "label": 5
+      },
+      {
+        "face": "bearing/bearing_0334.bin",
+        "topo": "bearing/bearing_0334.bin",
+        "label": 0
+      },
+      {
+        "face": "shaft/shaft_0226.bin",
+        "topo": "shaft/shaft_0226.bin",
+        "label": 9
+      },
+      {
+        "face": "coupling/coupling_0199.bin",
+        "topo": "coupling/coupling_0199.bin",
+        "label": 3
+      },
+      {
+        "face": "pulley/pulley_0194.bin",
+        "topo": "pulley/pulley_0194.bin",
+        "label": 7
+      },
+      {
+        "face": "gear/gear_0587.bin",
+        "topo": "gear/gear_0587.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0561.bin",
+        "topo": "gear/gear_0561.bin",
+        "label": 5
+      },
+      {
+        "face": "bolt/bolt_0514.bin",
+        "topo": "bolt/bolt_0514.bin",
+        "label": 1
+      },
+      {
+        "face": "shaft/shaft_0512.bin",
+        "topo": "shaft/shaft_0512.bin",
+        "label": 9
+      },
+      {
+        "face": "bearing/bearing_0647.bin",
+        "topo": "bearing/bearing_0647.bin",
+        "label": 0
+      },
+      {
+        "face": "gear/gear_0461.bin",
+        "topo": "gear/gear_0461.bin",
+        "label": 5
+      },
+      {
+        "face": "shaft/shaft_0227.bin",
+        "topo": "shaft/shaft_0227.bin",
+        "label": 9
+      },
+      {
+        "face": "gear/gear_0251.bin",
+        "topo": "gear/gear_0251.bin",
+        "label": 5
+      },
+      {
+        "face": "bracket/bracket_0825.bin",
+        "topo": "bracket/bracket_0825.bin",
+        "label": 2
+      },
+      {
+        "face": "bearing/bearing_0607.bin",
+        "topo": "bearing/bearing_0607.bin",
+        "label": 0
+      },
+      {
+        "face": "bearing/bearing_0498.bin",
+        "topo": "bearing/bearing_0498.bin",
+        "label": 0
+      },
+      {
+        "face": "bracket/bracket_0547.bin",
+        "topo": "bracket/bracket_0547.bin",
+        "label": 2
+      },
+      {
+        "face": "pulley/pulley_0369.bin",
+        "topo": "pulley/pulley_0369.bin",
+        "label": 7
+      },
+      {
+        "face": "pulley/pulley_0292.bin",
+        "topo": "pulley/pulley_0292.bin",
+        "label": 7
+      },
+      {
+        "face": "bearing/bearing_0058.bin",
+        "topo": "bearing/bearing_0058.bin",
+        "label": 0
+      },
+      {
+        "face": "gear/gear_0523.bin",
+        "topo": "gear/gear_0523.bin",
+        "label": 5
+      },
+      {
+        "face": "bracket/bracket_0777.bin",
+        "topo": "bracket/bracket_0777.bin",
+        "label": 2
+      },
+      {
+        "face": "shaft/shaft_0661.bin",
+        "topo": "shaft/shaft_0661.bin",
+        "label": 9
+      },
+      {
+        "face": "bracket/bracket_0287.bin",
+        "topo": "bracket/bracket_0287.bin",
+        "label": 2
+      },
+      {
+        "face": "bolt/bolt_0772.bin",
+        "topo": "bolt/bolt_0772.bin",
+        "label": 1
+      },
+      {
+        "face": "shaft/shaft_0243.bin",
+        "topo": "shaft/shaft_0243.bin",
+        "label": 9
+      },
+      {
+        "face": "screw/screw_0447.bin",
+        "topo": "screw/screw_0447.bin",
+        "label": 8
+      },
+      {
+        "face": "pulley/pulley_0029.bin",
+        "topo": "pulley/pulley_0029.bin",
+        "label": 7
+      },
+      {
+        "face": "screw/screw_0680.bin",
+        "topo": "screw/screw_0680.bin",
+        "label": 8
+      },
+      {
+        "face": "screw/screw_0297.bin",
+        "topo": "screw/screw_0297.bin",
+        "label": 8
+      },
+      {
+        "face": "bracket/bracket_0089.bin",
+        "topo": "bracket/bracket_0089.bin",
+        "label": 2
+      },
+      {
+        "face": "pulley/pulley_0236.bin",
+        "topo": "pulley/pulley_0236.bin",
+        "label": 7
+      },
+      {
+        "face": "bolt/bolt_0006.bin",
+        "topo": "bolt/bolt_0006.bin",
+        "label": 1
+      },
+      {
+        "face": "bracket/bracket_0586.bin",
+        "topo": "bracket/bracket_0586.bin",
+        "label": 2
+      },
+      {
+        "face": "gear/gear_0755.bin",
+        "topo": "gear/gear_0755.bin",
+        "label": 5
+      },
+      {
+        "face": "coupling/coupling_0006.bin",
+        "topo": "coupling/coupling_0006.bin",
+        "label": 3
+      },
+      {
+        "face": "gear/gear_0572.bin",
+        "topo": "gear/gear_0572.bin",
+        "label": 5
+      },
+      {
+        "face": "bracket/bracket_0424.bin",
+        "topo": "bracket/bracket_0424.bin",
+        "label": 2
+      },
+      {
+        "face": "coupling/coupling_0345.bin",
+        "topo": "coupling/coupling_0345.bin",
+        "label": 3
+      },
+      {
+        "face": "gear/gear_0230.bin",
+        "topo": "gear/gear_0230.bin",
+        "label": 5
+      },
+      {
+        "face": "bearing/bearing_0011.bin",
+        "topo": "bearing/bearing_0011.bin",
+        "label": 0
+      },
+      {
+        "face": "bearing/bearing_0088.bin",
+        "topo": "bearing/bearing_0088.bin",
+        "label": 0
+      },
+      {
+        "face": "gear/gear_0842.bin",
+        "topo": "gear/gear_0842.bin",
+        "label": 5
+      },
+      {
+        "face": "screw/screw_0504.bin",
+        "topo": "screw/screw_0504.bin",
+        "label": 8
+      },
+      {
+        "face": "screw/screw_0731.bin",
+        "topo": "screw/screw_0731.bin",
+        "label": 8
+      },
+      {
+        "face": "bracket/bracket_0251.bin",
+        "topo": "bracket/bracket_0251.bin",
+        "label": 2
+      },
+      {
+        "face": "screw/screw_0470.bin",
+        "topo": "screw/screw_0470.bin",
+        "label": 8
+      },
+      {
+        "face": "bearing/bearing_0331.bin",
+        "topo": "bearing/bearing_0331.bin",
+        "label": 0
+      },
+      {
+        "face": "bearing/bearing_0080.bin",
+        "topo": "bearing/bearing_0080.bin",
+        "label": 0
+      },
+      {
+        "face": "screw/screw_0351.bin",
+        "topo": "screw/screw_0351.bin",
+        "label": 8
+      },
+      {
+        "face": "gear/gear_0642.bin",
+        "topo": "gear/gear_0642.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0301.bin",
+        "topo": "gear/gear_0301.bin",
+        "label": 5
+      },
+      {
+        "face": "pulley/pulley_0009.bin",
+        "topo": "pulley/pulley_0009.bin",
+        "label": 7
+      },
+      {
+        "face": "gear/gear_0006.bin",
+        "topo": "gear/gear_0006.bin",
+        "label": 5
+      },
+      {
+        "face": "bracket/bracket_0931.bin",
+        "topo": "bracket/bracket_0931.bin",
+        "label": 2
+      },
+      {
+        "face": "coupling/coupling_0198.bin",
+        "topo": "coupling/coupling_0198.bin",
+        "label": 3
+      },
+      {
+        "face": "screw/screw_0490.bin",
+        "topo": "screw/screw_0490.bin",
+        "label": 8
+      },
+      {
+        "face": "gear/gear_0335.bin",
+        "topo": "gear/gear_0335.bin",
+        "label": 5
+      },
+      {
+        "face": "bearing/bearing_0069.bin",
+        "topo": "bearing/bearing_0069.bin",
+        "label": 0
+      },
+      {
+        "face": "gear/gear_0774.bin",
+        "topo": "gear/gear_0774.bin",
+        "label": 5
+      },
+      {
+        "face": "shaft/shaft_0257.bin",
+        "topo": "shaft/shaft_0257.bin",
+        "label": 9
+      },
+      {
+        "face": "gear/gear_0567.bin",
+        "topo": "gear/gear_0567.bin",
+        "label": 5
+      },
+      {
+        "face": "pulley/pulley_0308.bin",
+        "topo": "pulley/pulley_0308.bin",
+        "label": 7
+      },
+      {
+        "face": "coupling/coupling_0371.bin",
+        "topo": "coupling/coupling_0371.bin",
+        "label": 3
+      },
+      {
+        "face": "coupling/coupling_0244.bin",
+        "topo": "coupling/coupling_0244.bin",
+        "label": 3
+      },
+      {
+        "face": "screw/screw_0807.bin",
+        "topo": "screw/screw_0807.bin",
+        "label": 8
+      },
+      {
+        "face": "gear/gear_0586.bin",
+        "topo": "gear/gear_0586.bin",
+        "label": 5
+      },
+      {
+        "face": "shaft/shaft_0419.bin",
+        "topo": "shaft/shaft_0419.bin",
+        "label": 9
+      },
+      {
+        "face": "pulley/pulley_0247.bin",
+        "topo": "pulley/pulley_0247.bin",
+        "label": 7
+      },
+      {
+        "face": "bracket/bracket_0597.bin",
+        "topo": "bracket/bracket_0597.bin",
+        "label": 2
+      },
+      {
+        "face": "gear/gear_0466.bin",
+        "topo": "gear/gear_0466.bin",
+        "label": 5
+      },
+      {
+        "face": "coupling/coupling_0153.bin",
+        "topo": "coupling/coupling_0153.bin",
+        "label": 3
+      },
+      {
+        "face": "bolt/bolt_0774.bin",
+        "topo": "bolt/bolt_0774.bin",
+        "label": 1
+      },
+      {
+        "face": "gear/gear_0186.bin",
+        "topo": "gear/gear_0186.bin",
+        "label": 5
+      },
+      {
+        "face": "screw/screw_0667.bin",
+        "topo": "screw/screw_0667.bin",
+        "label": 8
+      },
+      {
+        "face": "pulley/pulley_0234.bin",
+        "topo": "pulley/pulley_0234.bin",
+        "label": 7
+      },
+      {
+        "face": "shaft/shaft_0141.bin",
+        "topo": "shaft/shaft_0141.bin",
+        "label": 9
+      },
+      {
+        "face": "shaft/shaft_0679.bin",
+        "topo": "shaft/shaft_0679.bin",
+        "label": 9
+      },
+      {
+        "face": "bearing/bearing_0330.bin",
+        "topo": "bearing/bearing_0330.bin",
+        "label": 0
+      },
+      {
+        "face": "gear/gear_0178.bin",
+        "topo": "gear/gear_0178.bin",
+        "label": 5
+      },
+      {
+        "face": "pulley/pulley_0249.bin",
+        "topo": "pulley/pulley_0249.bin",
+        "label": 7
+      },
+      {
+        "face": "screw/screw_0375.bin",
+        "topo": "screw/screw_0375.bin",
+        "label": 8
+      },
+      {
+        "face": "screw/screw_1052.bin",
+        "topo": "screw/screw_1052.bin",
+        "label": 8
+      },
+      {
+        "face": "gear/gear_0884.bin",
+        "topo": "gear/gear_0884.bin",
+        "label": 5
+      }
+    ],
+    "val": [
+      {
+        "face": "screw/screw_0695.bin",
+        "topo": "screw/screw_0695.bin",
+        "label": 8
+      },
+      {
+        "face": "gear/gear_0226.bin",
+        "topo": "gear/gear_0226.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0723.bin",
+        "topo": "gear/gear_0723.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0150.bin",
+        "topo": "gear/gear_0150.bin",
+        "label": 5
+      },
+      {
+        "face": "bracket/bracket_0145.bin",
+        "topo": "bracket/bracket_0145.bin",
+        "label": 2
+      },
+      {
+        "face": "screw/screw_0843.bin",
+        "topo": "screw/screw_0843.bin",
+        "label": 8
+      },
+      {
+        "face": "bearing/bearing_0008.bin",
+        "topo": "bearing/bearing_0008.bin",
+        "label": 0
+      },
+      {
+        "face": "shaft/shaft_0127.bin",
+        "topo": "shaft/shaft_0127.bin",
+        "label": 9
+      },
+      {
+        "face": "screw/screw_0824.bin",
+        "topo": "screw/screw_0824.bin",
+        "label": 8
+      },
+      {
+        "face": "screw/screw_0349.bin",
+        "topo": "screw/screw_0349.bin",
+        "label": 8
+      },
+      {
+        "face": "gear/gear_0498.bin",
+        "topo": "gear/gear_0498.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0895.bin",
+        "topo": "gear/gear_0895.bin",
+        "label": 5
+      },
+      {
+        "face": "bracket/bracket_0449.bin",
+        "topo": "bracket/bracket_0449.bin",
+        "label": 2
+      },
+      {
+        "face": "pulley/pulley_0268.bin",
+        "topo": "pulley/pulley_0268.bin",
+        "label": 7
+      },
+      {
+        "face": "gear/gear_0666.bin",
+        "topo": "gear/gear_0666.bin",
+        "label": 5
+      },
+      {
+        "face": "nut/nut_0807.bin",
+        "topo": "nut/nut_0807.bin",
+        "label": 6
+      },
+      {
+        "face": "shaft/shaft_0669.bin",
+        "topo": "shaft/shaft_0669.bin",
+        "label": 9
+      },
+      {
+        "face": "gear/gear_0296.bin",
+        "topo": "gear/gear_0296.bin",
+        "label": 5
+      },
+      {
+        "face": "coupling/coupling_0409.bin",
+        "topo": "coupling/coupling_0409.bin",
+        "label": 3
+      },
+      {
+        "face": "nut/nut_0617.bin",
+        "topo": "nut/nut_0617.bin",
+        "label": 6
+      },
+      {
+        "face": "gear/gear_0170.bin",
+        "topo": "gear/gear_0170.bin",
+        "label": 5
+      },
+      {
+        "face": "pulley/pulley_0177.bin",
+        "topo": "pulley/pulley_0177.bin",
+        "label": 7
+      },
+      {
+        "face": "bolt/bolt_0785.bin",
+        "topo": "bolt/bolt_0785.bin",
+        "label": 1
+      },
+      {
+        "face": "bearing/bearing_0830.bin",
+        "topo": "bearing/bearing_0830.bin",
+        "label": 0
+      },
+      {
+        "face": "screw/screw_0302.bin",
+        "topo": "screw/screw_0302.bin",
+        "label": 8
+      },
+      {
+        "face": "flange/flange_0793.bin",
+        "topo": "flange/flange_0793.bin",
+        "label": 4
+      },
+      {
+        "face": "bearing/bearing_0241.bin",
+        "topo": "bearing/bearing_0241.bin",
+        "label": 0
+      },
+      {
+        "face": "bearing/bearing_0586.bin",
+        "topo": "bearing/bearing_0586.bin",
+        "label": 0
+      },
+      {
+        "face": "gear/gear_0714.bin",
+        "topo": "gear/gear_0714.bin",
+        "label": 5
+      },
+      {
+        "face": "shaft/shaft_0335.bin",
+        "topo": "shaft/shaft_0335.bin",
+        "label": 9
+      },
+      {
+        "face": "bolt/bolt_0336.bin",
+        "topo": "bolt/bolt_0336.bin",
+        "label": 1
+      },
+      {
+        "face": "bearing/bearing_0293.bin",
+        "topo": "bearing/bearing_0293.bin",
+        "label": 0
+      },
+      {
+        "face": "screw/screw_0438.bin",
+        "topo": "screw/screw_0438.bin",
+        "label": 8
+      },
+      {
+        "face": "bolt/bolt_0075.bin",
+        "topo": "bolt/bolt_0075.bin",
+        "label": 1
+      },
+      {
+        "face": "pulley/pulley_0434.bin",
+        "topo": "pulley/pulley_0434.bin",
+        "label": 7
+      },
+      {
+        "face": "gear/gear_0174.bin",
+        "topo": "gear/gear_0174.bin",
+        "label": 5
+      },
+      {
+        "face": "screw/screw_0337.bin",
+        "topo": "screw/screw_0337.bin",
+        "label": 8
+      },
+      {
+        "face": "bracket/bracket_0836.bin",
+        "topo": "bracket/bracket_0836.bin",
+        "label": 2
+      },
+      {
+        "face": "gear/gear_0812.bin",
+        "topo": "gear/gear_0812.bin",
+        "label": 5
+      },
+      {
+        "face": "bracket/bracket_0837.bin",
+        "topo": "bracket/bracket_0837.bin",
+        "label": 2
+      },
+      {
+        "face": "bracket/bracket_0197.bin",
+        "topo": "bracket/bracket_0197.bin",
+        "label": 2
+      },
+      {
+        "face": "gear/gear_0454.bin",
+        "topo": "gear/gear_0454.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0238.bin",
+        "topo": "gear/gear_0238.bin",
+        "label": 5
+      },
+      {
+        "face": "bracket/bracket_0157.bin",
+        "topo": "bracket/bracket_0157.bin",
+        "label": 2
+      },
+      {
+        "face": "gear/gear_0076.bin",
+        "topo": "gear/gear_0076.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0698.bin",
+        "topo": "gear/gear_0698.bin",
+        "label": 5
+      },
+      {
+        "face": "shaft/shaft_0052.bin",
+        "topo": "shaft/shaft_0052.bin",
+        "label": 9
+      },
+      {
+        "face": "shaft/shaft_0317.bin",
+        "topo": "shaft/shaft_0317.bin",
+        "label": 9
+      },
+      {
+        "face": "bolt/bolt_0332.bin",
+        "topo": "bolt/bolt_0332.bin",
+        "label": 1
+      },
+      {
+        "face": "screw/screw_0486.bin",
+        "topo": "screw/screw_0486.bin",
+        "label": 8
+      },
+      {
+        "face": "pulley/pulley_0064.bin",
+        "topo": "pulley/pulley_0064.bin",
+        "label": 7
+      },
+      {
+        "face": "gear/gear_0841.bin",
+        "topo": "gear/gear_0841.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0458.bin",
+        "topo": "gear/gear_0458.bin",
+        "label": 5
+      },
+      {
+        "face": "bracket/bracket_0108.bin",
+        "topo": "bracket/bracket_0108.bin",
+        "label": 2
+      },
+      {
+        "face": "shaft/shaft_0069.bin",
+        "topo": "shaft/shaft_0069.bin",
+        "label": 9
+      },
+      {
+        "face": "pulley/pulley_0425.bin",
+        "topo": "pulley/pulley_0425.bin",
+        "label": 7
+      },
+      {
+        "face": "gear/gear_0339.bin",
+        "topo": "gear/gear_0339.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0259.bin",
+        "topo": "gear/gear_0259.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0396.bin",
+        "topo": "gear/gear_0396.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0221.bin",
+        "topo": "gear/gear_0221.bin",
+        "label": 5
+      },
+      {
+        "face": "shaft/shaft_0711.bin",
+        "topo": "shaft/shaft_0711.bin",
+        "label": 9
+      },
+      {
+        "face": "bolt/bolt_0310.bin",
+        "topo": "bolt/bolt_0310.bin",
+        "label": 1
+      },
+      {
+        "face": "gear/gear_0307.bin",
+        "topo": "gear/gear_0307.bin",
+        "label": 5
+      },
+      {
+        "face": "pulley/pulley_0183.bin",
+        "topo": "pulley/pulley_0183.bin",
+        "label": 7
+      },
+      {
+        "face": "shaft/shaft_0059.bin",
+        "topo": "shaft/shaft_0059.bin",
+        "label": 9
+      },
+      {
+        "face": "nut/nut_0663.bin",
+        "topo": "nut/nut_0663.bin",
+        "label": 6
+      },
+      {
+        "face": "gear/gear_0680.bin",
+        "topo": "gear/gear_0680.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0379.bin",
+        "topo": "gear/gear_0379.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0181.bin",
+        "topo": "gear/gear_0181.bin",
+        "label": 5
+      },
+      {
+        "face": "pulley/pulley_0462.bin",
+        "topo": "pulley/pulley_0462.bin",
+        "label": 7
+      },
+      {
+        "face": "pulley/pulley_0229.bin",
+        "topo": "pulley/pulley_0229.bin",
+        "label": 7
+      },
+      {
+        "face": "bracket/bracket_0689.bin",
+        "topo": "bracket/bracket_0689.bin",
+        "label": 2
+      },
+      {
+        "face": "screw/screw_0567.bin",
+        "topo": "screw/screw_0567.bin",
+        "label": 8
+      },
+      {
+        "face": "gear/gear_0811.bin",
+        "topo": "gear/gear_0811.bin",
+        "label": 5
+      },
+      {
+        "face": "bearing/bearing_0831.bin",
+        "topo": "bearing/bearing_0831.bin",
+        "label": 0
+      },
+      {
+        "face": "bracket/bracket_0238.bin",
+        "topo": "bracket/bracket_0238.bin",
+        "label": 2
+      },
+      {
+        "face": "pulley/pulley_0400.bin",
+        "topo": "pulley/pulley_0400.bin",
+        "label": 7
+      },
+      {
+        "face": "bearing/bearing_0376.bin",
+        "topo": "bearing/bearing_0376.bin",
+        "label": 0
+      },
+      {
+        "face": "bearing/bearing_0494.bin",
+        "topo": "bearing/bearing_0494.bin",
+        "label": 0
+      },
+      {
+        "face": "coupling/coupling_0260.bin",
+        "topo": "coupling/coupling_0260.bin",
+        "label": 3
+      },
+      {
+        "face": "screw/screw_0326.bin",
+        "topo": "screw/screw_0326.bin",
+        "label": 8
+      },
+      {
+        "face": "gear/gear_0331.bin",
+        "topo": "gear/gear_0331.bin",
+        "label": 5
+      },
+      {
+        "face": "bearing/bearing_0090.bin",
+        "topo": "bearing/bearing_0090.bin",
+        "label": 0
+      },
+      {
+        "face": "gear/gear_0754.bin",
+        "topo": "gear/gear_0754.bin",
+        "label": 5
+      },
+      {
+        "face": "bracket/bracket_0235.bin",
+        "topo": "bracket/bracket_0235.bin",
+        "label": 2
+      },
+      {
+        "face": "bracket/bracket_0258.bin",
+        "topo": "bracket/bracket_0258.bin",
+        "label": 2
+      },
+      {
+        "face": "gear/gear_0398.bin",
+        "topo": "gear/gear_0398.bin",
+        "label": 5
+      },
+      {
+        "face": "bracket/bracket_0615.bin",
+        "topo": "bracket/bracket_0615.bin",
+        "label": 2
+      },
+      {
+        "face": "gear/gear_0624.bin",
+        "topo": "gear/gear_0624.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0693.bin",
+        "topo": "gear/gear_0693.bin",
+        "label": 5
+      },
+      {
+        "face": "coupling/coupling_0243.bin",
+        "topo": "coupling/coupling_0243.bin",
+        "label": 3
+      },
+      {
+        "face": "shaft/shaft_0624.bin",
+        "topo": "shaft/shaft_0624.bin",
+        "label": 9
+      },
+      {
+        "face": "coupling/coupling_0044.bin",
+        "topo": "coupling/coupling_0044.bin",
+        "label": 3
+      },
+      {
+        "face": "bearing/bearing_0324.bin",
+        "topo": "bearing/bearing_0324.bin",
+        "label": 0
+      },
+      {
+        "face": "gear/gear_0061.bin",
+        "topo": "gear/gear_0061.bin",
+        "label": 5
+      },
+      {
+        "face": "pulley/pulley_0354.bin",
+        "topo": "pulley/pulley_0354.bin",
+        "label": 7
+      },
+      {
+        "face": "gear/gear_0447.bin",
+        "topo": "gear/gear_0447.bin",
+        "label": 5
+      },
+      {
+        "face": "shaft/shaft_0652.bin",
+        "topo": "shaft/shaft_0652.bin",
+        "label": 9
+      },
+      {
+        "face": "bolt/bolt_0358.bin",
+        "topo": "bolt/bolt_0358.bin",
+        "label": 1
+      },
+      {
+        "face": "screw/screw_0339.bin",
+        "topo": "screw/screw_0339.bin",
+        "label": 8
+      },
+      {
+        "face": "gear/gear_0560.bin",
+        "topo": "gear/gear_0560.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0202.bin",
+        "topo": "gear/gear_0202.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0562.bin",
+        "topo": "gear/gear_0562.bin",
+        "label": 5
+      },
+      {
+        "face": "bracket/bracket_0236.bin",
+        "topo": "bracket/bracket_0236.bin",
+        "label": 2
+      },
+      {
+        "face": "bracket/bracket_0677.bin",
+        "topo": "bracket/bracket_0677.bin",
+        "label": 2
+      },
+      {
+        "face": "bearing/bearing_0175.bin",
+        "topo": "bearing/bearing_0175.bin",
+        "label": 0
+      },
+      {
+        "face": "gear/gear_0771.bin",
+        "topo": "gear/gear_0771.bin",
+        "label": 5
+      },
+      {
+        "face": "nut/nut_0720.bin",
+        "topo": "nut/nut_0720.bin",
+        "label": 6
+      },
+      {
+        "face": "gear/gear_0194.bin",
+        "topo": "gear/gear_0194.bin",
+        "label": 5
+      },
+      {
+        "face": "bracket/bracket_0315.bin",
+        "topo": "bracket/bracket_0315.bin",
+        "label": 2
+      },
+      {
+        "face": "bearing/bearing_0249.bin",
+        "topo": "bearing/bearing_0249.bin",
+        "label": 0
+      },
+      {
+        "face": "gear/gear_0137.bin",
+        "topo": "gear/gear_0137.bin",
+        "label": 5
+      },
+      {
+        "face": "coupling/coupling_0196.bin",
+        "topo": "coupling/coupling_0196.bin",
+        "label": 3
+      },
+      {
+        "face": "bearing/bearing_0290.bin",
+        "topo": "bearing/bearing_0290.bin",
+        "label": 0
+      },
+      {
+        "face": "pulley/pulley_0256.bin",
+        "topo": "pulley/pulley_0256.bin",
+        "label": 7
+      },
+      {
+        "face": "coupling/coupling_0210.bin",
+        "topo": "coupling/coupling_0210.bin",
+        "label": 3
+      },
+      {
+        "face": "gear/gear_0669.bin",
+        "topo": "gear/gear_0669.bin",
+        "label": 5
+      },
+      {
+        "face": "screw/screw_0408.bin",
+        "topo": "screw/screw_0408.bin",
+        "label": 8
+      },
+      {
+        "face": "gear/gear_0145.bin",
+        "topo": "gear/gear_0145.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0416.bin",
+        "topo": "gear/gear_0416.bin",
+        "label": 5
+      },
+      {
+        "face": "bracket/bracket_0357.bin",
+        "topo": "bracket/bracket_0357.bin",
+        "label": 2
+      },
+      {
+        "face": "gear/gear_0514.bin",
+        "topo": "gear/gear_0514.bin",
+        "label": 5
+      },
+      {
+        "face": "pulley/pulley_0332.bin",
+        "topo": "pulley/pulley_0332.bin",
+        "label": 7
+      },
+      {
+        "face": "gear/gear_0445.bin",
+        "topo": "gear/gear_0445.bin",
+        "label": 5
+      },
+      {
+        "face": "bracket/bracket_0977.bin",
+        "topo": "bracket/bracket_0977.bin",
+        "label": 2
+      },
+      {
+        "face": "bracket/bracket_0628.bin",
+        "topo": "bracket/bracket_0628.bin",
+        "label": 2
+      },
+      {
+        "face": "bracket/bracket_0470.bin",
+        "topo": "bracket/bracket_0470.bin",
+        "label": 2
+      },
+      {
+        "face": "gear/gear_0032.bin",
+        "topo": "gear/gear_0032.bin",
+        "label": 5
+      },
+      {
+        "face": "shaft/shaft_0428.bin",
+        "topo": "shaft/shaft_0428.bin",
+        "label": 9
+      },
+      {
+        "face": "coupling/coupling_0005.bin",
+        "topo": "coupling/coupling_0005.bin",
+        "label": 3
+      },
+      {
+        "face": "gear/gear_0155.bin",
+        "topo": "gear/gear_0155.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0007.bin",
+        "topo": "gear/gear_0007.bin",
+        "label": 5
+      },
+      {
+        "face": "shaft/shaft_0238.bin",
+        "topo": "shaft/shaft_0238.bin",
+        "label": 9
+      },
+      {
+        "face": "bracket/bracket_0938.bin",
+        "topo": "bracket/bracket_0938.bin",
+        "label": 2
+      },
+      {
+        "face": "gear/gear_0026.bin",
+        "topo": "gear/gear_0026.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0299.bin",
+        "topo": "gear/gear_0299.bin",
+        "label": 5
+      },
+      {
+        "face": "coupling/coupling_0201.bin",
+        "topo": "coupling/coupling_0201.bin",
+        "label": 3
+      },
+      {
+        "face": "bearing/bearing_0366.bin",
+        "topo": "bearing/bearing_0366.bin",
+        "label": 0
+      },
+      {
+        "face": "screw/screw_0292.bin",
+        "topo": "screw/screw_0292.bin",
+        "label": 8
+      },
+      {
+        "face": "bearing/bearing_0370.bin",
+        "topo": "bearing/bearing_0370.bin",
+        "label": 0
+      },
+      {
+        "face": "gear/gear_0268.bin",
+        "topo": "gear/gear_0268.bin",
+        "label": 5
+      },
+      {
+        "face": "pulley/pulley_0214.bin",
+        "topo": "pulley/pulley_0214.bin",
+        "label": 7
+      },
+      {
+        "face": "screw/screw_0448.bin",
+        "topo": "screw/screw_0448.bin",
+        "label": 8
+      },
+      {
+        "face": "screw/screw_0273.bin",
+        "topo": "screw/screw_0273.bin",
+        "label": 8
+      },
+      {
+        "face": "gear/gear_0074.bin",
+        "topo": "gear/gear_0074.bin",
+        "label": 5
+      },
+      {
+        "face": "bearing/bearing_0295.bin",
+        "topo": "bearing/bearing_0295.bin",
+        "label": 0
+      },
+      {
+        "face": "screw/screw_0050.bin",
+        "topo": "screw/screw_0050.bin",
+        "label": 8
+      },
+      {
+        "face": "gear/gear_0254.bin",
+        "topo": "gear/gear_0254.bin",
+        "label": 5
+      },
+      {
+        "face": "coupling/coupling_0430.bin",
+        "topo": "coupling/coupling_0430.bin",
+        "label": 3
+      },
+      {
+        "face": "gear/gear_0417.bin",
+        "topo": "gear/gear_0417.bin",
+        "label": 5
+      },
+      {
+        "face": "screw/screw_0862.bin",
+        "topo": "screw/screw_0862.bin",
+        "label": 8
+      },
+      {
+        "face": "shaft/shaft_0103.bin",
+        "topo": "shaft/shaft_0103.bin",
+        "label": 9
+      },
+      {
+        "face": "shaft/shaft_0345.bin",
+        "topo": "shaft/shaft_0345.bin",
+        "label": 9
+      },
+      {
+        "face": "bracket/bracket_0134.bin",
+        "topo": "bracket/bracket_0134.bin",
+        "label": 2
+      },
+      {
+        "face": "gear/gear_0169.bin",
+        "topo": "gear/gear_0169.bin",
+        "label": 5
+      },
+      {
+        "face": "shaft/shaft_0046.bin",
+        "topo": "shaft/shaft_0046.bin",
+        "label": 9
+      },
+      {
+        "face": "screw/screw_0442.bin",
+        "topo": "screw/screw_0442.bin",
+        "label": 8
+      },
+      {
+        "face": "screw/screw_0564.bin",
+        "topo": "screw/screw_0564.bin",
+        "label": 8
+      },
+      {
+        "face": "gear/gear_0073.bin",
+        "topo": "gear/gear_0073.bin",
+        "label": 5
+      },
+      {
+        "face": "nut/nut_0728.bin",
+        "topo": "nut/nut_0728.bin",
+        "label": 6
+      },
+      {
+        "face": "pulley/pulley_0303.bin",
+        "topo": "pulley/pulley_0303.bin",
+        "label": 7
+      },
+      {
+        "face": "bracket/bracket_0314.bin",
+        "topo": "bracket/bracket_0314.bin",
+        "label": 2
+      },
+      {
+        "face": "bearing/bearing_0359.bin",
+        "topo": "bearing/bearing_0359.bin",
+        "label": 0
+      },
+      {
+        "face": "bearing/bearing_0027.bin",
+        "topo": "bearing/bearing_0027.bin",
+        "label": 0
+      },
+      {
+        "face": "bearing/bearing_0367.bin",
+        "topo": "bearing/bearing_0367.bin",
+        "label": 0
+      },
+      {
+        "face": "pulley/pulley_0330.bin",
+        "topo": "pulley/pulley_0330.bin",
+        "label": 7
+      },
+      {
+        "face": "bearing/bearing_0234.bin",
+        "topo": "bearing/bearing_0234.bin",
+        "label": 0
+      },
+      {
+        "face": "pulley/pulley_0102.bin",
+        "topo": "pulley/pulley_0102.bin",
+        "label": 7
+      },
+      {
+        "face": "screw/screw_0356.bin",
+        "topo": "screw/screw_0356.bin",
+        "label": 8
+      },
+      {
+        "face": "screw/screw_0217.bin",
+        "topo": "screw/screw_0217.bin",
+        "label": 8
+      },
+      {
+        "face": "shaft/shaft_0812.bin",
+        "topo": "shaft/shaft_0812.bin",
+        "label": 9
+      },
+      {
+        "face": "gear/gear_0005.bin",
+        "topo": "gear/gear_0005.bin",
+        "label": 5
+      },
+      {
+        "face": "screw/screw_0364.bin",
+        "topo": "screw/screw_0364.bin",
+        "label": 8
+      },
+      {
+        "face": "bearing/bearing_0218.bin",
+        "topo": "bearing/bearing_0218.bin",
+        "label": 0
+      },
+      {
+        "face": "gear/gear_0639.bin",
+        "topo": "gear/gear_0639.bin",
+        "label": 5
+      },
+      {
+        "face": "bearing/bearing_0232.bin",
+        "topo": "bearing/bearing_0232.bin",
+        "label": 0
+      },
+      {
+        "face": "bearing/bearing_0019.bin",
+        "topo": "bearing/bearing_0019.bin",
+        "label": 0
+      },
+      {
+        "face": "gear/gear_0093.bin",
+        "topo": "gear/gear_0093.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0760.bin",
+        "topo": "gear/gear_0760.bin",
+        "label": 5
+      },
+      {
+        "face": "nut/nut_0658.bin",
+        "topo": "nut/nut_0658.bin",
+        "label": 6
+      },
+      {
+        "face": "bearing/bearing_0369.bin",
+        "topo": "bearing/bearing_0369.bin",
+        "label": 0
+      },
+      {
+        "face": "bearing/bearing_0839.bin",
+        "topo": "bearing/bearing_0839.bin",
+        "label": 0
+      },
+      {
+        "face": "screw/screw_0649.bin",
+        "topo": "screw/screw_0649.bin",
+        "label": 8
+      },
+      {
+        "face": "pulley/pulley_0100.bin",
+        "topo": "pulley/pulley_0100.bin",
+        "label": 7
+      },
+      {
+        "face": "gear/gear_0106.bin",
+        "topo": "gear/gear_0106.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0583.bin",
+        "topo": "gear/gear_0583.bin",
+        "label": 5
+      },
+      {
+        "face": "screw/screw_0685.bin",
+        "topo": "screw/screw_0685.bin",
+        "label": 8
+      },
+      {
+        "face": "gear/gear_0078.bin",
+        "topo": "gear/gear_0078.bin",
+        "label": 5
+      },
+      {
+        "face": "bracket/bracket_0194.bin",
+        "topo": "bracket/bracket_0194.bin",
+        "label": 2
+      },
+      {
+        "face": "bearing/bearing_0190.bin",
+        "topo": "bearing/bearing_0190.bin",
+        "label": 0
+      },
+      {
+        "face": "gear/gear_0084.bin",
+        "topo": "gear/gear_0084.bin",
+        "label": 5
+      },
+      {
+        "face": "screw/screw_0975.bin",
+        "topo": "screw/screw_0975.bin",
+        "label": 8
+      },
+      {
+        "face": "pulley/pulley_0240.bin",
+        "topo": "pulley/pulley_0240.bin",
+        "label": 7
+      },
+      {
+        "face": "gear/gear_0300.bin",
+        "topo": "gear/gear_0300.bin",
+        "label": 5
+      },
+      {
+        "face": "pulley/pulley_0395.bin",
+        "topo": "pulley/pulley_0395.bin",
+        "label": 7
+      },
+      {
+        "face": "screw/screw_0407.bin",
+        "topo": "screw/screw_0407.bin",
+        "label": 8
+      },
+      {
+        "face": "bearing/bearing_0219.bin",
+        "topo": "bearing/bearing_0219.bin",
+        "label": 0
+      },
+      {
+        "face": "shaft/shaft_0058.bin",
+        "topo": "shaft/shaft_0058.bin",
+        "label": 9
+      },
+      {
+        "face": "shaft/shaft_0414.bin",
+        "topo": "shaft/shaft_0414.bin",
+        "label": 9
+      },
+      {
+        "face": "gear/gear_0185.bin",
+        "topo": "gear/gear_0185.bin",
+        "label": 5
+      },
+      {
+        "face": "screw/screw_0775.bin",
+        "topo": "screw/screw_0775.bin",
+        "label": 8
+      },
+      {
+        "face": "pulley/pulley_0098.bin",
+        "topo": "pulley/pulley_0098.bin",
+        "label": 7
+      },
+      {
+        "face": "bracket/bracket_0000.bin",
+        "topo": "bracket/bracket_0000.bin",
+        "label": 2
+      },
+      {
+        "face": "bolt/bolt_0817.bin",
+        "topo": "bolt/bolt_0817.bin",
+        "label": 1
+      },
+      {
+        "face": "screw/screw_1006.bin",
+        "topo": "screw/screw_1006.bin",
+        "label": 8
+      },
+      {
+        "face": "pulley/pulley_0478.bin",
+        "topo": "pulley/pulley_0478.bin",
+        "label": 7
+      },
+      {
+        "face": "bearing/bearing_0154.bin",
+        "topo": "bearing/bearing_0154.bin",
+        "label": 0
+      },
+      {
+        "face": "bearing/bearing_0278.bin",
+        "topo": "bearing/bearing_0278.bin",
+        "label": 0
+      },
+      {
+        "face": "pulley/pulley_0364.bin",
+        "topo": "pulley/pulley_0364.bin",
+        "label": 7
+      },
+      {
+        "face": "gear/gear_0261.bin",
+        "topo": "gear/gear_0261.bin",
+        "label": 5
+      },
+      {
+        "face": "pulley/pulley_0481.bin",
+        "topo": "pulley/pulley_0481.bin",
+        "label": 7
+      },
+      {
+        "face": "gear/gear_0257.bin",
+        "topo": "gear/gear_0257.bin",
+        "label": 5
+      },
+      {
+        "face": "pulley/pulley_0110.bin",
+        "topo": "pulley/pulley_0110.bin",
+        "label": 7
+      },
+      {
+        "face": "bracket/bracket_0192.bin",
+        "topo": "bracket/bracket_0192.bin",
+        "label": 2
+      },
+      {
+        "face": "bolt/bolt_0736.bin",
+        "topo": "bolt/bolt_0736.bin",
+        "label": 1
+      },
+      {
+        "face": "gear/gear_0715.bin",
+        "topo": "gear/gear_0715.bin",
+        "label": 5
+      },
+      {
+        "face": "pulley/pulley_0261.bin",
+        "topo": "pulley/pulley_0261.bin",
+        "label": 7
+      },
+      {
+        "face": "bearing/bearing_0063.bin",
+        "topo": "bearing/bearing_0063.bin",
+        "label": 0
+      },
+      {
+        "face": "flange/flange_0033.bin",
+        "topo": "flange/flange_0033.bin",
+        "label": 4
+      },
+      {
+        "face": "bearing/bearing_0101.bin",
+        "topo": "bearing/bearing_0101.bin",
+        "label": 0
+      },
+      {
+        "face": "gear/gear_0503.bin",
+        "topo": "gear/gear_0503.bin",
+        "label": 5
+      },
+      {
+        "face": "bracket/bracket_0446.bin",
+        "topo": "bracket/bracket_0446.bin",
+        "label": 2
+      },
+      {
+        "face": "pulley/pulley_0248.bin",
+        "topo": "pulley/pulley_0248.bin",
+        "label": 7
+      },
+      {
+        "face": "gear/gear_0889.bin",
+        "topo": "gear/gear_0889.bin",
+        "label": 5
+      },
+      {
+        "face": "coupling/coupling_0026.bin",
+        "topo": "coupling/coupling_0026.bin",
+        "label": 3
+      },
+      {
+        "face": "nut/nut_0585.bin",
+        "topo": "nut/nut_0585.bin",
+        "label": 6
+      },
+      {
+        "face": "coupling/coupling_0214.bin",
+        "topo": "coupling/coupling_0214.bin",
+        "label": 3
+      },
+      {
+        "face": "screw/screw_0218.bin",
+        "topo": "screw/screw_0218.bin",
+        "label": 8
+      },
+      {
+        "face": "bearing/bearing_0485.bin",
+        "topo": "bearing/bearing_0485.bin",
+        "label": 0
+      },
+      {
+        "face": "nut/nut_0386.bin",
+        "topo": "nut/nut_0386.bin",
+        "label": 6
+      },
+      {
+        "face": "bracket/bracket_0583.bin",
+        "topo": "bracket/bracket_0583.bin",
+        "label": 2
+      },
+      {
+        "face": "bearing/bearing_0411.bin",
+        "topo": "bearing/bearing_0411.bin",
+        "label": 0
+      },
+      {
+        "face": "gear/gear_0783.bin",
+        "topo": "gear/gear_0783.bin",
+        "label": 5
+      },
+      {
+        "face": "nut/nut_0729.bin",
+        "topo": "nut/nut_0729.bin",
+        "label": 6
+      },
+      {
+        "face": "bearing/bearing_0542.bin",
+        "topo": "bearing/bearing_0542.bin",
+        "label": 0
+      }
+    ],
+    "test": [
+      {
+        "face": "bearing/bearing_0047.bin",
+        "topo": "bearing/bearing_0047.bin",
+        "label": 0
+      },
+      {
+        "face": "bearing/bearing_0560.bin",
+        "topo": "bearing/bearing_0560.bin",
+        "label": 0
+      },
+      {
+        "face": "bearing/bearing_0266.bin",
+        "topo": "bearing/bearing_0266.bin",
+        "label": 0
+      },
+      {
+        "face": "pulley/pulley_0016.bin",
+        "topo": "pulley/pulley_0016.bin",
+        "label": 7
+      },
+      {
+        "face": "gear/gear_0882.bin",
+        "topo": "gear/gear_0882.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0177.bin",
+        "topo": "gear/gear_0177.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0240.bin",
+        "topo": "gear/gear_0240.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0737.bin",
+        "topo": "gear/gear_0737.bin",
+        "label": 5
+      },
+      {
+        "face": "pulley/pulley_0224.bin",
+        "topo": "pulley/pulley_0224.bin",
+        "label": 7
+      },
+      {
+        "face": "gear/gear_0773.bin",
+        "topo": "gear/gear_0773.bin",
+        "label": 5
+      },
+      {
+        "face": "bolt/bolt_0382.bin",
+        "topo": "bolt/bolt_0382.bin",
+        "label": 1
+      },
+      {
+        "face": "gear/gear_0321.bin",
+        "topo": "gear/gear_0321.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0353.bin",
+        "topo": "gear/gear_0353.bin",
+        "label": 5
+      },
+      {
+        "face": "bearing/bearing_0217.bin",
+        "topo": "bearing/bearing_0217.bin",
+        "label": 0
+      },
+      {
+        "face": "gear/gear_0217.bin",
+        "topo": "gear/gear_0217.bin",
+        "label": 5
+      },
+      {
+        "face": "bearing/bearing_0026.bin",
+        "topo": "bearing/bearing_0026.bin",
+        "label": 0
+      },
+      {
+        "face": "gear/gear_0640.bin",
+        "topo": "gear/gear_0640.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0530.bin",
+        "topo": "gear/gear_0530.bin",
+        "label": 5
+      },
+      {
+        "face": "screw/screw_0743.bin",
+        "topo": "screw/screw_0743.bin",
+        "label": 8
+      },
+      {
+        "face": "coupling/coupling_0154.bin",
+        "topo": "coupling/coupling_0154.bin",
+        "label": 3
+      },
+      {
+        "face": "bearing/bearing_0531.bin",
+        "topo": "bearing/bearing_0531.bin",
+        "label": 0
+      },
+      {
+        "face": "pulley/pulley_0213.bin",
+        "topo": "pulley/pulley_0213.bin",
+        "label": 7
+      },
+      {
+        "face": "gear/gear_0089.bin",
+        "topo": "gear/gear_0089.bin",
+        "label": 5
+      },
+      {
+        "face": "bracket/bracket_0333.bin",
+        "topo": "bracket/bracket_0333.bin",
+        "label": 2
+      },
+      {
+        "face": "coupling/coupling_0131.bin",
+        "topo": "coupling/coupling_0131.bin",
+        "label": 3
+      },
+      {
+        "face": "pulley/pulley_0318.bin",
+        "topo": "pulley/pulley_0318.bin",
+        "label": 7
+      },
+      {
+        "face": "gear/gear_0531.bin",
+        "topo": "gear/gear_0531.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0198.bin",
+        "topo": "gear/gear_0198.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0444.bin",
+        "topo": "gear/gear_0444.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0460.bin",
+        "topo": "gear/gear_0460.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0468.bin",
+        "topo": "gear/gear_0468.bin",
+        "label": 5
+      },
+      {
+        "face": "screw/screw_0000.bin",
+        "topo": "screw/screw_0000.bin",
+        "label": 8
+      },
+      {
+        "face": "screw/screw_0847.bin",
+        "topo": "screw/screw_0847.bin",
+        "label": 8
+      },
+      {
+        "face": "screw/screw_0340.bin",
+        "topo": "screw/screw_0340.bin",
+        "label": 8
+      },
+      {
+        "face": "pulley/pulley_0231.bin",
+        "topo": "pulley/pulley_0231.bin",
+        "label": 7
+      },
+      {
+        "face": "shaft/shaft_0323.bin",
+        "topo": "shaft/shaft_0323.bin",
+        "label": 9
+      },
+      {
+        "face": "gear/gear_0315.bin",
+        "topo": "gear/gear_0315.bin",
+        "label": 5
+      },
+      {
+        "face": "bearing/bearing_0254.bin",
+        "topo": "bearing/bearing_0254.bin",
+        "label": 0
+      },
+      {
+        "face": "shaft/shaft_0247.bin",
+        "topo": "shaft/shaft_0247.bin",
+        "label": 9
+      },
+      {
+        "face": "pulley/pulley_0174.bin",
+        "topo": "pulley/pulley_0174.bin",
+        "label": 7
+      },
+      {
+        "face": "gear/gear_0645.bin",
+        "topo": "gear/gear_0645.bin",
+        "label": 5
+      },
+      {
+        "face": "shaft/shaft_0000.bin",
+        "topo": "shaft/shaft_0000.bin",
+        "label": 9
+      },
+      {
+        "face": "bracket/bracket_0461.bin",
+        "topo": "bracket/bracket_0461.bin",
+        "label": 2
+      },
+      {
+        "face": "gear/gear_0732.bin",
+        "topo": "gear/gear_0732.bin",
+        "label": 5
+      },
+      {
+        "face": "nut/nut_0560.bin",
+        "topo": "nut/nut_0560.bin",
+        "label": 6
+      },
+      {
+        "face": "gear/gear_0602.bin",
+        "topo": "gear/gear_0602.bin",
+        "label": 5
+      },
+      {
+        "face": "bearing/bearing_0156.bin",
+        "topo": "bearing/bearing_0156.bin",
+        "label": 0
+      },
+      {
+        "face": "gear/gear_0868.bin",
+        "topo": "gear/gear_0868.bin",
+        "label": 5
+      },
+      {
+        "face": "screw/screw_0679.bin",
+        "topo": "screw/screw_0679.bin",
+        "label": 8
+      },
+      {
+        "face": "screw/screw_0437.bin",
+        "topo": "screw/screw_0437.bin",
+        "label": 8
+      },
+      {
+        "face": "bracket/bracket_0200.bin",
+        "topo": "bracket/bracket_0200.bin",
+        "label": 2
+      },
+      {
+        "face": "gear/gear_0595.bin",
+        "topo": "gear/gear_0595.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0195.bin",
+        "topo": "gear/gear_0195.bin",
+        "label": 5
+      },
+      {
+        "face": "bolt/bolt_0582.bin",
+        "topo": "bolt/bolt_0582.bin",
+        "label": 1
+      },
+      {
+        "face": "bearing/bearing_0227.bin",
+        "topo": "bearing/bearing_0227.bin",
+        "label": 0
+      },
+      {
+        "face": "gear/gear_0735.bin",
+        "topo": "gear/gear_0735.bin",
+        "label": 5
+      },
+      {
+        "face": "screw/screw_0433.bin",
+        "topo": "screw/screw_0433.bin",
+        "label": 8
+      },
+      {
+        "face": "bolt/bolt_0506.bin",
+        "topo": "bolt/bolt_0506.bin",
+        "label": 1
+      },
+      {
+        "face": "bearing/bearing_0827.bin",
+        "topo": "bearing/bearing_0827.bin",
+        "label": 0
+      },
+      {
+        "face": "nut/nut_0546.bin",
+        "topo": "nut/nut_0546.bin",
+        "label": 6
+      },
+      {
+        "face": "gear/gear_0039.bin",
+        "topo": "gear/gear_0039.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0699.bin",
+        "topo": "gear/gear_0699.bin",
+        "label": 5
+      },
+      {
+        "face": "bracket/bracket_0292.bin",
+        "topo": "bracket/bracket_0292.bin",
+        "label": 2
+      },
+      {
+        "face": "gear/gear_0728.bin",
+        "topo": "gear/gear_0728.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0427.bin",
+        "topo": "gear/gear_0427.bin",
+        "label": 5
+      },
+      {
+        "face": "nut/nut_0586.bin",
+        "topo": "nut/nut_0586.bin",
+        "label": 6
+      },
+      {
+        "face": "shaft/shaft_0418.bin",
+        "topo": "shaft/shaft_0418.bin",
+        "label": 9
+      },
+      {
+        "face": "coupling/coupling_0156.bin",
+        "topo": "coupling/coupling_0156.bin",
+        "label": 3
+      },
+      {
+        "face": "shaft/shaft_0476.bin",
+        "topo": "shaft/shaft_0476.bin",
+        "label": 9
+      },
+      {
+        "face": "bracket/bracket_0116.bin",
+        "topo": "bracket/bracket_0116.bin",
+        "label": 2
+      },
+      {
+        "face": "gear/gear_0592.bin",
+        "topo": "gear/gear_0592.bin",
+        "label": 5
+      },
+      {
+        "face": "pulley/pulley_0456.bin",
+        "topo": "pulley/pulley_0456.bin",
+        "label": 7
+      },
+      {
+        "face": "gear/gear_0343.bin",
+        "topo": "gear/gear_0343.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0260.bin",
+        "topo": "gear/gear_0260.bin",
+        "label": 5
+      },
+      {
+        "face": "bracket/bracket_0303.bin",
+        "topo": "bracket/bracket_0303.bin",
+        "label": 2
+      },
+      {
+        "face": "gear/gear_0180.bin",
+        "topo": "gear/gear_0180.bin",
+        "label": 5
+      },
+      {
+        "face": "bracket/bracket_0429.bin",
+        "topo": "bracket/bracket_0429.bin",
+        "label": 2
+      },
+      {
+        "face": "shaft/shaft_0285.bin",
+        "topo": "shaft/shaft_0285.bin",
+        "label": 9
+      },
+      {
+        "face": "coupling/coupling_0164.bin",
+        "topo": "coupling/coupling_0164.bin",
+        "label": 3
+      },
+      {
+        "face": "bracket/bracket_0375.bin",
+        "topo": "bracket/bracket_0375.bin",
+        "label": 2
+      },
+      {
+        "face": "bracket/bracket_0054.bin",
+        "topo": "bracket/bracket_0054.bin",
+        "label": 2
+      },
+      {
+        "face": "gear/gear_0566.bin",
+        "topo": "gear/gear_0566.bin",
+        "label": 5
+      },
+      {
+        "face": "bracket/bracket_0308.bin",
+        "topo": "bracket/bracket_0308.bin",
+        "label": 2
+      },
+      {
+        "face": "bolt/bolt_0518.bin",
+        "topo": "bolt/bolt_0518.bin",
+        "label": 1
+      },
+      {
+        "face": "bolt/bolt_0003.bin",
+        "topo": "bolt/bolt_0003.bin",
+        "label": 1
+      },
+      {
+        "face": "gear/gear_0450.bin",
+        "topo": "gear/gear_0450.bin",
+        "label": 5
+      },
+      {
+        "face": "bearing/bearing_0631.bin",
+        "topo": "bearing/bearing_0631.bin",
+        "label": 0
+      },
+      {
+        "face": "bearing/bearing_0669.bin",
+        "topo": "bearing/bearing_0669.bin",
+        "label": 0
+      },
+      {
+        "face": "coupling/coupling_0104.bin",
+        "topo": "coupling/coupling_0104.bin",
+        "label": 3
+      },
+      {
+        "face": "shaft/shaft_0745.bin",
+        "topo": "shaft/shaft_0745.bin",
+        "label": 9
+      },
+      {
+        "face": "pulley/pulley_0254.bin",
+        "topo": "pulley/pulley_0254.bin",
+        "label": 7
+      },
+      {
+        "face": "shaft/shaft_0762.bin",
+        "topo": "shaft/shaft_0762.bin",
+        "label": 9
+      },
+      {
+        "face": "gear/gear_0802.bin",
+        "topo": "gear/gear_0802.bin",
+        "label": 5
+      },
+      {
+        "face": "bolt/bolt_0788.bin",
+        "topo": "bolt/bolt_0788.bin",
+        "label": 1
+      },
+      {
+        "face": "gear/gear_0043.bin",
+        "topo": "gear/gear_0043.bin",
+        "label": 5
+      },
+      {
+        "face": "shaft/shaft_0086.bin",
+        "topo": "shaft/shaft_0086.bin",
+        "label": 9
+      },
+      {
+        "face": "screw/screw_0826.bin",
+        "topo": "screw/screw_0826.bin",
+        "label": 8
+      },
+      {
+        "face": "pulley/pulley_0386.bin",
+        "topo": "pulley/pulley_0386.bin",
+        "label": 7
+      },
+      {
+        "face": "gear/gear_0267.bin",
+        "topo": "gear/gear_0267.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0785.bin",
+        "topo": "gear/gear_0785.bin",
+        "label": 5
+      },
+      {
+        "face": "bracket/bracket_0542.bin",
+        "topo": "bracket/bracket_0542.bin",
+        "label": 2
+      },
+      {
+        "face": "coupling/coupling_0202.bin",
+        "topo": "coupling/coupling_0202.bin",
+        "label": 3
+      },
+      {
+        "face": "bracket/bracket_0897.bin",
+        "topo": "bracket/bracket_0897.bin",
+        "label": 2
+      },
+      {
+        "face": "bearing/bearing_0236.bin",
+        "topo": "bearing/bearing_0236.bin",
+        "label": 0
+      },
+      {
+        "face": "gear/gear_0322.bin",
+        "topo": "gear/gear_0322.bin",
+        "label": 5
+      },
+      {
+        "face": "coupling/coupling_0158.bin",
+        "topo": "coupling/coupling_0158.bin",
+        "label": 3
+      },
+      {
+        "face": "gear/gear_0048.bin",
+        "topo": "gear/gear_0048.bin",
+        "label": 5
+      },
+      {
+        "face": "pulley/pulley_0028.bin",
+        "topo": "pulley/pulley_0028.bin",
+        "label": 7
+      },
+      {
+        "face": "coupling/coupling_0373.bin",
+        "topo": "coupling/coupling_0373.bin",
+        "label": 3
+      },
+      {
+        "face": "bearing/bearing_0045.bin",
+        "topo": "bearing/bearing_0045.bin",
+        "label": 0
+      },
+      {
+        "face": "gear/gear_0834.bin",
+        "topo": "gear/gear_0834.bin",
+        "label": 5
+      },
+      {
+        "face": "screw/screw_0443.bin",
+        "topo": "screw/screw_0443.bin",
+        "label": 8
+      },
+      {
+        "face": "gear/gear_0424.bin",
+        "topo": "gear/gear_0424.bin",
+        "label": 5
+      },
+      {
+        "face": "pulley/pulley_0008.bin",
+        "topo": "pulley/pulley_0008.bin",
+        "label": 7
+      },
+      {
+        "face": "bearing/bearing_0077.bin",
+        "topo": "bearing/bearing_0077.bin",
+        "label": 0
+      },
+      {
+        "face": "gear/gear_0256.bin",
+        "topo": "gear/gear_0256.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0372.bin",
+        "topo": "gear/gear_0372.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0876.bin",
+        "topo": "gear/gear_0876.bin",
+        "label": 5
+      },
+      {
+        "face": "bearing/bearing_0371.bin",
+        "topo": "bearing/bearing_0371.bin",
+        "label": 0
+      },
+      {
+        "face": "gear/gear_0218.bin",
+        "topo": "gear/gear_0218.bin",
+        "label": 5
+      },
+      {
+        "face": "screw/screw_0336.bin",
+        "topo": "screw/screw_0336.bin",
+        "label": 8
+      },
+      {
+        "face": "gear/gear_0483.bin",
+        "topo": "gear/gear_0483.bin",
+        "label": 5
+      },
+      {
+        "face": "flange/flange_0911.bin",
+        "topo": "flange/flange_0911.bin",
+        "label": 4
+      },
+      {
+        "face": "gear/gear_0303.bin",
+        "topo": "gear/gear_0303.bin",
+        "label": 5
+      },
+      {
+        "face": "pulley/pulley_0000.bin",
+        "topo": "pulley/pulley_0000.bin",
+        "label": 7
+      },
+      {
+        "face": "gear/gear_0831.bin",
+        "topo": "gear/gear_0831.bin",
+        "label": 5
+      },
+      {
+        "face": "bracket/bracket_0572.bin",
+        "topo": "bracket/bracket_0572.bin",
+        "label": 2
+      },
+      {
+        "face": "screw/screw_0668.bin",
+        "topo": "screw/screw_0668.bin",
+        "label": 8
+      },
+      {
+        "face": "pulley/pulley_0232.bin",
+        "topo": "pulley/pulley_0232.bin",
+        "label": 7
+      },
+      {
+        "face": "gear/gear_0480.bin",
+        "topo": "gear/gear_0480.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0021.bin",
+        "topo": "gear/gear_0021.bin",
+        "label": 5
+      },
+      {
+        "face": "pulley/pulley_0250.bin",
+        "topo": "pulley/pulley_0250.bin",
+        "label": 7
+      },
+      {
+        "face": "gear/gear_0524.bin",
+        "topo": "gear/gear_0524.bin",
+        "label": 5
+      },
+      {
+        "face": "bearing/bearing_0453.bin",
+        "topo": "bearing/bearing_0453.bin",
+        "label": 0
+      },
+      {
+        "face": "screw/screw_0383.bin",
+        "topo": "screw/screw_0383.bin",
+        "label": 8
+      },
+      {
+        "face": "bracket/bracket_0848.bin",
+        "topo": "bracket/bracket_0848.bin",
+        "label": 2
+      },
+      {
+        "face": "gear/gear_0199.bin",
+        "topo": "gear/gear_0199.bin",
+        "label": 5
+      },
+      {
+        "face": "shaft/shaft_0421.bin",
+        "topo": "shaft/shaft_0421.bin",
+        "label": 9
+      },
+      {
+        "face": "gear/gear_0152.bin",
+        "topo": "gear/gear_0152.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0345.bin",
+        "topo": "gear/gear_0345.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0826.bin",
+        "topo": "gear/gear_0826.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0597.bin",
+        "topo": "gear/gear_0597.bin",
+        "label": 5
+      },
+      {
+        "face": "screw/screw_0841.bin",
+        "topo": "screw/screw_0841.bin",
+        "label": 8
+      },
+      {
+        "face": "bracket/bracket_0455.bin",
+        "topo": "bracket/bracket_0455.bin",
+        "label": 2
+      },
+      {
+        "face": "gear/gear_0860.bin",
+        "topo": "gear/gear_0860.bin",
+        "label": 5
+      },
+      {
+        "face": "shaft/shaft_0283.bin",
+        "topo": "shaft/shaft_0283.bin",
+        "label": 9
+      },
+      {
+        "face": "gear/gear_0354.bin",
+        "topo": "gear/gear_0354.bin",
+        "label": 5
+      },
+      {
+        "face": "bracket/bracket_0362.bin",
+        "topo": "bracket/bracket_0362.bin",
+        "label": 2
+      },
+      {
+        "face": "gear/gear_0142.bin",
+        "topo": "gear/gear_0142.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0410.bin",
+        "topo": "gear/gear_0410.bin",
+        "label": 5
+      },
+      {
+        "face": "screw/screw_0757.bin",
+        "topo": "screw/screw_0757.bin",
+        "label": 8
+      },
+      {
+        "face": "shaft/shaft_0180.bin",
+        "topo": "shaft/shaft_0180.bin",
+        "label": 9
+      },
+      {
+        "face": "bracket/bracket_0489.bin",
+        "topo": "bracket/bracket_0489.bin",
+        "label": 2
+      },
+      {
+        "face": "bearing/bearing_0726.bin",
+        "topo": "bearing/bearing_0726.bin",
+        "label": 0
+      },
+      {
+        "face": "screw/screw_0484.bin",
+        "topo": "screw/screw_0484.bin",
+        "label": 8
+      },
+      {
+        "face": "screw/screw_0267.bin",
+        "topo": "screw/screw_0267.bin",
+        "label": 8
+      },
+      {
+        "face": "bearing/bearing_0055.bin",
+        "topo": "bearing/bearing_0055.bin",
+        "label": 0
+      },
+      {
+        "face": "screw/screw_0468.bin",
+        "topo": "screw/screw_0468.bin",
+        "label": 8
+      },
+      {
+        "face": "gear/gear_0845.bin",
+        "topo": "gear/gear_0845.bin",
+        "label": 5
+      },
+      {
+        "face": "bearing/bearing_0495.bin",
+        "topo": "bearing/bearing_0495.bin",
+        "label": 0
+      },
+      {
+        "face": "gear/gear_0070.bin",
+        "topo": "gear/gear_0070.bin",
+        "label": 5
+      },
+      {
+        "face": "bracket/bracket_0388.bin",
+        "topo": "bracket/bracket_0388.bin",
+        "label": 2
+      },
+      {
+        "face": "screw/screw_0361.bin",
+        "topo": "screw/screw_0361.bin",
+        "label": 8
+      },
+      {
+        "face": "coupling/coupling_0226.bin",
+        "topo": "coupling/coupling_0226.bin",
+        "label": 3
+      },
+      {
+        "face": "bracket/bracket_0626.bin",
+        "topo": "bracket/bracket_0626.bin",
+        "label": 2
+      },
+      {
+        "face": "gear/gear_0246.bin",
+        "topo": "gear/gear_0246.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0763.bin",
+        "topo": "gear/gear_0763.bin",
+        "label": 5
+      },
+      {
+        "face": "flange/flange_0910.bin",
+        "topo": "flange/flange_0910.bin",
+        "label": 4
+      },
+      {
+        "face": "bearing/bearing_0350.bin",
+        "topo": "bearing/bearing_0350.bin",
+        "label": 0
+      },
+      {
+        "face": "flange/flange_0809.bin",
+        "topo": "flange/flange_0809.bin",
+        "label": 4
+      },
+      {
+        "face": "shaft/shaft_0501.bin",
+        "topo": "shaft/shaft_0501.bin",
+        "label": 9
+      },
+      {
+        "face": "coupling/coupling_0112.bin",
+        "topo": "coupling/coupling_0112.bin",
+        "label": 3
+      },
+      {
+        "face": "gear/gear_0064.bin",
+        "topo": "gear/gear_0064.bin",
+        "label": 5
+      },
+      {
+        "face": "screw/screw_0493.bin",
+        "topo": "screw/screw_0493.bin",
+        "label": 8
+      },
+      {
+        "face": "shaft/shaft_0169.bin",
+        "topo": "shaft/shaft_0169.bin",
+        "label": 9
+      },
+      {
+        "face": "bearing/bearing_0233.bin",
+        "topo": "bearing/bearing_0233.bin",
+        "label": 0
+      },
+      {
+        "face": "bearing/bearing_0268.bin",
+        "topo": "bearing/bearing_0268.bin",
+        "label": 0
+      },
+      {
+        "face": "nut/nut_0815.bin",
+        "topo": "nut/nut_0815.bin",
+        "label": 6
+      },
+      {
+        "face": "gear/gear_0046.bin",
+        "topo": "gear/gear_0046.bin",
+        "label": 5
+      },
+      {
+        "face": "pulley/pulley_0208.bin",
+        "topo": "pulley/pulley_0208.bin",
+        "label": 7
+      },
+      {
+        "face": "gear/gear_0022.bin",
+        "topo": "gear/gear_0022.bin",
+        "label": 5
+      },
+      {
+        "face": "bracket/bracket_0701.bin",
+        "topo": "bracket/bracket_0701.bin",
+        "label": 2
+      },
+      {
+        "face": "gear/gear_0326.bin",
+        "topo": "gear/gear_0326.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0866.bin",
+        "topo": "gear/gear_0866.bin",
+        "label": 5
+      },
+      {
+        "face": "screw/screw_0629.bin",
+        "topo": "screw/screw_0629.bin",
+        "label": 8
+      },
+      {
+        "face": "gear/gear_0653.bin",
+        "topo": "gear/gear_0653.bin",
+        "label": 5
+      },
+      {
+        "face": "bolt/bolt_0746.bin",
+        "topo": "bolt/bolt_0746.bin",
+        "label": 1
+      },
+      {
+        "face": "coupling/coupling_0315.bin",
+        "topo": "coupling/coupling_0315.bin",
+        "label": 3
+      },
+      {
+        "face": "gear/gear_0670.bin",
+        "topo": "gear/gear_0670.bin",
+        "label": 5
+      },
+      {
+        "face": "screw/screw_0815.bin",
+        "topo": "screw/screw_0815.bin",
+        "label": 8
+      },
+      {
+        "face": "gear/gear_0381.bin",
+        "topo": "gear/gear_0381.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0779.bin",
+        "topo": "gear/gear_0779.bin",
+        "label": 5
+      },
+      {
+        "face": "bearing/bearing_0216.bin",
+        "topo": "bearing/bearing_0216.bin",
+        "label": 0
+      },
+      {
+        "face": "gear/gear_0176.bin",
+        "topo": "gear/gear_0176.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0072.bin",
+        "topo": "gear/gear_0072.bin",
+        "label": 5
+      },
+      {
+        "face": "bracket/bracket_0052.bin",
+        "topo": "bracket/bracket_0052.bin",
+        "label": 2
+      },
+      {
+        "face": "gear/gear_0873.bin",
+        "topo": "gear/gear_0873.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0476.bin",
+        "topo": "gear/gear_0476.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0395.bin",
+        "topo": "gear/gear_0395.bin",
+        "label": 5
+      },
+      {
+        "face": "bearing/bearing_0170.bin",
+        "topo": "bearing/bearing_0170.bin",
+        "label": 0
+      },
+      {
+        "face": "bracket/bracket_0594.bin",
+        "topo": "bracket/bracket_0594.bin",
+        "label": 2
+      },
+      {
+        "face": "gear/gear_0225.bin",
+        "topo": "gear/gear_0225.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0616.bin",
+        "topo": "gear/gear_0616.bin",
+        "label": 5
+      },
+      {
+        "face": "pulley/pulley_0275.bin",
+        "topo": "pulley/pulley_0275.bin",
+        "label": 7
+      },
+      {
+        "face": "gear/gear_0184.bin",
+        "topo": "gear/gear_0184.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0471.bin",
+        "topo": "gear/gear_0471.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0077.bin",
+        "topo": "gear/gear_0077.bin",
+        "label": 5
+      },
+      {
+        "face": "nut/nut_0848.bin",
+        "topo": "nut/nut_0848.bin",
+        "label": 6
+      },
+      {
+        "face": "gear/gear_0573.bin",
+        "topo": "gear/gear_0573.bin",
+        "label": 5
+      },
+      {
+        "face": "bracket/bracket_0471.bin",
+        "topo": "bracket/bracket_0471.bin",
+        "label": 2
+      },
+      {
+        "face": "flange/flange_0087.bin",
+        "topo": "flange/flange_0087.bin",
+        "label": 4
+      },
+      {
+        "face": "screw/screw_0995.bin",
+        "topo": "screw/screw_0995.bin",
+        "label": 8
+      },
+      {
+        "face": "shaft/shaft_0189.bin",
+        "topo": "shaft/shaft_0189.bin",
+        "label": 9
+      },
+      {
+        "face": "screw/screw_0537.bin",
+        "topo": "screw/screw_0537.bin",
+        "label": 8
+      },
+      {
+        "face": "pulley/pulley_0473.bin",
+        "topo": "pulley/pulley_0473.bin",
+        "label": 7
+      },
+      {
+        "face": "screw/screw_0959.bin",
+        "topo": "screw/screw_0959.bin",
+        "label": 8
+      },
+      {
+        "face": "bearing/bearing_0496.bin",
+        "topo": "bearing/bearing_0496.bin",
+        "label": 0
+      },
+      {
+        "face": "nut/nut_0666.bin",
+        "topo": "nut/nut_0666.bin",
+        "label": 6
+      },
+      {
+        "face": "bracket/bracket_0754.bin",
+        "topo": "bracket/bracket_0754.bin",
+        "label": 2
+      },
+      {
+        "face": "screw/screw_0530.bin",
+        "topo": "screw/screw_0530.bin",
+        "label": 8
+      },
+      {
+        "face": "bearing/bearing_0006.bin",
+        "topo": "bearing/bearing_0006.bin",
+        "label": 0
+      },
+      {
+        "face": "gear/gear_0122.bin",
+        "topo": "gear/gear_0122.bin",
+        "label": 5
+      },
+      {
+        "face": "gear/gear_0708.bin",
+        "topo": "gear/gear_0708.bin",
+        "label": 5
+      },
+      {
+        "face": "pulley/pulley_0106.bin",
+        "topo": "pulley/pulley_0106.bin",
+        "label": 7
+      },
+      {
+        "face": "bracket/bracket_0538.bin",
+        "topo": "bracket/bracket_0538.bin",
+        "label": 2
+      },
+      {
+        "face": "pulley/pulley_0437.bin",
+        "topo": "pulley/pulley_0437.bin",
+        "label": 7
+      },
+      {
+        "face": "pulley/pulley_0212.bin",
+        "topo": "pulley/pulley_0212.bin",
+        "label": 7
+      },
+      {
+        "face": "bracket/bracket_0348.bin",
+        "topo": "bracket/bracket_0348.bin",
+        "label": 2
+      },
+      {
+        "face": "gear/gear_0394.bin",
+        "topo": "gear/gear_0394.bin",
+        "label": 5
+      },
+      {
+        "face": "screw/screw_0384.bin",
+        "topo": "screw/screw_0384.bin",
+        "label": 8
+      },
+      {
+        "face": "bracket/bracket_0726.bin",
+        "topo": "bracket/bracket_0726.bin",
+        "label": 2
+      },
+      {
+        "face": "gear/gear_0467.bin",
+        "topo": "gear/gear_0467.bin",
+        "label": 5
+      }
+    ]
+  },
+  "class_counts": {
+    "train": {
+      "0": 419,
+      "1": 435,
+      "2": 392,
+      "8": 451,
+      "6": 433,
+      "4": 647,
+      "7": 223,
+      "3": 222,
+      "9": 399,
+      "5": 87
+    },
+    "val": {
+      "7": 46,
+      "9": 86,
+      "6": 95,
+      "4": 131,
+      "8": 98,
+      "2": 88,
+      "1": 99,
+      "0": 79,
+      "3": 47,
+      "5": 20
+    }
+  },
+  "manifest_sha256": "bf3c5d467023f5a3aade2a3810d92d82eed8405892f18ac0b42da6b1ce39ddb9",
+  "split_path_disjoint": true,
+  "created_at": "2026-11-13 12:47:23 +0800"
+}

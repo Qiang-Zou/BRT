@@ -1,0 +1,209 @@
+{
+  "model_name": "BRT TMCAD fine-tuned classifier",
+  "release_tag": "weights-v1",
+  "status": "local_release_candidate_not_published",
+  "strict_paper_reproduction": false,
+  "extra_finetuning_stage_applied": true,
+  "checkpoint": "checkpoints/tmcad.pth",
+  "state_dict_sha256": "d874cf4b820b6a0589168e77b7f51fc9f39345aff92e43e720c6fc54c569d013",
+  "checkpoint_format": "plain PyTorch state_dict, tensors only",
+  "source_full_checkpoint_sha256": "46a8e90aa10154ae5e0067e1cb9dce10c02a207b517f70d4feeb02ee68210f6e",
+  "source_initial_checkpoint_sha256": "608dfa4eb761dc3b8b25139cd7696b2f6031a47a7b34de2ff19a6a86c192b676",
+  "parameters": 2292874,
+  "state_tensors": 181,
+  "checkpoint_bytes": 13369909,
+  "selected_finetune_epoch": 1,
+  "completed_finetune_epochs": 9,
+  "selection": "min_val_loss_including_initial_checkpoint",
+  "raw_split_counts": {
+    "train": 4780,
+    "val": 1024,
+    "test": 1026
+  },
+  "admitted_split_counts": {
+    "train": 3708,
+    "val": 789,
+    "test": 794
+  },
+  "relative_manifest_sha256": "778ed1e45b52d0ce92504b7619e0857c0b853d8666a747886be0b9b6f77cdf96",
+  "original_manifest_sha256": "bf3c5d467023f5a3aade2a3810d92d82eed8405892f18ac0b42da6b1ce39ddb9",
+  "test": {
+    "loss": 0.5622296187304129,
+    "accuracy": 83.87909319899245,
+    "num_cads": 794,
+    "correct": 666,
+    "confusion_matrix": [
+      [
+        63,
+        0,
+        2,
+        3,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        106,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        5,
+        3
+      ],
+      [
+        3,
+        0,
+        64,
+        6,
+        0,
+        1,
+        0,
+        0,
+        0,
+        4
+      ],
+      [
+        2,
+        1,
+        2,
+        20,
+        2,
+        3,
+        0,
+        1,
+        1,
+        3
+      ],
+      [
+        1,
+        0,
+        2,
+        0,
+        114,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        3,
+        2,
+        0,
+        16,
+        1,
+        0,
+        0,
+        1
+      ],
+      [
+        2,
+        0,
+        0,
+        1,
+        0,
+        1,
+        97,
+        0,
+        0,
+        0
+      ],
+      [
+        7,
+        0,
+        4,
+        1,
+        1,
+        2,
+        0,
+        31,
+        0,
+        2
+      ],
+      [
+        2,
+        34,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        71,
+        0
+      ],
+      [
+        3,
+        0,
+        0,
+        3,
+        1,
+        1,
+        1,
+        0,
+        3,
+        84
+      ]
+    ],
+    "seconds": 72.23128128051758
+  },
+  "paper_accuracy": 83.45,
+  "comparison": "Reference only; author-exact data, preprocessing and training protocol not matched.",
+  "evaluation": {
+    "device": "cpu",
+    "cpu_threads": 8,
+    "workers": 8,
+    "batch_size": 16,
+    "seed": 0,
+    "precision": "float32_highest",
+    "drop_last": false
+  },
+  "historical_initial_training": {
+    "selected_epoch": 24,
+    "source_run_epochs": 1000,
+    "learning_rate": 0.0001,
+    "adam_betas": [
+      0.9,
+      0.999
+    ],
+    "training_seed_verified": false,
+    "complete_command_verified": false
+  },
+  "runtime_sha256": {
+    "runtime/models/brt_classfication.py": "d73ec765b251f6c31b22d97453a75b47257195770ec2162c62f36d154b93ab49",
+    "runtime/models/brt.py": "a44608815515e9d0f497f179c3606dbcf59294eae487a98d01a770251c701ee1",
+    "runtime/models/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runtime/models/encoders.py": "05b87bcaf6d1373d6b84dd2d8b52fa82754faa28fe04d000150b08a3013fae4e",
+    "runtime/datasets/brt_dataset.py": "cdecedbaf79b73ca058dbac7596c96d4f323be47c2dc46f83ac522ba40cb802d",
+    "runtime/datasets/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "weight_export_verification": {
+    "tensor_exact_to_source": true,
+    "tensor_count": 181,
+    "weights_only_load": true,
+    "all_finite": true
+  },
+  "limitations": [
+    "Historical feature caches are required and are not included or publicly hosted by this package.",
+    "Paper-exact sample membership and split not verified.",
+    "Historical 4-head face encoder, degree-10 edge features, and topology behavior retained for numerical compatibility.",
+    "Supplemental fine-tuning is not the original paper training protocol.",
+    "Content-level train/test deduplication of this historical split has not been audited."
+  ],
+  "created_at": "2026-11-13T15:35:39.308003+08:00",
+  "runtime_packaging_changes": [
+    "Unused DGL imports already removed in the historical evaluation adapter.",
+    "Unused Lightning training wrapper/imports removed from classification module; BRTClassification AST matches the evaluated source."
+  ],
+  "asset_repository": "Qiang-Zou/BRT",
+  "packaging_note": "Short asset filename; model tensors, runtime, data manifests and measured predictions are unchanged."
+}

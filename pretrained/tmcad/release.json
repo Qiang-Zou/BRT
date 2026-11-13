@@ -1,0 +1,8 @@
+{
+  "tag": "weights-v1",
+  "repository": "Qiang-Zou/BRT",
+  "asset_name": "tmcad.pth",
+  "sha256": "d874cf4b820b6a0589168e77b7f51fc9f39345aff92e43e720c6fc54c569d013",
+  "download_url": "https://github.com/Qiang-Zou/BRT/releases/download/weights-v1/tmcad.pth",
+  "published": false
+}
