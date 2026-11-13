@@ -21,50 +21,41 @@ class BoundaryEdge:
         self.crv=crv
         self.edge3d=edge3d
 
+
+_MCACHE = {}
+def _conv_matrix(m, n, invert):
+    key = (m, n, invert)
+    M = _MCACHE.get(key)
+    if M is None:
+        degree = m + n
+        rows = []
+        for s in range(degree, -1, -1):
+            for b in range(s + 1):
+                a = s - b
+                row = np.zeros((m + 1) * (n + 1))
+                for j in range(a + 1):
+                    caj = binom(a, j)
+                    for k in range(max(0, b - m + j), min(b, n - a + j) + 1):
+                        c = caj * binom(b, k) * binom(m + n - a - b, m + k - j - b)
+                        if invert:
+                            row[(m - j) * (n + 1) + (n - k)] += c
+                        else:
+                            row[j * (n + 1) + k] += c
+                rows.append(row)
+        M = np.stack(rows) / binom(degree, n)
+        _MCACHE[key] = M
+    return M
+
 class Rectangular2TriangularBezier:
 
     def __init__(self) -> None:
         pass
 
-    def convert_(self,control_pts,invert=False):
-        '''
-            control_pts: m x n array
-        '''
-        m,n,_=control_pts.shape
-        m-=1
-        n-=1
-        nodes=[]
-
-        degree=m+n
-        const1=1./binom(degree,n)
-
-        for s in range(degree,-1,-1):
-            for b in range(s+1):
-                a=s-b
-                v=[]
-                for j in range(a+1):
-                    const_aj=binom(a,j)
-
-                    item_sum=[]
-
-                    for k in range(max(0,b-m+j),min(b,n-a+j)+1):
-                        if invert:
-                            item=control_pts[m-j,n-k]*binom(b,k)*binom(m+n-a-b,m+k-j-b)
-                        else:
-                            item=control_pts[j,k]*binom(b,k)*binom(m+n-a-b,m+k-j-b)
-                        item_sum.append(item)
-
-                    item_sum=sum(item_sum)
-                    item_sum*=const_aj
-
-                    v.append(item_sum)
-                v=sum(v)
-                nodes.append(v)
-
-        nodes=np.stack(nodes)
-        nodes*=const1
-
-        return degree,nodes
+    def convert_(self, control_pts, invert=False):
+        m, n, d = control_pts.shape
+        M = _conv_matrix(m - 1, n - 1, invert)
+        nodes = M @ control_pts.reshape(-1, d)
+        return (m - 1) + (n - 1), nodes
 
     def convert(self,control_pts,rational=False):
         if not rational:
