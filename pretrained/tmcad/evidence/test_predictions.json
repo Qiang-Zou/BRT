@@ -1,0 +1,5560 @@
+[
+  {
+    "index": 0,
+    "face": "screw/screw_0594.bin",
+    "topo": "screw/screw_0594.bin",
+    "label": 8,
+    "prediction": 8
+  },
+  {
+    "index": 1,
+    "face": "screw/screw_0321.bin",
+    "topo": "screw/screw_0321.bin",
+    "label": 8,
+    "prediction": 8
+  },
+  {
+    "index": 2,
+    "face": "nut/nut_0281.bin",
+    "topo": "nut/nut_0281.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 3,
+    "face": "pulley/pulley_0166.bin",
+    "topo": "pulley/pulley_0166.bin",
+    "label": 7,
+    "prediction": 7
+  },
+  {
+    "index": 4,
+    "face": "flange/flange_0353.bin",
+    "topo": "flange/flange_0353.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 5,
+    "face": "shaft/shaft_0260.bin",
+    "topo": "shaft/shaft_0260.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 6,
+    "face": "nut/nut_0058.bin",
+    "topo": "nut/nut_0058.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 7,
+    "face": "screw/screw_0576.bin",
+    "topo": "screw/screw_0576.bin",
+    "label": 8,
+    "prediction": 8
+  },
+  {
+    "index": 8,
+    "face": "shaft/shaft_0599.bin",
+    "topo": "shaft/shaft_0599.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 9,
+    "face": "screw/screw_0169.bin",
+    "topo": "screw/screw_0169.bin",
+    "label": 8,
+    "prediction": 8
+  },
+  {
+    "index": 10,
+    "face": "bearing/bearing_0774.bin",
+    "topo": "bearing/bearing_0774.bin",
+    "label": 0,
+    "prediction": 0
+  },
+  {
+    "index": 11,
+    "face": "bracket/bracket_0696.bin",
+    "topo": "bracket/bracket_0696.bin",
+    "label": 2,
+    "prediction": 2
+  },
+  {
+    "index": 12,
+    "face": "bolt/bolt_0463.bin",
+    "topo": "bolt/bolt_0463.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 13,
+    "face": "pulley/pulley_0078.bin",
+    "topo": "pulley/pulley_0078.bin",
+    "label": 7,
+    "prediction": 7
+  },
+  {
+    "index": 14,
+    "face": "bearing/bearing_0686.bin",
+    "topo": "bearing/bearing_0686.bin",
+    "label": 0,
+    "prediction": 0
+  },
+  {
+    "index": 15,
+    "face": "screw/screw_0018.bin",
+    "topo": "screw/screw_0018.bin",
+    "label": 8,
+    "prediction": 8
+  },
+  {
+    "index": 16,
+    "face": "flange/flange_0692.bin",
+    "topo": "flange/flange_0692.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 17,
+    "face": "screw/screw_0122.bin",
+    "topo": "screw/screw_0122.bin",
+    "label": 8,
+    "prediction": 8
+  },
+  {
+    "index": 18,
+    "face": "screw/screw_0178.bin",
+    "topo": "screw/screw_0178.bin",
+    "label": 8,
+    "prediction": 8
+  },
+  {
+    "index": 19,
+    "face": "flange/flange_0047.bin",
+    "topo": "flange/flange_0047.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 20,
+    "face": "bracket/bracket_0152.bin",
+    "topo": "bracket/bracket_0152.bin",
+    "label": 2,
+    "prediction": 2
+  },
+  {
+    "index": 21,
+    "face": "flange/flange_0849.bin",
+    "topo": "flange/flange_0849.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 22,
+    "face": "nut/nut_0323.bin",
+    "topo": "nut/nut_0323.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 23,
+    "face": "bolt/bolt_0756.bin",
+    "topo": "bolt/bolt_0756.bin",
+    "label": 1,
+    "prediction": 8
+  },
+  {
+    "index": 24,
+    "face": "nut/nut_0057.bin",
+    "topo": "nut/nut_0057.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 25,
+    "face": "coupling/coupling_0228.bin",
+    "topo": "coupling/coupling_0228.bin",
+    "label": 3,
+    "prediction": 9
+  },
+  {
+    "index": 26,
+    "face": "shaft/shaft_0690.bin",
+    "topo": "shaft/shaft_0690.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 27,
+    "face": "shaft/shaft_0109.bin",
+    "topo": "shaft/shaft_0109.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 28,
+    "face": "shaft/shaft_0689.bin",
+    "topo": "shaft/shaft_0689.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 29,
+    "face": "bolt/bolt_0181.bin",
+    "topo": "bolt/bolt_0181.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 30,
+    "face": "flange/flange_0161.bin",
+    "topo": "flange/flange_0161.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 31,
+    "face": "pulley/pulley_0217.bin",
+    "topo": "pulley/pulley_0217.bin",
+    "label": 7,
+    "prediction": 7
+  },
+  {
+    "index": 32,
+    "face": "coupling/coupling_0248.bin",
+    "topo": "coupling/coupling_0248.bin",
+    "label": 3,
+    "prediction": 5
+  },
+  {
+    "index": 33,
+    "face": "nut/nut_0340.bin",
+    "topo": "nut/nut_0340.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 34,
+    "face": "nut/nut_0756.bin",
+    "topo": "nut/nut_0756.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 35,
+    "face": "flange/flange_0670.bin",
+    "topo": "flange/flange_0670.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 36,
+    "face": "flange/flange_0547.bin",
+    "topo": "flange/flange_0547.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 37,
+    "face": "coupling/coupling_0298.bin",
+    "topo": "coupling/coupling_0298.bin",
+    "label": 3,
+    "prediction": 5
+  },
+  {
+    "index": 38,
+    "face": "flange/flange_0184.bin",
+    "topo": "flange/flange_0184.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 39,
+    "face": "flange/flange_0635.bin",
+    "topo": "flange/flange_0635.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 40,
+    "face": "nut/nut_0254.bin",
+    "topo": "nut/nut_0254.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 41,
+    "face": "bearing/bearing_0185.bin",
+    "topo": "bearing/bearing_0185.bin",
+    "label": 0,
+    "prediction": 0
+  },
+  {
+    "index": 42,
+    "face": "screw/screw_0767.bin",
+    "topo": "screw/screw_0767.bin",
+    "label": 8,
+    "prediction": 8
+  },
+  {
+    "index": 43,
+    "face": "screw/screw_0943.bin",
+    "topo": "screw/screw_0943.bin",
+    "label": 8,
+    "prediction": 1
+  },
+  {
+    "index": 44,
+    "face": "bolt/bolt_0461.bin",
+    "topo": "bolt/bolt_0461.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 45,
+    "face": "bolt/bolt_0337.bin",
+    "topo": "bolt/bolt_0337.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 46,
+    "face": "shaft/shaft_0649.bin",
+    "topo": "shaft/shaft_0649.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 47,
+    "face": "pulley/pulley_0005.bin",
+    "topo": "pulley/pulley_0005.bin",
+    "label": 7,
+    "prediction": 7
+  },
+  {
+    "index": 48,
+    "face": "flange/flange_0517.bin",
+    "topo": "flange/flange_0517.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 49,
+    "face": "bracket/bracket_0520.bin",
+    "topo": "bracket/bracket_0520.bin",
+    "label": 2,
+    "prediction": 2
+  },
+  {
+    "index": 50,
+    "face": "bearing/bearing_0536.bin",
+    "topo": "bearing/bearing_0536.bin",
+    "label": 0,
+    "prediction": 0
+  },
+  {
+    "index": 51,
+    "face": "bearing/bearing_0319.bin",
+    "topo": "bearing/bearing_0319.bin",
+    "label": 0,
+    "prediction": 0
+  },
+  {
+    "index": 52,
+    "face": "bearing/bearing_0817.bin",
+    "topo": "bearing/bearing_0817.bin",
+    "label": 0,
+    "prediction": 2
+  },
+  {
+    "index": 53,
+    "face": "flange/flange_0590.bin",
+    "topo": "flange/flange_0590.bin",
+    "label": 4,
+    "prediction": 0
+  },
+  {
+    "index": 54,
+    "face": "shaft/shaft_0142.bin",
+    "topo": "shaft/shaft_0142.bin",
+    "label": 9,
+    "prediction": 3
+  },
+  {
+    "index": 55,
+    "face": "shaft/shaft_0440.bin",
+    "topo": "shaft/shaft_0440.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 56,
+    "face": "bolt/bolt_0723.bin",
+    "topo": "bolt/bolt_0723.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 57,
+    "face": "flange/flange_0667.bin",
+    "topo": "flange/flange_0667.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 58,
+    "face": "shaft/shaft_0268.bin",
+    "topo": "shaft/shaft_0268.bin",
+    "label": 9,
+    "prediction": 0
+  },
+  {
+    "index": 59,
+    "face": "flange/flange_0419.bin",
+    "topo": "flange/flange_0419.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 60,
+    "face": "flange/flange_0941.bin",
+    "topo": "flange/flange_0941.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 61,
+    "face": "bearing/bearing_0372.bin",
+    "topo": "bearing/bearing_0372.bin",
+    "label": 0,
+    "prediction": 0
+  },
+  {
+    "index": 62,
+    "face": "gear/gear_0598.bin",
+    "topo": "gear/gear_0598.bin",
+    "label": 5,
+    "prediction": 5
+  },
+  {
+    "index": 63,
+    "face": "bolt/bolt_0101.bin",
+    "topo": "bolt/bolt_0101.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 64,
+    "face": "flange/flange_0498.bin",
+    "topo": "flange/flange_0498.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 65,
+    "face": "flange/flange_0416.bin",
+    "topo": "flange/flange_0416.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 66,
+    "face": "bracket/bracket_0255.bin",
+    "topo": "bracket/bracket_0255.bin",
+    "label": 2,
+    "prediction": 2
+  },
+  {
+    "index": 67,
+    "face": "nut/nut_0212.bin",
+    "topo": "nut/nut_0212.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 68,
+    "face": "pulley/pulley_0170.bin",
+    "topo": "pulley/pulley_0170.bin",
+    "label": 7,
+    "prediction": 7
+  },
+  {
+    "index": 69,
+    "face": "nut/nut_0370.bin",
+    "topo": "nut/nut_0370.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 70,
+    "face": "flange/flange_0524.bin",
+    "topo": "flange/flange_0524.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 71,
+    "face": "nut/nut_0832.bin",
+    "topo": "nut/nut_0832.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 72,
+    "face": "bracket/bracket_0646.bin",
+    "topo": "bracket/bracket_0646.bin",
+    "label": 2,
+    "prediction": 2
+  },
+  {
+    "index": 73,
+    "face": "bearing/bearing_0633.bin",
+    "topo": "bearing/bearing_0633.bin",
+    "label": 0,
+    "prediction": 0
+  },
+  {
+    "index": 74,
+    "face": "gear/gear_0621.bin",
+    "topo": "gear/gear_0621.bin",
+    "label": 5,
+    "prediction": 5
+  },
+  {
+    "index": 75,
+    "face": "bearing/bearing_0816.bin",
+    "topo": "bearing/bearing_0816.bin",
+    "label": 0,
+    "prediction": 0
+  },
+  {
+    "index": 76,
+    "face": "coupling/coupling_0369.bin",
+    "topo": "coupling/coupling_0369.bin",
+    "label": 3,
+    "prediction": 3
+  },
+  {
+    "index": 77,
+    "face": "pulley/pulley_0311.bin",
+    "topo": "pulley/pulley_0311.bin",
+    "label": 7,
+    "prediction": 0
+  },
+  {
+    "index": 78,
+    "face": "bearing/bearing_0735.bin",
+    "topo": "bearing/bearing_0735.bin",
+    "label": 0,
+    "prediction": 0
+  },
+  {
+    "index": 79,
+    "face": "shaft/shaft_0459.bin",
+    "topo": "shaft/shaft_0459.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 80,
+    "face": "pulley/pulley_0030.bin",
+    "topo": "pulley/pulley_0030.bin",
+    "label": 7,
+    "prediction": 7
+  },
+  {
+    "index": 81,
+    "face": "bolt/bolt_0421.bin",
+    "topo": "bolt/bolt_0421.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 82,
+    "face": "screw/screw_0412.bin",
+    "topo": "screw/screw_0412.bin",
+    "label": 8,
+    "prediction": 8
+  },
+  {
+    "index": 83,
+    "face": "bearing/bearing_0270.bin",
+    "topo": "bearing/bearing_0270.bin",
+    "label": 0,
+    "prediction": 0
+  },
+  {
+    "index": 84,
+    "face": "shaft/shaft_0221.bin",
+    "topo": "shaft/shaft_0221.bin",
+    "label": 9,
+    "prediction": 6
+  },
+  {
+    "index": 85,
+    "face": "shaft/shaft_0332.bin",
+    "topo": "shaft/shaft_0332.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 86,
+    "face": "flange/flange_0024.bin",
+    "topo": "flange/flange_0024.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 87,
+    "face": "shaft/shaft_0234.bin",
+    "topo": "shaft/shaft_0234.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 88,
+    "face": "bolt/bolt_0150.bin",
+    "topo": "bolt/bolt_0150.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 89,
+    "face": "shaft/shaft_0792.bin",
+    "topo": "shaft/shaft_0792.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 90,
+    "face": "nut/nut_0371.bin",
+    "topo": "nut/nut_0371.bin",
+    "label": 6,
+    "prediction": 3
+  },
+  {
+    "index": 91,
+    "face": "coupling/coupling_0279.bin",
+    "topo": "coupling/coupling_0279.bin",
+    "label": 3,
+    "prediction": 0
+  },
+  {
+    "index": 92,
+    "face": "flange/flange_0599.bin",
+    "topo": "flange/flange_0599.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 93,
+    "face": "nut/nut_0299.bin",
+    "topo": "nut/nut_0299.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 94,
+    "face": "flange/flange_0328.bin",
+    "topo": "flange/flange_0328.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 95,
+    "face": "bolt/bolt_0379.bin",
+    "topo": "bolt/bolt_0379.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 96,
+    "face": "bearing/bearing_0567.bin",
+    "topo": "bearing/bearing_0567.bin",
+    "label": 0,
+    "prediction": 0
+  },
+  {
+    "index": 97,
+    "face": "flange/flange_0195.bin",
+    "topo": "flange/flange_0195.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 98,
+    "face": "pulley/pulley_0185.bin",
+    "topo": "pulley/pulley_0185.bin",
+    "label": 7,
+    "prediction": 7
+  },
+  {
+    "index": 99,
+    "face": "bolt/bolt_0248.bin",
+    "topo": "bolt/bolt_0248.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 100,
+    "face": "flange/flange_0442.bin",
+    "topo": "flange/flange_0442.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 101,
+    "face": "bolt/bolt_0152.bin",
+    "topo": "bolt/bolt_0152.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 102,
+    "face": "bolt/bolt_0566.bin",
+    "topo": "bolt/bolt_0566.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 103,
+    "face": "flange/flange_0893.bin",
+    "topo": "flange/flange_0893.bin",
+    "label": 4,
+    "prediction": 9
+  },
+  {
+    "index": 104,
+    "face": "nut/nut_0487.bin",
+    "topo": "nut/nut_0487.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 105,
+    "face": "bracket/bracket_0548.bin",
+    "topo": "bracket/bracket_0548.bin",
+    "label": 2,
+    "prediction": 2
+  },
+  {
+    "index": 106,
+    "face": "bearing/bearing_0096.bin",
+    "topo": "bearing/bearing_0096.bin",
+    "label": 0,
+    "prediction": 0
+  },
+  {
+    "index": 107,
+    "face": "nut/nut_0350.bin",
+    "topo": "nut/nut_0350.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 108,
+    "face": "nut/nut_0614.bin",
+    "topo": "nut/nut_0614.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 109,
+    "face": "nut/nut_0141.bin",
+    "topo": "nut/nut_0141.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 110,
+    "face": "bolt/bolt_0396.bin",
+    "topo": "bolt/bolt_0396.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 111,
+    "face": "bracket/bracket_0856.bin",
+    "topo": "bracket/bracket_0856.bin",
+    "label": 2,
+    "prediction": 0
+  },
+  {
+    "index": 112,
+    "face": "gear/gear_0312.bin",
+    "topo": "gear/gear_0312.bin",
+    "label": 5,
+    "prediction": 3
+  },
+  {
+    "index": 113,
+    "face": "bracket/bracket_0439.bin",
+    "topo": "bracket/bracket_0439.bin",
+    "label": 2,
+    "prediction": 2
+  },
+  {
+    "index": 114,
+    "face": "gear/gear_0741.bin",
+    "topo": "gear/gear_0741.bin",
+    "label": 5,
+    "prediction": 5
+  },
+  {
+    "index": 115,
+    "face": "shaft/shaft_0439.bin",
+    "topo": "shaft/shaft_0439.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 116,
+    "face": "flange/flange_0304.bin",
+    "topo": "flange/flange_0304.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 117,
+    "face": "nut/nut_0434.bin",
+    "topo": "nut/nut_0434.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 118,
+    "face": "nut/nut_0534.bin",
+    "topo": "nut/nut_0534.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 119,
+    "face": "screw/screw_0986.bin",
+    "topo": "screw/screw_0986.bin",
+    "label": 8,
+    "prediction": 1
+  },
+  {
+    "index": 120,
+    "face": "screw/screw_0551.bin",
+    "topo": "screw/screw_0551.bin",
+    "label": 8,
+    "prediction": 8
+  },
+  {
+    "index": 121,
+    "face": "bolt/bolt_0356.bin",
+    "topo": "bolt/bolt_0356.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 122,
+    "face": "bolt/bolt_0266.bin",
+    "topo": "bolt/bolt_0266.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 123,
+    "face": "bracket/bracket_0288.bin",
+    "topo": "bracket/bracket_0288.bin",
+    "label": 2,
+    "prediction": 2
+  },
+  {
+    "index": 124,
+    "face": "nut/nut_0249.bin",
+    "topo": "nut/nut_0249.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 125,
+    "face": "screw/screw_0129.bin",
+    "topo": "screw/screw_0129.bin",
+    "label": 8,
+    "prediction": 1
+  },
+  {
+    "index": 126,
+    "face": "bolt/bolt_0575.bin",
+    "topo": "bolt/bolt_0575.bin",
+    "label": 1,
+    "prediction": 8
+  },
+  {
+    "index": 127,
+    "face": "shaft/shaft_0149.bin",
+    "topo": "shaft/shaft_0149.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 128,
+    "face": "gear/gear_0817.bin",
+    "topo": "gear/gear_0817.bin",
+    "label": 5,
+    "prediction": 2
+  },
+  {
+    "index": 129,
+    "face": "bracket/bracket_0693.bin",
+    "topo": "bracket/bracket_0693.bin",
+    "label": 2,
+    "prediction": 2
+  },
+  {
+    "index": 130,
+    "face": "coupling/coupling_0320.bin",
+    "topo": "coupling/coupling_0320.bin",
+    "label": 3,
+    "prediction": 9
+  },
+  {
+    "index": 131,
+    "face": "shaft/shaft_0808.bin",
+    "topo": "shaft/shaft_0808.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 132,
+    "face": "nut/nut_0104.bin",
+    "topo": "nut/nut_0104.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 133,
+    "face": "shaft/shaft_0628.bin",
+    "topo": "shaft/shaft_0628.bin",
+    "label": 9,
+    "prediction": 8
+  },
+  {
+    "index": 134,
+    "face": "nut/nut_0026.bin",
+    "topo": "nut/nut_0026.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 135,
+    "face": "bracket/bracket_0898.bin",
+    "topo": "bracket/bracket_0898.bin",
+    "label": 2,
+    "prediction": 2
+  },
+  {
+    "index": 136,
+    "face": "screw/screw_0042.bin",
+    "topo": "screw/screw_0042.bin",
+    "label": 8,
+    "prediction": 1
+  },
+  {
+    "index": 137,
+    "face": "screw/screw_0540.bin",
+    "topo": "screw/screw_0540.bin",
+    "label": 8,
+    "prediction": 0
+  },
+  {
+    "index": 138,
+    "face": "screw/screw_1064.bin",
+    "topo": "screw/screw_1064.bin",
+    "label": 8,
+    "prediction": 1
+  },
+  {
+    "index": 139,
+    "face": "coupling/coupling_0437.bin",
+    "topo": "coupling/coupling_0437.bin",
+    "label": 3,
+    "prediction": 3
+  },
+  {
+    "index": 140,
+    "face": "bolt/bolt_0023.bin",
+    "topo": "bolt/bolt_0023.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 141,
+    "face": "screw/screw_0300.bin",
+    "topo": "screw/screw_0300.bin",
+    "label": 8,
+    "prediction": 0
+  },
+  {
+    "index": 142,
+    "face": "coupling/coupling_0103.bin",
+    "topo": "coupling/coupling_0103.bin",
+    "label": 3,
+    "prediction": 4
+  },
+  {
+    "index": 143,
+    "face": "nut/nut_0486.bin",
+    "topo": "nut/nut_0486.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 144,
+    "face": "bearing/bearing_0118.bin",
+    "topo": "bearing/bearing_0118.bin",
+    "label": 0,
+    "prediction": 0
+  },
+  {
+    "index": 145,
+    "face": "bearing/bearing_0745.bin",
+    "topo": "bearing/bearing_0745.bin",
+    "label": 0,
+    "prediction": 0
+  },
+  {
+    "index": 146,
+    "face": "bolt/bolt_0625.bin",
+    "topo": "bolt/bolt_0625.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 147,
+    "face": "nut/nut_0433.bin",
+    "topo": "nut/nut_0433.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 148,
+    "face": "screw/screw_0634.bin",
+    "topo": "screw/screw_0634.bin",
+    "label": 8,
+    "prediction": 8
+  },
+  {
+    "index": 149,
+    "face": "bolt/bolt_0834.bin",
+    "topo": "bolt/bolt_0834.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 150,
+    "face": "nut/nut_0827.bin",
+    "topo": "nut/nut_0827.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 151,
+    "face": "bolt/bolt_0036.bin",
+    "topo": "bolt/bolt_0036.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 152,
+    "face": "shaft/shaft_0386.bin",
+    "topo": "shaft/shaft_0386.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 153,
+    "face": "bolt/bolt_0452.bin",
+    "topo": "bolt/bolt_0452.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 154,
+    "face": "bracket/bracket_0343.bin",
+    "topo": "bracket/bracket_0343.bin",
+    "label": 2,
+    "prediction": 2
+  },
+  {
+    "index": 155,
+    "face": "bearing/bearing_0404.bin",
+    "topo": "bearing/bearing_0404.bin",
+    "label": 0,
+    "prediction": 3
+  },
+  {
+    "index": 156,
+    "face": "bolt/bolt_0114.bin",
+    "topo": "bolt/bolt_0114.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 157,
+    "face": "flange/flange_0816.bin",
+    "topo": "flange/flange_0816.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 158,
+    "face": "screw/screw_0961.bin",
+    "topo": "screw/screw_0961.bin",
+    "label": 8,
+    "prediction": 8
+  },
+  {
+    "index": 159,
+    "face": "shaft/shaft_0304.bin",
+    "topo": "shaft/shaft_0304.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 160,
+    "face": "shaft/shaft_0716.bin",
+    "topo": "shaft/shaft_0716.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 161,
+    "face": "coupling/coupling_0389.bin",
+    "topo": "coupling/coupling_0389.bin",
+    "label": 3,
+    "prediction": 3
+  },
+  {
+    "index": 162,
+    "face": "flange/flange_0596.bin",
+    "topo": "flange/flange_0596.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 163,
+    "face": "nut/nut_0087.bin",
+    "topo": "nut/nut_0087.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 164,
+    "face": "flange/flange_0614.bin",
+    "topo": "flange/flange_0614.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 165,
+    "face": "screw/screw_0482.bin",
+    "topo": "screw/screw_0482.bin",
+    "label": 8,
+    "prediction": 8
+  },
+  {
+    "index": 166,
+    "face": "screw/screw_0303.bin",
+    "topo": "screw/screw_0303.bin",
+    "label": 8,
+    "prediction": 1
+  },
+  {
+    "index": 167,
+    "face": "flange/flange_0174.bin",
+    "topo": "flange/flange_0174.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 168,
+    "face": "screw/screw_0547.bin",
+    "topo": "screw/screw_0547.bin",
+    "label": 8,
+    "prediction": 1
+  },
+  {
+    "index": 169,
+    "face": "gear/gear_0679.bin",
+    "topo": "gear/gear_0679.bin",
+    "label": 5,
+    "prediction": 3
+  },
+  {
+    "index": 170,
+    "face": "bracket/bracket_0636.bin",
+    "topo": "bracket/bracket_0636.bin",
+    "label": 2,
+    "prediction": 2
+  },
+  {
+    "index": 171,
+    "face": "shaft/shaft_0755.bin",
+    "topo": "shaft/shaft_0755.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 172,
+    "face": "gear/gear_0620.bin",
+    "topo": "gear/gear_0620.bin",
+    "label": 5,
+    "prediction": 5
+  },
+  {
+    "index": 173,
+    "face": "bracket/bracket_0830.bin",
+    "topo": "bracket/bracket_0830.bin",
+    "label": 2,
+    "prediction": 2
+  },
+  {
+    "index": 174,
+    "face": "pulley/pulley_0315.bin",
+    "topo": "pulley/pulley_0315.bin",
+    "label": 7,
+    "prediction": 7
+  },
+  {
+    "index": 175,
+    "face": "pulley/pulley_0157.bin",
+    "topo": "pulley/pulley_0157.bin",
+    "label": 7,
+    "prediction": 7
+  },
+  {
+    "index": 176,
+    "face": "bearing/bearing_0323.bin",
+    "topo": "bearing/bearing_0323.bin",
+    "label": 0,
+    "prediction": 0
+  },
+  {
+    "index": 177,
+    "face": "bracket/bracket_0862.bin",
+    "topo": "bracket/bracket_0862.bin",
+    "label": 2,
+    "prediction": 2
+  },
+  {
+    "index": 178,
+    "face": "bolt/bolt_0124.bin",
+    "topo": "bolt/bolt_0124.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 179,
+    "face": "bracket/bracket_0665.bin",
+    "topo": "bracket/bracket_0665.bin",
+    "label": 2,
+    "prediction": 3
+  },
+  {
+    "index": 180,
+    "face": "bearing/bearing_0452.bin",
+    "topo": "bearing/bearing_0452.bin",
+    "label": 0,
+    "prediction": 0
+  },
+  {
+    "index": 181,
+    "face": "pulley/pulley_0139.bin",
+    "topo": "pulley/pulley_0139.bin",
+    "label": 7,
+    "prediction": 7
+  },
+  {
+    "index": 182,
+    "face": "bolt/bolt_0570.bin",
+    "topo": "bolt/bolt_0570.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 183,
+    "face": "bracket/bracket_0861.bin",
+    "topo": "bracket/bracket_0861.bin",
+    "label": 2,
+    "prediction": 2
+  },
+  {
+    "index": 184,
+    "face": "pulley/pulley_0066.bin",
+    "topo": "pulley/pulley_0066.bin",
+    "label": 7,
+    "prediction": 7
+  },
+  {
+    "index": 185,
+    "face": "nut/nut_0162.bin",
+    "topo": "nut/nut_0162.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 186,
+    "face": "flange/flange_0783.bin",
+    "topo": "flange/flange_0783.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 187,
+    "face": "bolt/bolt_0748.bin",
+    "topo": "bolt/bolt_0748.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 188,
+    "face": "screw/screw_0852.bin",
+    "topo": "screw/screw_0852.bin",
+    "label": 8,
+    "prediction": 8
+  },
+  {
+    "index": 189,
+    "face": "bearing/bearing_0029.bin",
+    "topo": "bearing/bearing_0029.bin",
+    "label": 0,
+    "prediction": 0
+  },
+  {
+    "index": 190,
+    "face": "bolt/bolt_0158.bin",
+    "topo": "bolt/bolt_0158.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 191,
+    "face": "shaft/shaft_0583.bin",
+    "topo": "shaft/shaft_0583.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 192,
+    "face": "bolt/bolt_0733.bin",
+    "topo": "bolt/bolt_0733.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 193,
+    "face": "bearing/bearing_0749.bin",
+    "topo": "bearing/bearing_0749.bin",
+    "label": 0,
+    "prediction": 0
+  },
+  {
+    "index": 194,
+    "face": "bracket/bracket_0883.bin",
+    "topo": "bracket/bracket_0883.bin",
+    "label": 2,
+    "prediction": 2
+  },
+  {
+    "index": 195,
+    "face": "pulley/pulley_0001.bin",
+    "topo": "pulley/pulley_0001.bin",
+    "label": 7,
+    "prediction": 2
+  },
+  {
+    "index": 196,
+    "face": "shaft/shaft_0574.bin",
+    "topo": "shaft/shaft_0574.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 197,
+    "face": "bolt/bolt_0360.bin",
+    "topo": "bolt/bolt_0360.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 198,
+    "face": "flange/flange_0244.bin",
+    "topo": "flange/flange_0244.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 199,
+    "face": "coupling/coupling_0411.bin",
+    "topo": "coupling/coupling_0411.bin",
+    "label": 3,
+    "prediction": 3
+  },
+  {
+    "index": 200,
+    "face": "nut/nut_0312.bin",
+    "topo": "nut/nut_0312.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 201,
+    "face": "screw/screw_0163.bin",
+    "topo": "screw/screw_0163.bin",
+    "label": 8,
+    "prediction": 8
+  },
+  {
+    "index": 202,
+    "face": "screw/screw_0711.bin",
+    "topo": "screw/screw_0711.bin",
+    "label": 8,
+    "prediction": 8
+  },
+  {
+    "index": 203,
+    "face": "gear/gear_0157.bin",
+    "topo": "gear/gear_0157.bin",
+    "label": 5,
+    "prediction": 5
+  },
+  {
+    "index": 204,
+    "face": "shaft/shaft_0692.bin",
+    "topo": "shaft/shaft_0692.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 205,
+    "face": "bearing/bearing_0529.bin",
+    "topo": "bearing/bearing_0529.bin",
+    "label": 0,
+    "prediction": 0
+  },
+  {
+    "index": 206,
+    "face": "screw/screw_1062.bin",
+    "topo": "screw/screw_1062.bin",
+    "label": 8,
+    "prediction": 1
+  },
+  {
+    "index": 207,
+    "face": "bolt/bolt_0269.bin",
+    "topo": "bolt/bolt_0269.bin",
+    "label": 1,
+    "prediction": 6
+  },
+  {
+    "index": 208,
+    "face": "flange/flange_0658.bin",
+    "topo": "flange/flange_0658.bin",
+    "label": 4,
+    "prediction": 2
+  },
+  {
+    "index": 209,
+    "face": "screw/screw_0602.bin",
+    "topo": "screw/screw_0602.bin",
+    "label": 8,
+    "prediction": 8
+  },
+  {
+    "index": 210,
+    "face": "flange/flange_0457.bin",
+    "topo": "flange/flange_0457.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 211,
+    "face": "shaft/shaft_0767.bin",
+    "topo": "shaft/shaft_0767.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 212,
+    "face": "bolt/bolt_0212.bin",
+    "topo": "bolt/bolt_0212.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 213,
+    "face": "pulley/pulley_0023.bin",
+    "topo": "pulley/pulley_0023.bin",
+    "label": 7,
+    "prediction": 7
+  },
+  {
+    "index": 214,
+    "face": "flange/flange_0619.bin",
+    "topo": "flange/flange_0619.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 215,
+    "face": "screw/screw_0703.bin",
+    "topo": "screw/screw_0703.bin",
+    "label": 8,
+    "prediction": 8
+  },
+  {
+    "index": 216,
+    "face": "bearing/bearing_0444.bin",
+    "topo": "bearing/bearing_0444.bin",
+    "label": 0,
+    "prediction": 0
+  },
+  {
+    "index": 217,
+    "face": "bolt/bolt_0035.bin",
+    "topo": "bolt/bolt_0035.bin",
+    "label": 1,
+    "prediction": 9
+  },
+  {
+    "index": 218,
+    "face": "bolt/bolt_0057.bin",
+    "topo": "bolt/bolt_0057.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 219,
+    "face": "screw/screw_0857.bin",
+    "topo": "screw/screw_0857.bin",
+    "label": 8,
+    "prediction": 8
+  },
+  {
+    "index": 220,
+    "face": "nut/nut_0330.bin",
+    "topo": "nut/nut_0330.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 221,
+    "face": "flange/flange_0299.bin",
+    "topo": "flange/flange_0299.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 222,
+    "face": "screw/screw_0452.bin",
+    "topo": "screw/screw_0452.bin",
+    "label": 8,
+    "prediction": 8
+  },
+  {
+    "index": 223,
+    "face": "coupling/coupling_0089.bin",
+    "topo": "coupling/coupling_0089.bin",
+    "label": 3,
+    "prediction": 2
+  },
+  {
+    "index": 224,
+    "face": "bolt/bolt_0277.bin",
+    "topo": "bolt/bolt_0277.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 225,
+    "face": "nut/nut_0616.bin",
+    "topo": "nut/nut_0616.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 226,
+    "face": "shaft/shaft_0306.bin",
+    "topo": "shaft/shaft_0306.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 227,
+    "face": "bracket/bracket_0684.bin",
+    "topo": "bracket/bracket_0684.bin",
+    "label": 2,
+    "prediction": 2
+  },
+  {
+    "index": 228,
+    "face": "bracket/bracket_0590.bin",
+    "topo": "bracket/bracket_0590.bin",
+    "label": 2,
+    "prediction": 5
+  },
+  {
+    "index": 229,
+    "face": "bolt/bolt_0638.bin",
+    "topo": "bolt/bolt_0638.bin",
+    "label": 1,
+    "prediction": 6
+  },
+  {
+    "index": 230,
+    "face": "nut/nut_0686.bin",
+    "topo": "nut/nut_0686.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 231,
+    "face": "bearing/bearing_0770.bin",
+    "topo": "bearing/bearing_0770.bin",
+    "label": 0,
+    "prediction": 0
+  },
+  {
+    "index": 232,
+    "face": "screw/screw_0967.bin",
+    "topo": "screw/screw_0967.bin",
+    "label": 8,
+    "prediction": 8
+  },
+  {
+    "index": 233,
+    "face": "bolt/bolt_0365.bin",
+    "topo": "bolt/bolt_0365.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 234,
+    "face": "screw/screw_0927.bin",
+    "topo": "screw/screw_0927.bin",
+    "label": 8,
+    "prediction": 8
+  },
+  {
+    "index": 235,
+    "face": "bolt/bolt_0418.bin",
+    "topo": "bolt/bolt_0418.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 236,
+    "face": "bearing/bearing_0161.bin",
+    "topo": "bearing/bearing_0161.bin",
+    "label": 0,
+    "prediction": 7
+  },
+  {
+    "index": 237,
+    "face": "bolt/bolt_0548.bin",
+    "topo": "bolt/bolt_0548.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 238,
+    "face": "bolt/bolt_0253.bin",
+    "topo": "bolt/bolt_0253.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 239,
+    "face": "flange/flange_0671.bin",
+    "topo": "flange/flange_0671.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 240,
+    "face": "nut/nut_0027.bin",
+    "topo": "nut/nut_0027.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 241,
+    "face": "screw/screw_0128.bin",
+    "topo": "screw/screw_0128.bin",
+    "label": 8,
+    "prediction": 1
+  },
+  {
+    "index": 242,
+    "face": "screw/screw_0985.bin",
+    "topo": "screw/screw_0985.bin",
+    "label": 8,
+    "prediction": 1
+  },
+  {
+    "index": 243,
+    "face": "shaft/shaft_0359.bin",
+    "topo": "shaft/shaft_0359.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 244,
+    "face": "bolt/bolt_0259.bin",
+    "topo": "bolt/bolt_0259.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 245,
+    "face": "shaft/shaft_0393.bin",
+    "topo": "shaft/shaft_0393.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 246,
+    "face": "bracket/bracket_0570.bin",
+    "topo": "bracket/bracket_0570.bin",
+    "label": 2,
+    "prediction": 2
+  },
+  {
+    "index": 247,
+    "face": "pulley/pulley_0487.bin",
+    "topo": "pulley/pulley_0487.bin",
+    "label": 7,
+    "prediction": 7
+  },
+  {
+    "index": 248,
+    "face": "bolt/bolt_0002.bin",
+    "topo": "bolt/bolt_0002.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 249,
+    "face": "bearing/bearing_0301.bin",
+    "topo": "bearing/bearing_0301.bin",
+    "label": 0,
+    "prediction": 0
+  },
+  {
+    "index": 250,
+    "face": "flange/flange_0605.bin",
+    "topo": "flange/flange_0605.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 251,
+    "face": "flange/flange_0257.bin",
+    "topo": "flange/flange_0257.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 252,
+    "face": "nut/nut_0778.bin",
+    "topo": "nut/nut_0778.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 253,
+    "face": "nut/nut_0859.bin",
+    "topo": "nut/nut_0859.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 254,
+    "face": "pulley/pulley_0083.bin",
+    "topo": "pulley/pulley_0083.bin",
+    "label": 7,
+    "prediction": 7
+  },
+  {
+    "index": 255,
+    "face": "screw/screw_0039.bin",
+    "topo": "screw/screw_0039.bin",
+    "label": 8,
+    "prediction": 8
+  },
+  {
+    "index": 256,
+    "face": "bolt/bolt_0475.bin",
+    "topo": "bolt/bolt_0475.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 257,
+    "face": "flange/flange_0103.bin",
+    "topo": "flange/flange_0103.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 258,
+    "face": "nut/nut_0505.bin",
+    "topo": "nut/nut_0505.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 259,
+    "face": "bolt/bolt_0735.bin",
+    "topo": "bolt/bolt_0735.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 260,
+    "face": "flange/flange_0035.bin",
+    "topo": "flange/flange_0035.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 261,
+    "face": "pulley/pulley_0053.bin",
+    "topo": "pulley/pulley_0053.bin",
+    "label": 7,
+    "prediction": 7
+  },
+  {
+    "index": 262,
+    "face": "nut/nut_0661.bin",
+    "topo": "nut/nut_0661.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 263,
+    "face": "flange/flange_0392.bin",
+    "topo": "flange/flange_0392.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 264,
+    "face": "flange/flange_0240.bin",
+    "topo": "flange/flange_0240.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 265,
+    "face": "bracket/bracket_0033.bin",
+    "topo": "bracket/bracket_0033.bin",
+    "label": 2,
+    "prediction": 2
+  },
+  {
+    "index": 266,
+    "face": "pulley/pulley_0393.bin",
+    "topo": "pulley/pulley_0393.bin",
+    "label": 7,
+    "prediction": 0
+  },
+  {
+    "index": 267,
+    "face": "screw/screw_0966.bin",
+    "topo": "screw/screw_0966.bin",
+    "label": 8,
+    "prediction": 8
+  },
+  {
+    "index": 268,
+    "face": "bracket/bracket_0505.bin",
+    "topo": "bracket/bracket_0505.bin",
+    "label": 2,
+    "prediction": 2
+  },
+  {
+    "index": 269,
+    "face": "bolt/bolt_0729.bin",
+    "topo": "bolt/bolt_0729.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 270,
+    "face": "shaft/shaft_0023.bin",
+    "topo": "shaft/shaft_0023.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 271,
+    "face": "bolt/bolt_0351.bin",
+    "topo": "bolt/bolt_0351.bin",
+    "label": 1,
+    "prediction": 9
+  },
+  {
+    "index": 272,
+    "face": "gear/gear_0546.bin",
+    "topo": "gear/gear_0546.bin",
+    "label": 5,
+    "prediction": 5
+  },
+  {
+    "index": 273,
+    "face": "bracket/bracket_0927.bin",
+    "topo": "bracket/bracket_0927.bin",
+    "label": 2,
+    "prediction": 2
+  },
+  {
+    "index": 274,
+    "face": "coupling/coupling_0434.bin",
+    "topo": "coupling/coupling_0434.bin",
+    "label": 3,
+    "prediction": 3
+  },
+  {
+    "index": 275,
+    "face": "nut/nut_0206.bin",
+    "topo": "nut/nut_0206.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 276,
+    "face": "bearing/bearing_0082.bin",
+    "topo": "bearing/bearing_0082.bin",
+    "label": 0,
+    "prediction": 0
+  },
+  {
+    "index": 277,
+    "face": "pulley/pulley_0227.bin",
+    "topo": "pulley/pulley_0227.bin",
+    "label": 7,
+    "prediction": 3
+  },
+  {
+    "index": 278,
+    "face": "flange/flange_0510.bin",
+    "topo": "flange/flange_0510.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 279,
+    "face": "nut/nut_0458.bin",
+    "topo": "nut/nut_0458.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 280,
+    "face": "screw/screw_0145.bin",
+    "topo": "screw/screw_0145.bin",
+    "label": 8,
+    "prediction": 1
+  },
+  {
+    "index": 281,
+    "face": "shaft/shaft_0070.bin",
+    "topo": "shaft/shaft_0070.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 282,
+    "face": "bracket/bracket_0973.bin",
+    "topo": "bracket/bracket_0973.bin",
+    "label": 2,
+    "prediction": 2
+  },
+  {
+    "index": 283,
+    "face": "nut/nut_0490.bin",
+    "topo": "nut/nut_0490.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 284,
+    "face": "screw/screw_1102.bin",
+    "topo": "screw/screw_1102.bin",
+    "label": 8,
+    "prediction": 8
+  },
+  {
+    "index": 285,
+    "face": "shaft/shaft_0217.bin",
+    "topo": "shaft/shaft_0217.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 286,
+    "face": "shaft/shaft_0800.bin",
+    "topo": "shaft/shaft_0800.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 287,
+    "face": "pulley/pulley_0474.bin",
+    "topo": "pulley/pulley_0474.bin",
+    "label": 7,
+    "prediction": 4
+  },
+  {
+    "index": 288,
+    "face": "shaft/shaft_0356.bin",
+    "topo": "shaft/shaft_0356.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 289,
+    "face": "pulley/pulley_0122.bin",
+    "topo": "pulley/pulley_0122.bin",
+    "label": 7,
+    "prediction": 2
+  },
+  {
+    "index": 290,
+    "face": "shaft/shaft_0778.bin",
+    "topo": "shaft/shaft_0778.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 291,
+    "face": "screw/screw_0989.bin",
+    "topo": "screw/screw_0989.bin",
+    "label": 8,
+    "prediction": 1
+  },
+  {
+    "index": 292,
+    "face": "pulley/pulley_0352.bin",
+    "topo": "pulley/pulley_0352.bin",
+    "label": 7,
+    "prediction": 7
+  },
+  {
+    "index": 293,
+    "face": "screw/screw_0061.bin",
+    "topo": "screw/screw_0061.bin",
+    "label": 8,
+    "prediction": 8
+  },
+  {
+    "index": 294,
+    "face": "flange/flange_0938.bin",
+    "topo": "flange/flange_0938.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 295,
+    "face": "flange/flange_0243.bin",
+    "topo": "flange/flange_0243.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 296,
+    "face": "bearing/bearing_0694.bin",
+    "topo": "bearing/bearing_0694.bin",
+    "label": 0,
+    "prediction": 0
+  },
+  {
+    "index": 297,
+    "face": "bracket/bracket_0609.bin",
+    "topo": "bracket/bracket_0609.bin",
+    "label": 2,
+    "prediction": 2
+  },
+  {
+    "index": 298,
+    "face": "bearing/bearing_0540.bin",
+    "topo": "bearing/bearing_0540.bin",
+    "label": 0,
+    "prediction": 0
+  },
+  {
+    "index": 299,
+    "face": "pulley/pulley_0432.bin",
+    "topo": "pulley/pulley_0432.bin",
+    "label": 7,
+    "prediction": 0
+  },
+  {
+    "index": 300,
+    "face": "bolt/bolt_0381.bin",
+    "topo": "bolt/bolt_0381.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 301,
+    "face": "nut/nut_0268.bin",
+    "topo": "nut/nut_0268.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 302,
+    "face": "screw/screw_0049.bin",
+    "topo": "screw/screw_0049.bin",
+    "label": 8,
+    "prediction": 1
+  },
+  {
+    "index": 303,
+    "face": "bolt/bolt_0299.bin",
+    "topo": "bolt/bolt_0299.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 304,
+    "face": "flange/flange_0651.bin",
+    "topo": "flange/flange_0651.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 305,
+    "face": "flange/flange_0341.bin",
+    "topo": "flange/flange_0341.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 306,
+    "face": "gear/gear_0529.bin",
+    "topo": "gear/gear_0529.bin",
+    "label": 5,
+    "prediction": 5
+  },
+  {
+    "index": 307,
+    "face": "screw/screw_0883.bin",
+    "topo": "screw/screw_0883.bin",
+    "label": 8,
+    "prediction": 8
+  },
+  {
+    "index": 308,
+    "face": "nut/nut_0726.bin",
+    "topo": "nut/nut_0726.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 309,
+    "face": "bolt/bolt_0657.bin",
+    "topo": "bolt/bolt_0657.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 310,
+    "face": "bolt/bolt_0722.bin",
+    "topo": "bolt/bolt_0722.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 311,
+    "face": "flange/flange_0235.bin",
+    "topo": "flange/flange_0235.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 312,
+    "face": "shaft/shaft_0396.bin",
+    "topo": "shaft/shaft_0396.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 313,
+    "face": "nut/nut_0745.bin",
+    "topo": "nut/nut_0745.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 314,
+    "face": "screw/screw_0207.bin",
+    "topo": "screw/screw_0207.bin",
+    "label": 8,
+    "prediction": 8
+  },
+  {
+    "index": 315,
+    "face": "shaft/shaft_0134.bin",
+    "topo": "shaft/shaft_0134.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 316,
+    "face": "bearing/bearing_0333.bin",
+    "topo": "bearing/bearing_0333.bin",
+    "label": 0,
+    "prediction": 9
+  },
+  {
+    "index": 317,
+    "face": "bracket/bracket_0295.bin",
+    "topo": "bracket/bracket_0295.bin",
+    "label": 2,
+    "prediction": 2
+  },
+  {
+    "index": 318,
+    "face": "nut/nut_0032.bin",
+    "topo": "nut/nut_0032.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 319,
+    "face": "nut/nut_0843.bin",
+    "topo": "nut/nut_0843.bin",
+    "label": 6,
+    "prediction": 5
+  },
+  {
+    "index": 320,
+    "face": "bearing/bearing_0298.bin",
+    "topo": "bearing/bearing_0298.bin",
+    "label": 0,
+    "prediction": 0
+  },
+  {
+    "index": 321,
+    "face": "flange/flange_0585.bin",
+    "topo": "flange/flange_0585.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 322,
+    "face": "screw/screw_0235.bin",
+    "topo": "screw/screw_0235.bin",
+    "label": 8,
+    "prediction": 8
+  },
+  {
+    "index": 323,
+    "face": "nut/nut_0438.bin",
+    "topo": "nut/nut_0438.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 324,
+    "face": "shaft/shaft_0363.bin",
+    "topo": "shaft/shaft_0363.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 325,
+    "face": "bolt/bolt_0697.bin",
+    "topo": "bolt/bolt_0697.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 326,
+    "face": "bolt/bolt_0430.bin",
+    "topo": "bolt/bolt_0430.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 327,
+    "face": "shaft/shaft_0680.bin",
+    "topo": "shaft/shaft_0680.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 328,
+    "face": "screw/screw_0952.bin",
+    "topo": "screw/screw_0952.bin",
+    "label": 8,
+    "prediction": 8
+  },
+  {
+    "index": 329,
+    "face": "screw/screw_0101.bin",
+    "topo": "screw/screw_0101.bin",
+    "label": 8,
+    "prediction": 8
+  },
+  {
+    "index": 330,
+    "face": "screw/screw_0432.bin",
+    "topo": "screw/screw_0432.bin",
+    "label": 8,
+    "prediction": 8
+  },
+  {
+    "index": 331,
+    "face": "screw/screw_0166.bin",
+    "topo": "screw/screw_0166.bin",
+    "label": 8,
+    "prediction": 8
+  },
+  {
+    "index": 332,
+    "face": "bolt/bolt_0102.bin",
+    "topo": "bolt/bolt_0102.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 333,
+    "face": "shaft/shaft_0328.bin",
+    "topo": "shaft/shaft_0328.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 334,
+    "face": "nut/nut_0480.bin",
+    "topo": "nut/nut_0480.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 335,
+    "face": "bracket/bracket_1007.bin",
+    "topo": "bracket/bracket_1007.bin",
+    "label": 2,
+    "prediction": 2
+  },
+  {
+    "index": 336,
+    "face": "bolt/bolt_0603.bin",
+    "topo": "bolt/bolt_0603.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 337,
+    "face": "bracket/bracket_0272.bin",
+    "topo": "bracket/bracket_0272.bin",
+    "label": 2,
+    "prediction": 2
+  },
+  {
+    "index": 338,
+    "face": "bolt/bolt_0059.bin",
+    "topo": "bolt/bolt_0059.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 339,
+    "face": "bolt/bolt_0371.bin",
+    "topo": "bolt/bolt_0371.bin",
+    "label": 1,
+    "prediction": 9
+  },
+  {
+    "index": 340,
+    "face": "gear/gear_0502.bin",
+    "topo": "gear/gear_0502.bin",
+    "label": 5,
+    "prediction": 9
+  },
+  {
+    "index": 341,
+    "face": "shaft/shaft_0735.bin",
+    "topo": "shaft/shaft_0735.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 342,
+    "face": "pulley/pulley_0068.bin",
+    "topo": "pulley/pulley_0068.bin",
+    "label": 7,
+    "prediction": 7
+  },
+  {
+    "index": 343,
+    "face": "shaft/shaft_0721.bin",
+    "topo": "shaft/shaft_0721.bin",
+    "label": 9,
+    "prediction": 8
+  },
+  {
+    "index": 344,
+    "face": "flange/flange_0798.bin",
+    "topo": "flange/flange_0798.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 345,
+    "face": "bracket/bracket_0399.bin",
+    "topo": "bracket/bracket_0399.bin",
+    "label": 2,
+    "prediction": 2
+  },
+  {
+    "index": 346,
+    "face": "bolt/bolt_0516.bin",
+    "topo": "bolt/bolt_0516.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 347,
+    "face": "bracket/bracket_0916.bin",
+    "topo": "bracket/bracket_0916.bin",
+    "label": 2,
+    "prediction": 2
+  },
+  {
+    "index": 348,
+    "face": "flange/flange_0686.bin",
+    "topo": "flange/flange_0686.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 349,
+    "face": "coupling/coupling_0040.bin",
+    "topo": "coupling/coupling_0040.bin",
+    "label": 3,
+    "prediction": 3
+  },
+  {
+    "index": 350,
+    "face": "shaft/shaft_0034.bin",
+    "topo": "shaft/shaft_0034.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 351,
+    "face": "shaft/shaft_0553.bin",
+    "topo": "shaft/shaft_0553.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 352,
+    "face": "bracket/bracket_0273.bin",
+    "topo": "bracket/bracket_0273.bin",
+    "label": 2,
+    "prediction": 2
+  },
+  {
+    "index": 353,
+    "face": "flange/flange_0234.bin",
+    "topo": "flange/flange_0234.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 354,
+    "face": "screw/screw_0521.bin",
+    "topo": "screw/screw_0521.bin",
+    "label": 8,
+    "prediction": 8
+  },
+  {
+    "index": 355,
+    "face": "flange/flange_0231.bin",
+    "topo": "flange/flange_0231.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 356,
+    "face": "bracket/bracket_0394.bin",
+    "topo": "bracket/bracket_0394.bin",
+    "label": 2,
+    "prediction": 3
+  },
+  {
+    "index": 357,
+    "face": "nut/nut_0508.bin",
+    "topo": "nut/nut_0508.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 358,
+    "face": "nut/nut_0078.bin",
+    "topo": "nut/nut_0078.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 359,
+    "face": "shaft/shaft_0307.bin",
+    "topo": "shaft/shaft_0307.bin",
+    "label": 9,
+    "prediction": 4
+  },
+  {
+    "index": 360,
+    "face": "bearing/bearing_0736.bin",
+    "topo": "bearing/bearing_0736.bin",
+    "label": 0,
+    "prediction": 0
+  },
+  {
+    "index": 361,
+    "face": "screw/screw_1057.bin",
+    "topo": "screw/screw_1057.bin",
+    "label": 8,
+    "prediction": 8
+  },
+  {
+    "index": 362,
+    "face": "screw/screw_0048.bin",
+    "topo": "screw/screw_0048.bin",
+    "label": 8,
+    "prediction": 1
+  },
+  {
+    "index": 363,
+    "face": "bracket/bracket_0516.bin",
+    "topo": "bracket/bracket_0516.bin",
+    "label": 2,
+    "prediction": 2
+  },
+  {
+    "index": 364,
+    "face": "shaft/shaft_0562.bin",
+    "topo": "shaft/shaft_0562.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 365,
+    "face": "nut/nut_0457.bin",
+    "topo": "nut/nut_0457.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 366,
+    "face": "bearing/bearing_0544.bin",
+    "topo": "bearing/bearing_0544.bin",
+    "label": 0,
+    "prediction": 0
+  },
+  {
+    "index": 367,
+    "face": "screw/screw_0046.bin",
+    "topo": "screw/screw_0046.bin",
+    "label": 8,
+    "prediction": 8
+  },
+  {
+    "index": 368,
+    "face": "bracket/bracket_0500.bin",
+    "topo": "bracket/bracket_0500.bin",
+    "label": 2,
+    "prediction": 2
+  },
+  {
+    "index": 369,
+    "face": "bearing/bearing_0149.bin",
+    "topo": "bearing/bearing_0149.bin",
+    "label": 0,
+    "prediction": 0
+  },
+  {
+    "index": 370,
+    "face": "bolt/bolt_0018.bin",
+    "topo": "bolt/bolt_0018.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 371,
+    "face": "flange/flange_0099.bin",
+    "topo": "flange/flange_0099.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 372,
+    "face": "shaft/shaft_0190.bin",
+    "topo": "shaft/shaft_0190.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 373,
+    "face": "bracket/bracket_0482.bin",
+    "topo": "bracket/bracket_0482.bin",
+    "label": 2,
+    "prediction": 2
+  },
+  {
+    "index": 374,
+    "face": "screw/screw_0895.bin",
+    "topo": "screw/screw_0895.bin",
+    "label": 8,
+    "prediction": 1
+  },
+  {
+    "index": 375,
+    "face": "bearing/bearing_0220.bin",
+    "topo": "bearing/bearing_0220.bin",
+    "label": 0,
+    "prediction": 0
+  },
+  {
+    "index": 376,
+    "face": "nut/nut_0187.bin",
+    "topo": "nut/nut_0187.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 377,
+    "face": "flange/flange_0784.bin",
+    "topo": "flange/flange_0784.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 378,
+    "face": "pulley/pulley_0014.bin",
+    "topo": "pulley/pulley_0014.bin",
+    "label": 7,
+    "prediction": 9
+  },
+  {
+    "index": 379,
+    "face": "bracket/bracket_0659.bin",
+    "topo": "bracket/bracket_0659.bin",
+    "label": 2,
+    "prediction": 9
+  },
+  {
+    "index": 380,
+    "face": "flange/flange_0284.bin",
+    "topo": "flange/flange_0284.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 381,
+    "face": "shaft/shaft_0714.bin",
+    "topo": "shaft/shaft_0714.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 382,
+    "face": "bearing/bearing_0510.bin",
+    "topo": "bearing/bearing_0510.bin",
+    "label": 0,
+    "prediction": 0
+  },
+  {
+    "index": 383,
+    "face": "bracket/bracket_0492.bin",
+    "topo": "bracket/bracket_0492.bin",
+    "label": 2,
+    "prediction": 2
+  },
+  {
+    "index": 384,
+    "face": "bracket/bracket_0785.bin",
+    "topo": "bracket/bracket_0785.bin",
+    "label": 2,
+    "prediction": 2
+  },
+  {
+    "index": 385,
+    "face": "screw/screw_0674.bin",
+    "topo": "screw/screw_0674.bin",
+    "label": 8,
+    "prediction": 8
+  },
+  {
+    "index": 386,
+    "face": "shaft/shaft_0797.bin",
+    "topo": "shaft/shaft_0797.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 387,
+    "face": "nut/nut_0133.bin",
+    "topo": "nut/nut_0133.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 388,
+    "face": "bearing/bearing_0449.bin",
+    "topo": "bearing/bearing_0449.bin",
+    "label": 0,
+    "prediction": 0
+  },
+  {
+    "index": 389,
+    "face": "shaft/shaft_0367.bin",
+    "topo": "shaft/shaft_0367.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 390,
+    "face": "shaft/shaft_0560.bin",
+    "topo": "shaft/shaft_0560.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 391,
+    "face": "pulley/pulley_0411.bin",
+    "topo": "pulley/pulley_0411.bin",
+    "label": 7,
+    "prediction": 5
+  },
+  {
+    "index": 392,
+    "face": "gear/gear_0705.bin",
+    "topo": "gear/gear_0705.bin",
+    "label": 5,
+    "prediction": 2
+  },
+  {
+    "index": 393,
+    "face": "pulley/pulley_0076.bin",
+    "topo": "pulley/pulley_0076.bin",
+    "label": 7,
+    "prediction": 7
+  },
+  {
+    "index": 394,
+    "face": "shaft/shaft_0712.bin",
+    "topo": "shaft/shaft_0712.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 395,
+    "face": "screw/screw_0210.bin",
+    "topo": "screw/screw_0210.bin",
+    "label": 8,
+    "prediction": 8
+  },
+  {
+    "index": 396,
+    "face": "nut/nut_0265.bin",
+    "topo": "nut/nut_0265.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 397,
+    "face": "bracket/bracket_0591.bin",
+    "topo": "bracket/bracket_0591.bin",
+    "label": 2,
+    "prediction": 3
+  },
+  {
+    "index": 398,
+    "face": "bolt/bolt_0686.bin",
+    "topo": "bolt/bolt_0686.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 399,
+    "face": "gear/gear_0141.bin",
+    "topo": "gear/gear_0141.bin",
+    "label": 5,
+    "prediction": 5
+  },
+  {
+    "index": 400,
+    "face": "bolt/bolt_0841.bin",
+    "topo": "bolt/bolt_0841.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 401,
+    "face": "bearing/bearing_0288.bin",
+    "topo": "bearing/bearing_0288.bin",
+    "label": 0,
+    "prediction": 0
+  },
+  {
+    "index": 402,
+    "face": "bearing/bearing_0553.bin",
+    "topo": "bearing/bearing_0553.bin",
+    "label": 0,
+    "prediction": 0
+  },
+  {
+    "index": 403,
+    "face": "nut/nut_0529.bin",
+    "topo": "nut/nut_0529.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 404,
+    "face": "nut/nut_0530.bin",
+    "topo": "nut/nut_0530.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 405,
+    "face": "bolt/bolt_0172.bin",
+    "topo": "bolt/bolt_0172.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 406,
+    "face": "nut/nut_0489.bin",
+    "topo": "nut/nut_0489.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 407,
+    "face": "bracket/bracket_0506.bin",
+    "topo": "bracket/bracket_0506.bin",
+    "label": 2,
+    "prediction": 2
+  },
+  {
+    "index": 408,
+    "face": "screw/screw_0950.bin",
+    "topo": "screw/screw_0950.bin",
+    "label": 8,
+    "prediction": 8
+  },
+  {
+    "index": 409,
+    "face": "shaft/shaft_0807.bin",
+    "topo": "shaft/shaft_0807.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 410,
+    "face": "bolt/bolt_0857.bin",
+    "topo": "bolt/bolt_0857.bin",
+    "label": 1,
+    "prediction": 8
+  },
+  {
+    "index": 411,
+    "face": "bolt/bolt_0855.bin",
+    "topo": "bolt/bolt_0855.bin",
+    "label": 1,
+    "prediction": 8
+  },
+  {
+    "index": 412,
+    "face": "shaft/shaft_0731.bin",
+    "topo": "shaft/shaft_0731.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 413,
+    "face": "nut/nut_0589.bin",
+    "topo": "nut/nut_0589.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 414,
+    "face": "flange/flange_0205.bin",
+    "topo": "flange/flange_0205.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 415,
+    "face": "shaft/shaft_0593.bin",
+    "topo": "shaft/shaft_0593.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 416,
+    "face": "bolt/bolt_0238.bin",
+    "topo": "bolt/bolt_0238.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 417,
+    "face": "screw/screw_0080.bin",
+    "topo": "screw/screw_0080.bin",
+    "label": 8,
+    "prediction": 8
+  },
+  {
+    "index": 418,
+    "face": "screw/screw_1077.bin",
+    "topo": "screw/screw_1077.bin",
+    "label": 8,
+    "prediction": 8
+  },
+  {
+    "index": 419,
+    "face": "bracket/bracket_0652.bin",
+    "topo": "bracket/bracket_0652.bin",
+    "label": 2,
+    "prediction": 2
+  },
+  {
+    "index": 420,
+    "face": "screw/screw_0964.bin",
+    "topo": "screw/screw_0964.bin",
+    "label": 8,
+    "prediction": 1
+  },
+  {
+    "index": 421,
+    "face": "nut/nut_0120.bin",
+    "topo": "nut/nut_0120.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 422,
+    "face": "bolt/bolt_0678.bin",
+    "topo": "bolt/bolt_0678.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 423,
+    "face": "bolt/bolt_0502.bin",
+    "topo": "bolt/bolt_0502.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 424,
+    "face": "shaft/shaft_0213.bin",
+    "topo": "shaft/shaft_0213.bin",
+    "label": 9,
+    "prediction": 5
+  },
+  {
+    "index": 425,
+    "face": "screw/screw_1044.bin",
+    "topo": "screw/screw_1044.bin",
+    "label": 8,
+    "prediction": 1
+  },
+  {
+    "index": 426,
+    "face": "coupling/coupling_0178.bin",
+    "topo": "coupling/coupling_0178.bin",
+    "label": 3,
+    "prediction": 0
+  },
+  {
+    "index": 427,
+    "face": "screw/screw_0177.bin",
+    "topo": "screw/screw_0177.bin",
+    "label": 8,
+    "prediction": 8
+  },
+  {
+    "index": 428,
+    "face": "flange/flange_0215.bin",
+    "topo": "flange/flange_0215.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 429,
+    "face": "bracket/bracket_0690.bin",
+    "topo": "bracket/bracket_0690.bin",
+    "label": 2,
+    "prediction": 9
+  },
+  {
+    "index": 430,
+    "face": "bearing/bearing_0013.bin",
+    "topo": "bearing/bearing_0013.bin",
+    "label": 0,
+    "prediction": 0
+  },
+  {
+    "index": 431,
+    "face": "shaft/shaft_0183.bin",
+    "topo": "shaft/shaft_0183.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 432,
+    "face": "nut/nut_0237.bin",
+    "topo": "nut/nut_0237.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 433,
+    "face": "shaft/shaft_0018.bin",
+    "topo": "shaft/shaft_0018.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 434,
+    "face": "shaft/shaft_0551.bin",
+    "topo": "shaft/shaft_0551.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 435,
+    "face": "bearing/bearing_0750.bin",
+    "topo": "bearing/bearing_0750.bin",
+    "label": 0,
+    "prediction": 0
+  },
+  {
+    "index": 436,
+    "face": "flange/flange_0116.bin",
+    "topo": "flange/flange_0116.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 437,
+    "face": "flange/flange_0039.bin",
+    "topo": "flange/flange_0039.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 438,
+    "face": "pulley/pulley_0430.bin",
+    "topo": "pulley/pulley_0430.bin",
+    "label": 7,
+    "prediction": 7
+  },
+  {
+    "index": 439,
+    "face": "shaft/shaft_0327.bin",
+    "topo": "shaft/shaft_0327.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 440,
+    "face": "coupling/coupling_0068.bin",
+    "topo": "coupling/coupling_0068.bin",
+    "label": 3,
+    "prediction": 3
+  },
+  {
+    "index": 441,
+    "face": "shaft/shaft_0635.bin",
+    "topo": "shaft/shaft_0635.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 442,
+    "face": "bearing/bearing_0461.bin",
+    "topo": "bearing/bearing_0461.bin",
+    "label": 0,
+    "prediction": 0
+  },
+  {
+    "index": 443,
+    "face": "flange/flange_0562.bin",
+    "topo": "flange/flange_0562.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 444,
+    "face": "shaft/shaft_0782.bin",
+    "topo": "shaft/shaft_0782.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 445,
+    "face": "flange/flange_0179.bin",
+    "topo": "flange/flange_0179.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 446,
+    "face": "screw/screw_0727.bin",
+    "topo": "screw/screw_0727.bin",
+    "label": 8,
+    "prediction": 8
+  },
+  {
+    "index": 447,
+    "face": "bracket/bracket_0887.bin",
+    "topo": "bracket/bracket_0887.bin",
+    "label": 2,
+    "prediction": 2
+  },
+  {
+    "index": 448,
+    "face": "bracket/bracket_0183.bin",
+    "topo": "bracket/bracket_0183.bin",
+    "label": 2,
+    "prediction": 2
+  },
+  {
+    "index": 449,
+    "face": "nut/nut_0543.bin",
+    "topo": "nut/nut_0543.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 450,
+    "face": "shaft/shaft_0535.bin",
+    "topo": "shaft/shaft_0535.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 451,
+    "face": "flange/flange_0123.bin",
+    "topo": "flange/flange_0123.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 452,
+    "face": "bolt/bolt_0355.bin",
+    "topo": "bolt/bolt_0355.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 453,
+    "face": "pulley/pulley_0081.bin",
+    "topo": "pulley/pulley_0081.bin",
+    "label": 7,
+    "prediction": 7
+  },
+  {
+    "index": 454,
+    "face": "nut/nut_0625.bin",
+    "topo": "nut/nut_0625.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 455,
+    "face": "shaft/shaft_0646.bin",
+    "topo": "shaft/shaft_0646.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 456,
+    "face": "flange/flange_0703.bin",
+    "topo": "flange/flange_0703.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 457,
+    "face": "screw/screw_1048.bin",
+    "topo": "screw/screw_1048.bin",
+    "label": 8,
+    "prediction": 8
+  },
+  {
+    "index": 458,
+    "face": "screw/screw_0357.bin",
+    "topo": "screw/screw_0357.bin",
+    "label": 8,
+    "prediction": 1
+  },
+  {
+    "index": 459,
+    "face": "nut/nut_0260.bin",
+    "topo": "nut/nut_0260.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 460,
+    "face": "nut/nut_0150.bin",
+    "topo": "nut/nut_0150.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 461,
+    "face": "nut/nut_0209.bin",
+    "topo": "nut/nut_0209.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 462,
+    "face": "bracket/bracket_0276.bin",
+    "topo": "bracket/bracket_0276.bin",
+    "label": 2,
+    "prediction": 9
+  },
+  {
+    "index": 463,
+    "face": "screw/screw_0098.bin",
+    "topo": "screw/screw_0098.bin",
+    "label": 8,
+    "prediction": 8
+  },
+  {
+    "index": 464,
+    "face": "flange/flange_0260.bin",
+    "topo": "flange/flange_0260.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 465,
+    "face": "nut/nut_0170.bin",
+    "topo": "nut/nut_0170.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 466,
+    "face": "screw/screw_0117.bin",
+    "topo": "screw/screw_0117.bin",
+    "label": 8,
+    "prediction": 1
+  },
+  {
+    "index": 467,
+    "face": "screw/screw_0056.bin",
+    "topo": "screw/screw_0056.bin",
+    "label": 8,
+    "prediction": 8
+  },
+  {
+    "index": 468,
+    "face": "screw/screw_0642.bin",
+    "topo": "screw/screw_0642.bin",
+    "label": 8,
+    "prediction": 8
+  },
+  {
+    "index": 469,
+    "face": "bolt/bolt_0223.bin",
+    "topo": "bolt/bolt_0223.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 470,
+    "face": "bracket/bracket_0715.bin",
+    "topo": "bracket/bracket_0715.bin",
+    "label": 2,
+    "prediction": 2
+  },
+  {
+    "index": 471,
+    "face": "flange/flange_0062.bin",
+    "topo": "flange/flange_0062.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 472,
+    "face": "bearing/bearing_0286.bin",
+    "topo": "bearing/bearing_0286.bin",
+    "label": 0,
+    "prediction": 0
+  },
+  {
+    "index": 473,
+    "face": "nut/nut_0545.bin",
+    "topo": "nut/nut_0545.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 474,
+    "face": "bracket/bracket_0120.bin",
+    "topo": "bracket/bracket_0120.bin",
+    "label": 2,
+    "prediction": 3
+  },
+  {
+    "index": 475,
+    "face": "bolt/bolt_0163.bin",
+    "topo": "bolt/bolt_0163.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 476,
+    "face": "screw/screw_0072.bin",
+    "topo": "screw/screw_0072.bin",
+    "label": 8,
+    "prediction": 1
+  },
+  {
+    "index": 477,
+    "face": "flange/flange_0163.bin",
+    "topo": "flange/flange_0163.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 478,
+    "face": "coupling/coupling_0162.bin",
+    "topo": "coupling/coupling_0162.bin",
+    "label": 3,
+    "prediction": 9
+  },
+  {
+    "index": 479,
+    "face": "gear/gear_0207.bin",
+    "topo": "gear/gear_0207.bin",
+    "label": 5,
+    "prediction": 5
+  },
+  {
+    "index": 480,
+    "face": "screw/screw_0946.bin",
+    "topo": "screw/screw_0946.bin",
+    "label": 8,
+    "prediction": 8
+  },
+  {
+    "index": 481,
+    "face": "flange/flange_0144.bin",
+    "topo": "flange/flange_0144.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 482,
+    "face": "bolt/bolt_0151.bin",
+    "topo": "bolt/bolt_0151.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 483,
+    "face": "bracket/bracket_0926.bin",
+    "topo": "bracket/bracket_0926.bin",
+    "label": 2,
+    "prediction": 2
+  },
+  {
+    "index": 484,
+    "face": "bolt/bolt_0530.bin",
+    "topo": "bolt/bolt_0530.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 485,
+    "face": "nut/nut_0318.bin",
+    "topo": "nut/nut_0318.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 486,
+    "face": "shaft/shaft_0694.bin",
+    "topo": "shaft/shaft_0694.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 487,
+    "face": "flange/flange_0708.bin",
+    "topo": "flange/flange_0708.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 488,
+    "face": "pulley/pulley_0300.bin",
+    "topo": "pulley/pulley_0300.bin",
+    "label": 7,
+    "prediction": 9
+  },
+  {
+    "index": 489,
+    "face": "shaft/shaft_0650.bin",
+    "topo": "shaft/shaft_0650.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 490,
+    "face": "flange/flange_0180.bin",
+    "topo": "flange/flange_0180.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 491,
+    "face": "nut/nut_0395.bin",
+    "topo": "nut/nut_0395.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 492,
+    "face": "flange/flange_0662.bin",
+    "topo": "flange/flange_0662.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 493,
+    "face": "bracket/bracket_0711.bin",
+    "topo": "bracket/bracket_0711.bin",
+    "label": 2,
+    "prediction": 0
+  },
+  {
+    "index": 494,
+    "face": "flange/flange_0429.bin",
+    "topo": "flange/flange_0429.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 495,
+    "face": "shaft/shaft_0751.bin",
+    "topo": "shaft/shaft_0751.bin",
+    "label": 9,
+    "prediction": 3
+  },
+  {
+    "index": 496,
+    "face": "bolt/bolt_0180.bin",
+    "topo": "bolt/bolt_0180.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 497,
+    "face": "nut/nut_0755.bin",
+    "topo": "nut/nut_0755.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 498,
+    "face": "nut/nut_0584.bin",
+    "topo": "nut/nut_0584.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 499,
+    "face": "flange/flange_0395.bin",
+    "topo": "flange/flange_0395.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 500,
+    "face": "nut/nut_0521.bin",
+    "topo": "nut/nut_0521.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 501,
+    "face": "bolt/bolt_0010.bin",
+    "topo": "bolt/bolt_0010.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 502,
+    "face": "flange/flange_0092.bin",
+    "topo": "flange/flange_0092.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 503,
+    "face": "bearing/bearing_0207.bin",
+    "topo": "bearing/bearing_0207.bin",
+    "label": 0,
+    "prediction": 0
+  },
+  {
+    "index": 504,
+    "face": "bracket/bracket_0638.bin",
+    "topo": "bracket/bracket_0638.bin",
+    "label": 2,
+    "prediction": 2
+  },
+  {
+    "index": 505,
+    "face": "bracket/bracket_0162.bin",
+    "topo": "bracket/bracket_0162.bin",
+    "label": 2,
+    "prediction": 2
+  },
+  {
+    "index": 506,
+    "face": "shaft/shaft_0496.bin",
+    "topo": "shaft/shaft_0496.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 507,
+    "face": "screw/screw_0930.bin",
+    "topo": "screw/screw_0930.bin",
+    "label": 8,
+    "prediction": 8
+  },
+  {
+    "index": 508,
+    "face": "shaft/shaft_0704.bin",
+    "topo": "shaft/shaft_0704.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 509,
+    "face": "bolt/bolt_0669.bin",
+    "topo": "bolt/bolt_0669.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 510,
+    "face": "bracket/bracket_0281.bin",
+    "topo": "bracket/bracket_0281.bin",
+    "label": 2,
+    "prediction": 2
+  },
+  {
+    "index": 511,
+    "face": "bearing/bearing_0125.bin",
+    "topo": "bearing/bearing_0125.bin",
+    "label": 0,
+    "prediction": 0
+  },
+  {
+    "index": 512,
+    "face": "flange/flange_0406.bin",
+    "topo": "flange/flange_0406.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 513,
+    "face": "coupling/coupling_0042.bin",
+    "topo": "coupling/coupling_0042.bin",
+    "label": 3,
+    "prediction": 3
+  },
+  {
+    "index": 514,
+    "face": "bolt/bolt_0136.bin",
+    "topo": "bolt/bolt_0136.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 515,
+    "face": "pulley/pulley_0453.bin",
+    "topo": "pulley/pulley_0453.bin",
+    "label": 7,
+    "prediction": 0
+  },
+  {
+    "index": 516,
+    "face": "bolt/bolt_0460.bin",
+    "topo": "bolt/bolt_0460.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 517,
+    "face": "bolt/bolt_0682.bin",
+    "topo": "bolt/bolt_0682.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 518,
+    "face": "nut/nut_0494.bin",
+    "topo": "nut/nut_0494.bin",
+    "label": 6,
+    "prediction": 0
+  },
+  {
+    "index": 519,
+    "face": "screw/screw_0030.bin",
+    "topo": "screw/screw_0030.bin",
+    "label": 8,
+    "prediction": 8
+  },
+  {
+    "index": 520,
+    "face": "nut/nut_0308.bin",
+    "topo": "nut/nut_0308.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 521,
+    "face": "shaft/shaft_0160.bin",
+    "topo": "shaft/shaft_0160.bin",
+    "label": 9,
+    "prediction": 8
+  },
+  {
+    "index": 522,
+    "face": "bolt/bolt_0800.bin",
+    "topo": "bolt/bolt_0800.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 523,
+    "face": "pulley/pulley_0160.bin",
+    "topo": "pulley/pulley_0160.bin",
+    "label": 7,
+    "prediction": 7
+  },
+  {
+    "index": 524,
+    "face": "flange/flange_0307.bin",
+    "topo": "flange/flange_0307.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 525,
+    "face": "flange/flange_0634.bin",
+    "topo": "flange/flange_0634.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 526,
+    "face": "flange/flange_0339.bin",
+    "topo": "flange/flange_0339.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 527,
+    "face": "shaft/shaft_0088.bin",
+    "topo": "shaft/shaft_0088.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 528,
+    "face": "nut/nut_0019.bin",
+    "topo": "nut/nut_0019.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 529,
+    "face": "screw/screw_0373.bin",
+    "topo": "screw/screw_0373.bin",
+    "label": 8,
+    "prediction": 8
+  },
+  {
+    "index": 530,
+    "face": "shaft/shaft_0331.bin",
+    "topo": "shaft/shaft_0331.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 531,
+    "face": "screw/screw_0064.bin",
+    "topo": "screw/screw_0064.bin",
+    "label": 8,
+    "prediction": 8
+  },
+  {
+    "index": 532,
+    "face": "gear/gear_0848.bin",
+    "topo": "gear/gear_0848.bin",
+    "label": 5,
+    "prediction": 5
+  },
+  {
+    "index": 533,
+    "face": "nut/nut_0375.bin",
+    "topo": "nut/nut_0375.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 534,
+    "face": "bracket/bracket_0298.bin",
+    "topo": "bracket/bracket_0298.bin",
+    "label": 2,
+    "prediction": 2
+  },
+  {
+    "index": 535,
+    "face": "flange/flange_0094.bin",
+    "topo": "flange/flange_0094.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 536,
+    "face": "shaft/shaft_0392.bin",
+    "topo": "shaft/shaft_0392.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 537,
+    "face": "shaft/shaft_0346.bin",
+    "topo": "shaft/shaft_0346.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 538,
+    "face": "nut/nut_0557.bin",
+    "topo": "nut/nut_0557.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 539,
+    "face": "nut/nut_0392.bin",
+    "topo": "nut/nut_0392.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 540,
+    "face": "bolt/bolt_0350.bin",
+    "topo": "bolt/bolt_0350.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 541,
+    "face": "screw/screw_0074.bin",
+    "topo": "screw/screw_0074.bin",
+    "label": 8,
+    "prediction": 1
+  },
+  {
+    "index": 542,
+    "face": "bracket/bracket_0779.bin",
+    "topo": "bracket/bracket_0779.bin",
+    "label": 2,
+    "prediction": 2
+  },
+  {
+    "index": 543,
+    "face": "bolt/bolt_0724.bin",
+    "topo": "bolt/bolt_0724.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 544,
+    "face": "flange/flange_0775.bin",
+    "topo": "flange/flange_0775.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 545,
+    "face": "gear/gear_0320.bin",
+    "topo": "gear/gear_0320.bin",
+    "label": 5,
+    "prediction": 5
+  },
+  {
+    "index": 546,
+    "face": "bearing/bearing_0296.bin",
+    "topo": "bearing/bearing_0296.bin",
+    "label": 0,
+    "prediction": 0
+  },
+  {
+    "index": 547,
+    "face": "screw/screw_0710.bin",
+    "topo": "screw/screw_0710.bin",
+    "label": 8,
+    "prediction": 8
+  },
+  {
+    "index": 548,
+    "face": "bearing/bearing_0541.bin",
+    "topo": "bearing/bearing_0541.bin",
+    "label": 0,
+    "prediction": 0
+  },
+  {
+    "index": 549,
+    "face": "nut/nut_0341.bin",
+    "topo": "nut/nut_0341.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 550,
+    "face": "screw/screw_0625.bin",
+    "topo": "screw/screw_0625.bin",
+    "label": 8,
+    "prediction": 8
+  },
+  {
+    "index": 551,
+    "face": "nut/nut_0160.bin",
+    "topo": "nut/nut_0160.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 552,
+    "face": "nut/nut_0882.bin",
+    "topo": "nut/nut_0882.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 553,
+    "face": "flange/flange_0365.bin",
+    "topo": "flange/flange_0365.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 554,
+    "face": "gear/gear_0223.bin",
+    "topo": "gear/gear_0223.bin",
+    "label": 5,
+    "prediction": 5
+  },
+  {
+    "index": 555,
+    "face": "flange/flange_0764.bin",
+    "topo": "flange/flange_0764.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 556,
+    "face": "coupling/coupling_0070.bin",
+    "topo": "coupling/coupling_0070.bin",
+    "label": 3,
+    "prediction": 4
+  },
+  {
+    "index": 557,
+    "face": "bearing/bearing_0466.bin",
+    "topo": "bearing/bearing_0466.bin",
+    "label": 0,
+    "prediction": 0
+  },
+  {
+    "index": 558,
+    "face": "bolt/bolt_0278.bin",
+    "topo": "bolt/bolt_0278.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 559,
+    "face": "flange/flange_0427.bin",
+    "topo": "flange/flange_0427.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 560,
+    "face": "bracket/bracket_0878.bin",
+    "topo": "bracket/bracket_0878.bin",
+    "label": 2,
+    "prediction": 2
+  },
+  {
+    "index": 561,
+    "face": "flange/flange_0020.bin",
+    "topo": "flange/flange_0020.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 562,
+    "face": "pulley/pulley_0413.bin",
+    "topo": "pulley/pulley_0413.bin",
+    "label": 7,
+    "prediction": 5
+  },
+  {
+    "index": 563,
+    "face": "shaft/shaft_0152.bin",
+    "topo": "shaft/shaft_0152.bin",
+    "label": 9,
+    "prediction": 0
+  },
+  {
+    "index": 564,
+    "face": "bracket/bracket_0518.bin",
+    "topo": "bracket/bracket_0518.bin",
+    "label": 2,
+    "prediction": 9
+  },
+  {
+    "index": 565,
+    "face": "shaft/shaft_0550.bin",
+    "topo": "shaft/shaft_0550.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 566,
+    "face": "screw/screw_0664.bin",
+    "topo": "screw/screw_0664.bin",
+    "label": 8,
+    "prediction": 8
+  },
+  {
+    "index": 567,
+    "face": "flange/flange_0172.bin",
+    "topo": "flange/flange_0172.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 568,
+    "face": "pulley/pulley_0397.bin",
+    "topo": "pulley/pulley_0397.bin",
+    "label": 7,
+    "prediction": 7
+  },
+  {
+    "index": 569,
+    "face": "nut/nut_0470.bin",
+    "topo": "nut/nut_0470.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 570,
+    "face": "bearing/bearing_0623.bin",
+    "topo": "bearing/bearing_0623.bin",
+    "label": 0,
+    "prediction": 3
+  },
+  {
+    "index": 571,
+    "face": "flange/flange_0906.bin",
+    "topo": "flange/flange_0906.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 572,
+    "face": "bolt/bolt_0839.bin",
+    "topo": "bolt/bolt_0839.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 573,
+    "face": "bracket/bracket_0103.bin",
+    "topo": "bracket/bracket_0103.bin",
+    "label": 2,
+    "prediction": 2
+  },
+  {
+    "index": 574,
+    "face": "bolt/bolt_0526.bin",
+    "topo": "bolt/bolt_0526.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 575,
+    "face": "screw/screw_0192.bin",
+    "topo": "screw/screw_0192.bin",
+    "label": 8,
+    "prediction": 8
+  },
+  {
+    "index": 576,
+    "face": "coupling/coupling_0012.bin",
+    "topo": "coupling/coupling_0012.bin",
+    "label": 3,
+    "prediction": 3
+  },
+  {
+    "index": 577,
+    "face": "bearing/bearing_0204.bin",
+    "topo": "bearing/bearing_0204.bin",
+    "label": 0,
+    "prediction": 0
+  },
+  {
+    "index": 578,
+    "face": "pulley/pulley_0164.bin",
+    "topo": "pulley/pulley_0164.bin",
+    "label": 7,
+    "prediction": 7
+  },
+  {
+    "index": 579,
+    "face": "gear/gear_0864.bin",
+    "topo": "gear/gear_0864.bin",
+    "label": 5,
+    "prediction": 5
+  },
+  {
+    "index": 580,
+    "face": "shaft/shaft_0495.bin",
+    "topo": "shaft/shaft_0495.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 581,
+    "face": "bolt/bolt_0125.bin",
+    "topo": "bolt/bolt_0125.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 582,
+    "face": "nut/nut_0284.bin",
+    "topo": "nut/nut_0284.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 583,
+    "face": "flange/flange_0725.bin",
+    "topo": "flange/flange_0725.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 584,
+    "face": "shaft/shaft_0810.bin",
+    "topo": "shaft/shaft_0810.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 585,
+    "face": "bolt/bolt_0092.bin",
+    "topo": "bolt/bolt_0092.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 586,
+    "face": "bolt/bolt_0850.bin",
+    "topo": "bolt/bolt_0850.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 587,
+    "face": "screw/screw_0140.bin",
+    "topo": "screw/screw_0140.bin",
+    "label": 8,
+    "prediction": 8
+  },
+  {
+    "index": 588,
+    "face": "bolt/bolt_0718.bin",
+    "topo": "bolt/bolt_0718.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 589,
+    "face": "bearing/bearing_0601.bin",
+    "topo": "bearing/bearing_0601.bin",
+    "label": 0,
+    "prediction": 3
+  },
+  {
+    "index": 590,
+    "face": "coupling/coupling_0168.bin",
+    "topo": "coupling/coupling_0168.bin",
+    "label": 3,
+    "prediction": 3
+  },
+  {
+    "index": 591,
+    "face": "bracket/bracket_0870.bin",
+    "topo": "bracket/bracket_0870.bin",
+    "label": 2,
+    "prediction": 3
+  },
+  {
+    "index": 592,
+    "face": "flange/flange_0773.bin",
+    "topo": "flange/flange_0773.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 593,
+    "face": "coupling/coupling_0402.bin",
+    "topo": "coupling/coupling_0402.bin",
+    "label": 3,
+    "prediction": 3
+  },
+  {
+    "index": 594,
+    "face": "bearing/bearing_0439.bin",
+    "topo": "bearing/bearing_0439.bin",
+    "label": 0,
+    "prediction": 0
+  },
+  {
+    "index": 595,
+    "face": "pulley/pulley_0307.bin",
+    "topo": "pulley/pulley_0307.bin",
+    "label": 7,
+    "prediction": 7
+  },
+  {
+    "index": 596,
+    "face": "coupling/coupling_0118.bin",
+    "topo": "coupling/coupling_0118.bin",
+    "label": 3,
+    "prediction": 2
+  },
+  {
+    "index": 597,
+    "face": "shaft/shaft_0455.bin",
+    "topo": "shaft/shaft_0455.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 598,
+    "face": "bearing/bearing_0802.bin",
+    "topo": "bearing/bearing_0802.bin",
+    "label": 0,
+    "prediction": 0
+  },
+  {
+    "index": 599,
+    "face": "bolt/bolt_0078.bin",
+    "topo": "bolt/bolt_0078.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 600,
+    "face": "screw/screw_1092.bin",
+    "topo": "screw/screw_1092.bin",
+    "label": 8,
+    "prediction": 1
+  },
+  {
+    "index": 601,
+    "face": "nut/nut_0349.bin",
+    "topo": "nut/nut_0349.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 602,
+    "face": "screw/screw_0044.bin",
+    "topo": "screw/screw_0044.bin",
+    "label": 8,
+    "prediction": 8
+  },
+  {
+    "index": 603,
+    "face": "bolt/bolt_0112.bin",
+    "topo": "bolt/bolt_0112.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 604,
+    "face": "coupling/coupling_0055.bin",
+    "topo": "coupling/coupling_0055.bin",
+    "label": 3,
+    "prediction": 3
+  },
+  {
+    "index": 605,
+    "face": "coupling/coupling_0267.bin",
+    "topo": "coupling/coupling_0267.bin",
+    "label": 3,
+    "prediction": 1
+  },
+  {
+    "index": 606,
+    "face": "flange/flange_0014.bin",
+    "topo": "flange/flange_0014.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 607,
+    "face": "bolt/bolt_0525.bin",
+    "topo": "bolt/bolt_0525.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 608,
+    "face": "shaft/shaft_0118.bin",
+    "topo": "shaft/shaft_0118.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 609,
+    "face": "shaft/shaft_0222.bin",
+    "topo": "shaft/shaft_0222.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 610,
+    "face": "bearing/bearing_0102.bin",
+    "topo": "bearing/bearing_0102.bin",
+    "label": 0,
+    "prediction": 0
+  },
+  {
+    "index": 611,
+    "face": "bearing/bearing_0210.bin",
+    "topo": "bearing/bearing_0210.bin",
+    "label": 0,
+    "prediction": 0
+  },
+  {
+    "index": 612,
+    "face": "bolt/bolt_0300.bin",
+    "topo": "bolt/bolt_0300.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 613,
+    "face": "screw/screw_0754.bin",
+    "topo": "screw/screw_0754.bin",
+    "label": 8,
+    "prediction": 8
+  },
+  {
+    "index": 614,
+    "face": "bolt/bolt_0586.bin",
+    "topo": "bolt/bolt_0586.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 615,
+    "face": "coupling/coupling_0076.bin",
+    "topo": "coupling/coupling_0076.bin",
+    "label": 3,
+    "prediction": 3
+  },
+  {
+    "index": 616,
+    "face": "bolt/bolt_0547.bin",
+    "topo": "bolt/bolt_0547.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 617,
+    "face": "nut/nut_0450.bin",
+    "topo": "nut/nut_0450.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 618,
+    "face": "flange/flange_0333.bin",
+    "topo": "flange/flange_0333.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 619,
+    "face": "bracket/bracket_0172.bin",
+    "topo": "bracket/bracket_0172.bin",
+    "label": 2,
+    "prediction": 2
+  },
+  {
+    "index": 620,
+    "face": "gear/gear_0612.bin",
+    "topo": "gear/gear_0612.bin",
+    "label": 5,
+    "prediction": 5
+  },
+  {
+    "index": 621,
+    "face": "bracket/bracket_0355.bin",
+    "topo": "bracket/bracket_0355.bin",
+    "label": 2,
+    "prediction": 3
+  },
+  {
+    "index": 622,
+    "face": "pulley/pulley_0080.bin",
+    "topo": "pulley/pulley_0080.bin",
+    "label": 7,
+    "prediction": 7
+  },
+  {
+    "index": 623,
+    "face": "shaft/shaft_0314.bin",
+    "topo": "shaft/shaft_0314.bin",
+    "label": 9,
+    "prediction": 3
+  },
+  {
+    "index": 624,
+    "face": "coupling/coupling_0306.bin",
+    "topo": "coupling/coupling_0306.bin",
+    "label": 3,
+    "prediction": 8
+  },
+  {
+    "index": 625,
+    "face": "bracket/bracket_0993.bin",
+    "topo": "bracket/bracket_0993.bin",
+    "label": 2,
+    "prediction": 2
+  },
+  {
+    "index": 626,
+    "face": "bearing/bearing_0000.bin",
+    "topo": "bearing/bearing_0000.bin",
+    "label": 0,
+    "prediction": 0
+  },
+  {
+    "index": 627,
+    "face": "pulley/pulley_0267.bin",
+    "topo": "pulley/pulley_0267.bin",
+    "label": 7,
+    "prediction": 7
+  },
+  {
+    "index": 628,
+    "face": "bolt/bolt_0228.bin",
+    "topo": "bolt/bolt_0228.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 629,
+    "face": "flange/flange_0232.bin",
+    "topo": "flange/flange_0232.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 630,
+    "face": "bracket/bracket_0025.bin",
+    "topo": "bracket/bracket_0025.bin",
+    "label": 2,
+    "prediction": 2
+  },
+  {
+    "index": 631,
+    "face": "bolt/bolt_0314.bin",
+    "topo": "bolt/bolt_0314.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 632,
+    "face": "flange/flange_0771.bin",
+    "topo": "flange/flange_0771.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 633,
+    "face": "flange/flange_0245.bin",
+    "topo": "flange/flange_0245.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 634,
+    "face": "shaft/shaft_0106.bin",
+    "topo": "shaft/shaft_0106.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 635,
+    "face": "bolt/bolt_0406.bin",
+    "topo": "bolt/bolt_0406.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 636,
+    "face": "nut/nut_0100.bin",
+    "topo": "nut/nut_0100.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 637,
+    "face": "bearing/bearing_0604.bin",
+    "topo": "bearing/bearing_0604.bin",
+    "label": 0,
+    "prediction": 0
+  },
+  {
+    "index": 638,
+    "face": "bracket/bracket_0450.bin",
+    "topo": "bracket/bracket_0450.bin",
+    "label": 2,
+    "prediction": 2
+  },
+  {
+    "index": 639,
+    "face": "shaft/shaft_0045.bin",
+    "topo": "shaft/shaft_0045.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 640,
+    "face": "nut/nut_0296.bin",
+    "topo": "nut/nut_0296.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 641,
+    "face": "flange/flange_0388.bin",
+    "topo": "flange/flange_0388.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 642,
+    "face": "nut/nut_0471.bin",
+    "topo": "nut/nut_0471.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 643,
+    "face": "screw/screw_0110.bin",
+    "topo": "screw/screw_0110.bin",
+    "label": 8,
+    "prediction": 3
+  },
+  {
+    "index": 644,
+    "face": "flange/flange_0113.bin",
+    "topo": "flange/flange_0113.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 645,
+    "face": "screw/screw_0126.bin",
+    "topo": "screw/screw_0126.bin",
+    "label": 8,
+    "prediction": 1
+  },
+  {
+    "index": 646,
+    "face": "coupling/coupling_0141.bin",
+    "topo": "coupling/coupling_0141.bin",
+    "label": 3,
+    "prediction": 3
+  },
+  {
+    "index": 647,
+    "face": "shaft/shaft_0012.bin",
+    "topo": "shaft/shaft_0012.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 648,
+    "face": "bearing/bearing_0024.bin",
+    "topo": "bearing/bearing_0024.bin",
+    "label": 0,
+    "prediction": 0
+  },
+  {
+    "index": 649,
+    "face": "shaft/shaft_0326.bin",
+    "topo": "shaft/shaft_0326.bin",
+    "label": 9,
+    "prediction": 0
+  },
+  {
+    "index": 650,
+    "face": "flange/flange_0262.bin",
+    "topo": "flange/flange_0262.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 651,
+    "face": "screw/screw_0455.bin",
+    "topo": "screw/screw_0455.bin",
+    "label": 8,
+    "prediction": 8
+  },
+  {
+    "index": 652,
+    "face": "bolt/bolt_0339.bin",
+    "topo": "bolt/bolt_0339.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 653,
+    "face": "bolt/bolt_0742.bin",
+    "topo": "bolt/bolt_0742.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 654,
+    "face": "bracket/bracket_0454.bin",
+    "topo": "bracket/bracket_0454.bin",
+    "label": 2,
+    "prediction": 2
+  },
+  {
+    "index": 655,
+    "face": "bolt/bolt_0414.bin",
+    "topo": "bolt/bolt_0414.bin",
+    "label": 1,
+    "prediction": 8
+  },
+  {
+    "index": 656,
+    "face": "bracket/bracket_0459.bin",
+    "topo": "bracket/bracket_0459.bin",
+    "label": 2,
+    "prediction": 2
+  },
+  {
+    "index": 657,
+    "face": "pulley/pulley_0148.bin",
+    "topo": "pulley/pulley_0148.bin",
+    "label": 7,
+    "prediction": 7
+  },
+  {
+    "index": 658,
+    "face": "nut/nut_0357.bin",
+    "topo": "nut/nut_0357.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 659,
+    "face": "nut/nut_0225.bin",
+    "topo": "nut/nut_0225.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 660,
+    "face": "screw/screw_1040.bin",
+    "topo": "screw/screw_1040.bin",
+    "label": 8,
+    "prediction": 8
+  },
+  {
+    "index": 661,
+    "face": "screw/screw_0479.bin",
+    "topo": "screw/screw_0479.bin",
+    "label": 8,
+    "prediction": 5
+  },
+  {
+    "index": 662,
+    "face": "bracket/bracket_0562.bin",
+    "topo": "bracket/bracket_0562.bin",
+    "label": 2,
+    "prediction": 2
+  },
+  {
+    "index": 663,
+    "face": "bolt/bolt_0331.bin",
+    "topo": "bolt/bolt_0331.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 664,
+    "face": "nut/nut_0622.bin",
+    "topo": "nut/nut_0622.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 665,
+    "face": "screw/screw_0562.bin",
+    "topo": "screw/screw_0562.bin",
+    "label": 8,
+    "prediction": 8
+  },
+  {
+    "index": 666,
+    "face": "bearing/bearing_0530.bin",
+    "topo": "bearing/bearing_0530.bin",
+    "label": 0,
+    "prediction": 0
+  },
+  {
+    "index": 667,
+    "face": "bolt/bolt_0435.bin",
+    "topo": "bolt/bolt_0435.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 668,
+    "face": "shaft/shaft_0637.bin",
+    "topo": "shaft/shaft_0637.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 669,
+    "face": "pulley/pulley_0119.bin",
+    "topo": "pulley/pulley_0119.bin",
+    "label": 7,
+    "prediction": 7
+  },
+  {
+    "index": 670,
+    "face": "nut/nut_0846.bin",
+    "topo": "nut/nut_0846.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 671,
+    "face": "coupling/coupling_0140.bin",
+    "topo": "coupling/coupling_0140.bin",
+    "label": 3,
+    "prediction": 7
+  },
+  {
+    "index": 672,
+    "face": "bearing/bearing_0390.bin",
+    "topo": "bearing/bearing_0390.bin",
+    "label": 0,
+    "prediction": 0
+  },
+  {
+    "index": 673,
+    "face": "nut/nut_0121.bin",
+    "topo": "nut/nut_0121.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 674,
+    "face": "screw/screw_0782.bin",
+    "topo": "screw/screw_0782.bin",
+    "label": 8,
+    "prediction": 1
+  },
+  {
+    "index": 675,
+    "face": "flange/flange_0718.bin",
+    "topo": "flange/flange_0718.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 676,
+    "face": "bolt/bolt_0457.bin",
+    "topo": "bolt/bolt_0457.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 677,
+    "face": "bracket/bracket_0582.bin",
+    "topo": "bracket/bracket_0582.bin",
+    "label": 2,
+    "prediction": 2
+  },
+  {
+    "index": 678,
+    "face": "bolt/bolt_0016.bin",
+    "topo": "bolt/bolt_0016.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 679,
+    "face": "coupling/coupling_0102.bin",
+    "topo": "coupling/coupling_0102.bin",
+    "label": 3,
+    "prediction": 3
+  },
+  {
+    "index": 680,
+    "face": "pulley/pulley_0082.bin",
+    "topo": "pulley/pulley_0082.bin",
+    "label": 7,
+    "prediction": 7
+  },
+  {
+    "index": 681,
+    "face": "bearing/bearing_0315.bin",
+    "topo": "bearing/bearing_0315.bin",
+    "label": 0,
+    "prediction": 0
+  },
+  {
+    "index": 682,
+    "face": "nut/nut_0623.bin",
+    "topo": "nut/nut_0623.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 683,
+    "face": "bracket/bracket_0411.bin",
+    "topo": "bracket/bracket_0411.bin",
+    "label": 2,
+    "prediction": 2
+  },
+  {
+    "index": 684,
+    "face": "shaft/shaft_0505.bin",
+    "topo": "shaft/shaft_0505.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 685,
+    "face": "pulley/pulley_0138.bin",
+    "topo": "pulley/pulley_0138.bin",
+    "label": 7,
+    "prediction": 7
+  },
+  {
+    "index": 686,
+    "face": "bearing/bearing_0272.bin",
+    "topo": "bearing/bearing_0272.bin",
+    "label": 0,
+    "prediction": 0
+  },
+  {
+    "index": 687,
+    "face": "shaft/shaft_0122.bin",
+    "topo": "shaft/shaft_0122.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 688,
+    "face": "flange/flange_0701.bin",
+    "topo": "flange/flange_0701.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 689,
+    "face": "shaft/shaft_0462.bin",
+    "topo": "shaft/shaft_0462.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 690,
+    "face": "screw/screw_0067.bin",
+    "topo": "screw/screw_0067.bin",
+    "label": 8,
+    "prediction": 1
+  },
+  {
+    "index": 691,
+    "face": "pulley/pulley_0295.bin",
+    "topo": "pulley/pulley_0295.bin",
+    "label": 7,
+    "prediction": 0
+  },
+  {
+    "index": 692,
+    "face": "bolt/bolt_0513.bin",
+    "topo": "bolt/bolt_0513.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 693,
+    "face": "screw/screw_0141.bin",
+    "topo": "screw/screw_0141.bin",
+    "label": 8,
+    "prediction": 1
+  },
+  {
+    "index": 694,
+    "face": "bracket/bracket_0416.bin",
+    "topo": "bracket/bracket_0416.bin",
+    "label": 2,
+    "prediction": 2
+  },
+  {
+    "index": 695,
+    "face": "bracket/bracket_0814.bin",
+    "topo": "bracket/bracket_0814.bin",
+    "label": 2,
+    "prediction": 2
+  },
+  {
+    "index": 696,
+    "face": "nut/nut_0230.bin",
+    "topo": "nut/nut_0230.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 697,
+    "face": "flange/flange_0669.bin",
+    "topo": "flange/flange_0669.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 698,
+    "face": "bearing/bearing_0434.bin",
+    "topo": "bearing/bearing_0434.bin",
+    "label": 0,
+    "prediction": 0
+  },
+  {
+    "index": 699,
+    "face": "bracket/bracket_0477.bin",
+    "topo": "bracket/bracket_0477.bin",
+    "label": 2,
+    "prediction": 2
+  },
+  {
+    "index": 700,
+    "face": "gear/gear_0632.bin",
+    "topo": "gear/gear_0632.bin",
+    "label": 5,
+    "prediction": 5
+  },
+  {
+    "index": 701,
+    "face": "screw/screw_0136.bin",
+    "topo": "screw/screw_0136.bin",
+    "label": 8,
+    "prediction": 1
+  },
+  {
+    "index": 702,
+    "face": "screw/screw_0161.bin",
+    "topo": "screw/screw_0161.bin",
+    "label": 8,
+    "prediction": 1
+  },
+  {
+    "index": 703,
+    "face": "screw/screw_0154.bin",
+    "topo": "screw/screw_0154.bin",
+    "label": 8,
+    "prediction": 8
+  },
+  {
+    "index": 704,
+    "face": "screw/screw_0033.bin",
+    "topo": "screw/screw_0033.bin",
+    "label": 8,
+    "prediction": 8
+  },
+  {
+    "index": 705,
+    "face": "flange/flange_0338.bin",
+    "topo": "flange/flange_0338.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 706,
+    "face": "screw/screw_0139.bin",
+    "topo": "screw/screw_0139.bin",
+    "label": 8,
+    "prediction": 1
+  },
+  {
+    "index": 707,
+    "face": "nut/nut_0795.bin",
+    "topo": "nut/nut_0795.bin",
+    "label": 6,
+    "prediction": 0
+  },
+  {
+    "index": 708,
+    "face": "bearing/bearing_0335.bin",
+    "topo": "bearing/bearing_0335.bin",
+    "label": 0,
+    "prediction": 0
+  },
+  {
+    "index": 709,
+    "face": "pulley/pulley_0285.bin",
+    "topo": "pulley/pulley_0285.bin",
+    "label": 7,
+    "prediction": 7
+  },
+  {
+    "index": 710,
+    "face": "screw/screw_0151.bin",
+    "topo": "screw/screw_0151.bin",
+    "label": 8,
+    "prediction": 8
+  },
+  {
+    "index": 711,
+    "face": "bearing/bearing_0392.bin",
+    "topo": "bearing/bearing_0392.bin",
+    "label": 0,
+    "prediction": 0
+  },
+  {
+    "index": 712,
+    "face": "screw/screw_0206.bin",
+    "topo": "screw/screw_0206.bin",
+    "label": 8,
+    "prediction": 1
+  },
+  {
+    "index": 713,
+    "face": "screw/screw_0978.bin",
+    "topo": "screw/screw_0978.bin",
+    "label": 8,
+    "prediction": 8
+  },
+  {
+    "index": 714,
+    "face": "bracket/bracket_0792.bin",
+    "topo": "bracket/bracket_0792.bin",
+    "label": 2,
+    "prediction": 2
+  },
+  {
+    "index": 715,
+    "face": "nut/nut_0165.bin",
+    "topo": "nut/nut_0165.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 716,
+    "face": "bolt/bolt_0432.bin",
+    "topo": "bolt/bolt_0432.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 717,
+    "face": "gear/gear_0292.bin",
+    "topo": "gear/gear_0292.bin",
+    "label": 5,
+    "prediction": 6
+  },
+  {
+    "index": 718,
+    "face": "shaft/shaft_0278.bin",
+    "topo": "shaft/shaft_0278.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 719,
+    "face": "flange/flange_0073.bin",
+    "topo": "flange/flange_0073.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 720,
+    "face": "screw/screw_0860.bin",
+    "topo": "screw/screw_0860.bin",
+    "label": 8,
+    "prediction": 1
+  },
+  {
+    "index": 721,
+    "face": "flange/flange_0647.bin",
+    "topo": "flange/flange_0647.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 722,
+    "face": "flange/flange_0168.bin",
+    "topo": "flange/flange_0168.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 723,
+    "face": "pulley/pulley_0246.bin",
+    "topo": "pulley/pulley_0246.bin",
+    "label": 7,
+    "prediction": 2
+  },
+  {
+    "index": 724,
+    "face": "pulley/pulley_0314.bin",
+    "topo": "pulley/pulley_0314.bin",
+    "label": 7,
+    "prediction": 0
+  },
+  {
+    "index": 725,
+    "face": "coupling/coupling_0122.bin",
+    "topo": "coupling/coupling_0122.bin",
+    "label": 3,
+    "prediction": 3
+  },
+  {
+    "index": 726,
+    "face": "flange/flange_0085.bin",
+    "topo": "flange/flange_0085.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 727,
+    "face": "flange/flange_0216.bin",
+    "topo": "flange/flange_0216.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 728,
+    "face": "screw/screw_0313.bin",
+    "topo": "screw/screw_0313.bin",
+    "label": 8,
+    "prediction": 1
+  },
+  {
+    "index": 729,
+    "face": "nut/nut_0144.bin",
+    "topo": "nut/nut_0144.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 730,
+    "face": "shaft/shaft_0567.bin",
+    "topo": "shaft/shaft_0567.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 731,
+    "face": "coupling/coupling_0126.bin",
+    "topo": "coupling/coupling_0126.bin",
+    "label": 3,
+    "prediction": 5
+  },
+  {
+    "index": 732,
+    "face": "bolt/bolt_0015.bin",
+    "topo": "bolt/bolt_0015.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 733,
+    "face": "shaft/shaft_0534.bin",
+    "topo": "shaft/shaft_0534.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 734,
+    "face": "bearing/bearing_0790.bin",
+    "topo": "bearing/bearing_0790.bin",
+    "label": 0,
+    "prediction": 0
+  },
+  {
+    "index": 735,
+    "face": "bolt/bolt_0171.bin",
+    "topo": "bolt/bolt_0171.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 736,
+    "face": "nut/nut_0635.bin",
+    "topo": "nut/nut_0635.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 737,
+    "face": "bearing/bearing_0107.bin",
+    "topo": "bearing/bearing_0107.bin",
+    "label": 0,
+    "prediction": 0
+  },
+  {
+    "index": 738,
+    "face": "bearing/bearing_0823.bin",
+    "topo": "bearing/bearing_0823.bin",
+    "label": 0,
+    "prediction": 0
+  },
+  {
+    "index": 739,
+    "face": "flange/flange_0613.bin",
+    "topo": "flange/flange_0613.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 740,
+    "face": "bolt/bolt_0367.bin",
+    "topo": "bolt/bolt_0367.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 741,
+    "face": "flange/flange_0361.bin",
+    "topo": "flange/flange_0361.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 742,
+    "face": "bolt/bolt_0535.bin",
+    "topo": "bolt/bolt_0535.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 743,
+    "face": "bracket/bracket_0845.bin",
+    "topo": "bracket/bracket_0845.bin",
+    "label": 2,
+    "prediction": 0
+  },
+  {
+    "index": 744,
+    "face": "flange/flange_0546.bin",
+    "topo": "flange/flange_0546.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 745,
+    "face": "shaft/shaft_0033.bin",
+    "topo": "shaft/shaft_0033.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 746,
+    "face": "bearing/bearing_0725.bin",
+    "topo": "bearing/bearing_0725.bin",
+    "label": 0,
+    "prediction": 2
+  },
+  {
+    "index": 747,
+    "face": "flange/flange_0565.bin",
+    "topo": "flange/flange_0565.bin",
+    "label": 4,
+    "prediction": 2
+  },
+  {
+    "index": 748,
+    "face": "flange/flange_0688.bin",
+    "topo": "flange/flange_0688.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 749,
+    "face": "screw/screw_1088.bin",
+    "topo": "screw/screw_1088.bin",
+    "label": 8,
+    "prediction": 8
+  },
+  {
+    "index": 750,
+    "face": "bearing/bearing_0755.bin",
+    "topo": "bearing/bearing_0755.bin",
+    "label": 0,
+    "prediction": 0
+  },
+  {
+    "index": 751,
+    "face": "flange/flange_0370.bin",
+    "topo": "flange/flange_0370.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 752,
+    "face": "flange/flange_0482.bin",
+    "topo": "flange/flange_0482.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 753,
+    "face": "shaft/shaft_0409.bin",
+    "topo": "shaft/shaft_0409.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 754,
+    "face": "screw/screw_0520.bin",
+    "topo": "screw/screw_0520.bin",
+    "label": 8,
+    "prediction": 1
+  },
+  {
+    "index": 755,
+    "face": "screw/screw_1086.bin",
+    "topo": "screw/screw_1086.bin",
+    "label": 8,
+    "prediction": 8
+  },
+  {
+    "index": 756,
+    "face": "flange/flange_0049.bin",
+    "topo": "flange/flange_0049.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 757,
+    "face": "flange/flange_0674.bin",
+    "topo": "flange/flange_0674.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 758,
+    "face": "nut/nut_0399.bin",
+    "topo": "nut/nut_0399.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 759,
+    "face": "nut/nut_0606.bin",
+    "topo": "nut/nut_0606.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 760,
+    "face": "pulley/pulley_0133.bin",
+    "topo": "pulley/pulley_0133.bin",
+    "label": 7,
+    "prediction": 2
+  },
+  {
+    "index": 761,
+    "face": "screw/screw_0020.bin",
+    "topo": "screw/screw_0020.bin",
+    "label": 8,
+    "prediction": 8
+  },
+  {
+    "index": 762,
+    "face": "bolt/bolt_0298.bin",
+    "topo": "bolt/bolt_0298.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 763,
+    "face": "bolt/bolt_0444.bin",
+    "topo": "bolt/bolt_0444.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 764,
+    "face": "coupling/coupling_0056.bin",
+    "topo": "coupling/coupling_0056.bin",
+    "label": 3,
+    "prediction": 3
+  },
+  {
+    "index": 765,
+    "face": "bolt/bolt_0029.bin",
+    "topo": "bolt/bolt_0029.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 766,
+    "face": "pulley/pulley_0283.bin",
+    "topo": "pulley/pulley_0283.bin",
+    "label": 7,
+    "prediction": 0
+  },
+  {
+    "index": 767,
+    "face": "bracket/bracket_0472.bin",
+    "topo": "bracket/bracket_0472.bin",
+    "label": 2,
+    "prediction": 2
+  },
+  {
+    "index": 768,
+    "face": "coupling/coupling_0399.bin",
+    "topo": "coupling/coupling_0399.bin",
+    "label": 3,
+    "prediction": 3
+  },
+  {
+    "index": 769,
+    "face": "flange/flange_0856.bin",
+    "topo": "flange/flange_0856.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 770,
+    "face": "screw/screw_0002.bin",
+    "topo": "screw/screw_0002.bin",
+    "label": 8,
+    "prediction": 8
+  },
+  {
+    "index": 771,
+    "face": "nut/nut_0411.bin",
+    "topo": "nut/nut_0411.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 772,
+    "face": "flange/flange_0628.bin",
+    "topo": "flange/flange_0628.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 773,
+    "face": "bolt/bolt_0039.bin",
+    "topo": "bolt/bolt_0039.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 774,
+    "face": "flange/flange_0006.bin",
+    "topo": "flange/flange_0006.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 775,
+    "face": "coupling/coupling_0387.bin",
+    "topo": "coupling/coupling_0387.bin",
+    "label": 3,
+    "prediction": 3
+  },
+  {
+    "index": 776,
+    "face": "bearing/bearing_0598.bin",
+    "topo": "bearing/bearing_0598.bin",
+    "label": 0,
+    "prediction": 0
+  },
+  {
+    "index": 777,
+    "face": "shaft/shaft_0554.bin",
+    "topo": "shaft/shaft_0554.bin",
+    "label": 9,
+    "prediction": 9
+  },
+  {
+    "index": 778,
+    "face": "nut/nut_0643.bin",
+    "topo": "nut/nut_0643.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 779,
+    "face": "coupling/coupling_0195.bin",
+    "topo": "coupling/coupling_0195.bin",
+    "label": 3,
+    "prediction": 3
+  },
+  {
+    "index": 780,
+    "face": "flange/flange_0604.bin",
+    "topo": "flange/flange_0604.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 781,
+    "face": "bolt/bolt_0391.bin",
+    "topo": "bolt/bolt_0391.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 782,
+    "face": "bolt/bolt_0793.bin",
+    "topo": "bolt/bolt_0793.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 783,
+    "face": "bolt/bolt_0055.bin",
+    "topo": "bolt/bolt_0055.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 784,
+    "face": "nut/nut_0263.bin",
+    "topo": "nut/nut_0263.bin",
+    "label": 6,
+    "prediction": 6
+  },
+  {
+    "index": 785,
+    "face": "screw/screw_0963.bin",
+    "topo": "screw/screw_0963.bin",
+    "label": 8,
+    "prediction": 1
+  },
+  {
+    "index": 786,
+    "face": "bolt/bolt_0542.bin",
+    "topo": "bolt/bolt_0542.bin",
+    "label": 1,
+    "prediction": 1
+  },
+  {
+    "index": 787,
+    "face": "screw/screw_0801.bin",
+    "topo": "screw/screw_0801.bin",
+    "label": 8,
+    "prediction": 8
+  },
+  {
+    "index": 788,
+    "face": "bracket/bracket_0671.bin",
+    "topo": "bracket/bracket_0671.bin",
+    "label": 2,
+    "prediction": 2
+  },
+  {
+    "index": 789,
+    "face": "gear/gear_0638.bin",
+    "topo": "gear/gear_0638.bin",
+    "label": 5,
+    "prediction": 2
+  },
+  {
+    "index": 790,
+    "face": "gear/gear_0799.bin",
+    "topo": "gear/gear_0799.bin",
+    "label": 5,
+    "prediction": 5
+  },
+  {
+    "index": 791,
+    "face": "bracket/bracket_0568.bin",
+    "topo": "bracket/bracket_0568.bin",
+    "label": 2,
+    "prediction": 2
+  },
+  {
+    "index": 792,
+    "face": "flange/flange_0057.bin",
+    "topo": "flange/flange_0057.bin",
+    "label": 4,
+    "prediction": 4
+  },
+  {
+    "index": 793,
+    "face": "bracket/bracket_0154.bin",
+    "topo": "bracket/bracket_0154.bin",
+    "label": 2,
+    "prediction": 2
+  }
+]

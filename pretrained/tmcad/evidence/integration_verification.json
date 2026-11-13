@@ -1,0 +1,24 @@
+{
+  "checked_at": "2026-11-13T16:07:36.209552+08:00",
+  "upstream_commit": "910ac5a8ac7a03f377eca8e3f6f86cce1f2fb824",
+  "checkpoint": "tmcad.pth",
+  "checkpoint_sha256": "d874cf4b820b6a0589168e77b7f51fc9f39345aff92e43e720c6fc54c569d013",
+  "model_tensors_unchanged": true,
+  "runtime_files_unchanged": true,
+  "data_manifest_unchanged": true,
+  "strict_load": true,
+  "parameters": 2292874,
+  "project_pythonpath_unset": true,
+  "validated_from_upstream_repository_root": true,
+  "validation_smoke": {
+    "status": "validation_forward_smoke_passed",
+    "processed": 16,
+    "finite_logits": true,
+    "research_metric": false
+  },
+  "readme_patch_applied_cleanly": true,
+  "binary_ignored_by_git": true,
+  "remote_mutations_performed": false,
+  "previous_full_evaluation": "release_verification.json",
+  "full_test_repeated_for_filename_change": false
+}

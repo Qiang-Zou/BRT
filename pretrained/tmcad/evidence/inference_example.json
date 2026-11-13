@@ -1,0 +1,18 @@
+{
+  "class_id": 0,
+  "class_name": "bearing",
+  "probabilities": {
+    "bearing": 0.9972121119499207,
+    "bolt": 1.3524805808629026e-06,
+    "bracket": 9.635398600948974e-05,
+    "coupling": 5.090550985187292e-05,
+    "flange": 7.728451600996777e-05,
+    "gear": 0.0021218894980847836,
+    "nut": 5.97242615185678e-05,
+    "pulley": 0.00014214268594514579,
+    "screw": 7.916170829957991e-07,
+    "shaft": 0.0002375625044805929
+  },
+  "device": "cpu",
+  "input_type": "historical_processed_cache_pair"
+}

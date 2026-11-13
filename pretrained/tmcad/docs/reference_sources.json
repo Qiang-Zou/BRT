@@ -1,0 +1,50 @@
+[
+  {
+    "name": "point_mae_readme",
+    "url": "https://raw.githubusercontent.com/Pang-Yatian/Point-MAE/main/README.md",
+    "sha256": "605f301b847bdd8a807344db52b4ccf44bf1a681903d3f917e57bb44423eec31",
+    "checked_at": "2026-11-13T15:34:48.145556+08:00"
+  },
+  {
+    "name": "uv_net_readme",
+    "url": "https://raw.githubusercontent.com/AutodeskAILab/UV-Net/main/README.md",
+    "sha256": "cec030b8bf599e19f781efe5aee5c31b35032e67c2ef09397422eb66f8655a1b",
+    "checked_at": "2026-11-13T15:34:48.604115+08:00"
+  },
+  {
+    "name": "brepnet_readme",
+    "url": "https://raw.githubusercontent.com/AutodeskAILab/BRepNet/master/README.md",
+    "sha256": "e77beeb58223277c054f34a25440833c0f9d54601c395b475ec6e748d9dfadfc",
+    "checked_at": "2026-11-13T15:34:49.067776+08:00"
+  },
+  {
+    "name": "brt_readme",
+    "url": "https://raw.githubusercontent.com/Qiang-Zou/BRT/main/README.md",
+    "sha256": "bdb3b177362d01519fd274fcfed985fcec473a7995f5ab4c756ae14f39840d97",
+    "checked_at": "2026-11-13T15:34:49.607685+08:00"
+  },
+  {
+    "name": "brt_license",
+    "url": "https://raw.githubusercontent.com/Qiang-Zou/BRT/main/LICENSE",
+    "sha256": "8b1ba204bb69a0ade2bfcf65ef294a920f6bb361b317dba43c7ef29d96332b9b",
+    "checked_at": "2026-11-13T15:34:50.308146+08:00"
+  },
+  {
+    "name": "brt_dataset",
+    "url": "https://raw.githubusercontent.com/Qiang-Zou/BRT/main/DATASET.md",
+    "sha256": "afc9cdf5f6e3a139f76bb9bb1191684e48d1960671eed1438e808fbad04ef8e7",
+    "checked_at": "2026-11-13T15:34:50.739262+08:00"
+  },
+  {
+    "name": "point_mae_release_assets",
+    "url": "https://api.github.com/repos/Pang-Yatian/Point-MAE/releases/tags/main",
+    "sha256": "4e68e3bd0ca1ed2bbe207e4cdd405d417a3ad090c4fe106de14fc979fbede8e6",
+    "checked_at": "2026-11-13T15:52:26.506884+08:00"
+  },
+  {
+    "name": "mae_readme",
+    "url": "https://raw.githubusercontent.com/facebookresearch/mae/main/README.md",
+    "sha256": "edda3ecd28d6cb32559e638c56c7d28d59d6e2f9ada2dd084292c8706764bea6",
+    "checked_at": "2026-11-13T15:52:26.506953+08:00"
+  }
+]

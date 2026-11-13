@@ -116,6 +116,15 @@ We therefore provide two geometry preprocessing options:
 
 
 
+5.Pretrained Models
+-------------------
+
+| Dataset | Task | Config | ACC | Download |
+|---|---|---|---:|---|
+| TMCAD | Classification | [config](pretrained/tmcad/configs/finetune.json) | 83.88% | [tmcad.pth](https://github.com/Qiang-Zou/BRT/releases/download/weights-v1/tmcad.pth) |
+
+See [MODELS.md](MODELS.md) for installation and testing. The TMCAD score is measured on the supplied 794-sample test split; training and evaluation settings are in the [model description](pretrained/tmcad/MODEL_CARD.md).
+
 6.References
 -------------
 - [1] Qiang Zou, Lizhen Zhu, "Bringing Attention to CAD: Boundary Representation Learning via Transformer." Computer-Aided Design, vol.189, 103940, 2025. https://doi.org/10.1016/j.cad.2025.103940
