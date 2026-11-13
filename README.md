@@ -4,7 +4,7 @@
 - Email: qzou.code@gmail.com
 - Webpage: https://qiang-zou.github.io/
 - Latest Release: 2025.09
-- Updated on 2026.11 with open weights and an optional C++ core for face tokenization. [@alex-crlhmmr](https://github.com/alex-crlhmmr) contributed the C++ core and the standalone `convert_` speedup in [PR #14](https://github.com/Qiang-Zou/BRT/pull/14).
+- Updated on 2026.11 with open weights and an optional C++ core for face tokenization.
 
 <img align="left" src="brt.jpg">
 <br />
@@ -116,6 +116,36 @@ We therefore provide two geometry preprocessing options:
     ```
 
 
+
+### 4.3 Optional C++ Tokenizer for Triangular Bézier Patches
+
+**Python (default).** Run `gen_tmcad_triangles.py` as shown in Section 4.1. Both examples expect the TMCAD v1-style category folders, including separate `bolt/` and `screw/` directories.
+
+**C++ (optional).** On Linux, use the same working `brt` environment as Section 4.1, with `pythonocc-core` and `occwl` installed. From the repository root, build the extension once with a C++17 compiler.
+
+```bash
+conda activate brt
+python -m pip install pybind11
+(cd process/cpp_core && python setup.py build_ext --inplace)
+```
+
+For a C++ run, use the following command in place of `gen_tmcad_triangles.py`. Set the input path to the directory containing the TMCAD category folders and the output path to the directory where the converter should create `triangles/`.
+
+```bash
+cd process
+PYTHONPATH="cpp_core${PYTHONPATH:+:$PYTHONPATH}" python - <<'PY'
+import solid_to_triangles2 as stt
+from brt_wrapper import convertFaceToTriangles_cpp
+
+stt.convertFaceToTriangles = convertFaceToTriangles_cpp
+stt.process_main("/path/to/input_dir", "/path/to/output_dir",
+                 method=8, dataset="tmcad", target="triangles")
+PY
+```
+
+This setting applies to the current run. To switch back to Python, run the command in Section 4.1. For build requirements and verification, see the [C++ tokenizer guide](process/cpp_core/README.md).
+
+**Credits.** [@alex-crlhmmr](https://github.com/alex-crlhmmr) contributed the optional C++ tokenizer and accelerated the Python conversion routine `Rectangular2TriangularBezier.convert_` in [PR #14](https://github.com/Qiang-Zou/BRT/pull/14).
 
 5.Open Weights Models
 -------------------
