@@ -1,7 +1,7 @@
 {
   "model_name": "BRT TMCAD fine-tuned classifier",
   "release_tag": "weights-v1",
-  "status": "local_release_candidate_not_published",
+  "status": "bundled_checkpoint",
   "strict_paper_reproduction": false,
   "extra_finetuning_stage_applied": true,
   "checkpoint": "checkpoints/tmcad.pth",

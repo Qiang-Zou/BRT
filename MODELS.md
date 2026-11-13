@@ -2,7 +2,7 @@
 
 | Dataset | Task | ACC | Weights | Configuration |
 |---|---|---:|---|---|
-| TMCAD | Classification | **83.88%** | [tmcad.pth](https://github.com/Qiang-Zou/BRT/releases/download/weights-v1/tmcad.pth) | [config](pretrained/tmcad/configs/finetune.json) |
+| TMCAD | Classification | **83.88%** | [tmcad.pth](pretrained/tmcad/checkpoints/tmcad.pth?raw=true) | [config](pretrained/tmcad/configs/finetune.json) |
 
 The TMCAD result is 666/794 correct on the supplied test split. See the [model description](pretrained/tmcad/MODEL_CARD.md) for the training and evaluation settings.
 
@@ -16,7 +16,7 @@ python pretrained/tmcad/download_weights.py
 python pretrained/tmcad/load_model.py
 ```
 
-The downloader saves `tmcad.pth` in `pretrained/tmcad/checkpoints/` and verifies its SHA-256. This tensor-only checkpoint uses the loading and testing entry points below; the original `classification.py` entry point expects a Lightning checkpoint.
+The checkpoint is included in `pretrained/tmcad/checkpoints/`. The download script verifies its SHA-256 and can restore a missing copy. This tensor-only checkpoint uses the loading and testing entry points below; the original `classification.py` entry point expects a Lightning checkpoint.
 
 ## Testing
 

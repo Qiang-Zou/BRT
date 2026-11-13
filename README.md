@@ -4,7 +4,7 @@
 - Email: qzou.code@gmail.com
 - Webpage: https://qiang-zou.github.io/
 - Latest Release: 2025.09
-- Updated on 2026.11 with open weights and C++ core for face tokenization (plus a standalone convert_ speedup)
+- Updated on 2026.11 with open weights and an optional C++ core for face tokenization. [@alex-crlhmmr](https://github.com/alex-crlhmmr) contributed the C++ core and the standalone `convert_` speedup in [PR #14](https://github.com/Qiang-Zou/BRT/pull/14).
 
 <img align="left" src="brt.jpg">
 <br />
@@ -124,7 +124,7 @@ The weights for conducting classification tasks on TMCAD dataset is also given. 
 
 | Dataset | Task | Config | ACC | Download |
 |---|---|---|---:|---|
-| TMCAD | Classification | [config](pretrained/tmcad/configs/finetune.json) | 83.88% | [tmcad.pth](https://github.com/Qiang-Zou/BRT/releases/download/weights-v1/tmcad.pth) |
+| TMCAD | Classification | [config](pretrained/tmcad/configs/finetune.json) | 83.88% | [tmcad.pth](pretrained/tmcad/checkpoints/tmcad.pth?raw=true) |
 
 
 6.References

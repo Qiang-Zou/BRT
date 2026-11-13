@@ -8,7 +8,7 @@ Model weights and evaluation code for TMCAD part classification, based on [BRT](
 
 | Task | Dataset | Config | ACC | Download |
 |---|---|---|---:|---|
-| Classification | TMCAD, 10 classes | [Model](configs/model.json) / [Fine-tuning](configs/finetune.json) | **83.88%** | [Checkpoint](https://github.com/Qiang-Zou/BRT/releases/download/weights-v1/tmcad.pth) |
+| Classification | TMCAD, 10 classes | [Model](configs/model.json) / [Fine-tuning](configs/finetune.json) | **83.88%** | [Checkpoint](checkpoints/tmcad.pth?raw=true) |
 
 ACC is measured on the supplied test split: **666/794** correct. The checkpoint is a PyTorch `state_dict` (13.4 MB). See [model details](MODEL_CARD.md) for training, data and evaluation settings.
 
@@ -24,7 +24,7 @@ source .venv/bin/activate
 python -m pip install -r requirements.txt
 ```
 
-Place the checkpoint in `checkpoints/`, then verify and load it:
+Verify and load the checkpoint included in `checkpoints/`:
 
 ```bash
 python download_weights.py
