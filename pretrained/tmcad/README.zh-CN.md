@@ -8,7 +8,7 @@
 
 | 任务 | 数据集 | 配置 | ACC | 下载 |
 |---|---|---|---:|---|
-| 零件分类 | TMCAD，10 类 | [模型](configs/model.json) / [微调](configs/finetune.json) | **83.88%** | [权重](https://github.com/Qiang-Zou/BRT/releases/download/weights-v1/tmcad.pth) |
+| 零件分类 | TMCAD，10 类 | [模型](configs/model.json) / [微调](configs/finetune.json) | **83.88%** | [权重](checkpoints/tmcad.pth?raw=true) |
 
 ACC 在随包提供的测试划分上测得，预测正确 **666/794**。权重采用 PyTorch `state_dict` 格式，大小约 13.4 MB。训练、数据与评测设置见[模型说明](MODEL_CARD.md)。
 
@@ -24,7 +24,7 @@ source .venv/bin/activate
 python -m pip install -r requirements.txt
 ```
 
-将权重放入 `checkpoints/`，校验并加载：
+校验并加载仓库中 `checkpoints/` 下的权重：
 
 ```bash
 python download_weights.py

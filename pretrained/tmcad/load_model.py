@@ -15,7 +15,7 @@ def load_model(checkpoint=None, device='cpu'):
     metadata = json.loads((HERE / 'model_card.json').read_text())
     checkpoint = Path(checkpoint) if checkpoint else HERE / metadata['checkpoint']
     if not checkpoint.is_file():
-        raise FileNotFoundError('Download the release asset into ' + str(checkpoint))
+        raise FileNotFoundError('Restore the bundled checkpoint with download_weights.py or supply a checkpoint at ' + str(checkpoint))
     if hashlib.sha256(checkpoint.read_bytes()).hexdigest() != metadata['state_dict_sha256']:
         raise ValueError('Checkpoint SHA-256 differs from the released 83.88% model')
     state = torch.load(checkpoint, map_location='cpu', weights_only=True)
