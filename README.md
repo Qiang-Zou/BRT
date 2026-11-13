@@ -116,14 +116,15 @@ We therefore provide two geometry preprocessing options:
 
 
 
-5.Pretrained Models
+5.Open Weights Models
 -------------------
+
+The weights for conducting classification tasks on TMCAD dataset is also given. See [MODELS.md](MODELS.md) for more details on the training and evaluation settings are in the [model description](pretrained/tmcad/MODEL_CARD.md).
 
 | Dataset | Task | Config | ACC | Download |
 |---|---|---|---:|---|
 | TMCAD | Classification | [config](pretrained/tmcad/configs/finetune.json) | 83.88% | [tmcad.pth](https://github.com/Qiang-Zou/BRT/releases/download/weights-v1/tmcad.pth) |
 
-See [MODELS.md](MODELS.md) for installation and testing. The TMCAD score is measured on the supplied 794-sample test split; training and evaluation settings are in the [model description](pretrained/tmcad/MODEL_CARD.md).
 
 6.References
 -------------
