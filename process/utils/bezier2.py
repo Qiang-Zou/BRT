@@ -61,14 +61,14 @@ def bernstein_polynomial_all_multi(degree,u,v):
     nodes=[bernstein_polynomial_all(degree,u[i],v[i]) for i in range(len(u))]
     nodes=np.stack(nodes)
     return nodes
-def fit_bezier_surface2(points,uvs, initial_control_points=None,bn_cache=[]):
+def fit_bezier_surface2(points,uvs, initial_control_points=None,bn_cache=None):
     """Fit a triangular Bézier surface to the given points."""
-    if bn_cache is None or len(bn_cache)==0:
-        bn=bernstein_polynomial_all_multi(6,uvs[:,0],uvs[:,1])
-        if bn_cache is not None:
-            bn_cache.append(bn)
+    if uvs is FIT_UVS:
+        bn = FIT_BASIS
     else:
-        bn=bn_cache[0]
+        bn = bernstein_polynomial_all_multi(6, uvs[:, 0], uvs[:, 1])
+    if bn_cache is not None:
+        bn_cache[:] = [bn]
     result=np.linalg.lstsq(bn.T@bn,bn.T@points,rcond=None)
     ctrl=result[0] 
     residuals=result[1]
@@ -85,12 +85,13 @@ def fit_bezier_surface2(points,uvs, initial_control_points=None,bn_cache=[]):
     return ctrl
 
 
-def generate_uvw(num_points):
+def generate_uvw(num_points, rng=None):
+    rng = np.random if rng is None else rng
     points = []
     for _ in range(num_points):
         # 生成均匀分布的随机数
-        x = np.random.rand()
-        y = np.random.rand()
+        x = rng.random()
+        y = rng.random()
         # 计算 (u, v) 值
         if x + y > 1:
             u = x - (x + y - 1)
@@ -107,27 +108,19 @@ def generate_uvw(num_points):
     points=np.array(points)
     
     return points
-def getControlPointsFromApproximation(triangle:Triangle,face:Face,edge=None,edge_idx=0,uvs_random=generate_uvw(100)[:,:2]):
+# These samples define the least-squares basis for both tokenizers.
+_FIT_ANCHORS = np.array([[0,0],[0,1],[1,0],[0,1/3],[0,2/3],[1/3,2/3],[2/3,1/3],[2/3,0],[1/3,0]])
+FIT_UVS = np.concatenate((_FIT_ANCHORS, generate_uvw(100, np.random.default_rng(0))[:, :2]))
+FIT_UVS.setflags(write=False)
+FIT_BASIS = bernstein_polynomial_all_multi(6, FIT_UVS[:, 0], FIT_UVS[:, 1])
+FIT_BASIS.setflags(write=False)
+
+
+def getControlPointsFromApproximation(triangle:Triangle,face:Face,edge=None,edge_idx=0,uvs_random=None):
     v1=triangle.v1
     v2=triangle.v2
     v3=triangle.v3
-
-    # uvs=np.array([[0,0],[0,1],[1,0],[0,1/3],[0,2/3],[1/3,2/3],[2/3,1/3],[2/3,0],[1/3,0],
-    #                 [1/9,1/9],[1/9,7/9],[7/9,1/9],
-    #                 [(1/3)*(7/9)+(2/3)*(1/9),1/9],[1-(1/3)*(7/9)-(2/3)*(1/9)-1/9,1/9],
-    #                 [1/9,(1/3)*(7/9)+(2/3)*(1/9)],[1/9,1-(1/3)*(7/9)-(2/3)*(1/9)-1/9],
-    #                 [(1/3)*(7/9)+(2/3)*(1/9),1-(1/3)*(7/9)-(2/3)*(1/9)-1/9],[1-(1/3)*(7/9)-(2/3)*(1/9)-1/9,(1/3)*(7/9)+(2/3)*(1/9)],
-
-    #                 [2/9,2/9],[2/9,5/9],[5/9,2/9],
-    #                 [(1/3)*(5/9)+(2/3)*(2/9),2/9],[1-(1/3)*(5/9)-(2/3)*(2/9)-2/9,2/9],
-    #                 [2/9,(1/3)*(5/9)+(2/3)*(2/9)],[2/9,1-(1/3)*(5/9)-(2/3)*(2/9)-2/9],
-    #                 [(1/3)*(5/9)+(2/3)*(2/9),1-(1/3)*(5/9)-(2/3)*(2/9)-2/9],[1-(1/3)*(5/9)-(2/3)*(2/9)-2/9,(1/3)*(5/9)+(2/3)*(2/9)],
-
-    #                 [1/3,1/3]
-    #                 ])
-    uvs_base=np.array([[0,0],[0,1],[1,0],[0,1/3],[0,2/3],[1/3,2/3],[2/3,1/3],[2/3,0],[1/3,0]])
-    # uvs_random=generate_uvw(100)[:,:2]
-    uvs=np.concatenate([uvs_base,uvs_random],axis=0)
+    uvs = FIT_UVS if uvs_random is None else np.concatenate((_FIT_ANCHORS, uvs_random))
 
     params=[[v3[i]*u+v2[i]*v+v1[i]*(1-u-v) for i in range(2)] for (u,v) in uvs]
     points=[pointOnFace(face,p) for p in params]

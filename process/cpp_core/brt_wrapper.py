@@ -33,26 +33,15 @@ from solid_to_triangles2 import (
 )
 from utils import bezier2
 
-# The exact uv grid getControlPointsFromApproximation uses: 9 fixed rows plus
-# the module-import-time random 100 rows living in the function's default
-# argument. Reading the live default keeps the C++ path bitwise aligned with
-# the Python path within this process.
-_UVS_BASE = np.array(
-    [[0, 0], [0, 1], [1, 0], [0, 1 / 3], [0, 2 / 3], [1 / 3, 2 / 3],
-     [2 / 3, 1 / 3], [2 / 3, 0], [1 / 3, 0]]
-)
-_UVS_RANDOM = bezier2.getControlPointsFromApproximation.__defaults__[2]
-_UVS = np.concatenate([_UVS_BASE, _UVS_RANDOM], axis=0)
-
 
 def _fit_tail(points):
     """Exact tail of getControlPointsFromApproximation after the surface
-    sampling: normalization, lstsq fit (module bn_cache), denormalization."""
+    sampling: normalization, least-squares fit, denormalization."""
     points = np.array(points)
     center, scale = bezier2.getCenterAndScale(points)
     points = points - center
     points = points * scale
-    ctrl_pts = bezier2.fit_bezier_surface2(points, _UVS, points)
+    ctrl_pts = bezier2.fit_bezier_surface2(points, bezier2.FIT_UVS, points)
     ctrl_pts[..., :3] /= scale
     ctrl_pts[..., :3] += center
     return ctrl_pts
@@ -90,7 +79,7 @@ def _collect_cpp(face):
     ]
 
     res = brt_core.process_face(
-        int(tds.this), int(surface.this), uknots, vknots, curve_args, _UVS
+        int(tds.this), int(surface.this), uknots, vknots, curve_args, bezier2.FIT_UVS
     )
     # keep tds / surface / crvs alive until after the call (they own the OCC
     # objects the C++ side borrowed)

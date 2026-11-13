@@ -367,21 +367,27 @@ def curveInRect(crv: Geom2d_Curve, interval, rect: Rectangle, intersection: Inte
     )
 
 
+def boundary_interval(intersection, rect):
+    """Return parameters on the in-cell arc, in the order of the stored points."""
+    first, last = intersection.Parameters
+    crv = intersection.Curve[0]
+    if crv.IsPeriodic():
+        midpoint = geom_utils.gp_to_numpy(crv.Value((first + last) / 2))
+        if not rect.contains(midpoint):
+            if first < last:
+                first += crv.Period()
+            else:
+                last += crv.Period()
+    return first, last
+
+
 def chordErrorCheckInRect(intersection: Intersection, rect: Rectangle, tol=0.995, edge_sample_num=20):
-    crv, interval = intersection.Curve
-    crv: Geom2d_Curve
-    interval = intersection.Parameters
+    crv = intersection.Curve[0]
     if intersection.NbPoints > 1:
         if intersection.NbPoints != 2:
             raise ValueError("intersection points are not 2, but {}".format(intersection.NbPoints))
-        if crv.IsPeriodic():
-            u = (interval[0] + interval[1]) / 2
-            middle_point = geom_utils.gp_to_numpy(crv.Value(u))
-            if not rect.contains(middle_point):
-                interval[0], interval[1] = interval[1], interval[0]
-                interval[1] += crv.Period()
-
-        t = np.linspace(interval[0], interval[1], edge_sample_num)
+        first, last = boundary_interval(intersection, rect)
+        t = np.linspace(first, last, edge_sample_num)
         points = [geom_utils.gp_to_numpy(crv.Value(value)) for value in t]
 
         dist_fn = lambda x, y: np.linalg.norm(x - y)
@@ -685,6 +691,9 @@ def splitBoundaryRectangle(face: Face, rectangle: Rectangle, surface, loc, tol=9
                 corner_point = False
 
                 reverse = item == 0x02
+                interval = boundary_interval(intersection, rectangle)
+                if reverse:
+                    interval = interval[::-1]
                 if status[(idx + 1) % 4] > 0:
                     if item != status[(idx + 1) % 4]:
                         # intersection on adjacent edges
@@ -701,7 +710,7 @@ def splitBoundaryRectangle(face: Face, rectangle: Rectangle, surface, loc, tol=9
                             rectangle.sub_rects[end_index].leaf_info = make_triangles(
                                 face=face,
                                 curve=intersection.Curve[0],
-                                interval=intersection.Parameters[::-1] if reverse else intersection.Parameters,
+                                interval=interval,
                                 end_points=(intersection.Points[reverse], oppo_point, intersection.Points[not reverse]),
                             )
                         else:
@@ -718,7 +727,7 @@ def splitBoundaryRectangle(face: Face, rectangle: Rectangle, surface, loc, tol=9
                             rectangle.sub_rects[end_index].leaf_info = make_triangles(
                                 face=face,
                                 curve=intersection.Curve[0],
-                                interval=intersection.Parameters[::-1] if reverse else intersection.Parameters,
+                                interval=interval,
                                 end_points=(
                                     intersection.Points[reverse],
                                     rectangle.points[end_index],
@@ -751,7 +760,7 @@ def splitBoundaryRectangle(face: Face, rectangle: Rectangle, surface, loc, tol=9
                             rectangle.sub_rects[clockwise_index[(idx + 3) % 4]].leaf_info = make_triangles(
                                 face=face,
                                 curve=intersection.Curve[0],
-                                interval=intersection.Parameters[::-1] if reverse else intersection.Parameters,
+                                interval=interval,
                                 end_points=(point1, oppo_point, point2),
                             )
                         elif np.linalg.norm(point1 - end_point) - np.linalg.norm(point2 - other_point) < -tol:
@@ -761,7 +770,7 @@ def splitBoundaryRectangle(face: Face, rectangle: Rectangle, surface, loc, tol=9
                             rectangle.sub_rects[clockwise_index[idx]].leaf_info = make_triangles(
                                 face=face,
                                 curve=intersection.Curve[0],
-                                interval=intersection.Parameters[::-1] if reverse else intersection.Parameters,
+                                interval=interval,
                                 end_points=(point1, oppo_point, point2),
                             )
                         else:
@@ -771,7 +780,7 @@ def splitBoundaryRectangle(face: Face, rectangle: Rectangle, surface, loc, tol=9
                             rectangle.sub_rects[end_index].leaf_info = make_boundary_rect(
                                 face=face,
                                 curve=intersection.Curve[0],
-                                interval=intersection.Parameters[::-1] if reverse else intersection.Parameters,
+                                interval=interval,
                                 end_points=(point1, end_point, other_point, oppo_point),
                             )
                             for idx, rect in enumerate(rectangle.sub_rects):
@@ -791,9 +800,14 @@ def splitBoundaryRectangle(face: Face, rectangle: Rectangle, surface, loc, tol=9
 
 
 def pointOnLine(p1, p2, point, tol=9e-3):
+    if np.linalg.norm(p2 - point) < tol or np.linalg.norm(p1 - point) < tol:
+        return True
+    direction = p2 - p1
+    length_squared = np.dot(direction, direction)
+    projection = np.dot(direction, point - p1)
     return (
-        (np.linalg.norm(p2 - point) < tol or np.linalg.norm(p1 - point) < tol)
-        or np.dot(p2 - p1, point - p1) >= 0
+        length_squared > 0
+        and 0 <= projection <= length_squared
         and distance_point_to_line(p1, p2, point) < tol
     )
 
@@ -808,7 +822,7 @@ def distance_point_to_line(A, B, P):
     AP = P - A
 
     # 计算叉积的模
-    cross_product = np.abs(np.cross(AB, AP))
+    cross_product = abs(AB[0] * AP[1] - AB[1] * AP[0])
 
     # 计算 AB 的模长
     AB_length = np.linalg.norm(AB)
