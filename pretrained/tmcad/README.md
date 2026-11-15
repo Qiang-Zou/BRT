@@ -1,6 +1,6 @@
 # BRT TMCAD
 
-[简体中文](README.zh-CN.md) · [Model details](MODEL_CARD.md) · [Data preparation](data/README.md)
+[Model details](MODEL_CARD.md) · [Data preparation](data/README.md)
 
 Model weights and evaluation code for TMCAD part classification, based on [BRT](https://github.com/Qiang-Zou/BRT).
 
