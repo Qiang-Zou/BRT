@@ -3,8 +3,7 @@
 - By Lizhen Zhu and Qiang Zou
 - Email: qzou.code@gmail.com
 - Webpage: https://qiang-zou.github.io/
-- Latest Release: 2025.09
-- Updated on 2026.11 with open weights and an optional C++ core for face tokenization.
+- Release history: 2025.09 (initial); 2026.11 (updates with open weights and an optional C++ core for face tokenization)
 
 <img align="left" src="brt.jpg">
 <br />
